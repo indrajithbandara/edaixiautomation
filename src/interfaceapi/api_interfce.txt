@@ -1,0 +1,3948 @@
+### /settlements(.:format)
+
+> http请求方式：GET
+
+> 地址：/settlements(.:format)
+
+
+
+
+### /settlements/stat(.:format)
+
+> http请求方式：GET
+
+> 地址：/settlements/stat(.:format)
+
+
+
+
+### /settlements/keys(.:format)
+
+> http请求方式：GET
+
+> 地址：/settlements/keys(.:format)
+
+
+
+
+### /settlements/id/:id(.:format)
+
+> http请求方式：GET
+
+> 地址：/settlements/id/:id(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /settlements/piliang_queren_shoukuan(.:format)
+
+> http请求方式：POST
+
+> 地址：/settlements/piliang_queren_shoukuan(.:format)
+
+
+
+
+### /couriers(.:format)
+
+> http请求方式：GET
+
+> 地址：/couriers(.:format)
+
+
+
+
+### /couriers/keys(.:format)
+
+> http请求方式：GET
+
+> 地址：/couriers/keys(.:format)
+
+
+
+
+### /couriers/single(.:format)
+
+> http请求方式：GET
+
+> 地址：/couriers/single(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+tel | String | true | 
+password | String | true | 
+
+
+
+### /couriers/single_by_id(.:format)
+
+> http请求方式：GET
+
+> 地址：/couriers/single_by_id(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id | Integer | true | 
+
+
+
+### /couriers/get_info_by_ids(.:format)
+
+> http请求方式：GET
+
+> 地址：/couriers/get_info_by_ids(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+ids | [Integer] | true | 
+
+
+
+### /couriers/get_info_by_name(.:format)
+
+> http请求方式：GET
+
+> 地址：/couriers/get_info_by_name(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+name | String | true | 
+
+
+
+### /couriers/on_duty(.:format)
+
+> http请求方式：GET
+
+> 地址：/couriers/on_duty(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+kind | Integer | true | 
+map_polygon_group_id | Integer | true | 
+week_nr | Integer | true | 
+from_time_mod | Integer | true | 
+to_time_mod | Integer | true | 
+
+
+
+### /couriers/login(.:format)
+
+> http请求方式：POST
+
+> 地址：/couriers/login(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+tel | String | true | 
+password | String | true | 
+push_token | String | true | 
+
+
+
+### /couriers/id/:id(.:format)
+
+> http请求方式：GET
+
+> 地址：/couriers/id/:id(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /couriers/id/:id/login(.:format)
+
+> http请求方式：POST
+
+> 地址：/couriers/id/:id/login(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+push_token |  | true | 
+
+
+
+### /couriers/id/:id/job_qu_list(.:format)
+
+> http请求方式：GET
+
+> 地址：/couriers/id/:id/job_qu_list(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id | Integer | false | 
+
+
+
+### /couriers/id/:id/job_song_list(.:format)
+
+> http请求方式：GET
+
+> 地址：/couriers/id/:id/job_song_list(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /couriers/id/:id/all_jobs_todo_list(.:format)
+
+> http请求方式：GET
+
+> 地址：/couriers/id/:id/all_jobs_todo_list(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /couriers/id/:id/weiqueren_shoukuan(.:format)
+
+> http请求方式：GET
+
+> 地址：/couriers/id/:id/weiqueren_shoukuan(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+pay_type | String | false | 
+
+
+
+### /couriers/id/:id/shiti_daijinquan_count(.:format)
+
+> http请求方式：GET
+
+> 地址：/couriers/id/:id/shiti_daijinquan_count(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /couriers/id/:id/update(.:format)
+
+> http请求方式：POST
+
+> 地址：/couriers/id/:id/update(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /couriers/id/:id/delete(.:format)
+
+> http请求方式：POST
+
+> 地址：/couriers/id/:id/delete(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /couriers/id/:id/set_schedule(.:format)
+
+> http请求方式：POST
+
+> 地址：/couriers/id/:id/set_schedule(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+use_auto_schedule | Virtus::Attribute::Boolean | true | 
+week_nr | Integer | true | 
+weekly_schedule | Array | true | 
+
+
+
+### /couriers/id/:id/set_vacation(.:format)
+
+> http请求方式：POST
+
+> 地址：/couriers/id/:id/set_vacation(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+vacation | Array | true | 
+
+
+
+### /couriers/id/:id/get_schedule(.:format)
+
+> http请求方式：GET
+
+> 地址：/couriers/id/:id/get_schedule(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /couriers/id/:id/get_vacation(.:format)
+
+> http请求方式：GET
+
+> 地址：/couriers/id/:id/get_vacation(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /couriers/id/:id/set_use_auto_schedule(.:format)
+
+> http请求方式：POST
+
+> 地址：/couriers/id/:id/set_use_auto_schedule(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+use_auto_schedule | Virtus::Attribute::Boolean | true | 
+
+
+
+### /couriers/id/:id/jiaokuan(.:format)
+
+> http请求方式：POST
+
+> 地址：/couriers/id/:id/jiaokuan(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+order_ids | String | false | 
+
+
+
+### /couriers/id/:id/daifu(.:format)
+
+> http请求方式：POST
+
+> 地址：/couriers/id/:id/daifu(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+order_id | Integer | true | 
+courier_id | Integer | true | 
+pay_type | Integer | false | 
+
+
+
+### /couriers(.:format)
+
+> http请求方式：POST
+
+> 地址：/couriers(.:format)
+
+
+
+
+### /customers(.:format)
+
+> http请求方式：GET
+
+> 地址：/customers(.:format)
+
+
+
+
+### /customers/keys(.:format)
+
+> http请求方式：GET
+
+> 地址：/customers/keys(.:format)
+
+
+
+
+### /customers/from_user_exist(.:format)
+
+> http请求方式：GET
+
+> 地址：/customers/from_user_exist(.:format)
+
+
+
+
+### /customers/single(.:format)
+
+> http请求方式：GET
+
+> 地址：/customers/single(.:format)
+
+
+
+
+### /customers(.:format)
+
+> http请求方式：POST
+
+> 地址：/customers(.:format)
+
+
+
+
+### 关注
+
+> http请求方式：POST
+
+> 地址：/customers/follow(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+from_user | String | true | 
+qrcid | Integer | true | 
+user_type | Integer | true | 
+
+
+
+### 取消关注
+
+> http请求方式：POST
+
+> 地址：/customers/unfollow(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+from_user | String | true | 
+user_type | Integer | true | 
+
+
+
+### /customers/id/:id(.:format)
+
+> http请求方式：GET
+
+> 地址：/customers/id/:id(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id | String | true | Customer ID.
+
+
+
+### 开卡
+
+> http请求方式：POST
+
+> 地址：/customers/id/:id/kaika(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id | String | true | Customer ID.
+user_id | Integer | true | 
+paytype | Integer | true | 
+fee | Integer | false | 
+
+
+
+### 获取第三方标识
+
+> http请求方式：GET
+
+> 地址：/customers/id/:id/clients(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id | String | true | Customer ID.
+
+
+
+### 获取推送标示
+
+> http请求方式：GET
+
+> 地址：/customers/id/:id/push_token(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id | String | true | Customer ID.
+user_type | Integer | true | 
+
+
+
+### /orders(.:format)
+
+> http请求方式：GET
+
+> 地址：/orders(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+order_type | Integer | false | 
+type | String | false | 
+user_type | Integer | false | 
+
+
+
+### /orders/keys(.:format)
+
+> http请求方式：GET
+
+> 地址：/orders/keys(.:format)
+
+
+
+
+### /orders/single(.:format)
+
+> http请求方式：GET
+
+> 地址：/orders/single(.:format)
+
+
+
+
+### /orders/has_paid_order_by_tel(.:format)
+
+> http请求方式：GET
+
+> 地址：/orders/has_paid_order_by_tel(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+mobile | String | true | 
+
+
+
+### /orders(.:format)
+
+> http请求方式：POST
+
+> 地址：/orders(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+washing_date | String | true | 
+washing_time | String | true | 
+user_type | Integer | false | 
+skip_quota_check | Virtus::Attribute::Boolean | false | 
+client_id | Integer | false | 
+foreign_order_id | Integer | false | 
+
+
+
+### /orders/id/:id(.:format)
+
+> http请求方式：GET
+
+> 地址：/orders/id/:id(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+security_check | Virtus::Attribute::Boolean | false | 
+
+
+
+### /orders/id/:id/update(.:format)
+
+> http请求方式：POST
+
+> 地址：/orders/id/:id/update(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /orders/id/:id/create_comment(.:format)
+
+> http请求方式：POST
+
+> 地址：/orders/id/:id/create_comment(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### 订单支付
+
+> http请求方式：POST
+
+> 地址：/orders/id/:id/pay(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+user_id | Integer | true | 
+paytype | Integer | true | 
+
+
+
+### 订单支付
+
+> http请求方式：POST
+
+> 地址：/orders/id/:id/pay2(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+user_id | Integer | true | 
+paytype | Integer | true | 
+coupon_id | Integer | false | 
+
+
+
+### 第三方订单已支付
+
+> http请求方式：POST
+
+> 地址：/orders/id/:id/foreign_pay(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+order_id | Integer | true | 
+paytype | Integer | true | 
+
+
+
+### 订单取消
+
+> http请求方式：POST
+
+> 地址：/orders/id/:id/cancel(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+user_id | Integer | true | 
+user_check | Integer | false | 
+back_reason | String | false | 
+push_msg | Virtus::Attribute::Boolean | false | 
+
+
+
+### /orders/id/:id/mendian_shoukuan(.:format)
+
+> http请求方式：POST
+
+> 地址：/orders/id/:id/mendian_shoukuan(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+outlet_id | Integer | true | 
+is_xianxia | Virtus::Attribute::Boolean | true | 
+pay_type | Integer | true | 
+total_price | Float | true | 
+sn_code | String | false | 
+sn_password | String | false | 
+
+
+
+### /orders/id/:id/fanxi(.:format)
+
+> http请求方式：POST
+
+> 地址：/orders/id/:id/fanxi(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+washing_date | String | true | 
+washing_time | String | true | 
+remark | String | false | 
+
+
+
+### /orders/id/:id/caiwu_tuika(.:format)
+
+> http请求方式：POST
+
+> 地址：/orders/id/:id/caiwu_tuika(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+money | Float | true | 
+worker_id | Integer | true | 
+
+
+
+### /outlets(.:format)
+
+> http请求方式：GET
+
+> 地址：/outlets(.:format)
+
+
+
+
+### /outlets/outlet_and_jiesuan(.:format)
+
+> http请求方式：GET
+
+> 地址：/outlets/outlet_and_jiesuan(.:format)
+
+
+
+
+### /outlets/outlet_jiesuan_and_rule_by_id(.:format)
+
+> http请求方式：GET
+
+> 地址：/outlets/outlet_jiesuan_and_rule_by_id(.:format)
+
+
+
+
+### /outlets/jiesuan_detail(.:format)
+
+> http请求方式：GET
+
+> 地址：/outlets/jiesuan_detail(.:format)
+
+
+
+
+### /outlets/keys(.:format)
+
+> http请求方式：GET
+
+> 地址：/outlets/keys(.:format)
+
+
+
+
+### /outlets/rules(.:format)
+
+> http请求方式：GET
+
+> 地址：/outlets/rules(.:format)
+
+
+
+
+### /outlets/single(.:format)
+
+> http请求方式：GET
+
+> 地址：/outlets/single(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+bianma | String | true | 
+
+
+
+### /outlets/id/:id(.:format)
+
+> http请求方式：GET
+
+> 地址：/outlets/id/:id(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /outlets/id/:id/update(.:format)
+
+> http请求方式：POST
+
+> 地址：/outlets/id/:id/update(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /outlets/id/:id/delete(.:format)
+
+> http请求方式：POST
+
+> 地址：/outlets/id/:id/delete(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /outlets/id/:id/create_rule(.:format)
+
+> http请求方式：POST
+
+> 地址：/outlets/id/:id/create_rule(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /outlets/id/:id/outlet_order_rule(.:format)
+
+> http请求方式：POST
+
+> 地址：/outlets/id/:id/outlet_order_rule(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /outlets/id/:id/outlet_order_cleaning(.:format)
+
+> http请求方式：POST
+
+> 地址：/outlets/id/:id/outlet_order_cleaning(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /outlets/id/:id/delete_rule(.:format)
+
+> http请求方式：POST
+
+> 地址：/outlets/id/:id/delete_rule(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /outlets/id/:id/jiesuan_pay(.:format)
+
+> http请求方式：POST
+
+> 地址：/outlets/id/:id/jiesuan_pay(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /outlets/id/:id/save_jiesuan(.:format)
+
+> http请求方式：POST
+
+> 地址：/outlets/id/:id/save_jiesuan(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /outlets(.:format)
+
+> http请求方式：POST
+
+> 地址：/outlets(.:format)
+
+
+
+
+### /goods(.:format)
+
+> http请求方式：GET
+
+> 地址：/goods(.:format)
+
+
+
+
+### /goods/keys(.:format)
+
+> http请求方式：GET
+
+> 地址：/goods/keys(.:format)
+
+
+
+
+### /goods/id/:id(.:format)
+
+> http请求方式：GET
+
+> 地址：/goods/id/:id(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /clothings(.:format)
+
+> http请求方式：GET
+
+> 地址：/clothings(.:format)
+
+
+
+
+### /clothings/keys(.:format)
+
+> http请求方式：GET
+
+> 地址：/clothings/keys(.:format)
+
+
+
+
+### /addresss(.:format)
+
+> http请求方式：GET
+
+> 地址：/addresss(.:format)
+
+
+
+
+### /addresss/keys(.:format)
+
+> http请求方式：GET
+
+> 地址：/addresss/keys(.:format)
+
+
+
+
+### /addresss(.:format)
+
+> http请求方式：POST
+
+> 地址：/addresss(.:format)
+
+
+
+
+### /addresss/id/:id(.:format)
+
+> http请求方式：GET
+
+> 地址：/addresss/id/:id(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /addresss/id/:id/update(.:format)
+
+> http请求方式：POST
+
+> 地址：/addresss/id/:id/update(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /addresss/id/:id/update_coords(.:format)
+
+> http请求方式：POST
+
+> 地址：/addresss/id/:id/update_coords(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /addresss/id/:id/delete(.:format)
+
+> http请求方式：POST
+
+> 地址：/addresss/id/:id/delete(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /slides(.:format)
+
+> http请求方式：GET
+
+> 地址：/slides(.:format)
+
+
+
+
+### /slides/keys(.:format)
+
+> http请求方式：GET
+
+> 地址：/slides/keys(.:format)
+
+
+
+
+### /slides/id/:id(.:format)
+
+> http请求方式：GET
+
+> 地址：/slides/id/:id(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /feedbacks/keys(.:format)
+
+> http请求方式：GET
+
+> 地址：/feedbacks/keys(.:format)
+
+
+
+
+### /feedbacks(.:format)
+
+> http请求方式：POST
+
+> 地址：/feedbacks(.:format)
+
+
+
+
+### /logisticss(.:format)
+
+> http请求方式：GET
+
+> 地址：/logisticss(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+all_couriers | Virtus::Attribute::Boolean | false | 
+get_all_couriers | Virtus::Attribute::Boolean | false | 
+courier_qu_id | Integer | false | 
+courier_song_id | Integer | false | 
+jiagongdian_id | Integer | false | 
+shouyidian_song_id | Integer | false | 
+shouyidian_qu_id | Integer | false | 
+
+
+
+### /logisticss/shouyidian_song_kuaidi(.:format)
+
+> http请求方式：GET
+
+> 地址：/logisticss/shouyidian_song_kuaidi(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+all_couriers | Virtus::Attribute::Boolean | false | 
+get_all_couriers | Virtus::Attribute::Boolean | false | 
+courier_qu_id | Integer | false | 
+courier_song_id | Integer | false | 
+jiagongdian_id | Integer | false | 
+shouyidian_song_id | Integer | true | 
+shouyidian_qu_id | Integer | false | 
+
+
+
+### /logisticss/keys(.:format)
+
+> http请求方式：GET
+
+> 地址：/logisticss/keys(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+all_couriers | Virtus::Attribute::Boolean | false | 
+get_all_couriers | Virtus::Attribute::Boolean | false | 
+courier_qu_id | Integer | false | 
+courier_song_id | Integer | false | 
+jiagongdian_id | Integer | false | 
+shouyidian_song_id | Integer | false | 
+shouyidian_qu_id | Integer | false | 
+
+
+
+### /logisticss/stat(.:format)
+
+> http请求方式：GET
+
+> 地址：/logisticss/stat(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+all_couriers | Virtus::Attribute::Boolean | false | 
+get_all_couriers | Virtus::Attribute::Boolean | false | 
+courier_qu_id | Integer | false | 
+courier_song_id | Integer | false | 
+jiagongdian_id | Integer | false | 
+shouyidian_song_id | Integer | false | 
+shouyidian_qu_id | Integer | false | 
+
+
+
+### /logisticss/batch_shouyidian_song_qianshou(.:format)
+
+> http请求方式：POST
+
+> 地址：/logisticss/batch_shouyidian_song_qianshou(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+all_couriers | Virtus::Attribute::Boolean | false | 
+get_all_couriers | Virtus::Attribute::Boolean | false | 
+courier_qu_id | Integer | false | 
+courier_song_id | Integer | false | 
+jiagongdian_id | Integer | false | 
+shouyidian_song_id | Integer | false | 
+shouyidian_qu_id | Integer | false | 
+order_ids | Array | true | 
+outlet_id | Integer | true | 
+
+
+
+### /logisticss/single(.:format)
+
+> http请求方式：GET
+
+> 地址：/logisticss/single(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+all_couriers | Virtus::Attribute::Boolean | false | 
+get_all_couriers | Virtus::Attribute::Boolean | false | 
+courier_qu_id | Integer | false | 
+courier_song_id | Integer | false | 
+jiagongdian_id | Integer | false | 
+shouyidian_song_id | Integer | false | 
+shouyidian_qu_id | Integer | false | 
+seal_sn | String | false | 
+ordersn | String | false | 
+
+
+
+### /logisticss/id/:id(.:format)
+
+> http请求方式：GET
+
+> 地址：/logisticss/id/:id(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+all_couriers | Virtus::Attribute::Boolean | false | 
+get_all_couriers | Virtus::Attribute::Boolean | false | 
+courier_qu_id | Integer | false | 
+courier_song_id | Integer | false | 
+jiagongdian_id | Integer | false | 
+shouyidian_song_id | Integer | false | 
+shouyidian_qu_id | Integer | false | 
+
+
+
+### /logisticss/id/:id/update(.:format)
+
+> http请求方式：POST
+
+> 地址：/logisticss/id/:id/update(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+all_couriers | Virtus::Attribute::Boolean | false | 
+get_all_couriers | Virtus::Attribute::Boolean | false | 
+courier_qu_id | Integer | false | 
+courier_song_id | Integer | false | 
+jiagongdian_id | Integer | false | 
+shouyidian_song_id | Integer | false | 
+shouyidian_qu_id | Integer | false | 
+order_params | Hash | true | 
+
+
+
+### /logisticss/id/:id/shoukuan(.:format)
+
+> http请求方式：POST
+
+> 地址：/logisticss/id/:id/shoukuan(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+all_couriers | Virtus::Attribute::Boolean | false | 
+get_all_couriers | Virtus::Attribute::Boolean | false | 
+courier_qu_id | Integer | false | 
+courier_song_id | Integer | false | 
+jiagongdian_id | Integer | false | 
+shouyidian_song_id | Integer | false | 
+shouyidian_qu_id | Integer | false | 
+pay_type | Integer | true | 
+
+
+
+### /logisticss/id/:id/wuliu_qu_tuihui(.:format)
+
+> http请求方式：POST
+
+> 地址：/logisticss/id/:id/wuliu_qu_tuihui(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+all_couriers | Virtus::Attribute::Boolean | false | 
+get_all_couriers | Virtus::Attribute::Boolean | false | 
+courier_qu_id | Integer | false | 
+courier_song_id | Integer | false | 
+jiagongdian_id | Integer | false | 
+shouyidian_song_id | Integer | false | 
+shouyidian_qu_id | Integer | false | 
+
+
+
+### /logisticss/id/:id/wuliu_qu_yiqu(.:format)
+
+> http请求方式：POST
+
+> 地址：/logisticss/id/:id/wuliu_qu_yiqu(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+all_couriers | Virtus::Attribute::Boolean | false | 
+get_all_couriers | Virtus::Attribute::Boolean | false | 
+courier_qu_id | Integer | false | 
+courier_song_id | Integer | false | 
+jiagongdian_id | Integer | false | 
+shouyidian_song_id | Integer | false | 
+shouyidian_qu_id | Integer | false | 
+
+
+
+### /logisticss/id/:id/diaodu_yiqueren(.:format)
+
+> http请求方式：POST
+
+> 地址：/logisticss/id/:id/diaodu_yiqueren(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+all_couriers | Virtus::Attribute::Boolean | false | 
+get_all_couriers | Virtus::Attribute::Boolean | false | 
+courier_qu_id | Integer | false | 
+courier_song_id | Integer | false | 
+jiagongdian_id | Integer | false | 
+shouyidian_song_id | Integer | false | 
+shouyidian_qu_id | Integer | false | 
+
+
+
+### /logisticss/id/:id/jiagongdian_yifenjian(.:format)
+
+> http请求方式：POST
+
+> 地址：/logisticss/id/:id/jiagongdian_yifenjian(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+all_couriers | Virtus::Attribute::Boolean | false | 
+get_all_couriers | Virtus::Attribute::Boolean | false | 
+courier_qu_id | Integer | false | 
+courier_song_id | Integer | false | 
+jiagongdian_id | Integer | false | 
+shouyidian_song_id | Integer | false | 
+shouyidian_qu_id | Integer | false | 
+data | String | true | 
+avgfjsj | Float | false | 
+
+
+
+### /logisticss/id/:id/jiagongdian_yishangjia(.:format)
+
+> http请求方式：POST
+
+> 地址：/logisticss/id/:id/jiagongdian_yishangjia(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+all_couriers | Virtus::Attribute::Boolean | false | 
+get_all_couriers | Virtus::Attribute::Boolean | false | 
+courier_qu_id | Integer | false | 
+courier_song_id | Integer | false | 
+jiagongdian_id | Integer | false | 
+shouyidian_song_id | Integer | false | 
+shouyidian_qu_id | Integer | false | 
+
+
+
+### /logisticss/id/:id/wuliu_song_tuihui(.:format)
+
+> http请求方式：POST
+
+> 地址：/logisticss/id/:id/wuliu_song_tuihui(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+all_couriers | Virtus::Attribute::Boolean | false | 
+get_all_couriers | Virtus::Attribute::Boolean | false | 
+courier_qu_id | Integer | false | 
+courier_song_id | Integer | false | 
+jiagongdian_id | Integer | false | 
+shouyidian_song_id | Integer | false | 
+shouyidian_qu_id | Integer | false | 
+
+
+
+### /logisticss/id/:id/diaodu_paidan(.:format)
+
+> http请求方式：POST
+
+> 地址：/logisticss/id/:id/diaodu_paidan(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+all_couriers | Virtus::Attribute::Boolean | false | 
+get_all_couriers | Virtus::Attribute::Boolean | false | 
+courier_qu_id | Integer | false | 
+courier_song_id | Integer | false | 
+jiagongdian_id | Integer | false | 
+shouyidian_song_id | Integer | false | 
+shouyidian_qu_id | Integer | false | 
+
+
+
+### /logisticss/id/:id/kehu_song_shouyidian(.:format)
+
+> http请求方式：POST
+
+> 地址：/logisticss/id/:id/kehu_song_shouyidian(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+all_couriers | Virtus::Attribute::Boolean | false | 
+get_all_couriers | Virtus::Attribute::Boolean | false | 
+courier_qu_id | Integer | false | 
+courier_song_id | Integer | false | 
+jiagongdian_id | Integer | false | 
+shouyidian_song_id | Integer | false | 
+shouyidian_qu_id | Integer | false | 
+
+
+
+### /logisticss/id/:id/dingdan_quxiao(.:format)
+
+> http请求方式：POST
+
+> 地址：/logisticss/id/:id/dingdan_quxiao(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+all_couriers | Virtus::Attribute::Boolean | false | 
+get_all_couriers | Virtus::Attribute::Boolean | false | 
+courier_qu_id | Integer | false | 
+courier_song_id | Integer | false | 
+jiagongdian_id | Integer | false | 
+shouyidian_song_id | Integer | false | 
+shouyidian_qu_id | Integer | false | 
+
+
+
+### /logisticss/id/:id/jiagongdian_qianshou(.:format)
+
+> http请求方式：POST
+
+> 地址：/logisticss/id/:id/jiagongdian_qianshou(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+all_couriers | Virtus::Attribute::Boolean | false | 
+get_all_couriers | Virtus::Attribute::Boolean | false | 
+courier_qu_id | Integer | false | 
+courier_song_id | Integer | false | 
+jiagongdian_id | Integer | true | 
+shouyidian_song_id | Integer | false | 
+shouyidian_qu_id | Integer | false | 
+
+
+
+### /logisticss/id/:id/wangdian_qianshou(.:format)
+
+> http请求方式：POST
+
+> 地址：/logisticss/id/:id/wangdian_qianshou(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+all_couriers | Virtus::Attribute::Boolean | false | 
+get_all_couriers | Virtus::Attribute::Boolean | false | 
+courier_qu_id | Integer | false | 
+courier_song_id | Integer | false | 
+jiagongdian_id | Integer | false | 
+shouyidian_song_id | Integer | false | 
+shouyidian_qu_id | Integer | false | 
+wangdian_id | Integer | true | 
+
+
+
+### /logisticss/id/:id/jiagongdian_chuku(.:format)
+
+> http请求方式：POST
+
+> 地址：/logisticss/id/:id/jiagongdian_chuku(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+all_couriers | Virtus::Attribute::Boolean | false | 
+get_all_couriers | Virtus::Attribute::Boolean | false | 
+courier_qu_id | Integer | false | 
+courier_song_id | Integer | false | 
+jiagongdian_id | Integer | false | 
+shouyidian_song_id | Integer | false | 
+shouyidian_qu_id | Integer | false | 
+outlet_id | Integer | true | 
+
+
+
+### /logisticss/id/:id/wangdian_chuku(.:format)
+
+> http请求方式：POST
+
+> 地址：/logisticss/id/:id/wangdian_chuku(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+all_couriers | Virtus::Attribute::Boolean | false | 
+get_all_couriers | Virtus::Attribute::Boolean | false | 
+courier_qu_id | Integer | false | 
+courier_song_id | Integer | false | 
+jiagongdian_id | Integer | false | 
+shouyidian_song_id | Integer | false | 
+shouyidian_qu_id | Integer | false | 
+outlet_id | Integer | true | 
+
+
+
+### /logisticss/id/:id/diaodu_song_paidan(.:format)
+
+> http请求方式：POST
+
+> 地址：/logisticss/id/:id/diaodu_song_paidan(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+all_couriers | Virtus::Attribute::Boolean | false | 
+get_all_couriers | Virtus::Attribute::Boolean | false | 
+courier_qu_id | Integer | false | 
+courier_song_id | Integer | false | 
+jiagongdian_id | Integer | false | 
+shouyidian_song_id | Integer | false | 
+shouyidian_qu_id | Integer | false | 
+
+
+
+### /logisticss/id/:id/wuliu_song_qianshou(.:format)
+
+> http请求方式：POST
+
+> 地址：/logisticss/id/:id/wuliu_song_qianshou(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+all_couriers | Virtus::Attribute::Boolean | false | 
+get_all_couriers | Virtus::Attribute::Boolean | false | 
+courier_qu_id | Integer | false | 
+courier_song_id | Integer | false | 
+jiagongdian_id | Integer | false | 
+shouyidian_song_id | Integer | false | 
+shouyidian_qu_id | Integer | false | 
+
+
+
+### /logisticss/id/:id/shouyidian_song_qianshou(.:format)
+
+> http请求方式：POST
+
+> 地址：/logisticss/id/:id/shouyidian_song_qianshou(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+all_couriers | Virtus::Attribute::Boolean | false | 
+get_all_couriers | Virtus::Attribute::Boolean | false | 
+courier_qu_id | Integer | false | 
+courier_song_id | Integer | false | 
+jiagongdian_id | Integer | false | 
+shouyidian_song_id | Integer | false | 
+shouyidian_qu_id | Integer | false | 
+
+
+
+### /logisticss/id/:id/kehu_qianshou(.:format)
+
+> http请求方式：POST
+
+> 地址：/logisticss/id/:id/kehu_qianshou(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+all_couriers | Virtus::Attribute::Boolean | false | 
+get_all_couriers | Virtus::Attribute::Boolean | false | 
+courier_qu_id | Integer | false | 
+courier_song_id | Integer | false | 
+jiagongdian_id | Integer | false | 
+shouyidian_song_id | Integer | false | 
+shouyidian_qu_id | Integer | false | 
+
+
+
+### /logisticss/id/:id/wuliu_fenjian(.:format)
+
+> http请求方式：POST
+
+> 地址：/logisticss/id/:id/wuliu_fenjian(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+all_couriers | Virtus::Attribute::Boolean | false | 
+get_all_couriers | Virtus::Attribute::Boolean | false | 
+courier_qu_id | Integer | false | 
+courier_song_id | Integer | false | 
+jiagongdian_id | Integer | false | 
+shouyidian_song_id | Integer | false | 
+shouyidian_qu_id | Integer | false | 
+order_details |  | true | 
+
+
+
+### /envelopes/keys(.:format)
+
+> http请求方式：GET
+
+> 地址：/envelopes/keys(.:format)
+
+
+
+
+### /envelopes(.:format)
+
+> http请求方式：POST
+
+> 地址：/envelopes(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+order_id | String | true | 
+
+
+
+### /rcard_lists(.:format)
+
+> http请求方式：GET
+
+> 地址：/rcard_lists(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+title | String | false | 
+
+
+
+### /rcard_lists/keys(.:format)
+
+> http请求方式：GET
+
+> 地址：/rcard_lists/keys(.:format)
+
+
+
+
+### /rcard_lists(.:format)
+
+> http请求方式：POST
+
+> 地址：/rcard_lists(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+title | String | true | 
+price | Integer | true | 
+starttime | String | true | 
+endtime | String | true | 
+apply_department | String | false | 
+applicant | String | false | 
+city | String | false | 
+
+
+
+### /rcard_lists/id/:id(.:format)
+
+> http请求方式：GET
+
+> 地址：/rcard_lists/id/:id(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /rcard_lists/id/:id/update(.:format)
+
+> http请求方式：POST
+
+> 地址：/rcard_lists/id/:id/update(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+title | String | true | 
+price | Integer | true | 
+starttime | String | true | 
+endtime | String | true | 
+apply_department | String | false | 
+applicant | String | false | 
+city | String | false | 
+
+
+
+### /rcard_lists/id/:id/delete(.:format)
+
+> http请求方式：POST
+
+> 地址：/rcard_lists/id/:id/delete(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /rcard_lists/id/:id/generate(.:format)
+
+> http请求方式：POST
+
+> 地址：/rcard_lists/id/:id/generate(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+amount | Integer | true | 
+
+
+
+### /rcard_lists/id/:id/recharge(.:format)
+
+> http请求方式：POST
+
+> 地址：/rcard_lists/id/:id/recharge(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+from_no | String | true | 
+to_no | String | true | 
+xiaoshoujia | Integer | true | 
+chongzhijine | Integer | true | 
+worker_id | Integer | true | 
+
+
+
+### /rcards(.:format)
+
+> http请求方式：GET
+
+> 地址：/rcards(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+rcard_list_id | String | true | 
+
+
+
+### /rcards/keys(.:format)
+
+> http请求方式：GET
+
+> 地址：/rcards/keys(.:format)
+
+
+
+
+### /rcards/single(.:format)
+
+> http请求方式：GET
+
+> 地址：/rcards/single(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+sn_code | String | false | 
+sn_password | String | false | 
+
+
+
+### /rcards/id/:id(.:format)
+
+> http请求方式：GET
+
+> 地址：/rcards/id/:id(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /rcards/id/:id/bind(.:format)
+
+> http请求方式：POST
+
+> 地址：/rcards/id/:id/bind(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+user_id | Integer | true | 
+
+
+
+### /rcards/id/:id/caiwu_tuika(.:format)
+
+> http请求方式：POST
+
+> 地址：/rcards/id/:id/caiwu_tuika(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+money | Float | true | 
+zhenqian | Float | true | 
+worker_id | Integer | true | 
+
+
+
+### /rcards/id/:id/caiwu_tuikuan(.:format)
+
+> http请求方式：POST
+
+> 地址：/rcards/id/:id/caiwu_tuikuan(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+worker_id | Integer | true | 
+
+
+
+### /icards(.:format)
+
+> http请求方式：GET
+
+> 地址：/icards(.:format)
+
+
+
+
+### /icards/keys(.:format)
+
+> http请求方式：GET
+
+> 地址：/icards/keys(.:format)
+
+
+
+
+### /icards/single(.:format)
+
+> http请求方式：GET
+
+> 地址：/icards/single(.:format)
+
+
+
+
+### /icards/id/:id(.:format)
+
+> http请求方式：GET
+
+> 地址：/icards/id/:id(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### 充值
+
+> http请求方式：POST
+
+> 地址：/icards/id/:id/recharge(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+user_id | Integer | true | 
+fee | Float | true | 
+paytype | Integer | true | 
+
+
+
+### /icards/id/:id/caiwu_recharge(.:format)
+
+> http请求方式：POST
+
+> 地址：/icards/id/:id/caiwu_recharge(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+money | Float | true | 
+zhenqian | Float | true | 
+worker_id | Integer | true | 
+
+
+
+### /icards/id/:id/caiwu_tuikuan(.:format)
+
+> http请求方式：POST
+
+> 地址：/icards/id/:id/caiwu_tuikuan(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+worker_id | Integer | true | 
+
+
+
+### /icards/id/:id/caiwu_koukuan(.:format)
+
+> http请求方式：POST
+
+> 地址：/icards/id/:id/caiwu_koukuan(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+money | Float | true | 
+zhenqian | Float | true | 
+worker_id | Integer | true | 
+
+
+
+### /coupon_lists(.:format)
+
+> http请求方式：GET
+
+> 地址：/coupon_lists(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+title | String | false | 
+is_kefu_faquan | Virtus::Attribute::Boolean | false | 
+coupon_group_id | Integer | false | 
+
+
+
+### /coupon_lists/keys(.:format)
+
+> http请求方式：GET
+
+> 地址：/coupon_lists/keys(.:format)
+
+
+
+
+### /coupon_lists(.:format)
+
+> http请求方式：POST
+
+> 地址：/coupon_lists(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+title | String | true | 
+totalnum | Integer | true | 
+title_alias | String | true | 
+exclusive_channels | String | false | 
+least_price | Integer | true | 
+coupon_price | Integer | true | 
+coupon_type | Integer | true | 
+limit_count | Integer | true | 
+use_limit | Integer | true | 
+validity_type | Integer | true | 
+starttime | String | false | 
+endtime | String | false | 
+fixed_term | Integer | false | 
+fixed_begin_term | Integer | false | 
+is_kefu_faquan | Virtus::Attribute::Boolean | false | 
+apply_department | String | false | 
+applicant | String | false | 
+category_id | Integer | false | 
+coupon_group_id | Integer | false | 
+channel | String | false | 
+city_id | Integer | false | 
+user_types | String | false | 
+
+
+
+### /coupon_lists/acquire_kaquan(.:format)
+
+> http请求方式：POST
+
+> 地址：/coupon_lists/acquire_kaquan(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+card_id | String | true | 
+from_user | String | true | 
+sncode | String | true | 
+friend_from_user | String | false | 
+
+
+
+### /coupon_lists/search_couponlist(.:format)
+
+> http请求方式：POST
+
+> 地址：/coupon_lists/search_couponlist(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+keyworlds | String | true | 
+
+
+
+### /coupon_lists/id/:id(.:format)
+
+> http请求方式：GET
+
+> 地址：/coupon_lists/id/:id(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /coupon_lists/id/:id/update(.:format)
+
+> http请求方式：POST
+
+> 地址：/coupon_lists/id/:id/update(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+title | String | true | 
+totalnum | Integer | true | 
+title_alias | String | true | 
+exclusive_channels | String | false | 
+least_price | Integer | true | 
+coupon_price | Integer | true | 
+coupon_type | Integer | true | 
+limit_count | Integer | true | 
+use_limit | Integer | true | 
+validity_type | Integer | true | 
+starttime | String | false | 
+endtime | String | false | 
+fixed_term | Integer | false | 
+fixed_begin_term | Integer | false | 
+is_kefu_faquan | Virtus::Attribute::Boolean | false | 
+apply_department | String | false | 
+applicant | String | false | 
+category_id | Integer | false | 
+coupon_group_id | Integer | false | 
+channel | String | false | 
+city_id | Integer | false | 
+user_types | String | false | 
+
+
+
+### /coupon_lists/id/:id/delete(.:format)
+
+> http请求方式：POST
+
+> 地址：/coupon_lists/id/:id/delete(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /coupon_lists/id/:id/generate(.:format)
+
+> http请求方式：POST
+
+> 地址：/coupon_lists/id/:id/generate(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+amount | Integer | true | 
+
+
+
+### /coupon_lists/id/:id/acquire(.:format)
+
+> http请求方式：POST
+
+> 地址：/coupon_lists/id/:id/acquire(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+from_user | String | false | 
+user_id | Integer | false | 
+client_id | Integer | false | 
+tel | String | false | 
+user_type | Integer | false | 
+
+
+
+### /coupon_lists/id/:id/batch_acquire(.:format)
+
+> http请求方式：POST
+
+> 地址：/coupon_lists/id/:id/batch_acquire(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+user_ids | String | false | 
+client_ids | String | false | 
+user_type | Integer | false | 
+
+
+
+### /coupons(.:format)
+
+> http请求方式：GET
+
+> 地址：/coupons(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+user_id | Integer | false | 
+coupon_list_id | Integer | false | 
+order_id | Integer | false | 
+
+
+
+### /coupons/single(.:format)
+
+> http请求方式：GET
+
+> 地址：/coupons/single(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+sncode | String | true | 
+
+
+
+### /coupons/keys(.:format)
+
+> http请求方式：GET
+
+> 地址：/coupons/keys(.:format)
+
+
+
+
+### /coupons/bind(.:format)
+
+> http请求方式：POST
+
+> 地址：/coupons/bind(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+sncode | String | true | 
+user_id | String | true | 
+
+
+
+### /coupons/id/:id/delete(.:format)
+
+> http请求方式：POST
+
+> 地址：/coupons/id/:id/delete(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /coupon_groups(.:format)
+
+> http请求方式：GET
+
+> 地址：/coupon_groups(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+name | String | false | 
+
+
+
+### /coupon_groups/keys(.:format)
+
+> http请求方式：GET
+
+> 地址：/coupon_groups/keys(.:format)
+
+
+
+
+### /coupon_groups(.:format)
+
+> http请求方式：POST
+
+> 地址：/coupon_groups(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+name | String | true | 
+
+
+
+### /coupon_groups/id/:id(.:format)
+
+> http请求方式：GET
+
+> 地址：/coupon_groups/id/:id(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /coupon_groups/id/:id/update(.:format)
+
+> http请求方式：POST
+
+> 地址：/coupon_groups/id/:id/update(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+name | String | true | 
+
+
+
+### /coupon_groups/id/:id/delete(.:format)
+
+> http请求方式：POST
+
+> 地址：/coupon_groups/id/:id/delete(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /recharge_lists(.:format)
+
+> http请求方式：GET
+
+> 地址：/recharge_lists(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+title | String | false | 
+
+
+
+### /recharge_lists/keys(.:format)
+
+> http请求方式：GET
+
+> 地址：/recharge_lists/keys(.:format)
+
+
+
+
+### /recharge_lists(.:format)
+
+> http请求方式：POST
+
+> 地址：/recharge_lists(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+title | String | true | 
+price | Float | true | 
+zhenqian | Float | true | 
+starttime | String | true | 
+endtime | String | true | 
+apply_department | String | false | 
+applicant | String | false | 
+city | String | false | 
+
+
+
+### /recharge_lists/single(.:format)
+
+> http请求方式：GET
+
+> 地址：/recharge_lists/single(.:format)
+
+
+
+
+### /recharge_lists/id/:id(.:format)
+
+> http请求方式：GET
+
+> 地址：/recharge_lists/id/:id(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /recharge_lists/id/:id/update(.:format)
+
+> http请求方式：POST
+
+> 地址：/recharge_lists/id/:id/update(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+title | String | true | 
+price | Float | true | 
+zhenqian | Float | true | 
+starttime | String | true | 
+endtime | String | true | 
+apply_department | String | false | 
+applicant | String | false | 
+city | String | false | 
+
+
+
+### /recharge_lists/id/:id/generate(.:format)
+
+> http请求方式：POST
+
+> 地址：/recharge_lists/id/:id/generate(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+amount | Integer | true | 
+
+
+
+### /recharge_lists/id/:id/assign(.:format)
+
+> http请求方式：POST
+
+> 地址：/recharge_lists/id/:id/assign(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+amount | Integer | true | 
+start_num | Integer | false | 
+end_num | Integer | false | 
+
+
+
+### /recharge_lists/id/:id/recycle(.:format)
+
+> http请求方式：POST
+
+> 地址：/recharge_lists/id/:id/recycle(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /recharges(.:format)
+
+> http请求方式：GET
+
+> 地址：/recharges(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+user_id | Integer | false | 
+recharge_list_id | Integer | false | 
+
+
+
+### /recharges(.:format)
+
+> http请求方式：POST
+
+> 地址：/recharges(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+courier_id | Integer | true | 
+recharge_buy_list | Hash | true | 
+paytype | Integer | true | 
+
+
+
+### /recharges/shoukajilu(.:format)
+
+> http请求方式：GET
+
+> 地址：/recharges/shoukajilu(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+year | String | false | 
+month | String | false | 
+day | String | false | 
+courier_id | Integer | true | 
+
+
+
+### /recharges/keys(.:format)
+
+> http请求方式：GET
+
+> 地址：/recharges/keys(.:format)
+
+
+
+
+### /recharges/single(.:format)
+
+> http请求方式：GET
+
+> 地址：/recharges/single(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+sncode | String | true | 
+
+
+
+### /recharges/id/:id(.:format)
+
+> http请求方式：GET
+
+> 地址：/recharges/id/:id(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /recharges/id/:id/charge(.:format)
+
+> http请求方式：POST
+
+> 地址：/recharges/id/:id/charge(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /recharges/id/:id/delete(.:format)
+
+> http请求方式：POST
+
+> 地址：/recharges/id/:id/delete(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /paylogs(.:format)
+
+> http请求方式：GET
+
+> 地址：/paylogs(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+user_id | Integer | true | 
+
+
+
+### /paylogs/keys(.:format)
+
+> http请求方式：GET
+
+> 地址：/paylogs/keys(.:format)
+
+
+
+
+### /paylogs/id/:id(.:format)
+
+> http请求方式：GET
+
+> 地址：/paylogs/id/:id(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /paylogs/id/:id/success(.:format)
+
+> http请求方式：POST
+
+> 地址：/paylogs/id/:id/success(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /wash_prices(.:format)
+
+> http请求方式：GET
+
+> 地址：/wash_prices(.:format)
+
+
+
+
+### /wash_prices/keys(.:format)
+
+> http请求方式：GET
+
+> 地址：/wash_prices/keys(.:format)
+
+
+
+
+### /wash_prices(.:format)
+
+> http请求方式：POST
+
+> 地址：/wash_prices(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+cloth_name | String | true | 
+cloth_price | Float | true | 
+cloth_yuanjia | Float | true | 
+
+
+
+### /wash_prices/id/:id(.:format)
+
+> http请求方式：GET
+
+> 地址：/wash_prices/id/:id(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /wash_prices/id/:id/update(.:format)
+
+> http请求方式：POST
+
+> 地址：/wash_prices/id/:id/update(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+cloth_name | String | true | 
+cloth_price | Float | true | 
+cloth_yuanjia | Float | true | 
+
+
+
+### /wash_prices/id/:id/delete(.:format)
+
+> http请求方式：POST
+
+> 地址：/wash_prices/id/:id/delete(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /citys(.:format)
+
+> http请求方式：GET
+
+> 地址：/citys(.:format)
+
+
+
+
+### /citys/group_select_options(.:format)
+
+> http请求方式：GET
+
+> 地址：/citys/group_select_options(.:format)
+
+
+
+
+### /citys/keys(.:format)
+
+> http请求方式：GET
+
+> 地址：/citys/keys(.:format)
+
+
+
+
+### /citys(.:format)
+
+> http请求方式：POST
+
+> 地址：/citys(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+name | String | true | 
+zip_code | String | true | 
+
+
+
+### /citys/id/:id(.:format)
+
+> http请求方式：GET
+
+> 地址：/citys/id/:id(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /citys/id/:id/couriers(.:format)
+
+> http请求方式：GET
+
+> 地址：/citys/id/:id/couriers(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /citys/id/:id/crowdsourcers(.:format)
+
+> http请求方式：GET
+
+> 地址：/citys/id/:id/crowdsourcers(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /citys/id/:id/update(.:format)
+
+> http请求方式：POST
+
+> 地址：/citys/id/:id/update(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+name | String | true | 
+
+
+
+### /citys/id/:id/active(.:format)
+
+> http请求方式：POST
+
+> 地址：/citys/id/:id/active(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /citys/id/:id/inactive(.:format)
+
+> http请求方式：POST
+
+> 地址：/citys/id/:id/inactive(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /citys/id/:id/delete(.:format)
+
+> http请求方式：POST
+
+> 地址：/citys/id/:id/delete(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /areas(.:format)
+
+> http请求方式：GET
+
+> 地址：/areas(.:format)
+
+
+
+
+### /areas/keys(.:format)
+
+> http请求方式：GET
+
+> 地址：/areas/keys(.:format)
+
+
+
+
+### /areas(.:format)
+
+> http请求方式：POST
+
+> 地址：/areas(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+city_name | String | true | 
+name | String | true | 
+
+
+
+### /areas/id/:id(.:format)
+
+> http请求方式：GET
+
+> 地址：/areas/id/:id(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /areas/id/:id/update(.:format)
+
+> http请求方式：POST
+
+> 地址：/areas/id/:id/update(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+name | String | true | 
+
+
+
+### /areas/id/:id/active(.:format)
+
+> http请求方式：POST
+
+> 地址：/areas/id/:id/active(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /areas/id/:id/active_kuaixi(.:format)
+
+> http请求方式：POST
+
+> 地址：/areas/id/:id/active_kuaixi(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /areas/id/:id/inactive_kuaixi(.:format)
+
+> http请求方式：POST
+
+> 地址：/areas/id/:id/inactive_kuaixi(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /areas/id/:id/active_in_list(.:format)
+
+> http请求方式：POST
+
+> 地址：/areas/id/:id/active_in_list(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /areas/id/:id/inactive_in_list(.:format)
+
+> http请求方式：POST
+
+> 地址：/areas/id/:id/inactive_in_list(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /areas/id/:id/inactive(.:format)
+
+> http请求方式：POST
+
+> 地址：/areas/id/:id/inactive(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /areas/id/:id/delete(.:format)
+
+> http请求方式：POST
+
+> 地址：/areas/id/:id/delete(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /products(.json)
+
+> http请求方式：GET
+
+> 地址：/products(.json)
+
+
+
+
+### /products(.json)
+
+> http请求方式：POST
+
+> 地址：/products(.json)
+
+
+
+
+### /products/keys(.json)
+
+> http请求方式：GET
+
+> 地址：/products/keys(.json)
+
+
+
+
+### /products/id/:id(.json)
+
+> http请求方式：GET
+
+> 地址：/products/id/:id(.json)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /products/id/:id/toggle(.json)
+
+> http请求方式：POST
+
+> 地址：/products/id/:id/toggle(.json)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /products/id/:id/update(.json)
+
+> http请求方式：POST
+
+> 地址：/products/id/:id/update(.json)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /order_comments(.:format)
+
+> http请求方式：GET
+
+> 地址：/order_comments(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+grade | Integer | false | 
+
+
+
+### /order_comments/keys(.:format)
+
+> http请求方式：GET
+
+> 地址：/order_comments/keys(.:format)
+
+
+
+
+### /order_comments/id/:id(.:format)
+
+> http请求方式：GET
+
+> 地址：/order_comments/id/:id(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /vouchers(.:format)
+
+> http请求方式：GET
+
+> 地址：/vouchers(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+card_id | Integer | true | 
+card_type | String | true | 
+
+
+
+### /vouchers/keys(.:format)
+
+> http请求方式：GET
+
+> 地址：/vouchers/keys(.:format)
+
+
+
+
+### /mobiles/single(.:format)
+
+> http请求方式：GET
+
+> 地址：/mobiles/single(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+mobile | String | true | 
+
+
+
+### /mobiles/keys(.:format)
+
+> http请求方式：GET
+
+> 地址：/mobiles/keys(.:format)
+
+
+
+
+### /mobiles/id/:id(.:format)
+
+> http请求方式：GET
+
+> 地址：/mobiles/id/:id(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /yiwu_constants(.:format)
+
+> http请求方式：GET
+
+> 地址：/yiwu_constants(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+constant_type | String | true | 
+value | String | false | 
+
+
+
+### /yiwu_constants/keys(.:format)
+
+> http请求方式：GET
+
+> 地址：/yiwu_constants/keys(.:format)
+
+
+
+
+### /yiwu_constants/constant_versions(.:format)
+
+> http请求方式：GET
+
+> 地址：/yiwu_constants/constant_versions(.:format)
+
+
+
+
+### /yiwu_constants(.:format)
+
+> http请求方式：POST
+
+> 地址：/yiwu_constants(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+constant_type | String | true | 
+value | String | true | 
+value_pinyin | String | false | 
+
+
+
+### /yiwu_constants/id/:id(.:format)
+
+> http请求方式：GET
+
+> 地址：/yiwu_constants/id/:id(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /yiwu_constants/id/:id/update(.:format)
+
+> http请求方式：POST
+
+> 地址：/yiwu_constants/id/:id/update(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+value | String | true | 
+value_pinyin | String | false | 
+
+
+
+### /yiwu_constants/id/:id/delete(.:format)
+
+> http请求方式：POST
+
+> 地址：/yiwu_constants/id/:id/delete(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /delivery_fee_settings(.:format)
+
+> http请求方式：GET
+
+> 地址：/delivery_fee_settings(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+city_name | String | false | 
+city_id | Integer | false | 
+
+
+
+### /delivery_fee_settings/keys(.:format)
+
+> http请求方式：GET
+
+> 地址：/delivery_fee_settings/keys(.:format)
+
+
+
+
+### /delivery_fee_settings(.:format)
+
+> http请求方式：POST
+
+> 地址：/delivery_fee_settings(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+city_name | String | true | 
+delivery_fee | Float | true | 
+sentinel_min | Float | true | 
+sentinel_max | Float | true | 
+
+
+
+### /delivery_fee_settings/id/:id(.:format)
+
+> http请求方式：GET
+
+> 地址：/delivery_fee_settings/id/:id(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /delivery_fee_settings/id/:id/update(.:format)
+
+> http请求方式：POST
+
+> 地址：/delivery_fee_settings/id/:id/update(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+city_name | String | true | 
+delivery_fee | Float | true | 
+sentinel_min | Float | true | 
+sentinel_max | Float | true | 
+
+
+
+### /delivery_fee_settings/id/:id/delete(.:format)
+
+> http请求方式：POST
+
+> 地址：/delivery_fee_settings/id/:id/delete(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /order_quotas(.:format)
+
+> http请求方式：GET
+
+> 地址：/order_quotas(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+city_name | String | true | 
+category_id | String | true | 
+
+
+
+### /order_quotas(.:format)
+
+> http请求方式：POST
+
+> 地址：/order_quotas(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+city_name | String | true | 
+area_name | String | true | 
+timerange | String | true | 
+category_id | String | true | 
+amount | Integer | true | 
+
+
+
+### /order_quotas/keys(.:format)
+
+> http请求方式：GET
+
+> 地址：/order_quotas/keys(.:format)
+
+
+
+
+### /order_quotas/id/:id(.:format)
+
+> http请求方式：GET
+
+> 地址：/order_quotas/id/:id(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /order_quotas/id/:id/update(.:format)
+
+> http请求方式：POST
+
+> 地址：/order_quotas/id/:id/update(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+amount | Integer | true | 
+
+
+
+### /order_quotas/id/:id/delete(.:format)
+
+> http请求方式：POST
+
+> 地址：/order_quotas/id/:id/delete(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /recharge_settings(.:format)
+
+> http请求方式：GET
+
+> 地址：/recharge_settings(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+city_name | String | false | 
+
+
+
+### /recharge_settings/keys(.:format)
+
+> http请求方式：GET
+
+> 地址：/recharge_settings/keys(.:format)
+
+
+
+
+### /recharge_settings(.:format)
+
+> http请求方式：POST
+
+> 地址：/recharge_settings(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+money_give | Float | true | 
+min | Float | true | 
+
+
+
+### /recharge_settings/id/:id(.:format)
+
+> http请求方式：GET
+
+> 地址：/recharge_settings/id/:id(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /recharge_settings/id/:id/update(.:format)
+
+> http请求方式：POST
+
+> 地址：/recharge_settings/id/:id/update(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+money_give | Float | true | 
+min | Float | true | 
+
+
+
+### /recharge_settings/id/:id/delete(.:format)
+
+> http请求方式：POST
+
+> 地址：/recharge_settings/id/:id/delete(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### 领取红包
+
+> http请求方式：POST
+
+> 地址：/hongbaos/lingqu(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+uuid | String | true | 红包标识
+from_user | String | true | 用户标识
+user_type | Integer | false | 渠道类型
+
+
+
+### /hongbaos/keys(.:format)
+
+> http请求方式：GET
+
+> 地址：/hongbaos/keys(.:format)
+
+
+
+
+### 红包信息
+
+> http请求方式：GET
+
+> 地址：/hongbaos/single(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+uuid | String | true | 红包标识
+
+
+
+### /courier_messages(.:format)
+
+> http请求方式：GET
+
+> 地址：/courier_messages(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+user_id | Integer | false | 
+
+
+
+### /courier_messages/keys(.:format)
+
+> http请求方式：GET
+
+> 地址：/courier_messages/keys(.:format)
+
+
+
+
+### /courier_messages/id/:id(.:format)
+
+> http请求方式：GET
+
+> 地址：/courier_messages/id/:id(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /foreign_order_id_mappings/get_order_id(.:format)
+
+> http请求方式：GET
+
+> 地址：/foreign_order_id_mappings/get_order_id(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+foreign_order_id | Integer | true | 
+user_type | Integer | true | 
+
+
+
+### /courier_invitees/keys(.:format)
+
+> http请求方式：GET
+
+> 地址：/courier_invitees/keys(.:format)
+
+
+
+
+### 创建小e互助邀请关系
+
+> http请求方式：POST
+
+> 地址：/courier_invitees/create_courier_invitee(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+uid | Integer | true | 
+tel | String | true | 
+name | String | true | 
+
+
+
+### /outlet_order_cleanings(.:format)
+
+> http请求方式：GET
+
+> 地址：/outlet_order_cleanings(.:format)
+
+
+
+
+### /outlet_order_cleanings/keys(.:format)
+
+> http请求方式：GET
+
+> 地址：/outlet_order_cleanings/keys(.:format)
+
+
+
+
+### /outlet_order_cleanings/id/:id(.:format)
+
+> http请求方式：GET
+
+> 地址：/outlet_order_cleanings/id/:id(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /outlet_order_cleanings/id/:id/jiesuan_detail(.:format)
+
+> http请求方式：GET
+
+> 地址：/outlet_order_cleanings/id/:id/jiesuan_detail(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+id |  | | 
+
+
+
+### /qrcode_fans(.:format)
+
+> http请求方式：GET
+
+> 地址：/qrcode_fans(.:format)
+
+
+
+
+### /courier_invitees/keys(.:format)
+
+> http请求方式：GET
+
+> 地址：/courier_invitees/keys(.:format)
+
+
+
+
+### 创建小e互助邀请关系
+
+> http请求方式：POST
+
+> 地址：/courier_invitees/create_courier_invitee(.:format)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+uid | Integer | true | 
+tel | String | true | 
+name | String | true | 
+
+
+
+### /all_classes(.json)
+
+> http请求方式：GET
+
+> 地址：/all_classes(.json)
+
+
+
+
+### /send_sms(.json)
+
+> http请求方式：POST
+
+> 地址：/send_sms(.json)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+phone | String | true | 
+pattern | String | false | 
+user_id | Integer | false | 
+
+
+
+### /send_register_sms(.json)
+
+> http请求方式：POST
+
+> 地址：/send_register_sms(.json)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+phone | String | true | 
+pattern | String | false | 
+
+
+
+### /send_reset_sms(.json)
+
+> http请求方式：POST
+
+> 地址：/send_reset_sms(.json)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+phone | String | true | 
+pattern | String | false | 
+
+
+
+### /verify_code_for_courier(.json)
+
+> http请求方式：POST
+
+> 地址：/verify_code_for_courier(.json)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+phone | String | true | 
+code | Integer | true | 
+user_id | Integer | false | 
+pattern | String | false | 
+
+
+
+### /group_schedules(.json)
+
+> http请求方式：GET
+
+> 地址：/group_schedules(.json)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+map_polygon_group_id | Integer | true | 
+week_nr | Integer | true | 
+courier_type | Integer | true | 
+
+
+
+### /bind_user(.json)
+
+> http请求方式：POST
+
+> 地址：/bind_user(.json)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+phone | String | true | 
+code | String | true | 
+push_token | String | false | 
+user_type | Integer | false | 
+user_id | Integer | false | 
+mark | String | false | 
+
+
+
+### 用户登录
+
+> http请求方式：POST
+
+> 地址：/bind_http_user(.json)
+
+###### 参数说明
+
+参数 | 类型 | 是否必须 | 说明
+------ | ------ | ------ | ------
+from_user | String | true | 
+user_type | Integer | false | 
+
+
+
