@@ -1,4 +1,7 @@
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
+#!/usr/bin/env python 
+#!/usr/bin/python
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
