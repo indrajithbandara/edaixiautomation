@@ -1,4 +1,15 @@
 eclipse.preferences.version=1
 encoding//src/uicaiwutestcase/caiwu_testcase00_rdt5caiwuchongzhicard.py=utf-8
+encoding//src/uicaiwutestcase/caiwu_testcase00_rdt6caiwuordermanage.py=utf-8
+encoding//src/uicaiwutestcase/caiwu_testcase08_citylist_jiagongdian_factorbalancebranch.py=utf-8
+encoding//src/uikefutestcase/kefu_testcase00_rdt2_myuserfeedback.py=utf-8
+encoding//src/uiopstestcase/ops_testcase04_category_substation.py=utf-8
+encoding//src/uiwechatendtestcase/weixinendsystem.py=utf-8
 encoding//src/uiwuliutestcase/wuliu_testcase00_editpermission_sitepersmission.py=utf-8
 encoding//src/uiwuliutestcase/wuliu_testcase00_factorysite_servicesitequery.py=utf-8
+encoding//src/uiwuliutestcase/wuliu_testcase01_querypermission.py=utf-8
+encoding//src/uiwuliutestcase/wuliu_testcase02_factory_inoutstockquery.py=utf-8
+encoding//src/uiwuliutestcase/wuliu_testcase02_factory_sign.py=utf-8
+encoding//src/uiwuliutestcase/wuliu_testcase03_site_sign.py=utf-8
+encoding//src/uiwuliutestcase/wuliu_testcase_testsuit.py=utf-8
+encoding//src/uiwuliutestcase/wuliu_utiltools.py=utf-8

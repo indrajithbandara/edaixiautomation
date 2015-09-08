@@ -60,10 +60,10 @@ class WuliuTestcase02factorysign(unittest.TestCase):
         conn.commit()
         
      
-        n = cursor.execute("SELECT ordersn,bagsn,status_delivery,jiagongdian_id,qianshoudian_id  FROM ims_washing_order WHERE bagsn='E0000000006'") 
-        for i in xrange(cursor.rowcount):
-            ordersn ,bagsn,status_delivery,jiagongdian_id,qianshoudian_id = cursor.fetchone()
-        print ordersn ,bagsn,status_delivery,jiagongdian_id,qianshoudian_id
+#         n = cursor.execute("SELECT ordersn,bagsn,status_delivery,jiagongdian_id,qianshoudian_id  FROM ims_washing_order WHERE bagsn='E0000000006'") 
+#         for i in xrange(cursor.rowcount):
+#             ordersn ,bagsn,status_delivery,jiagongdian_id,qianshoudian_id = cursor.fetchone()
+#         print ordersn ,bagsn,status_delivery,jiagongdian_id,qianshoudian_id
         
         #driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child(2).dropdown a").click()
         driver.find_element_by_css_selector("div.container > nav > ul > li:nth-child(2) >a").click()
@@ -76,7 +76,7 @@ class WuliuTestcase02factorysign(unittest.TestCase):
         driver.find_element_by_xpath("/html/body/header/div/nav/ul/li[2]/ul/li[1]/a").click()
         #html body header.navbar.navbar-default.navbar-static-top div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child(2).dropdown ul.dropdown-menu li:first-child a
         driver.find_element_by_id("bagsn").clear()
-        driver.find_element_by_id("bagsn").send_keys(bagsn)
+        driver.find_element_by_id("bagsn").send_keys("1792411229")
         driver.find_element_by_name("commit").click()
         
         print " after submitted testcase test_wuliu_testcase02factory_sign ",driver.title
