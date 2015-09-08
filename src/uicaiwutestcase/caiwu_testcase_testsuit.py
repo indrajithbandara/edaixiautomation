@@ -64,8 +64,8 @@ if __name__ == '__main__':
     time.sleep(3)
     suite.addTest(CaiwuTestcase01Caiwuordermanagementmore('test_caiwu_testcase01_caiwuordermanagementmore')) 
     time.sleep(3)
-    suite.addTest(CaiwuTestcase01Caiwuordermanagementshoukuanmanagei('test_caiwu_testcase01_caiwuordermanagement_shoukuanmanage')) 
-    time.sleep(3)
+#     suite.addTest(CaiwuTestcase01Caiwuordermanagementshoukuanmanagei('test_caiwu_testcase01_caiwuordermanagement_shoukuanmanage')) 
+#     time.sleep(3)
     #caiwu testcase02
     suite.addTest(CaiwuTestcase02Caiwuyouhuicardgroup('test_caiwu_testcase02_caiwuyouhuicardgroup'))
     time.sleep(3)

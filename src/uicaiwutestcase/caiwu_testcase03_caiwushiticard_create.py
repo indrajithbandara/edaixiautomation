@@ -63,7 +63,7 @@ class CaiwuTestcase03CaiwushiticardCreate(unittest.TestCase):
         #driver.find_element_by_name("commit").click()
         #self.assert_(driver.title, u"财务")
         self.assertEqual(driver.title, u"财务")
-        
+        time.sleep(1)
         shiticardcreate=driver.find_element_by_css_selector("html body div.container div.alert.fade.in.alert-success").text
         print " the shiticardcreate is ",shiticardcreate
         assert u"实体卡生成任务提交成功" in shiticardcreate
