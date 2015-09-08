@@ -37,19 +37,20 @@ class OpsTestcase07clothesmanageminor(unittest.TestCase):
         print driver.title
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
         
-        driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child("+str(7)+") a").click()
+        driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child("+str(8)+") a").click()
         driver.implicitly_wait(10)
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
-        driver.find_element_by_css_selector("div.container div.navbar-collapse.collapse.navbar-responsive-collapse ul.nav.navbar-nav li:nth-child("+str(7)+").dropdown ul.dropdown-menu li:nth-child(1) a").send_keys(Keys.ENTER)
+        driver.find_element_by_css_selector("div.container div.navbar-collapse.collapse.navbar-responsive-collapse ul.nav.navbar-nav li:nth-child("+str(8)+").dropdown ul.dropdown-menu li:nth-child(1) a").send_keys(Keys.ENTER)
         
-        print driver.title
-        self.assertEqual(driver.title, u"e袋洗城市运营后台")
+        print " the testcase test_ops_testcase07_clothesmanageminor is ",driver.title
+        #self.assertEqual(driver.title, u"e袋洗城市运营后台")
         #driver.find_element_by_link_text(u"洗衣").click()
         #driver.find_element_by_css_selector("div.container.container>ul#myTab.nav.nav-tabs>li:first-child>a").send_keys(Keys.ENTER)
         #driver.find_element_by_link_text(u"新 建").click()
         #html body div.navbar.navbar-default.navbar-static-top div.container div.navbar-collapse.collapse.navbar-responsive-collapse ul.nav.navbar-nav li.dropdown ul.dropdown-menu li a
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
-        driver.find_element_by_css_selector("div#container.container a.btn.btn-info.btn-sm").click()
+        #driver.find_element_by_css_selector("div#container.container a.btn.btn-info.btn-sm").click()
+        driver.find_element_by_link_text(u"新 建").click()
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
         driver.find_element_by_id("yiwu_constant_form_value").clear()
         driver.find_element_by_id("yiwu_constant_form_value").send_keys("lukebrand")
@@ -82,7 +83,7 @@ class OpsTestcase07clothesmanageminor(unittest.TestCase):
         finally: self.accept_next_alert = True
     
     def tearDown(self):
-        self.driver.quit()
+        #self.driver.quit()
         self.assertEqual([], self.verificationErrors)
 
 if __name__ == "__main__":
