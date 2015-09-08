@@ -54,14 +54,14 @@ class WuliuTestcase02factorydelivery(unittest.TestCase):
         global cursor 
         cursor = conn.cursor() 
         
-        cursor.execute("UPDATE ims_washing_order SET status_delivery='1' ,qianshoudian_id= NULL WHERE bagsn='E0000000006'")
+        cursor.execute("UPDATE ims_washing_order SET status_delivery='1' ,qianshoudian_id= NULL WHERE bagsn='1792411229'")
         conn.commit()
         
      
-        n = cursor.execute("SELECT ordersn,bagsn,status_delivery,jiagongdian_id,qianshoudian_id  FROM ims_washing_order WHERE bagsn='E0000000006'") 
-        for i in xrange(cursor.rowcount):
-            ordersn ,bagsn,status_delivery,jiagongdian_id,qianshoudian_id = cursor.fetchone()
-        print ordersn ,bagsn,status_delivery,jiagongdian_id,qianshoudian_id
+#         n = cursor.execute("SELECT ordersn,bagsn,status_delivery,jiagongdian_id,qianshoudian_id  FROM ims_washing_order WHERE bagsn='E0000000006'") 
+#         for i in xrange(cursor.rowcount):
+#             ordersn ,bagsn,status_delivery,jiagongdian_id,qianshoudian_id = cursor.fetchone()
+#         print ordersn ,bagsn,status_delivery,jiagongdian_id,qianshoudian_id
         
         driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child(2).dropdown a").click()
         
@@ -79,7 +79,7 @@ class WuliuTestcase02factorydelivery(unittest.TestCase):
         self.assertEqual(driver.title, u"物流")
         #html body header.navbar.navbar-default.navbar-static-top div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child(2).dropdown ul.dropdown-menu li:first-child a
         driver.find_element_by_id("bagsn").clear()
-        driver.find_element_by_id("bagsn").send_keys(bagsn)
+        driver.find_element_by_id("bagsn").send_keys("1792411229")
         driver.find_element_by_name("commit").click()
         
         #print driver.title
