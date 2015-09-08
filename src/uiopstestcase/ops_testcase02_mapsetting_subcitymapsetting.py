@@ -6,7 +6,7 @@ from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
 import unittest, time, re ,ConfigParser
-from xlwt.antlr import ifelse
+# from xlwt.antlr import ifelse
 import appobjectops
 class OpsTestcase02MapSettingSubCityMapSetting(unittest.TestCase):
     def setUp(self):
