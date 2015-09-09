@@ -91,11 +91,13 @@ class KefuTestcase03OrderlistCreateorder(unittest.TestCase):
         driver.find_element_by_id("new_order_form_remark").clear()
         driver.find_element_by_id("new_order_form_remark").send_keys("hellodedaixi")
         
-        driver.find_element_by_name("commit").click()
+        #driver.find_element_by_name("commit").click()
         #driver.find_element_by_css_selector("input.button.btn.btn-info.btn-style-width").send_keys(Keys.ENTER)
         #html body div#container.container div.alert.fade.in.alert-success
         #createorderresult=driver.find_element_by_css_selector("div#container.container div.alert.fade.in.alert-success").text
-
+        #driver.find_element_by_css_selector("input.button.btn.btn-info.btn-style-width").click()
+        driver.find_element_by_xpath("/html/body/div[2]/div/form/input").click()
+        #html body div#container.container div.sidebar_container form#new_new_order_form.form-horizontal.new_new_order_form input.button.btn.btn-info.btn-style-width
         self.assertEqual(driver.title,u"客服系统")
     def is_element_present(self, how, what):
         try: self.driver.find_element(by=how, value=what)
@@ -119,7 +121,7 @@ class KefuTestcase03OrderlistCreateorder(unittest.TestCase):
         finally: self.accept_next_alert = True
     
     def tearDown(self):
-        self.driver.quit()
+        #self.driver.quit()
         self.assertEqual([], self.verificationErrors)
 
 if __name__ == "__main__":
