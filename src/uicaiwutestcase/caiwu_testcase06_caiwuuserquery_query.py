@@ -47,7 +47,7 @@ class CaiwuTestcase06CaiwuuserqueryQuery(unittest.TestCase):
         driver.find_element_by_id("password").clear()
         driver.find_element_by_id("password").send_keys(PASS_WORD)
         driver.find_element_by_id("login-submit").click()
-        driver.implicitly_wait(10)
+        driver.implicitly_wait(30)
         self.assertEqual(driver.title, u"财务")
         driver.find_element_by_css_selector("ul.nav.navbar-nav li:nth-child(7).dropdown a.dropdown-toggle").click()
         #driver.find_element_by_link_text(u"会员卡查询").click()

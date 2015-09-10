@@ -41,7 +41,8 @@ class OpsTestcase02MapSettingSubCityMapSetting(unittest.TestCase):
         time.sleep(2)
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
         driver.find_element_by_css_selector("ul.nav.navbar-nav li:nth-child(2).dropdown ul.dropdown-menu li:first-child a").click()
-       
+        time.sleep(1)
+        
         #driver.find_element_by_css_selector("div#container.container a.btn.btn-sm.btn-info.col-md-1").click()
         #html body div#container.container div.panel.panel-primary div.pnale-body table.table.table-bordered.table-striped tbody tr:nth-child(2) td:last-child
         mapsetoperatename=driver.find_element_by_css_selector("div#container.container div.panel.panel-primary div.pnale-body table.table.table-bordered.table-striped tbody tr:nth-child(2) td:last-child").text

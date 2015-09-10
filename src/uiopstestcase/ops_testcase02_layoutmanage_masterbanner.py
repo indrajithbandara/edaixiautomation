@@ -39,7 +39,7 @@ class OpsTestcase02LayoutManageMasterBanner(unittest.TestCase):
         driver.find_element_by_id("password").send_keys(PASS_WORD)
         driver.find_element_by_id("login-submit").click()
         print driver.title
-
+        time.sleep(1)
         #self.assert_(driver.title, u"e袋洗城市运营后台")
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
         
