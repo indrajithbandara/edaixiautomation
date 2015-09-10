@@ -93,11 +93,11 @@ class WuliuTestcase08citylistdiaoduqueryfanxidan(unittest.TestCase):
         cursor.execute("UPDATE ims_washing_order SET fanxidan_id='0',status_delivery='3',STATUS='7',paytype='1' WHERE ordersn='"+wuliu_utiltools.ordersnnumber+"'")
         conn.commit()
         
-        n = cursor.execute("SELECT ordersn ,username,tel,address ,status_delivery,STATUS ,fanxidan_id  FROM ims_washing_order WHERE status_delivery='3' AND ordersn='"+wuliu_utiltools.ordersnnumber+"'") 
-        for i in xrange(cursor.rowcount):
-            ordersn ,username,tel,address,status_delivery,STATUS ,fanxidan_id = cursor.fetchone()
-        print ordersn ,username,tel,address,status_delivery,STATUS ,fanxidan_id
-        
+#         n = cursor.execute("SELECT ordersn ,username,tel,address ,status_delivery,STATUS ,fanxidan_id  FROM ims_washing_order WHERE status_delivery='3' AND ordersn='"+wuliu_utiltools.ordersnnumber+"'") 
+#         for i in xrange(cursor.rowcount):
+#             ordersn ,username,tel,address,status_delivery,STATUS ,fanxidan_id = cursor.fetchone()
+#         print ordersn ,username,tel,address,status_delivery,STATUS ,fanxidan_id
+#         
         driver.find_element_by_id("order_search_form_ordersn").clear()
         driver.find_element_by_id("order_search_form_ordersn").send_keys(wuliu_utiltools.ordersnnumber)
         driver.find_element_by_name("commit").click()

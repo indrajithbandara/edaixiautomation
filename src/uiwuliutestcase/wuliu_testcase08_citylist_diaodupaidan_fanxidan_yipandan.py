@@ -62,9 +62,10 @@ class WuliuTestcase08citylistdiaodupaidanfanxidanYiPandan(unittest.TestCase):
         global cursor 
         cursor = conn.cursor() 
         
-        #driver.find_element_by_link_text(u"新建城市").click()
+        time.sleep(1)
+        driver.find_element_by_link_text(u"新建城市").click()
         #driver.find_elements_by_css_selector("div#container.container a.btn.btn-infos").click()
-        driver.find_element_by_xpath("/html/body/div/a").click()
+        #driver.find_element_by_xpath("/html/body/div/a").click()
         cityidname=driver.find_element_by_css_selector("div#container.container div.panel.panel-primary div.panle-body div.orders_container form#new_map_city.form-horizontal.new_map_city div.form-inputs div.form-group.select.required.map_city_api_city_id div.col-sm-8 select#map_city_api_city_id.select.required.form-control option:nth-child(2)").text
         print cityidname
         Select(driver.find_element_by_id("map_city_api_city_id")).select_by_visible_text(cityidname)
@@ -97,14 +98,14 @@ class WuliuTestcase08citylistdiaodupaidanfanxidanYiPandan(unittest.TestCase):
         #.btn.btn-success
         self.assertEqual(driver.title, u"物流")
         
-        n = cursor.execute("SELECT ordersn ,username,tel,address ,status_delivery,STATUS ,fanxidan_id  FROM ims_washing_order WHERE status_delivery='3' AND ordersn='15072110393738'") 
-        for i in xrange(cursor.rowcount):
-            ordersn ,username,tel,address,status_delivery,STATUS ,fanxidan_id = cursor.fetchone()
-        print ordersn ,username,tel,address,status_delivery,STATUS ,fanxidan_id
+#         n = cursor.execute("SELECT ordersn ,username,tel,address ,status_delivery,STATUS ,fanxidan_id  FROM ims_washing_order WHERE status_delivery='3' AND ordersn='15072110393738'") 
+#         for i in xrange(cursor.rowcount):
+#             ordersn ,username,tel,address,status_delivery,STATUS ,fanxidan_id = cursor.fetchone()
+#         print ordersn ,username,tel,address,status_delivery,STATUS ,fanxidan_id
         
-        print " the ordersn is ",ordersn
+        #print " the ordersn is ",ordersn
         driver.find_element_by_id("order_search_form_ordersn").clear()
-        driver.find_element_by_id("order_search_form_ordersn").send_keys(ordersn)
+        driver.find_element_by_id("order_search_form_ordersn").send_keys(str(wuliu_utiltools.ordersnnumber))
         
         driver.find_element_by_name("commit").click()
         time.sleep(2)
