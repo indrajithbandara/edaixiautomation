@@ -1,3 +1,4 @@
+#!/usr/lib/python2.7
 # -*- coding: utf-8 -*-
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -6,14 +7,15 @@ from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
 import unittest, time, re,ConfigParser,MySQLdb
-import appobjectcaiwu
+import appobjectcaiwu,caiwu_utiltools
 class CaiwuTestcase06CaiwuuserqueryQuery(unittest.TestCase):
     def setUp(self):
         #self.driver = webdriver.Firefox()
         self.driver = appobjectcaiwu.GetInstance()
         self.driver.implicitly_wait(30)
         conf = ConfigParser.ConfigParser()
-        conf.read("C:/edaixi_testdata/userdata_caiwu.conf")
+        #conf.read("C:/edaixi_testdata/userdata_caiwu.conf")
+        conf.read(caiwu_utiltools.getcaiwuconfigpath())
         global CAIWU_URL,USER_NAME,PASS_WORD,mysqlhostname,mysqlusername,mysqlpassword,mysqlcaiwudb,mysqlrongchangdb
         CAIWU_URL = conf.get("caiwusection", "uihostname")
         USER_NAME = conf.get("caiwusection", "uiusername")

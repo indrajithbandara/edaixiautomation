@@ -1,3 +1,4 @@
+#!/usr/lib/python2.7
 # -*- coding: utf-8 -*-
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -15,7 +16,8 @@ class CaiwuTestcase03CaiwushiticardCrud(unittest.TestCase):
         self.driver = appobjectcaiwu.GetInstance()
         self.driver.implicitly_wait(30)
         conf = ConfigParser.ConfigParser()
-        conf.read("C:/edaixi_testdata/userdata_caiwu.conf")
+        #conf.read("C:/edaixi_testdata/userdata_caiwu.conf")
+        conf.read(caiwu_utiltools.getcaiwuconfigpath())
         global CAIWU_URL,USER_NAME,PASS_WORD
         CAIWU_URL = conf.get("caiwusection", "uihostname")
         USER_NAME = conf.get("caiwusection", "uiusername")

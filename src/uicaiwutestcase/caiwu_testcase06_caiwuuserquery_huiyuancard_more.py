@@ -1,3 +1,4 @@
+#!/usr/lib/python2.7
 # -*- coding: utf-8 -*-
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -7,14 +8,16 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
 import unittest, time, re ,ConfigParser
 from selenium.webdriver.support.ui import WebDriverWait 
-import appobjectcaiwu
+import appobjectcaiwu,caiwu_utiltools
 class CaiwuTestcase06CaiwuuserqueryHuiyuanMore(unittest.TestCase):
     def setUp(self):
         #self.driver = webdriver.Firefox()
         self.driver = appobjectcaiwu.GetInstance()
         self.driver.implicitly_wait(30)
         conf = ConfigParser.ConfigParser()
-        conf.read("C:/edaixi_testdata/userdata_caiwu.conf")
+        #conf.read("C:/edaixi_testdata/userdata_caiwu.conf")
+        #conf.read(caiwu_utiltools.getcaiwuconfigpath())
+        conf.read(caiwu_utiltools.getcaiwuconfigpath())
         global CAIWU_URL,USER_NAME,PASS_WORD
         CAIWU_URL = conf.get("caiwusection", "uihostname")
         USER_NAME = conf.get("caiwusection", "uiusername")
@@ -31,6 +34,7 @@ class CaiwuTestcase06CaiwuuserqueryHuiyuanMore(unittest.TestCase):
         driver.get(self.base_url + "/")
         #driver.find_element_by_link_text(u"登陆").click()
         driver.find_element_by_css_selector("div.container h3.text-center.text-primary a.btn.btn-success.text-center").click()
+        time.sleep(1)
         driver.find_element_by_id("username").clear()
         driver.find_element_by_id("username").send_keys(USER_NAME)
         driver.find_element_by_id("password").clear()
