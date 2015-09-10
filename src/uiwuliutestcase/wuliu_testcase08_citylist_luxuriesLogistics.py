@@ -49,7 +49,7 @@ class WuliuTestcase08CitylistluxuriesLogistics(unittest.TestCase):
         self.assertTrue(driver.title, u"物流")
         
         time.sleep(1)
-        driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child(8).active a").click()
+        driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child("+str(9)+").active a").click()
         
         self.assertEqual(driver.title, u"物流")
      

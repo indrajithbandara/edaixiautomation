@@ -15,6 +15,7 @@ from wuliu_testcase03_site_inoutstockquery import *
 from wuliu_testcase03_site_sign import *
 
 from wuliu_testcase04_pushorder import *
+from wuliu_testcase04_modifysignnumber import *
 
 from wuliu_testcase05_takecloth import *
 
@@ -80,6 +81,9 @@ if __name__ == '__main__':
      time.sleep(3)
      #caiwu testcase04
      suite.addTest(WuliuTestcase04pushorder('test_wuliu_testcase04_pushorder'))
+     time.sleep(3)
+
+     suite.addTest(WuliuTestcase04modifysignnumber('test_wuliu_testcase04_modifysignnumber'))
      time.sleep(3)
      #caiwu testcase05
      suite.addTest(WuliuTestcase05takecloth('test_wuliu_testcase05_takecloth'))

@@ -54,7 +54,7 @@ class WuliuTestcase08Citylistxiaoeyizhansitepersonmanage(unittest.TestCase):
         cursor = conn.cursor() 
 
         
-        driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child(8).active a").click()
+        driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child("+str(9)+").active a").click()
         
         self.assertEqual(driver.title, u"物流")
      
@@ -92,6 +92,7 @@ class WuliuTestcase08Citylistxiaoeyizhansitepersonmanage(unittest.TestCase):
 
         driver.find_element_by_name("commit").click()
       
+        time.sleep(1)
         self.assertEqual(driver.title, u"物流")
 
         driver.find_element_by_id("realname").clear()

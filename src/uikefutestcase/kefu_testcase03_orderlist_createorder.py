@@ -85,18 +85,25 @@ class KefuTestcase03OrderlistCreateorder(unittest.TestCase):
         print " the datestr is ",datestr
         
         driver.find_element_by_id("new_order_form_washing_date").send_keys(datestr)
-        
+        driver.find_element_by_id("new_order_form_washing_date").click()
+        time.sleep(1)
         Select(driver.find_element_by_id("new_order_form_washing_time")).select_by_visible_text("08:00-10:00")
-  
+        time.sleep(1)
         driver.find_element_by_id("new_order_form_remark").clear()
         driver.find_element_by_id("new_order_form_remark").send_keys("hellodedaixi")
         
-        driver.find_element_by_name("commit").click()
+        time.sleep(2)
+        #driver.find_element_by_name("commit").click()
         #driver.find_element_by_css_selector("input.button.btn.btn-info.btn-style-width").send_keys(Keys.ENTER)
         #html body div#container.container div.alert.fade.in.alert-success
         #createorderresult=driver.find_element_by_css_selector("div#container.container div.alert.fade.in.alert-success").text
         #driver.find_element_by_css_selector("input.button.btn.btn-info.btn-style-width").click()
         #driver.find_element_by_xpath("/html/body/div[2]/div/form/input").click()
+        driver.execute_script("window.scrollBy(0,200)","")  #
+        driver.execute_script("window.scrollBy(0,document.body.scrollHeight)","")
+        time.sleep(1)
+        driver.find_element_by_css_selector("input.button.btn.btn-info.btn-style-width").click()
+        #html body div#container.container div.sidebar_container form#new_new_order_form.form-horizontal.new_new_order_form input.button.btn.btn-info.btn-style-width
         #html body div#container.container div.sidebar_container form#new_new_order_form.form-horizontal.new_new_order_form input.button.btn.btn-info.btn-style-width
         self.assertEqual(driver.title,u"客服系统")
     def is_element_present(self, how, what):

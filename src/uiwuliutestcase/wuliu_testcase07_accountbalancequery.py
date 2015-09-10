@@ -42,7 +42,7 @@ class WuliuTestcase07AccountBalance(unittest.TestCase):
         #self.assertTrue(driver.title, u"物流")
         self.assertEqual(driver.title, u"物流")
         
-        driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child(7) a").click()
+        driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child("+str(8)+") a").click()
         self.assertEqual(driver.title, u"物流")
         
         driver.find_element_by_id("sn_code").clear()

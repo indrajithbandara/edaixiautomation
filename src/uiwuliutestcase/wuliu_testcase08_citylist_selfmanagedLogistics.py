@@ -48,7 +48,7 @@ class WuliuTestcase08CitylistselfmanagedLogistics(unittest.TestCase):
         print driver.title
         self.assertEqual(driver.title, u"物流")
         
-        driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child(8).active a").click()
+        driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child("+str(9)+").active a").click()
         self.assertEqual(driver.title, u"物流")
         
         driver.find_element_by_css_selector("div#container.container div.panel.panel-primary.checkout-order table.table.table-striped.city-table tbody tr:nth-child(2) td:nth-child(2).btn-link a:nth-child(4)").click()
@@ -88,6 +88,7 @@ class WuliuTestcase08CitylistselfmanagedLogistics(unittest.TestCase):
         driver.find_element_by_name("commit").click()
         self.assertEqual(driver.title, u"物流")
         #click query button
+        time.sleep(1)
         driver.find_element_by_css_selector("div#container.container div.panel.panel-primary.checkout-order div.panle-body div.orders_container form div.col-md-4.input-group span.input-group-btn input.btn.btn-info").click()
         self.assertEqual(driver.title, u"物流")
         #html body div#container.container div.panel.panel-primary.checkout-order div.panle-body div.orders_container form div.col-md-4.input-group span.input-group-btn input.btn.btn-info

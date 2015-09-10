@@ -49,7 +49,7 @@ class WuliuTestcase08Citylistouttimemanage(unittest.TestCase):
         print " testcase test_wuliu_testcase08_citylist_outtimemanage is ",driver.title
         self.assertEqual(driver.title, u"物流")
            
-        driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child(8).active a").click()
+        driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child("+str(9)+").active a").click()
         
         conn=MySQLdb.connect(host=mysqlhostname,user=mysqlusername,passwd=mysqlpassword,db=mysqlrongchangdb,charset="utf8")    
         global cursor 
@@ -85,7 +85,7 @@ class WuliuTestcase08Citylistouttimemanage(unittest.TestCase):
         print " the addsuccess is ",addsuccess
         #shtml body div#container.container>div:nth-child(2)>a.btn.btn-default
         
-        driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child(8).active a").click()
+        driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child("+str(9)+").active a").click()
                  
         driver.find_element_by_css_selector("div#container.container div.panel.panel-primary.checkout-order table.table.table-striped.city-table tbody tr:nth-child(2) td:nth-child(2).btn-link a:nth-child(3)").click()
         #.btn.btn-success
