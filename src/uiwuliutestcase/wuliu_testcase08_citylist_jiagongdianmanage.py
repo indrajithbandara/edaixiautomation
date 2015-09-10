@@ -200,8 +200,11 @@ class WuliuTestcase08Citylistjiagongdianmanage(unittest.TestCase):
         #driver.find_element_by_id("s2id_autogen2").send_keys("01:00")
         
         #s2id_autogen2
+        driver.find_element_by_id("outlet_form_bianma").clear()
+        driver.find_element_by_id("outlet_form_bianma").send_keys("1125")
 #         driver.find_element_by_id("capacity_5_count").clear()
 #         driver.find_element_by_id("capacity_5_count").send_keys("5")
+        
 # 
 #         driver.find_element_by_id("capacity_9_count").clear()
 #         driver.find_element_by_id("capacity_9_count").send_keys("5")
@@ -209,6 +212,7 @@ class WuliuTestcase08Citylistjiagongdianmanage(unittest.TestCase):
 #         driver.find_element_by_id("outlet_form_can_xiyi").click()
 #         driver.find_element_by_id("outlet_form_can_xixie").click()
 #         driver.find_element_by_id("outlet_form_can_luxury").click()
+##outlet_form_bianma
         driver.find_element_by_name("commit").click()
         
         self.assertEqual(driver.title, u"物流")

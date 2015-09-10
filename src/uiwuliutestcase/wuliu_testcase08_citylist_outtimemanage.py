@@ -57,6 +57,7 @@ class WuliuTestcase08Citylistouttimemanage(unittest.TestCase):
         
         #driver.find_element_by_link_text(u"新建城市").click()
         #driver.find_elements_by_css_selector("div#container.container a.btn.btn-infos").click()
+        time.sleep(1)
         driver.find_element_by_xpath("/html/body/div/a").click()
         self.assertEqual(driver.title,u"物流")
         cityidname=driver.find_element_by_css_selector("div#container.container div.panel.panel-primary div.panle-body div.orders_container form#new_map_city.form-horizontal.new_map_city div.form-inputs div.form-group.select.required.map_city_api_city_id div.col-sm-8 select#map_city_api_city_id.select.required.form-control option:nth-child(2)").text
@@ -78,7 +79,8 @@ class WuliuTestcase08Citylistouttimemanage(unittest.TestCase):
         
         driver.find_element_by_name("commit").click()
         self.assertEqual(driver.title, u"物流")
-                
+        time.sleep(1)
+        
         addsuccess=driver.find_element_by_css_selector("div#container.container div.alert.fade.in.alert-success").text
         print " the addsuccess is ",addsuccess
         #shtml body div#container.container>div:nth-child(2)>a.btn.btn-default
@@ -136,7 +138,7 @@ class WuliuTestcase08Citylistouttimemanage(unittest.TestCase):
         finally: self.accept_next_alert = True
     
     def tearDown(self):
-        #self.driver.quit()
+        self.driver.quit()
         self.assertEqual([], self.verificationErrors)
 
 if __name__ == "__main__":
