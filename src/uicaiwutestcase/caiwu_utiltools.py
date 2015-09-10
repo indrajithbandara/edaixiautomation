@@ -159,7 +159,9 @@ def get_today_month(n=0):
         arr = (y,m,day) 
     return "-".join("%s" %i for i in arr) 
   
-
+def getcaiwuconfigpath():
+    return "C:/edaixi_testdata/userdata_caiwu.conf"
+    
 if __name__=="__main__":
     start = time.clock()
         

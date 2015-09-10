@@ -8,14 +8,15 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
 import unittest, time, re,ConfigParser
 from selenium.webdriver.support.ui import WebDriverWait 
-import appobjectcaiwu
+import appobjectcaiwu, caiwu_utiltools
 class CaiwuTestcase00rdt6caiwuordermanage(unittest.TestCase):
     def setUp(self):
         #self.driver = webdriver.Firefox()
         self.driver = appobjectcaiwu.GetInstance()
         self.driver.implicitly_wait(30)
         conf = ConfigParser.ConfigParser()
-        conf.read("C:/edaixi_testdata/userdata_caiwu.conf")
+        #conf.read("C:/edaixi_testdata/userdata_caiwu.conf")
+        conf.read(caiwu_utiltools.getcaiwuconfigpath())
         global CAIWU_URL,USER_NAME,PASS_WORD
         CAIWU_URL = conf.get("caiwusection", "uihostname")
         USER_NAME = conf.get("caiwusection", "uirdt6username")

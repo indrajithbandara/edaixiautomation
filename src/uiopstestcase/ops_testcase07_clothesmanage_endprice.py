@@ -41,7 +41,8 @@ class OpsTestcase07clothesmanageendprice(unittest.TestCase):
         driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child("+str(7)+") a").click()
         driver.implicitly_wait(10)
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
-        driver.find_element_by_css_selector("div.container div.navbar-collapse.collapse.navbar-responsive-collapse ul.nav.navbar-nav li:nth-child("+str(7)+").dropdown ul.dropdown-menu li:nth-child(2) a").send_keys(Keys.ENTER)
+        driver.find_element_by_css_selector("div.container>div>ul.nav.navbar-nav>li:nth-child("+str(7)+").dropdown>ul.dropdown-menu>li:nth-child(2)>a").send_keys(Keys.ENTER)
+        #driver.find_element_by_css_selector("div.container div.navbar-collapse.collapse.navbar-responsive-collapse ul.nav.navbar-nav li:nth-child("+str(7)+").dropdown ul.dropdown-menu li:nth-child(2) a").send_keys(Keys.ENTER)
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
         print driver.title
         
@@ -82,6 +83,7 @@ class OpsTestcase07clothesmanageendprice(unittest.TestCase):
         print randomstr2
         #html body div#container.container table.table.table-bordered.table-striped tbody tr:nth-child(2) td:last-child a:first-child
         #driver.find_element_by_link_text(u"编辑").click()
+        time.sleep(1)
         driver.find_element_by_css_selector("div#container.container table.table.table-bordered.table-striped tbody tr:nth-child(2) td:last-child a:first-child").send_keys(Keys.ENTER)
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
         

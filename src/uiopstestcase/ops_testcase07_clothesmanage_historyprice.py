@@ -36,11 +36,15 @@ class OpsTestcase07clothesmanagehistoryprice(unittest.TestCase):
         driver.find_element_by_id("login-submit").click()
         print driver.title
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
-        
-        driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child("+str(7)+") a").click()
-        driver.implicitly_wait(10)
+        time.sleep(1)
+        driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child("+str(7)+")>a").click()
+        driver.implicitly_wait(30)
+        #self.assertEqual(driver.title, u"e袋洗城市运营后台")
+        #driver.find_element_by_css_selector("ul.nav.navbar-nav>li:nth-child("+str(8)+").dropdown>ul.dropdown-menu>li:nth-child("+str(3)+")>a").click()#.send_keys(Keys.ENTER)
+        #driver.find_element_by_css_selector("div.container>div>ul.nav.navbar-nav>li:nth-child("+str(7)+").dropdown>ul.dropdown-menu>li:nth-child("+str(2)+")>a").send_keys(Keys.ENTER)
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
-        driver.find_element_by_css_selector("div.container div.navbar-collapse.collapse.navbar-responsive-collapse ul.nav.navbar-nav li:nth-child(7).dropdown ul.dropdown-menu li:nth-child(3) a").send_keys(Keys.ENTER)
+        driver.find_element_by_css_selector("div.container>div>ul.nav.navbar-nav>li:nth-child("+str(7)+").dropdown>ul.dropdown-menu>li:nth-child(3)>a").send_keys(Keys.ENTER)
+        #driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child("+str(8)+").dropdown>ul.dropdown-menu>li:nth-child(3)>a").click()#.send_keys(Keys.ENTER)
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
         print driver.title
         #html body div#container.container form table tbody tr td div.input-group select#category_id.form-control option

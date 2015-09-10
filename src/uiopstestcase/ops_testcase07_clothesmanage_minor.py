@@ -34,13 +34,13 @@ class OpsTestcase07clothesmanageminor(unittest.TestCase):
         driver.find_element_by_id("password").clear()
         driver.find_element_by_id("password").send_keys(PASS_WORD)
         driver.find_element_by_id("login-submit").click()
-        print driver.title
+        print "the testcase test_ops_testcase07_clothesmanageminor is ",driver.title
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
-        
-        driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child("+str(8)+") a").click()
-        driver.implicitly_wait(10)
+        time.sleep(1)
+        driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child("+str(7)+") a").click()
+        driver.implicitly_wait(30)
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
-        driver.find_element_by_css_selector("div.container div.navbar-collapse.collapse.navbar-responsive-collapse ul.nav.navbar-nav li:nth-child("+str(8)+").dropdown ul.dropdown-menu li:nth-child(1) a").send_keys(Keys.ENTER)
+        driver.find_element_by_css_selector("div.container div.navbar-collapse.collapse.navbar-responsive-collapse ul.nav.navbar-nav li:nth-child("+str(7)+").dropdown ul.dropdown-menu li:nth-child(1) a").send_keys(Keys.ENTER)
         
         print " the testcase test_ops_testcase07_clothesmanageminor is ",driver.title
         #self.assertEqual(driver.title, u"e袋洗城市运营后台")
@@ -49,6 +49,7 @@ class OpsTestcase07clothesmanageminor(unittest.TestCase):
         #driver.find_element_by_link_text(u"新 建").click()
         #html body div.navbar.navbar-default.navbar-static-top div.container div.navbar-collapse.collapse.navbar-responsive-collapse ul.nav.navbar-nav li.dropdown ul.dropdown-menu li a
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
+        time.sleep(1)
         #driver.find_element_by_css_selector("div#container.container a.btn.btn-info.btn-sm").click()
         driver.find_element_by_link_text(u"新 建").click()
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
