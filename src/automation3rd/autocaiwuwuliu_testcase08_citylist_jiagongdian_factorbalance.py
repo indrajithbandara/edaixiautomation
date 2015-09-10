@@ -16,7 +16,8 @@ class WuliuTestcase08CitylistJiagongdianFactoryBalance(unittest.TestCase):
         self.driver = appobjectauto3rd.GetInstance()
         self.driver.implicitly_wait(30)
         conf = ConfigParser.ConfigParser()
-        conf.read("C:/edaixi_testdata/userdata_wuliu.conf")
+        #conf.read("C:/edaixi_testdata/userdata_wuliu.conf")
+        conf.read(auto3rd_utiltools.get3rdwuliupath())
         global WULIU_URL,USER_NAME,PASS_WORD,mysqlhostname,mysqlusername,mysqlpassword,mysqlwuliudb,mysqlrongchangdb
         WULIU_URL = conf.get("wuliusection", "uihostname")
         USER_NAME = conf.get("wuliusection", "uiusername")

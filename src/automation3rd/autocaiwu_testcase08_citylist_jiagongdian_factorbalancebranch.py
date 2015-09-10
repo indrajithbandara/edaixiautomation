@@ -19,7 +19,8 @@ class CaiwuTestcase08CitylistJiagongdianFactoryBalanceBranch(unittest.TestCase):
         self.driver = appobjectauto3rd.GetInstance()
         self.driver.implicitly_wait(30)
         conf = ConfigParser.ConfigParser()
-        conf.read("C:/edaixi_testdata/userdata_caiwu.conf")
+        #conf.read("C:/edaixi_testdata/userdata_caiwu.conf")
+        conf.read(auto3rd_utiltools.get3rdcaiwupath())
         global CAIWU_URL,BranchUSER_NAME,BranchPASS_WORD,mysqlhostname,mysqlusername,mysqlpassword,mysqlcaiwudb
         CAIWU_URL = conf.get("caiwusection", "uihostname")
         BranchUSER_NAME = conf.get("caiwusection", "uibranchusername")
@@ -130,10 +131,14 @@ class CaiwuTestcase08CitylistJiagongdianFactoryBalanceBranch(unittest.TestCase):
         driver.find_element_by_id("outlet_jiesuan_form_jiesuan_end_time").click()
         #WebDriverWait(driver, 3).until(lambda driver : driver.title.lower().startswith(u"python"))
         #WebDriverWait(driver, 3).until(lambda driver : driver.refresh())
-
+        driver.execute_script("var doc=document.getElementById('ui-datepicker-div');doc.setAttribute('style','display:block');")
+        
         #WebDriverWait(driver, 3).until(EC.title_contains(u"财务"))
-        driver.find_element_by_name("commit").click()
         time.sleep(1)
+        #driver.find_element_by_name("commit").click()
+        #driver.find_element_by_link_text(u"生成结算单").click()
+        driver.find_element_by_css_selector("div.container div.orders_container form#jiesuan_form.form-horizontal.new_outlet_jiesuan_form button.button.btn.btn-info.pull-right").click()
+
         self.assertEqual(driver.title, u"财务")
 #         winBeforeHandle = driver.current_window_handle
 #         print "winBeforeHandle==",winBeforeHandle
@@ -143,6 +148,7 @@ class CaiwuTestcase08CitylistJiagongdianFactoryBalanceBranch(unittest.TestCase):
 #             if winBeforeHandle != handle:
 #                 driver.switch_to_window(handle)
 #                 
+        time.sleep(1)
         driver.find_element_by_link_text(u"提交审核").click()
         time.sleep(1)
         self.assertRegexpMatches(self.close_alert_and_get_its_text(), u"^确认提交审核[\s\S]$")

@@ -224,6 +224,13 @@ def get_today_month(n=0):
         arr = (y,m,day) 
     return "-".join("%s" %i for i in arr) 
   
+def get3rdcaiwupath():
+    return "C:/edaixi_testdata/userdata_caiwu.conf"
+
+def get3rdwuliupath():
+    return "C:/edaixi_testdata/userdata_wuliu.conf"
+
+
 
 if __name__=="__main__":
     start = time.clock()

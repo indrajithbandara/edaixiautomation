@@ -7,7 +7,7 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
 import unittest, time, re,ConfigParser,MySQLdb
 from selenium.webdriver.common.action_chains import ActionChains
-import appobjectauto3rd
+import appobjectauto3rd,auto3rd_utiltools
 
 class CaiwuTestcase08CitylistJiagongdianFactoryBalanceMaster(unittest.TestCase):
     def setUp(self):
@@ -15,7 +15,8 @@ class CaiwuTestcase08CitylistJiagongdianFactoryBalanceMaster(unittest.TestCase):
         self.driver = appobjectauto3rd.GetInstance()
         self.driver.implicitly_wait(30)
         conf = ConfigParser.ConfigParser()
-        conf.read("C:/edaixi_testdata/userdata_caiwu.conf")
+        #conf.read("C:/edaixi_testdata/userdata_caiwu.conf")
+        conf.read(auto3rd_utiltools.get3rdcaiwupath())
         global CAIWU_URL,MasterUSER_NAME,MasterPASS_WORD,mysqlhostname,mysqlusername,mysqlpassword,mysqldatabase
         CAIWU_URL = conf.get("caiwusection", "uihostname")
         MasterUSER_NAME = conf.get("caiwusection", "uimasterusername")
