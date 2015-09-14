@@ -51,21 +51,28 @@ class WuliuTestcase00siteservicesitequery(unittest.TestCase):
         self.assertEqual(driver.title, u"物流")
         time.sleep(2)
         #html body header.navbar.navbar-default.navbar-static-top div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li.active a
-        driver.find_element_by_css_selector("div.container>nav.collapse.navbar-collapse.bs-navbar-collapse>ul.nav.navbar-nav>li:nth-child(2)>a").click()
+        driver.find_element_by_css_selector("div.container>nav.collapse.navbar-collapse.bs-navbar-collapse>ul.nav.navbar-nav>li:nth-child("+str(3)+")>a").click()
         
         #self.assertTrue(driver.title, u"物流")
         self.assertEqual(driver.title, u"物流")
        
         driver.find_element_by_id("seal_sn").clear()
-        driver.find_element_by_id("seal_sn").send_keys("E0000000006")
+        driver.find_element_by_id("seal_sn").send_keys(appobjectwuliu.testdata_ordersnumber)
         driver.find_element_by_name("commit").click()
         self.assertEqual(driver.title, u"物流")
         driver.find_element_by_id("ordersn").clear()
-        driver.find_element_by_id("ordersn").send_keys("15072110393738")
+        driver.find_element_by_id("ordersn").send_keys(appobjectwuliu.testdata_ordersnumber)
         driver.find_element_by_name("commit").click()
 
         self.assertEqual(driver.title, u"物流")
         
+        driver.find_element_by_css_selector("div.container>nav.collapse.navbar-collapse.bs-navbar-collapse>ul.nav.navbar-nav>li:nth-child("+str(2)+")>a").click()
+        
+        driver.find_element_by_id("search_ordersn").clear()
+        driver.find_element_by_id("search_ordersn").send_keys(appobjectwuliu.testdata_ordersnumber)
+        driver.find_element_by_name("commit").click()
+        #search_ordersn
+        self.assertEqual(driver.title, u"物流")
         
     
     def is_element_present(self, how, what):

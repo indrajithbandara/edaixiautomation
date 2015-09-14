@@ -47,7 +47,7 @@ class WuliuTestcase02factorydelivery(unittest.TestCase):
         driver.find_element_by_id("password").clear()
         driver.find_element_by_id("password").send_keys(PASS_WORD)
         driver.find_element_by_id("login-submit").click()
-        print driver.title
+        print " the testcase test_wuliu_testcase02_factory_delivery is ",driver.title
         #self.assertTrue(driver.title, u"物流")
         self.assertEqual(driver.title, u"物流")
         time.sleep(2)
@@ -66,11 +66,11 @@ class WuliuTestcase02factorydelivery(unittest.TestCase):
 #         print ordersn ,bagsn,status_delivery,jiagongdian_id,qianshoudian_id
         
         driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child(2).dropdown a").click()
-        
+        self.assertEqual(driver.title, u"物流")
         #driver.find_element_by_css_selector("div.container > ul.nav.navbar-nav > li:nth-child(2).dropdown > ul.dropdown-menu > li:first-child > a").click()
         #print rukuqinshou
         #self.assertTrue(driver.title, u"物流")
-        self.assertEqual(driver.title, u"物流")
+
         #ActionChains(driver).context_click(rukuqinshou).perform()
         #ActionChains(driver).double_click(rukuqinshou).perform()
         
@@ -87,13 +87,13 @@ class WuliuTestcase02factorydelivery(unittest.TestCase):
         #print driver.title
         #self.assertTrue(driver.title, u"物流")
         self.assertEqual(driver.title, u"物流")
-        
+        time.sleep(1)
         driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child(2).dropdown a").click()
         self.assertEqual(driver.title, u"物流")
         
         driver.find_element_by_xpath("/html/body/header/div/nav/ul/li[2]/ul/li[2]/a").click()
                 
-        Select(driver.find_element_by_id("store_type")).select_by_visible_text(u"加工店")
+        #Select(driver.find_element_by_id("store_type")).select_by_visible_text(u"加工店")
         driver.find_element_by_id("order_key").clear()
         driver.find_element_by_id("order_key").send_keys("1792411229")
         driver.find_element_by_name("commit").click()

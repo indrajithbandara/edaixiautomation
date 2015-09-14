@@ -13,18 +13,18 @@ def GetInstance():
     if(instance == None):  
             mutex.acquire()   
             if(instance == None):  
-                #printInfo(u'初始化单例')  
+                #printInfo(u'åˆ�å§‹åŒ–å�•ä¾‹')  
                 print u"initial singleton .........."
                 #instance = webdriver.Firefox()
                 #instance = webdriver.Ie()
                 instance = webdriver.Chrome()
             else:  
                 print u" Sigleton has been initial...."
-                #printInfo(u'单例已经初始化')    
+                #printInfo(u'å�•ä¾‹å·²ç»�åˆ�å§‹åŒ–')    
             mutex.release()  
     else:  
             print u" Sigleton has been initial...."
-            #printInfo(u'单例已经初始化')          
+            #printInfo(u'å�•ä¾‹å·²ç»�åˆ�å§‹åŒ–')          
     return instance  
     
     
@@ -39,21 +39,25 @@ class Singleton():
         if(Singleton.instance == None):  
             Singleton.mutex.acquire()   
             if(Singleton.instance == None):  
-                #printInfo(u'初始化单例')  
+                #printInfo(u'åˆ�å§‹åŒ–å�•ä¾‹')  
                 print u"initial singleton .........."
                 Singleton.instance = webdriver.Firefox()
             else:  
                 print u" Sigleton has been initial...."
-                #printInfo(u'单例已经初始化')    
+                #printInfo(u'å�•ä¾‹å·²ç»�åˆ�å§‹åŒ–')    
             Singleton.mutex.release()  
         else:  
             print u" Sigleton has been initial...."
-            #printInfo(u'单例已经初始化')          
+            #printInfo(u'å�•ä¾‹å·²ç»�åˆ�å§‹åŒ–')          
         return Singleton.instance  
 
 #class appobjectops:
 # class appObjectUtils(self):
-#     
+# test data for wuliu system
+global testdata_ordersnumber
+testdata_ordersnumber="E0000000006"
+global testdata_bagsnnumber
+testdata_bagsnnumber="E0000000006"
 # class appobjectops:
 global permloginClickButton,clickPermissionLink,clickPermissionButton
 global clickPositionLink,clickPositionNewButton,clickPositionEditButton,clickPositionDeleteButton

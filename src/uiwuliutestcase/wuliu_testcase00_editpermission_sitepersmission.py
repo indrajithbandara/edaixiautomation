@@ -72,7 +72,7 @@ class WuliuTestcase00EditSitePermission(unittest.TestCase):
         global cursor 
         cursor = conn.cursor() 
         
-        cursor.execute("UPDATE ims_washing_order SET status_delivery='1' ,qianshoudian_id= NULL WHERE bagsn='E0000000006'")
+        cursor.execute("UPDATE ims_washing_order SET status_delivery='1' ,qianshoudian_id= NULL WHERE bagsn='"+appobjectwuliu.testdata_bagsnnumber+"'")
         conn.commit()
         
 #         n = cursor.execute("SELECT ordersn,bagsn,status_delivery,jiagongdian_id,qianshoudian_id  FROM ims_washing_order WHERE bagsn='E0000000006'") 
@@ -81,7 +81,7 @@ class WuliuTestcase00EditSitePermission(unittest.TestCase):
 #         print ordersn ,bagsn,status_delivery,jiagongdian_id,qianshoudian_id
         time.sleep(1)
         driver.find_element_by_id("bagsn").clear()
-        driver.find_element_by_id("bagsn").send_keys("E0000000006")
+        driver.find_element_by_id("bagsn").send_keys(appobjectwuliu.testdata_bagsnnumber)
         driver.find_element_by_name("commit").click()
         self.assertEqual(driver.title, u"物流")
         qianshouresult=driver.find_element_by_css_selector("div#container.container>div.panel.panel-primary>p.text-center>b#check_in_msg").text
@@ -96,19 +96,20 @@ class WuliuTestcase00EditSitePermission(unittest.TestCase):
         driver.find_element_by_link_text(u"站点出入库管理").click()
         driver.find_element_by_link_text(u"出库").click()
         driver.find_element_by_id("order_key").clear()
-        driver.find_element_by_id("order_key").send_keys("E0000000006")
+        driver.find_element_by_id("order_key").send_keys(appobjectwuliu.testdata_bagsnnumber)
         driver.find_element_by_name("commit").click()
         self.assertEqual(driver.title, u"物流")
-#         zhandianchukuresult=driver.find_element_by_css_selector("html body div#container.container div.panel.panel-primary p.text-center b#check_in_msg").text
-#         print " the zhandianchukuresult null is ",zhandianchukuresult
-#         assert u"出库成功" in zhandianchukuresult
-        
+
         time.sleep(2)
 #         driver.find_element_by_link_text(u"站点出入库管理").click()
 #         driver.find_element_by_link_text(u"出库").click()
 #         driver.find_element_by_id("order_key").clear()
 #         driver.find_element_by_id("order_key").send_keys("")
 #         driver.find_element_by_name("commit").click()
+#         zhandianchukuresult=driver.find_element_by_css_selector("html body div#container.container div.panel.panel-primary p.text-center b#check_in_msg").text
+#         print " the zhandianchukuresult null is ",zhandianchukuresult
+#         assert u"出库成功" in zhandianchukuresult
+        
         zhandianchukuresult=driver.find_element_by_css_selector("html body div#container.container div.panel.panel-primary p.text-center b#check_in_msg").text
         print " the zhandianchukuresult null is ",zhandianchukuresult
         if u"输入的封签号不存在！" in zhandianchukuresult:
