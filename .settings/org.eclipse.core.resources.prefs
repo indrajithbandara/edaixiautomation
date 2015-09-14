@@ -140,6 +140,7 @@ encoding//src/uiwuliutestcase/wuliu_testcase02_factory_inoutstockquery.py=utf-8
 encoding//src/uiwuliutestcase/wuliu_testcase02_factory_sign.py=utf-8
 encoding//src/uiwuliutestcase/wuliu_testcase03_site_delivery.py=utf-8
 encoding//src/uiwuliutestcase/wuliu_testcase03_site_sign.py=utf-8
+<<<<<<< Upstream, based on origin/master
 encoding//src/uiwuliutestcase/wuliu_testcase04_modifysignnumber.py=utf-8
 encoding//src/uiwuliutestcase/wuliu_testcase04_pushorder.py=utf-8
 encoding//src/uiwuliutestcase/wuliu_testcase05_takecloth.py=utf-8
@@ -168,5 +169,8 @@ encoding//src/uiwuliutestcase/wuliu_testcase08_citylist_xiaoeyizhansitepersonman
 encoding//src/uiwuliutestcase/wuliu_testcase09_factory_orderquery.py=utf-8
 encoding//src/uiwuliutestcase/wuliu_testcase10_site_orderquery.py=utf-8
 encoding//src/uiwuliutestcase/wuliu_testcase11_sitepersonmanage.py=utf-8
+=======
+encoding//src/uiwuliutestcase/wuliu_testcase08_citylist_jiagongdianmanage.py=utf-8
+>>>>>>> 2f87011 aaa
 encoding//src/uiwuliutestcase/wuliu_testcase_testsuit.py=utf-8
 encoding//src/uiwuliutestcase/wuliu_utiltools.py=utf-8
