@@ -39,9 +39,9 @@ class KefuTestcase03OrderlistCreateorder(unittest.TestCase):
         driver.find_element_by_id("password").send_keys(PASS_WORD)
         driver.find_element_by_id("login-submit").click()
         
-        print driver.title
+        print " the testcase test_kefu_testcase03_orderlist_createorder is ",driver.title,USER_NAME,PASS_WORD
         self.assertEqual(driver.title,u"客服系统")
-    
+        time.sleep(1)
         driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child(3)>a").click()
         self.assertEqual(driver.title,u"客服系统")
         #html body div#container.container>div#content-container>a.btn.btn-info.col-md-1
@@ -61,7 +61,7 @@ class KefuTestcase03OrderlistCreateorder(unittest.TestCase):
         driver.find_element_by_id("new_order_form_totalnum").send_keys("10")
         
         driver.find_element_by_id("new_order_form_coupon_sn").clear()
-        driver.find_element_by_id("new_order_form_coupon_sn").send_keys("8217005292233")
+        driver.find_element_by_id("new_order_form_coupon_sn").send_keys("82170")
         
         Select(driver.find_element_by_id("new_order_form_user_type")).select_by_visible_text(u"客服下单")
 
@@ -70,7 +70,7 @@ class KefuTestcase03OrderlistCreateorder(unittest.TestCase):
         driver.find_element_by_id("new_order_form_username").send_keys("testlukeuser")
         
         driver.find_element_by_id("new_order_form_tel").clear()
-        driver.find_element_by_id("new_order_form_tel").send_keys("beijingjiangtailu")
+        driver.find_element_by_id("new_order_form_tel").send_keys("121323232")
         
         Select(driver.find_element_by_id("new_order_form_city")).select_by_visible_text(u"北京")
         #html body div#container.container div.sidebar_container form#new_new_order_form.form-horizontal.new_new_order_form div.form-group.select.required.new_order_form_area div.col-sm-8 select#new_order_form_area.select.required.form-control option:first-child
@@ -85,16 +85,25 @@ class KefuTestcase03OrderlistCreateorder(unittest.TestCase):
         #driver.find_element_by_link_text("29").click()
         datestr=str(PythonDateUtils.get_day_of_day(2))
         print " the datestr is ",datestr
+        datestrfinalstr=str(datestr[-2:])
+        print " the datestrfinalstr is ",datestrfinalstr
         
         driver.find_element_by_id("new_order_form_washing_date").send_keys(datestr)
-        driver.find_element_by_id("new_order_form_washing_date").click()
+        driver.find_element_by_link_text(datestrfinalstr).click()
+#         time.sleep(1)
+#         winBeforeHandle = driver.current_window_handle
+#         winHandles = driver.window_handles
+#         for handle in winHandles:
+#             if winBeforeHandle != handle:
+#                 driver.switch_to_window(handle)
+#         driver.find_element_by_id(datestrfinalstr).click()
         time.sleep(1)
         Select(driver.find_element_by_id("new_order_form_washing_time")).select_by_visible_text("08:00-10:00")
         time.sleep(1)
         driver.find_element_by_id("new_order_form_remark").clear()
         driver.find_element_by_id("new_order_form_remark").send_keys("hellodedaixi")
         
-        time.sleep(2)
+        time.sleep(1)
         #driver.find_element_by_name("commit").click()
         #driver.find_element_by_css_selector("input.button.btn.btn-info.btn-style-width").send_keys(Keys.ENTER)
         #html body div#container.container div.alert.fade.in.alert-success
@@ -103,10 +112,28 @@ class KefuTestcase03OrderlistCreateorder(unittest.TestCase):
         #driver.find_element_by_xpath("/html/body/div[2]/div/form/input").click()
         driver.execute_script("window.scrollBy(0,200)","")  #
         driver.execute_script("window.scrollBy(0,document.body.scrollHeight)","")
-        time.sleep(1)
+        time.sleep(2)
         driver.find_element_by_css_selector("input.button.btn.btn-info.btn-style-width").click()
         #html body div#container.container div.sidebar_container form#new_new_order_form.form-horizontal.new_new_order_form input.button.btn.btn-info.btn-style-width
         #html body div#container.container div.sidebar_container form#new_new_order_form.form-horizontal.new_new_order_form input.button.btn.btn-info.btn-style-width
+        self.assertEqual(driver.title,u"客服系统")
+
+        try:  
+            wearesorrytext=driver.find_element_by_css_selector("body > div > h1").text
+            print " the wearesorrytext result is ",wearesorrytext
+            if wearesorrytext in "We're sorry, but something went wrong":
+                 raise "We are Sorry"
+            else:
+            
+             finalresult=driver.find_element_by_css_selector("html body div#container.container div.alert.fade.in.alert-success").text
+             print " the finalresult is ",finalresult
+             assert u"订单已添加" in finalresult
+        except Exception,e:  
+             #print Exception,":",e 
+             pass
+             finalresult=driver.find_element_by_css_selector("html body div#container.container div.alert.fade.in.alert-success").text
+             print " the finalresult is ",finalresult
+             assert u"订单已添加" in finalresult
         self.assertEqual(driver.title,u"客服系统")
     def is_element_present(self, how, what):
         try: self.driver.find_element(by=how, value=what)
@@ -130,7 +157,7 @@ class KefuTestcase03OrderlistCreateorder(unittest.TestCase):
         finally: self.accept_next_alert = True
     
     def tearDown(self):
-        #self.driver.quit()
+        self.driver.quit()
         self.assertEqual([], self.verificationErrors)
 
 if __name__ == "__main__":
