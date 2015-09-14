@@ -1,3 +1,4 @@
+#!/usr/lib/python2.7
 # -*- coding: utf-8 -*-
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -6,7 +7,7 @@ from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
 import unittest, time, re,ConfigParser ,random
-import appobjectkefu
+import appobjectkefu,kefu_utiltools
 class KefuTestcase04TabmanageCreatesubtab(unittest.TestCase):
     def setUp(self):
         #self.driver = webdriver.Firefox()
@@ -14,7 +15,8 @@ class KefuTestcase04TabmanageCreatesubtab(unittest.TestCase):
         #self.driver.implicitly_wait(30)
         self.driver.implicitly_wait(30)
         conf = ConfigParser.ConfigParser()
-        conf.read("C:/edaixi_testdata/userdata_kefu.conf")
+        conf.read(kefu_utiltools.getkefuconfigpath())
+        #conf.read("C:/edaixi_testdata/userdata_kefu.conf")
         global CAIWU_URL,USER_NAME,PASS_WORD
         KEFU_URL = conf.get("kefusection", "uihostname")
         USER_NAME = conf.get("kefusection", "uiusername")
@@ -36,13 +38,13 @@ class KefuTestcase04TabmanageCreatesubtab(unittest.TestCase):
         driver.find_element_by_id("password").clear()
         driver.find_element_by_id("password").send_keys(PASS_WORD)
         driver.find_element_by_id("login-submit").click()
-        
-        print driver.title
+        time.sleep(1)
+        print "the testcase test_kefu_testcase04_tabmanage_createsubtab is ",driver.title
         self.assertEqual(driver.title,u"客服系统")
         driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child(4)>a").click()
         self.assertEqual(driver.title,u"客服系统")
         #driver.find_element_by_id("add_tag").click()
-        
+        time.sleep(1)
         driver.find_element_by_css_selector("div#container.container table.table.table-bordered tbody tr:first-child td:nth-child(3) a#add_tag_1").send_keys(Keys.ENTER)
         #driver.find_element_by_css_selector("div#container.container div.col-sm-4 a#add_tag").send_keys(Keys.ENTER)
         #html body div#container.container div.col-sm-4 a#add_tag.btn.btn-success

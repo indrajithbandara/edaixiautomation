@@ -1,3 +1,4 @@
+#!/usr/lib/python2.7
 # -*- coding: utf-8 -*-
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -6,14 +7,15 @@ from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
 import unittest, time, re,ConfigParser,random ,MySQLdb
-import appobjectkefu
+import appobjectkefu,kefu_utiltools
 class KefuTestcase04TabmanageCreateMastertab(unittest.TestCase):
     def setUp(self):
         #self.driver = webdriver.Firefox()
         self.driver = appobjectkefu.GetInstance()
         self.driver.implicitly_wait(30)
         conf = ConfigParser.ConfigParser()
-        conf.read("C:/edaixi_testdata/userdata_kefu.conf")
+        conf.read(kefu_utiltools.getkefuconfigpath())
+        #conf.read("C:/edaixi_testdata/userdata_kefu.conf")
         global CAIWU_URL,USER_NAME,PASS_WORD,mysqlhostname,mysqlusername,mysqlpassword,mysqldatabase
         KEFU_URL = conf.get("kefusection", "uihostname")
         USER_NAME = conf.get("kefusection", "uiusername")
@@ -42,8 +44,8 @@ class KefuTestcase04TabmanageCreateMastertab(unittest.TestCase):
         driver.find_element_by_id("password").clear()
         driver.find_element_by_id("password").send_keys(PASS_WORD)
         driver.find_element_by_id("login-submit").click()
-        
-        print driver.title
+        time.sleep(1)
+        print " the testcase test_kefu_testcase04_tabmanage_createmastertab is ",driver.title
         self.assertEqual(driver.title,u"客服系统")
         conn=MySQLdb.connect(host=mysqlhostname,user=mysqlusername,passwd=mysqlpassword,db=mysqldatabase,charset="utf8")    
         global cursor 

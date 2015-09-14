@@ -30,6 +30,7 @@ def makeNewIdentifiedCardId():
 
 conf = ConfigParser.ConfigParser()
 conf.read("C:/edaixi_testdata/userdata_wuliu.conf")
+
 global CAIWU_URL,USER_NAME,PASS_WORD,mysqlhostname,mysqlusername,mysqlpassword,mysqldatabase
 mysqlhostname = conf.get("databaseconn", "mysqlhostname")
 mysqlusername = conf.get("databaseconn", "mysqlusername")
@@ -245,6 +246,10 @@ def get_today_month(n=0):
         arr = (y,m,day) 
     return "-".join("%s" %i for i in arr) 
   
+def getwuliuconfigpath():
+#window path    return "C:/edaixi_testdata/userdata_kefu.conf"
+    return "C:/edaixi_testdata/userdata_wuliu.conf"
+
 
 if __name__=="__main__":
     start = time.clock()

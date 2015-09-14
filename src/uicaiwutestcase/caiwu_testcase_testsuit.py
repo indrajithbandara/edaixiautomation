@@ -1,5 +1,5 @@
+#!/usr/lib/python2.7
 # -*- coding: utf-8 -*-
-#encoding:utf-8 
 import unittest, time, re 
 from caiwu_testcase01_caiwuordermanagechongzhi import *
 from caiwu_testcase01_caiwuordermanagekoukuan import *

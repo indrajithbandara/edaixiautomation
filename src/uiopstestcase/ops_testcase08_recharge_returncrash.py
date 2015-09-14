@@ -1,3 +1,4 @@
+#!/usr/lib/python2.7
 # -*- coding: utf-8 -*-
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -7,7 +8,7 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
 import unittest, time, re ,ConfigParser,random
 #from uiappobject.appobjectops import appobjectops
-import appobjectops
+import appobjectops,ops_utiltools
 class OpsTestcase08rechargereturncrash(unittest.TestCase):
     def setUp(self):
         #self.driver = webdriver.Firefox()
@@ -15,7 +16,8 @@ class OpsTestcase08rechargereturncrash(unittest.TestCase):
         #self.driver =SingleWebDriver.getWebDriverInstance(self)
         self.driver.implicitly_wait(30)
         conf = ConfigParser.ConfigParser()
-        conf.read("C:/edaixi_testdata/userdata_ops.conf")
+        conf.read(ops_utiltools.getopsconfigpath())
+        #conf.read("C:/edaixi_testdata/userdata_ops.conf")
         global CAIWU_URL,USER_NAME,PASS_WORD
         OPS_URL = conf.get("opssection", "uihostname")
         USER_NAME = conf.get("opssection", "uiadminusername")

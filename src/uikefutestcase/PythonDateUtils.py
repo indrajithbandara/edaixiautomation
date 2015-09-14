@@ -1,3 +1,4 @@
+#!/usr/lib/python2.7
 # -*- coding: utf-8 -*-
 
 '''获取当前日期前后N天或N月的日期'''
