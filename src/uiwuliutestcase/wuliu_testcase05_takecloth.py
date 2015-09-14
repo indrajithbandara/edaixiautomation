@@ -1,3 +1,4 @@
+#!/usr/lib/python2.7
 # -*- coding: utf-8 -*-
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -7,14 +8,15 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
 import unittest, time, re,ConfigParser
 from selenium.webdriver.common.action_chains import ActionChains
-import appobjectwuliu
+import appobjectwuliu,wuliu_utiltools
 class WuliuTestcase05takecloth(unittest.TestCase):
     def setUp(self):
         #self.driver = webdriver.Firefox()
         self.driver = appobjectwuliu.GetInstance()
         self.driver.implicitly_wait(30)
         conf = ConfigParser.ConfigParser()
-        conf.read("C:/edaixi_testdata/userdata_wuliu.conf")
+        conf.read(wuliu_utiltools.getwuliuconfigpath()) 
+        #conf.read("C:/edaixi_testdata/userdata_wuliu.conf")
         global WULIU_URL,USER_NAME,PASS_WORD
         WULIU_URL = conf.get("wuliusection", "uihostname")
         USER_NAME = conf.get("wuliusection", "uiusername")

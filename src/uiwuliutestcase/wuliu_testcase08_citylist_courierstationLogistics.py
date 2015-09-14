@@ -1,3 +1,4 @@
+#!/usr/lib/python2.7
 # -*- coding: utf-8 -*-
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -7,14 +8,16 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
 import unittest, time, re,ConfigParser,MySQLdb
 from selenium.webdriver.common.action_chains import ActionChains
-import appobjectwuliu
+import appobjectwuliu,wuliu_utiltools
 class WuliuTestcase08CitylistAddEdit(unittest.TestCase):
     def setUp(self):
         #self.driver = webdriver.Firefox()
         self.driver = appobjectwuliu.GetInstance()
         self.driver.implicitly_wait(30)
-        conf = ConfigParser.ConfigParser()
-        conf.read("C:/edaixi_testdata/userdata_wuliu.conf")
+        conf = ConfigParser.ConfigParser()        
+        conf.read(wuliu_utiltools.getwuliuconfigpath()) 
+
+        #conf.read("C:/edaixi_testdata/userdata_wuliu.conf")
         global WULIU_URL,USER_NAME,PASS_WORD,mysqlhostname,mysqlusername,mysqlpassword,mysqldatabase
         WULIU_URL = conf.get("wuliusection", "uihostname")
         USER_NAME = conf.get("wuliusection", "uiusername")
@@ -24,7 +27,7 @@ class WuliuTestcase08CitylistAddEdit(unittest.TestCase):
         mysqlhostname = conf.get("databaseconn", "mysqlhostname")
         mysqlusername = conf.get("databaseconn", "mysqlusername")
         mysqlpassword = conf.get("databaseconn", "mysqlpassword")
-        mysqldatabase = conf.get("databaseconn", "mysqlwuliudb")12121
+        mysqldatabase = conf.get("databaseconn", "mysqlwuliudb")
         print mysqlhostname,mysqlusername,mysqlpassword,mysqldatabase
         
         self.base_url = WULIU_URL

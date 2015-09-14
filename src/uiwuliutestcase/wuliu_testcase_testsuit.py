@@ -1,5 +1,5 @@
+#!/usr/lib/python2.7
 # -*- coding: utf-8 -*-
-#encoding:utf-8 
 import unittest, time, re 
 import HTMLTestRunner
 
@@ -164,7 +164,7 @@ if __name__ == '__main__':
 
      fp = file("c:\\edaixi_testdata\\"+currenttime+"-wuliu_test_report.html", 'wb')
     
-     htmlRunner= HTMLTestRunner.HTMLTestRunner(stream=fp,title="edaixi uiwuliu testing result",description="201508 luke")
+     htmlRunner= HTMLTestRunner.HTMLTestRunner(stream=fp,title="edaixi uiwuliu testing result",description="2015 luke")
     #suite =  unittest.TestLoader().loadTestsFromTestCase(MyTest)  
      htmlRunner.run(suite)
      fp.close()
