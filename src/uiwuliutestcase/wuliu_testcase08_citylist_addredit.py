@@ -48,8 +48,8 @@ class WuliuTestcase08CitylistAddEdit(unittest.TestCase):
         print " the testcase test_wuliu_testcase08_citylist_addedit is ",driver.title
         #self.assertTrue(driver.title, u"物流")
         self.assertEqual(driver.title, u"物流")
-        
-        driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child("+str(9)+") a").click()
+        driver.find_element_by_css_selector("div.container > nav > ul > li:nth-child("+appobjectwuliu.wuliutabnine+") >a").click()
+        #driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child("+appobjectwuliu.wuliutabnine+") a").click()
         #html body header.navbar.navbar-default.navbar-static-top div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child(8) a
         self.assertEqual(driver.title, u"物流")
         conn=MySQLdb.connect(host=mysqlhostname,user=mysqlusername,passwd=mysqlpassword,db=mysqldatabase,charset="utf8")    

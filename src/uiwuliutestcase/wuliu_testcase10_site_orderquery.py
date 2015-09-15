@@ -45,7 +45,7 @@ class WuliuTestcase10SiteOrderquery(unittest.TestCase):
         
         time.sleep(1)
         #html body header.navbar.navbar-default.navbar-static-top div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:last-child.active a
-        driver.find_element_by_css_selector("div.container>nav.collapse.navbar-collapse.bs-navbar-collapse>ul.nav.navbar-nav>li:nth-child("+str(11)+")>a").click()
+        driver.find_element_by_css_selector("div.container>nav.collapse.navbar-collapse.bs-navbar-collapse>ul.nav.navbar-nav>li:nth-child("+appobjectwuliu.wuliutabeleven+")>a").click()
         
         driver.find_element_by_id("ordersn").clear()
         driver.find_element_by_id("ordersn").send_keys("110500367088")

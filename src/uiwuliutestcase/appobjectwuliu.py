@@ -50,6 +50,30 @@ class Singleton():
             print u" Sigleton has been initial...."
             #printInfo(u'å�•ä¾‹å·²ç»�åˆ�å§‹åŒ–')          
         return Singleton.instance  
+#define wuliu system module tab,if module tab has been changed,we need change the number for wuliu ssyetem tab
+global wuliutabone,wuliutabtwo,wuliutabthree,wuliutabfour,wuliutabfive
+global wuliutabsix,wuliutabseven,wuliutabeight,wuliutabnine,wuliutabten,wuliutabeleven
+wuliutabone=str(1)
+wuliutabtwo=str(2)
+wuliutabthree=str(3)
+wuliutabfour=str(4)
+wuliutabfive=str(5)
+wuliutabsix=str(6)
+wuliutabseven=str(7)
+wuliutabeight=str(8)
+wuliutabnine=str(9)
+wuliutabten=str(10)
+wuliutabeleven=str(11)
+
+
+def deleteOutlet_RulesTableData():
+        conn=MySQLdb.connect(host=mysqlhostname,user=mysqlusername,passwd=mysqlpassword,db=mysqlrongchangdb,charset="utf8")    
+        global cursor 
+        cursor = conn.cursor() 
+        cursor.execute("DELETE FROM outlet_rules")
+        conn.commit()
+        cursor.close()
+        conn.close()
 
 #class appobjectops:
 # class appObjectUtils(self):

@@ -50,7 +50,7 @@ class WuliuTestcase00EditSitePermission(unittest.TestCase):
         self.assertEqual(driver.title, u"物流")
         time.sleep(2)
         wuliu_utiltools.updateSignNumber()
-        driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child(1).dropdown a").click()
+        driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child("+appobjectwuliu.wuliutabone+").dropdown a").click()
         self.assertEqual(driver.title, u"物流")      
         driver.find_element_by_xpath("/html/body/header/div/nav/ul/li[1]/ul/li[1]/a").click()
         self.assertEqual(driver.title, u"物流")

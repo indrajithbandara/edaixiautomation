@@ -68,7 +68,7 @@ class WuliuTestcase02factorysign(unittest.TestCase):
 #         print ordersn ,bagsn,status_delivery,jiagongdian_id,qianshoudian_id
         
         #driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child(2).dropdown a").click()
-        driver.find_element_by_css_selector("div.container > nav > ul > li:nth-child(2) >a").click()
+        driver.find_element_by_css_selector("div.container > nav > ul > li:nth-child("+appobjectwuliu.wuliutabtwo+") >a").click()
         
         self.assertEqual(driver.title, u"物流")
         #driver.find_element_by_css_selector("div.container > ul.nav.navbar-nav > li:nth-child(2).dropdown > ul.dropdown-menu > li:first-child > a").click()

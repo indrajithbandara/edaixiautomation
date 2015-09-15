@@ -56,8 +56,8 @@ class WuliuTestcase08Citylistjiagongdianmanage(unittest.TestCase):
         conn=MySQLdb.connect(host=mysqlhostname,user=mysqlusername,passwd=mysqlpassword,db=mysqlrongchangdb,charset="utf8")    
         global cursor 
         cursor = conn.cursor() 
-        
-        driver.find_element_by_css_selector("div.container > nav > ul > li:nth-child("+str(9)+") >a").click()
+        #driver.find_element_by_css_selector("div.container > nav > ul > li:nth-child("+str(9)+") >a").click()
+        driver.find_element_by_css_selector("div.container > nav > ul > li:nth-child("+appobjectwuliu.wuliutabnine+") >a").click()
         time.sleep(1)
         #html body header.navbar.navbar-default.navbar-static-top div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li.active a
         #html body header.navbar.navbar-default.navbar-static-top div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li.active a

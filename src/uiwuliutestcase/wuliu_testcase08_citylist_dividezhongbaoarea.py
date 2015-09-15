@@ -47,9 +47,10 @@ class WuliuTestcase08Citylistdividezhongbaoarea(unittest.TestCase):
         driver.find_element_by_id("password").send_keys(PASS_WORD)
         driver.find_element_by_id("login-submit").click()
         time.sleep(2)
-        print driver.title
+        print "the testcase test_wuliu_testcase08_citylist_dividezhongbaoarea is ",driver.title
         self.assertEqual(driver.title, u"物流")
-        driver.find_element_by_css_selector("div.container > nav > ul > li:nth-child("+str(9)+") >a").click()
+        driver.find_element_by_css_selector("div.container > nav > ul > li:nth-child("+appobjectwuliu.wuliutabnine+") >a").click()
+        #driver.find_element_by_css_selector("div.container > nav > ul > li:nth-child("+str(9)+") >a").click()
         #driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child("+str(9)+").active a").click()
         time.sleep(1)
         driver.find_element_by_css_selector("div#container.container div.panel.panel-primary.checkout-order table.table.table-striped.city-table tbody tr:nth-child(2) td:nth-last-child(2).btn-link a:nth-child(5)").click()

@@ -54,7 +54,8 @@ class WuliuTestcase08CitylistxiaoemanagerLogistics(unittest.TestCase):
         conn=MySQLdb.connect(host=mysqlhostname,user=mysqlusername,passwd=mysqlpassword,db=mysqlrongchangdb,charset="utf8")    
         global cursor 
         cursor = conn.cursor() 
-        driver.find_element_by_css_selector("div.container > nav > ul > li:nth-child("+str(9)+") >a").click()
+        driver.find_element_by_css_selector("div.container > nav > ul > li:nth-child("+appobjectwuliu.wuliutabnine+") >a").click()
+        #driver.find_element_by_css_selector("div.container > nav > ul > li:nth-child("+str(9)+") >a").click()
         #driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child("+str(9)+").active a").click()
         
         self.assertEqual(driver.title, u"物流")

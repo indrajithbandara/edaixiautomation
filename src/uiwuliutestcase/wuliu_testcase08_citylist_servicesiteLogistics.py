@@ -49,7 +49,8 @@ class WuliuTestcase08CitylistservicesiteLogistics(unittest.TestCase):
         print " the testcase test_wuliu_testcase08_citylist_servicesiteLogistics is ",driver.title
         self.assertEqual(driver.title, u"物流")
         time.sleep(1)
-        driver.find_element_by_css_selector("div.container > nav > ul > li:nth-child("+str(9)+") >a").click()
+        #driver.find_element_by_css_selector("div.container > nav > ul > li:nth-child("+str(9)+") >a").click()
+        driver.find_element_by_css_selector("div.container > nav > ul > li:nth-child("+appobjectwuliu.wuliutabnine+") >a").click()
         #driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child("+str(9)+").active a").click()
         self.assertEqual(driver.title, u"物流")
         time.sleep(1)

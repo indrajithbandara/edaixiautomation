@@ -51,7 +51,7 @@ class WuliuTestcase00sitepeoplemanage(unittest.TestCase):
         self.assertEqual(driver.title, u"物流")
         time.sleep(2)
         
-        driver.find_element_by_css_selector("div.container>nav.collapse.navbar-collapse.bs-navbar-collapse>ul.nav.navbar-nav>li:nth-child("+str(4)+")>a").click()
+        driver.find_element_by_css_selector("div.container>nav.collapse.navbar-collapse.bs-navbar-collapse>ul.nav.navbar-nav>li:nth-child("+appobjectwuliu.wuliutabfour+")>a").click()
         driver.find_element_by_name("text").send_keys("18888888888")
         driver.find_element_by_css_selector("html body div#container.container div.panel.panel-primary.checkout-order div.panle-body div.orders_container form#myform div.col-md-12.input-group span.input-group-btn input.btn.btn-info").click()
         self.assertEqual(driver.title, u"物流")

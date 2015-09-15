@@ -65,7 +65,7 @@ class WuliuTestcase02factorydelivery(unittest.TestCase):
 #             ordersn ,bagsn,status_delivery,jiagongdian_id,qianshoudian_id = cursor.fetchone()
 #         print ordersn ,bagsn,status_delivery,jiagongdian_id,qianshoudian_id
         
-        driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child(2).dropdown a").click()
+        driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child("+appobjectwuliu.wuliutabtwo+").dropdown a").click()
         self.assertEqual(driver.title, u"物流")
         #driver.find_element_by_css_selector("div.container > ul.nav.navbar-nav > li:nth-child(2).dropdown > ul.dropdown-menu > li:first-child > a").click()
         #print rukuqinshou
@@ -88,7 +88,7 @@ class WuliuTestcase02factorydelivery(unittest.TestCase):
         #self.assertTrue(driver.title, u"物流")
         self.assertEqual(driver.title, u"物流")
         time.sleep(1)
-        driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child(2).dropdown a").click()
+        driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child("+appobjectwuliu.wuliutabtwo+").dropdown a").click()
         self.assertEqual(driver.title, u"物流")
         
         driver.find_element_by_xpath("/html/body/header/div/nav/ul/li[2]/ul/li[2]/a").click()

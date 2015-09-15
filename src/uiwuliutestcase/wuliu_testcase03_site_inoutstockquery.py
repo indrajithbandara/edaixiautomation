@@ -43,12 +43,13 @@ class WuliuTestcase03siteinoutstockquery(unittest.TestCase):
         self.assertEqual(driver.title, u"物流")
         time.sleep(2)
         
-        driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child(3).dropdown a").click()
+        driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child("+appobjectwuliu.wuliutabthree+").dropdown a").click()
         self.assertEqual(driver.title, u"物流")
         #html body header.navbar.navbar-default.navbar-static-top div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li.dropdown ul.dropdown-menu li a
         #driver.find_element_by_css_selector("div.container>nav.collapse.navbar-collapse.bs-navbar-collapse>ul.nav.navbar-nav>li:nth-child(2)>ul.dropdown-menu>li:first-child>a").click()
         #driver.find_element_by_xpath("/html/body/header/div/nav/ul/li[2]/ul/li[3]/a").click()
-        driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child(3).dropdown ul.dropdown-menu li:nth-child(3) a").click()
+        driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child("+appobjectwuliu.wuliutabthree+").dropdown ul.dropdown-menu li:nth-child(3) a").click()
+        self.assertEqual(driver.title, u"物流")
         #html body header.navbar.navbar-default.navbar-static-top div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child(2).dropdown ul.dropdown-menu li:first-child a
         
 #         jiagongdian=driver.find_element_by_css_selector("div#container.container div.panel.panel-primary div.panle-body form#jiagongdian_form table tbody tr td:nth-last-child(3) select#target_type.form-control.single_input option:nth-child(2)").text
@@ -69,7 +70,7 @@ class WuliuTestcase03siteinoutstockquery(unittest.TestCase):
         rukuname=driver.find_element_by_css_selector("div#container.container div.panel.panel-primary div.panle-body form#wangdian_form table tbody tr td:nth-child(2) select#in_out_type.form-control.single_input option:nth-child(1)").text
         
         #div#container.container div.panel.panel-primary div.panle-body form#wangdian_form table tbody tr td:nth-child(2) select#in_out_type.form-control.single_input option:nth-child(1)
-        print rukuname
+        print " the rukuname is  ",rukuname
         
         Select(driver.find_element_by_id("in_out_type")).select_by_visible_text(rukuname)
         driver.find_element_by_name("commit").click()
