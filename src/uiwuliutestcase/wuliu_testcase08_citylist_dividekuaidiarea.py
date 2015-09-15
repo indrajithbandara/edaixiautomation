@@ -63,8 +63,12 @@ class WuliuTestcase08Citylistdividekuaidiarea(unittest.TestCase):
         #driver.find_element_by_id("add_polygon_btn").click()
         #driver.find_element_by_css_selector("div#container.container div#map_action_container div#window-top div.row div#func_navi_btns div#add_polygon_btn.btn.btn-info").click()
         #driver.find_element_by_css_selector("#address_search_bar > div.btn.btn-info.firefinder-match").click()
-
-        
+        driver.find_element_by_id("address_input").clear()
+        driver.find_element_by_id("address_input").send_keys("addmuiltlgraphic")
+        driver.find_element_by_css_selector("#address_search_bar > div.btn.btn-info").click()
+        time.sleep(1)
+        driver.find_element_by_id("add_polygon_btn").click()
+        self.assertEqual(driver.title, u"物流")
     def is_element_present(self, how, what):
         try: self.driver.find_element(by=how, value=what)
         except NoSuchElementException, e: return False

@@ -1,3 +1,4 @@
+#!/usr/lib/python2.7
 # -*- coding: utf-8 -*-
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -60,7 +61,7 @@ class WuliuTestcase08CitylistJiagongdianFactoryBalance(unittest.TestCase):
         cursor.close()
         conn.close()
         #driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child(8).active a").click()
-        driver.find_element_by_css_selector("div.container > nav > ul > li:nth-child(8) >a").click()
+        driver.find_element_by_css_selector("div.container > nav > ul > li:nth-child("+auto3rd_utiltools.jiagongdianjiesuan_balancetab+") >a").click()
         self.assertEqual(driver.title, u"物流")
         time.sleep(1)
         driver.find_element_by_css_selector("div#container.container div.panel.panel-primary.checkout-order table.table.table-striped.city-table tbody tr:nth-child(2) td:nth-child(2).btn-link a:nth-child(9)").click()

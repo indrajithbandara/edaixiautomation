@@ -50,8 +50,9 @@ class WuliuTestcase08Citylistouttimemanage(unittest.TestCase):
         driver.find_element_by_id("login-submit").click()
         print " testcase test_wuliu_testcase08_citylist_outtimemanage is ",driver.title
         self.assertEqual(driver.title, u"物流")
-           
-        driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child("+str(9)+").active a").click()
+        
+        driver.find_element_by_css_selector("div.container > nav > ul > li:nth-child("+str(9)+") >a").click()
+        #driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child("+str(9)+").active a").click()
         
         conn=MySQLdb.connect(host=mysqlhostname,user=mysqlusername,passwd=mysqlpassword,db=mysqlrongchangdb,charset="utf8")    
         global cursor 

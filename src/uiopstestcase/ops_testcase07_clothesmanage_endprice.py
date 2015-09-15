@@ -89,10 +89,12 @@ class OpsTestcase07clothesmanageendprice(unittest.TestCase):
         driver.find_element_by_css_selector("div#container.container table.table.table-bordered.table-striped tbody tr:nth-child(2) td:last-child a:first-child").send_keys(Keys.ENTER)
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
         
+        yiwusmartkeycode="".join(random.choice("0123456789") for i in range(8))
+        print " the yiwusmartkeycode is ",yiwusmartkeycode
         driver.find_element_by_id("yiwu_price_form_cloth_name").clear()
         driver.find_element_by_id("yiwu_price_form_cloth_name").send_keys(u"羽绒服1"+randomstr2)
         driver.find_element_by_id("yiwu_price_form_smart_key").clear()
-        driver.find_element_by_id("yiwu_price_form_smart_key").send_keys("22")
+        driver.find_element_by_id("yiwu_price_form_smart_key").send_keys(yiwusmartkeycode)
         driver.find_element_by_name("commit").click()
         
         self.assertEqual(driver.title, u"e袋洗城市运营后台")

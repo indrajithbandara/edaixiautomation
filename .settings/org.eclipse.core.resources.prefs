@@ -1,3 +1,6 @@
+=\=\=\=\=\=\=
+<<<<<<<=Upstream, based on origin/master
+>>>>>>>=2f87011 aaa
 eclipse.preferences.version=1
 encoding//src/automation3rd/auto3rd_utiltools.py=utf-8
 encoding//src/automation3rd/autocaiwu_testcase08_citylist_jiagongdian_factorbalancebranch.py=utf-8
@@ -5,6 +8,8 @@ encoding//src/automation3rd/autocaiwu_testcase08_citylist_jiagongdian_factorbala
 encoding//src/automation3rd/autocaiwuwuliu_testcase08_citylist_jiagongdian_factorbalance.py=utf-8
 encoding//src/automation3rd/automation3rd_testcase_testsuit.py=utf-8
 encoding//src/automation3rd/checkMysqlKeywords.py=utf8
+encoding//src/interfaceapi/api_interfce.txt=UTF-8
+encoding//src/interfaceapi/interfaceapi_testcase_testsuit.py=utf-8
 encoding//src/uicaiwutestcase/caiwu_edaixi_mysql.py=utf-8
 encoding//src/uicaiwutestcase/caiwu_testcase00_rdt5caiwuchongzhicard.py=utf-8
 encoding//src/uicaiwutestcase/caiwu_testcase00_rdt5caiwuhuiyuancard.py=utf-8
@@ -131,16 +136,25 @@ encoding//src/uiopstestcase/ops_testcase11_marketingtools_sendsms.py=utf-8
 encoding//src/uiopstestcase/ops_testcase11_marketingtools_sendyouhuiquan.py=utf-8
 encoding//src/uiopstestcase/ops_testcase_testsuit.py=utf-8
 encoding//src/uiopstestcase/ops_utiltools.py=utf-8
+encoding//src/uiwechatendtestcase/wechat_end_utiltools.py=utf-8
+encoding//src/uiwechatendtestcase/wechatend_testcase01_basesetting_defaultkeyword.py=utf-8
+encoding//src/uiwechatendtestcase/wechatend_testcase02_mainbusiness_sendcouple.py=utf-8
+encoding//src/uiwechatendtestcase/wechatend_testcase04_setting_managemenu.py=utf-8
+encoding//src/uiwechatendtestcase/wechatend_testcase06_hongbao_telephonesendcouple.py=utf-8
+encoding//src/uiwechatendtestcase/wechatend_testcase_testsuit.py=utf-8
 encoding//src/uiwechatendtestcase/weixinendsystem.py=utf-8
+encoding//src/uiwuliutestcase/appobjectwuliu.py=UTF-8
 encoding//src/uiwuliutestcase/wuliu_testcase00_editpermission_sitepersmission.py=utf-8
 encoding//src/uiwuliutestcase/wuliu_testcase00_factorysite_servicesitequery.py=utf-8
+encoding//src/uiwuliutestcase/wuliu_testcase00_factorysite_sitepeoplemanage.py=utf-8
+encoding//src/uiwuliutestcase/wuliu_testcase01_editpermission.py=utf-8
 encoding//src/uiwuliutestcase/wuliu_testcase01_querypermission.py=utf-8
 encoding//src/uiwuliutestcase/wuliu_testcase02_factory_delivery.py=utf-8
 encoding//src/uiwuliutestcase/wuliu_testcase02_factory_inoutstockquery.py=utf-8
 encoding//src/uiwuliutestcase/wuliu_testcase02_factory_sign.py=utf-8
 encoding//src/uiwuliutestcase/wuliu_testcase03_site_delivery.py=utf-8
+encoding//src/uiwuliutestcase/wuliu_testcase03_site_inoutstockquery.py=utf-8
 encoding//src/uiwuliutestcase/wuliu_testcase03_site_sign.py=utf-8
-<<<<<<< Upstream, based on origin/master
 encoding//src/uiwuliutestcase/wuliu_testcase04_modifysignnumber.py=utf-8
 encoding//src/uiwuliutestcase/wuliu_testcase04_pushorder.py=utf-8
 encoding//src/uiwuliutestcase/wuliu_testcase05_takecloth.py=utf-8
@@ -169,8 +183,5 @@ encoding//src/uiwuliutestcase/wuliu_testcase08_citylist_xiaoeyizhansitepersonman
 encoding//src/uiwuliutestcase/wuliu_testcase09_factory_orderquery.py=utf-8
 encoding//src/uiwuliutestcase/wuliu_testcase10_site_orderquery.py=utf-8
 encoding//src/uiwuliutestcase/wuliu_testcase11_sitepersonmanage.py=utf-8
-=======
-encoding//src/uiwuliutestcase/wuliu_testcase08_citylist_jiagongdianmanage.py=utf-8
->>>>>>> 2f87011 aaa
 encoding//src/uiwuliutestcase/wuliu_testcase_testsuit.py=utf-8
 encoding//src/uiwuliutestcase/wuliu_utiltools.py=utf-8

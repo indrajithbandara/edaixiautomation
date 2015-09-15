@@ -55,8 +55,8 @@ class WuliuTestcase08Citylistxiaoeyizhansitepersonmanage(unittest.TestCase):
         global cursor 
         cursor = conn.cursor() 
 
-        
-        driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child("+str(9)+").active a").click()
+        driver.find_element_by_css_selector("div.container > nav > ul > li:nth-child("+str(9)+") >a").click()
+        #driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child("+str(9)+").active a").click()
         
         self.assertEqual(driver.title, u"物流")
      
@@ -67,16 +67,22 @@ class WuliuTestcase08Citylistxiaoeyizhansitepersonmanage(unittest.TestCase):
     
         driver.find_element_by_css_selector("div#container.container a.btn.btn-info.col-md-1").click()
         userrname="lukejujnjun"+str(random.randint(0,999))
-        telephonenumber="18611111"+str(random.randint(0,999))
-        identitnumber="152528198801280"+str(random.randint(0,999))
-        print " the telephonenumber,identitnumber is ",telephonenumber,identitnumber
+#         telephonenumber="18611111"+str(random.randint(0,999))
+#         identitnumber="152528198801280"+str(random.randint(0,999))
+        telephonenumber=random.choice(['139','188','185','136','158','151'])+"".join(random.choice("0123456789") for i in range(8))
+        print " the telephonenumber is ",telephonenumber
+        #identifiedCardId="152528198801280"+str(random.randint(0,999))
+        identifiedCardId=wuliu_utiltools.makeNewIdentifiedCardId()
+        print " the identifiedCardId is ",identifiedCardId
+        
+#         print " the telephonenumber,identitnumber is ",telephonenumber,identitnumber
         self.assertEqual(driver.title, u"物流")
         driver.find_element_by_id("courier_form_realname").clear()
         driver.find_element_by_id("courier_form_realname").send_keys(userrname)
         driver.find_element_by_id("courier_form_tel").clear()
         driver.find_element_by_id("courier_form_tel").send_keys(telephonenumber)
         driver.find_element_by_id("courier_form_id_number").clear()
-        driver.find_element_by_id("courier_form_id_number").send_keys(identitnumber)
+        driver.find_element_by_id("courier_form_id_number").send_keys(identifiedCardId)
         driver.find_element_by_id("courier_form_password").clear()
         driver.find_element_by_id("courier_form_password").send_keys("123456")
         driver.find_element_by_id("courier_form_bank_name").clear()
@@ -105,7 +111,7 @@ class WuliuTestcase08Citylistxiaoeyizhansitepersonmanage(unittest.TestCase):
         driver.find_element_by_id("realname").clear()
         driver.find_element_by_id("realname").send_keys("luke")
         driver.find_element_by_name("commit").click()
-        time.sleep(3)
+        time.sleep(2)
         
         self.assertEqual(driver.title, u"物流")
         #html body div#container.container>div#courier_search_container>table.table.table-striped>tbody>tr:nth-child(2)>td:last-child>a
@@ -114,7 +120,7 @@ class WuliuTestcase08Citylistxiaoeyizhansitepersonmanage(unittest.TestCase):
         driver.find_element_by_id("courier_form_realname").clear()
         driver.find_element_by_id("courier_form_realname").send_keys("lukejujnjun111")
         driver.find_element_by_name("commit").click()
-        time.sleep(3)
+        time.sleep(2)
         
         cursor.execute("DELETE FROM ims_washing_courier where tel='"+telephonenumber+"'")
         conn.commit()
@@ -123,7 +129,7 @@ class WuliuTestcase08Citylistxiaoeyizhansitepersonmanage(unittest.TestCase):
         driver.find_element_by_id("realname").clear()
         driver.find_element_by_id("realname").send_keys("luke")
         driver.find_element_by_name("commit").click()
-        time.sleep(3)
+        time.sleep(2)
         driver.find_element_by_link_text(u"超时订单").click()
         driver.find_element_by_id("timeout_qu_list_btn").click()
         driver.find_element_by_id("timeout_song_list_btn").click()

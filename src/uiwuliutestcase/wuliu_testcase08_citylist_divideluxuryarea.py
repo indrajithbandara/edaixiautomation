@@ -50,12 +50,18 @@ class WuliuTestcase08Citylistdivideluxuryarea(unittest.TestCase):
         print driver.title
         self.assertEqual(driver.title, u"物流")
         
-        
-        driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child("+str(9)+").active a").click()
+        driver.find_element_by_css_selector("div.container > nav > ul > li:nth-child("+str(9)+") >a").click()
+        #driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child("+str(9)+").active a").click()
         time.sleep(1)
-        driver.find_element_by_css_selector("div#container.container div.panel.panel-primary.checkout-order table.table.table-striped.city-table tbody tr:nth-child(2) td:nth-last-child(2).btn-link a:last-child").click()
+        driver.find_element_by_css_selector("div#container.container div.panel.panel-primary.checkout-order table.table.table-striped.city-table tbody tr:nth-child(2) td:nth-last-child(2).btn-link a:nth-child(4)").click()
         self.assertEqual(driver.title, u"物流")
         time.sleep(2)
+        driver.find_element_by_id("address_input").clear()
+        driver.find_element_by_id("address_input").send_keys(u"朝阳区酒仙桥七九八")
+        driver.find_element_by_css_selector("#address_search_bar > div.btn.btn-info").click()
+        time.sleep(1)
+        driver.find_element_by_id("add_polygon_btn").click()
+        self.assertEqual(driver.title, u"物流")
         
     def is_element_present(self, how, what):
         try: self.driver.find_element(by=how, value=what)

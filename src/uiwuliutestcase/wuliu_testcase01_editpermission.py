@@ -43,8 +43,9 @@ class WuliuTestcase01EditPermission(unittest.TestCase):
         print driver.title
         self.assertEqual(driver.title, u"物流")
         time.sleep(2)
-        
-        driver.find_element_by_xpath("/html/body/header/div/nav/ul/li[1]/a").click()
+        driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:first-child.active a").click()
+        time.sleep(1)
+        #driver.find_element_by_xpath("/html/body/header/div/nav/ul/li[1]/a").click()
         #driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:first-child.active a").click()
         driver.find_element_by_id("name").clear()
         driver.find_element_by_id("name").send_keys(u"技术测试账号1")

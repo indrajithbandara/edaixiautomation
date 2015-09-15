@@ -16,6 +16,12 @@ hour = strftime("%H",localtime())
 min  = strftime("%M",localtime())
 sec  = strftime("%S",localtime())
 
+global ordersnnumer,username,address,telephonenumber
+ordersnnumer="132323242223"
+username="test"
+address="chaoyangqu"
+telephonenumber="8121212121"
+
 def today():
     '''''
     get today,date format="YYYY-MM-DD"

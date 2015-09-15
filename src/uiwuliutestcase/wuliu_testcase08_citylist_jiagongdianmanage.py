@@ -77,8 +77,10 @@ class WuliuTestcase08Citylistjiagongdianmanage(unittest.TestCase):
         driver.find_element_by_id("outlet_form_title").send_keys("testjiagongdian")
         driver.find_element_by_id("outlet_form_tel").clear()
         driver.find_element_by_id("outlet_form_tel").send_keys(telephonenumber)
+        telephonenumber2=random.choice(['139','188','185','136','158','151'])+"".join(random.choice("0123456789") for i in range(8))
+        print " the telephonenumber2 is ",telephonenumber2
         driver.find_element_by_id("outlet_form_usertel").clear()
-        driver.find_element_by_id("outlet_form_usertel").send_keys(u"测试张三")
+        driver.find_element_by_id("outlet_form_usertel").send_keys(telephonenumber2)
         Select(driver.find_element_by_id("outlet_form_area")).select_by_visible_text(u"朝阳区")
  #div#container.container div.panel.panel-primary.checkout-order div.panle-body div.orders_container form#new_outlet_form.form-horizontal.new_outlet_form div.form-group.select.required.outlet_form_area div.col-sm-8 select#outlet_form_area.select.required.form-control option
         driver.find_element_by_id("outlet_form_address").clear()
@@ -202,8 +204,10 @@ class WuliuTestcase08Citylistjiagongdianmanage(unittest.TestCase):
         #driver.find_element_by_id("s2id_autogen2").send_keys("01:00")
         
         #s2id_autogen2
+        jiagongdianbianma="".join(random.choice("0123456789") for i in range(8))
+        print " the jiagongdianbianma is ",jiagongdianbianma
         driver.find_element_by_id("outlet_form_bianma").clear()
-        driver.find_element_by_id("outlet_form_bianma").send_keys("1125")
+        driver.find_element_by_id("outlet_form_bianma").send_keys(jiagongdianbianma)
 #         driver.find_element_by_id("capacity_5_count").clear()
 #         driver.find_element_by_id("capacity_5_count").send_keys("5")
         
@@ -216,9 +220,10 @@ class WuliuTestcase08Citylistjiagongdianmanage(unittest.TestCase):
 #         driver.find_element_by_id("outlet_form_can_luxury").click()
 ##outlet_form_bianma
         driver.find_element_by_name("commit").click()
-        
         self.assertEqual(driver.title, u"物流")
         time.sleep(1)
+        
+        
         driver.find_element_by_link_text(u"编辑").click()
         driver.find_element_by_id("outlet_form_usertel").clear()
         driver.find_element_by_id("outlet_form_usertel").send_keys(u"测试张三update")

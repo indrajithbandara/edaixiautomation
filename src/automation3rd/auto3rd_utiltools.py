@@ -7,7 +7,8 @@ import time,random
 import datetime
 import ConfigParser,MySQLdb
 
-
+global jiagongdianjiesuan_balancetab
+jiagongdianjiesuan_balancetab=str(9)
 ARR = (7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2)
 LAST = ('1', '0', 'X', '9', '8', '7', '6', '5', '4', '3', '2')
 

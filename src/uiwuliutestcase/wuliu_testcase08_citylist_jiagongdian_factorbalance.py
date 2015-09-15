@@ -72,7 +72,7 @@ class WuliuTestcase08CitylistJiagongdianFactoryBalance(unittest.TestCase):
         #html body div#container.container table.table.table-striped tbody tr#outlets_279 td a.btn.btn-primary.btn-sm
         self.assertEqual(driver.title, u"物流")
     
-        Select(driver.find_element_by_id("outlet_rule_form_category_id")).select_by_visible_text(u"家纺")
+        Select(driver.find_element_by_id("outlet_rule_form_category_id")).select_by_visible_text(u"快洗")
         driver.find_element_by_id("outlet_rule_form_discount").clear()
         driver.find_element_by_id("outlet_rule_form_discount").send_keys("22")
 
@@ -128,7 +128,7 @@ class WuliuTestcase08CitylistJiagongdianFactoryBalance(unittest.TestCase):
         time.sleep(2)
         
         #Select(driver.find_element_by_id("outlet_rule_form_category_id")).select_by_visible_text(u"奢侈品")
-        Select(driver.find_element_by_id("outlet_rule_form_category_id")).select_by_visible_text(u"家纺")
+        Select(driver.find_element_by_id("outlet_rule_form_category_id")).select_by_visible_text(u"快洗")
         driver.find_element_by_id("outlet_rule_form_discount").clear()
         driver.find_element_by_id("outlet_rule_form_discount").send_keys("12")
         
