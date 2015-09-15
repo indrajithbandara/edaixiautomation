@@ -7,8 +7,16 @@ import time,random
 import datetime
 import ConfigParser,MySQLdb
 
-global jiagongdianjiesuan_balancetab
+global jiagongdianjiesuan_balancetab,jiagongdianjiesuantestdata
+global xiyicode,xixiecode,jiafangcode,kuaixicode
 jiagongdianjiesuan_balancetab=str(9)
+jiagongdianjiesuantestdata=u"test"
+xiyicode=u"洗衣"
+xixiecode=u"洗鞋"
+jiafangcode=u"家纺"
+kuaixicode=u"快洗"
+
+
 ARR = (7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2)
 LAST = ('1', '0', 'X', '9', '8', '7', '6', '5', '4', '3', '2')
 

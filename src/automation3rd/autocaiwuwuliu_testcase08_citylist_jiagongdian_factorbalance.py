@@ -69,7 +69,7 @@ class WuliuTestcase08CitylistJiagongdianFactoryBalance(unittest.TestCase):
         self.assertEqual(driver.title, u"物流")
         #BJ加工店-长楹天街-店
         driver.find_element_by_id("title").clear()
-        driver.find_element_by_id("title").send_keys(u"BJ加工店-长楹天街-店")
+        driver.find_element_by_id("title").send_keys(auto3rd_utiltools.jiagongdianjiesuantestdata)
         driver.find_element_by_name("commit").click()
         time.sleep(1)
         driver.find_element_by_css_selector("div#container.container >table.table.table-striped> tbody > tr:nth-child(2) > td:nth-last-child(2) > a:last-child").click()
@@ -77,12 +77,13 @@ class WuliuTestcase08CitylistJiagongdianFactoryBalance(unittest.TestCase):
         #html body div#container.container table.table.table-striped tbody tr#outlets_279 td a.btn.btn-primary.btn-sm
         self.assertEqual(driver.title, u"物流")
     
-        Select(driver.find_element_by_id("outlet_rule_form_category_id")).select_by_visible_text(u"家纺")
+        Select(driver.find_element_by_id("outlet_rule_form_category_id")).select_by_visible_text(auto3rd_utiltools.kuaixicode)
         driver.find_element_by_id("outlet_rule_form_discount").clear()
-        driver.find_element_by_id("outlet_rule_form_discount").send_keys("9")
+        driver.find_element_by_id("outlet_rule_form_discount").send_keys("19")
 
+        time.sleep(1)
         print str(auto3rd_utiltools.today())
-        driver.find_element_by_id("outlet_rule_form_start_time_display").send_keys(str(auto3rd_utiltools.today()))
+        #driver.find_element_by_id("outlet_rule_form_start_time_display").send_keys(str(auto3rd_utiltools.today()))
         #driver.find_element_by_link_text("6").click()
         driver.find_element_by_id("outlet_rule_form_end_time").send_keys(str(auto3rd_utiltools.get_day_of_day(3)))
         #driver.find_element_by_link_text("20").click()
@@ -102,11 +103,11 @@ class WuliuTestcase08CitylistJiagongdianFactoryBalance(unittest.TestCase):
     
     
         #driver.find_element_by_link_text(u"创建规则").click()
-        Select(driver.find_element_by_id("outlet_rule_form_category_id")).select_by_visible_text(u"洗衣")
+        Select(driver.find_element_by_id("outlet_rule_form_category_id")).select_by_visible_text(auto3rd_utiltools.xiyicode)
         driver.find_element_by_id("outlet_rule_form_discount").clear()
         driver.find_element_by_id("outlet_rule_form_discount").send_keys("10")
         
-        driver.find_element_by_id("outlet_rule_form_start_time_display").send_keys(str(auto3rd_utiltools.today()))
+        #driver.find_element_by_id("outlet_rule_form_start_time_display").send_keys(str(auto3rd_utiltools.today()))
         #driver.find_element_by_link_text("6").click()
         driver.find_element_by_id("outlet_rule_form_end_time").send_keys(str(auto3rd_utiltools.get_day_of_day(3)))
         #driver.find_element_by_link_text("20").click()
@@ -120,8 +121,8 @@ class WuliuTestcase08CitylistJiagongdianFactoryBalance(unittest.TestCase):
 #         driver.find_element_by_id("outlet_rule_form_end_time").click()
 #         driver.find_element_by_link_text("20").click()
 #         driver.find_element_by_name("commit").click()
-        Select(driver.find_element_by_id("outlet_rule_form_category_id")).select_by_visible_text(u"洗鞋")
-        driver.find_element_by_id("outlet_rule_form_start_time_display").send_keys(str(auto3rd_utiltools.today()))
+        Select(driver.find_element_by_id("outlet_rule_form_category_id")).select_by_visible_text(auto3rd_utiltools.xixiecode)
+        #driver.find_element_by_id("outlet_rule_form_start_time_display").send_keys(str(auto3rd_utiltools.today()))
         #driver.find_element_by_link_text("6").click()
         driver.find_element_by_id("outlet_rule_form_end_time").send_keys(str(auto3rd_utiltools.get_day_of_day(3)))
         #driver.find_element_by_link_text("20").click()
@@ -133,11 +134,11 @@ class WuliuTestcase08CitylistJiagongdianFactoryBalance(unittest.TestCase):
         time.sleep(2)
         
         #Select(driver.find_element_by_id("outlet_rule_form_category_id")).select_by_visible_text(u"奢侈品")
-        Select(driver.find_element_by_id("outlet_rule_form_category_id")).select_by_visible_text(u"家纺")
+        Select(driver.find_element_by_id("outlet_rule_form_category_id")).select_by_visible_text(auto3rd_utiltools.kuaixicode)
         driver.find_element_by_id("outlet_rule_form_discount").clear()
         driver.find_element_by_id("outlet_rule_form_discount").send_keys("8")
         
-        driver.find_element_by_id("outlet_rule_form_start_time_display").send_keys(str(auto3rd_utiltools.today()))
+        #driver.find_element_by_id("outlet_rule_form_start_time_display").send_keys(str(auto3rd_utiltools.today()))
         #driver.find_element_by_link_text("6").click()
         driver.find_element_by_id("outlet_rule_form_end_time").send_keys(str(auto3rd_utiltools.get_day_of_day(3)))
         #driver.find_element_by_link_text("20").click()

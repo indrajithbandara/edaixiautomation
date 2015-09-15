@@ -65,10 +65,10 @@ class CaiwuTestcase00rdt5caiwuyouhuiquancard(unittest.TestCase):
         driver.find_element_by_id("title").send_keys(u"电子优惠券添加")
         driver.find_element_by_name("commit").click()
         time.sleep(1)
-        driver.find_element_by_id("coupon_list_id").clear()
-        driver.find_element_by_id("coupon_list_id").send_keys("545")
-        driver.find_element_by_xpath("(//input[@name='commit'])[2]").click()
-        time.sleep(1)
+#         driver.find_element_by_id("coupon_list_id").clear()
+#         driver.find_element_by_id("coupon_list_id").send_keys("545")
+#         driver.find_element_by_xpath("(//input[@name='commit'])[2]").click()
+#         time.sleep(1)
         
         driver.find_element_by_css_selector("div.container div.navbar-collapse.collapse.navbar-responsive-collapse ul.nav.navbar-nav li:first-child.dropdown a.dropdown-toggle").click()
         #driver.find_element_by_link_text(u"优惠券组").click()
@@ -149,7 +149,7 @@ class CaiwuTestcase00rdt5caiwuyouhuiquancard(unittest.TestCase):
         finally: self.accept_next_alert = True
     
     def tearDown(self):
-        #self.driver.quit()
+        self.driver.quit()
         self.assertEqual([], self.verificationErrors)
 
 if __name__ == "__main__":

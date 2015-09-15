@@ -69,7 +69,7 @@ class CaiwuTestcase03CaiwushiticardCreate(unittest.TestCase):
         shiticardcreate=driver.find_element_by_css_selector("html body div.container div.alert.fade.in.alert-success").text
         print " the shiticardcreate is ",shiticardcreate
         assert u"实体卡生成任务提交成功" in shiticardcreate
-        time.sleep(1)
+        time.sleep(2)
         #html body div.container div#content div.panel.panel-primary table.table.table-striped tbody tr:first-child td:first-child
         createshiticarednum=driver.find_element_by_css_selector("div.container div#content div.panel.panel-primary table.table.table-striped tbody tr:first-child td:first-child").text
         print " the createshiticarednum is ",createshiticarednum

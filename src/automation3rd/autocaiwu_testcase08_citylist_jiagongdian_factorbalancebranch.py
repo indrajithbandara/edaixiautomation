@@ -80,7 +80,7 @@ class CaiwuTestcase08CitylistJiagongdianFactoryBalanceBranch(unittest.TestCase):
         #driver.find_element_by_link_text(u"结算管理").click()
         time.sleep(1)
         driver.find_element_by_id("title").clear()
-        driver.find_element_by_id("title").send_keys(u"BJ加工店-长楹天街-店")
+        driver.find_element_by_id("title").send_keys(auto3rd_utiltools.jiagongdianjiesuantestdata)
         driver.find_element_by_name("commit").click()
         
         time.sleep(1)

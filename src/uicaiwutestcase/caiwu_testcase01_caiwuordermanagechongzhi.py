@@ -62,7 +62,7 @@ class CaiwuTestcase01Caiwuordermanagementchongzhi(unittest.TestCase):
         driver.find_element_by_id("settlement_search_form_ordersn").send_keys(caiwu_edaixi_mysql.getordersn())
         driver.find_element_by_name("commit").click()
 
-
+        time.sleep(5)
         self.assertEqual(driver.title,u"财务")
         ordernumber=driver.find_element_by_css_selector("div.container>div#content div.panel.panel-primary>table.table.table-striped.list-table>tbody>tr:first-child>td:nth-child(3)>a").text
         #print " the ordernumber is :",ordernumber
@@ -133,7 +133,7 @@ class CaiwuTestcase01Caiwuordermanagementchongzhi(unittest.TestCase):
 #         finally: self.accept_next_alert = True
 #     
     def tearDown(self):
-        self.driver.quit()
+        #self.driver.quit()
         self.assertEqual([], self.verificationErrors)
 
 if __name__ == "__main__":

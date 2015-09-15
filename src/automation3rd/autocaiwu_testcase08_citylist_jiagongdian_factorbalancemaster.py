@@ -63,7 +63,7 @@ class CaiwuTestcase08CitylistJiagongdianFactoryBalanceMaster(unittest.TestCase):
         driver.find_element_by_css_selector("div.container > div > ul > li:nth-child(1) >a").click()
         #driver.find_element_by_link_text(u"结算管理").click()
         driver.find_element_by_id("title").clear()
-        driver.find_element_by_id("title").send_keys(u"BJ加工店-长楹天街-店")
+        driver.find_element_by_id("title").send_keys(auto3rd_utiltools.jiagongdianjiesuantestdata)
         #driver.find_element_by_id("title").send_keys(u"test")
         driver.find_element_by_name("commit").click()
         self.assertEqual(driver.title, u"财务")

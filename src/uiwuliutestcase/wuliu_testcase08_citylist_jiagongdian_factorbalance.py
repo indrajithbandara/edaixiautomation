@@ -76,10 +76,13 @@ class WuliuTestcase08CitylistJiagongdianFactoryBalance(unittest.TestCase):
         driver.find_element_by_id("outlet_rule_form_discount").clear()
         driver.find_element_by_id("outlet_rule_form_discount").send_keys("22")
 
+        driver.execute_script("window.scrollBy(0,200)","")  #
+        driver.execute_script("window.scrollBy(0,document.body.scrollHeight)","")  #folloing down to page
+
         print str(wuliu_utiltools.today())
-        driver.find_element_by_id("outlet_rule_form_start_time_display").send_keys(str(wuliu_utiltools.today()))
+        #driver.find_element_by_id("outlet_rule_form_start_time_display").send_keys(str(wuliu_utiltools.today()))
         #driver.find_element_by_link_text("6").click()
-        driver.find_element_by_id("outlet_rule_form_end_time").send_keys(str(wuliu_utiltools.get_day_of_day(3)))
+        driver.find_element_by_id("outlet_rule_form_end_time").send_keys(str(wuliu_utiltools.get_day_of_day(5)))
         #driver.find_element_by_link_text("20").click()
         driver.find_element_by_name("commit").click()
         self.assertEqual(driver.title, u"物流")
@@ -101,9 +104,9 @@ class WuliuTestcase08CitylistJiagongdianFactoryBalance(unittest.TestCase):
         driver.find_element_by_id("outlet_rule_form_discount").clear()
         driver.find_element_by_id("outlet_rule_form_discount").send_keys("100")
         
-        driver.find_element_by_id("outlet_rule_form_start_time_display").send_keys(str(wuliu_utiltools.today()))
+        #driver.find_element_by_id("outlet_rule_form_start_time_display").send_keys(str(wuliu_utiltools.today()))
         #driver.find_element_by_link_text("6").click()
-        driver.find_element_by_id("outlet_rule_form_end_time").send_keys(str(wuliu_utiltools.get_day_of_day(3)))
+        driver.find_element_by_id("outlet_rule_form_end_time").send_keys(str(wuliu_utiltools.get_day_of_day(5)))
         #driver.find_element_by_link_text("20").click()
         driver.find_element_by_name("commit").click()
         self.assertEqual(driver.title, u"物流")
@@ -116,9 +119,8 @@ class WuliuTestcase08CitylistJiagongdianFactoryBalance(unittest.TestCase):
 #         driver.find_element_by_link_text("20").click()
 #         driver.find_element_by_name("commit").click()
         Select(driver.find_element_by_id("outlet_rule_form_category_id")).select_by_visible_text(u"洗鞋")
-        driver.find_element_by_id("outlet_rule_form_start_time_display").send_keys(str(wuliu_utiltools.today()))
         #driver.find_element_by_link_text("6").click()
-        driver.find_element_by_id("outlet_rule_form_end_time").send_keys(str(wuliu_utiltools.get_day_of_day(3)))
+        driver.find_element_by_id("outlet_rule_form_end_time").send_keys(str(wuliu_utiltools.get_day_of_day(5)))
         #driver.find_element_by_link_text("20").click()
         driver.find_element_by_id("outlet_rule_form_discount").clear()
         driver.find_element_by_id("outlet_rule_form_discount").send_keys("2")
@@ -132,9 +134,9 @@ class WuliuTestcase08CitylistJiagongdianFactoryBalance(unittest.TestCase):
         driver.find_element_by_id("outlet_rule_form_discount").clear()
         driver.find_element_by_id("outlet_rule_form_discount").send_keys("12")
         
-        driver.find_element_by_id("outlet_rule_form_start_time_display").send_keys(str(wuliu_utiltools.today()))
+        #driver.find_element_by_id("outlet_rule_form_start_time_display").send_keys(str(wuliu_utiltools.today()))
         #driver.find_element_by_link_text("6").click()
-        driver.find_element_by_id("outlet_rule_form_end_time").send_keys(str(wuliu_utiltools.get_day_of_day(3)))
+        driver.find_element_by_id("outlet_rule_form_end_time").send_keys(str(wuliu_utiltools.get_day_of_day(5)))
         #driver.find_element_by_link_text("20").click()
         driver.find_element_by_name("commit").click()
         self.assertEqual(driver.title, u"物流")
@@ -162,7 +164,7 @@ class WuliuTestcase08CitylistJiagongdianFactoryBalance(unittest.TestCase):
         finally: self.accept_next_alert = True
     
     def tearDown(self):
-        self.driver.quit()
+        #self.driver.quit()
         self.assertEqual([], self.verificationErrors)
 
 if __name__ == "__main__":

@@ -60,8 +60,8 @@ class CaiwuTestcase06CaiwuuserqueryHuiyuanMore(unittest.TestCase):
         print huiyuancardnum
         driver.find_element_by_link_text(huiyuancardnum).click()
         
-        driver.implicitly_wait(10)
-        driver.find_element_by_css_selector("div.container h4 a.btn.btn-sm.btn-primary").send_keys(Keys.ENTER)
+#         driver.implicitly_wait(10)
+#         driver.find_element_by_css_selector("div.container>h4>a.btn.btn-sm.btn-primary").send_keys(Keys.ENTER)
 
         #driver.find_element_by_link_text(u"更多").click()
         #self.assert_(driver.title, u"财务")

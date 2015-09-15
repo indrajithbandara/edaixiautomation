@@ -66,6 +66,9 @@ class KefuTestcase02MyUserFeedbackAlllistFiltered(unittest.TestCase):
         #self.assert_(driver.title, u"客服系统")
         self.assertEquals(driver.title,u"客服系统")
     
+    
+    
+        
     def is_element_present(self, how, what):
         try: self.driver.find_element(by=how, value=what)
         except NoSuchElementException, e: return False

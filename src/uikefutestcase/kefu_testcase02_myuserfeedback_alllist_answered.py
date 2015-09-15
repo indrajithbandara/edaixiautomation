@@ -48,7 +48,7 @@ class KefuTestcase02MyUserFeedbackAlllistAnswered(unittest.TestCase):
         #driver.find_element_by_link_text(u"处理").click()
         self.assertEqual(driver.title,u"客服系统")
     
-        driver.find_element_by_css_selector("div#container.container div.panel.panel-primary table.table.table-stripe tbody#table_new_customer tr#customer_1239520 td a.btn.btn-success.btn-sm").click()
+        driver.find_element_by_css_selector("div#container.container>div.panel.panel-primary>table.table.table-stripe>tbody#table_new_customer>tr>td>a").click()
         #driver.find_element_by_id("tag_to_feedback_71874").click()
         self.assertEqual(driver.title,u"客服系统")
     
