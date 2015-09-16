@@ -1,0 +1,14 @@
+CI framework to manage our automation system and build testcase use jenkins
+
+jenkins
+windows
+ubuntu
+
+install headless xvfb
+install python2.7
+install python mysql
+install python selenium
+
+modify some automation config files 
+
+deploy automation scripts and config files,and prepare test data
