@@ -8,6 +8,21 @@ from datetime import timedelta, date
 import calendar
 import time
 import datetime
+import logging
+
+
+def init_autotest_log(log_level,log_path):  
+    #log leverl value: CRITICAL 50; ERROR 40; WARNING 30; INFO 20; DEBUG 10, NOSET 0;  
+    logger = logging.getLogger()  
+      
+    hdlr = logging.FileHandler(log_path)  
+    formatter = logging.Formatter('%(asctime)s [%(levelname)-8s %(module)s:%(lineno)d] %(message)s')  
+    hdlr.setFormatter(formatter)  
+    logger.addHandler(hdlr)  
+    logger.setLevel(log_level)  
+  
+    return logger  
+
 
 year = strftime("%Y",localtime())
 mon  = strftime("%m",localtime())

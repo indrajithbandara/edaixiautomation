@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 import unittest, time, re 
 import HTMLTestRunner
+import ops_utiltools
 
 from ops_testcase01_permissionmanage_permission import *
 from ops_testcase01_permissionmanage_position import *
