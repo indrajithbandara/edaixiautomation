@@ -3,9 +3,17 @@
 
 from selenium import webdriver
 import threading 
+import MySQLdb,ConfigParser
 
 
-
+conf = ConfigParser.ConfigParser()
+#conf.read(wuliu_utiltools.getwuliuconfigpath())  
+mysqlhostname = conf.get("databaseconn", "mysqlhostname")
+mysqlusername = conf.get("databaseconn", "mysqlusername")
+mysqlpassword = conf.get("databaseconn", "mysqlpassword")
+mysqlrongchangdb  = conf.get("databaseconn", "mysqlrongchangdb")
+        
+        
 #@staticmethod  
 def GetInstance():  
     instance = None  
