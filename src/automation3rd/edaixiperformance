@@ -1,4 +1,5 @@
 1.apache ab
+httperf  tool also can testing server performances
 
 2.nmon tool download nmon_x86_64_ubuntu1004
 install nmon
