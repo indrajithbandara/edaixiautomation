@@ -130,7 +130,7 @@ class WuliuTestcase08citylistdiaoduqueryfanxidan(unittest.TestCase):
 #         
         self.assertEqual(driver.title, u"物流")        
         time.sleep(1)
-        driver.find_element_by_css_selector("div#container.container>a#fanxi_button.btn.btn-info").click()
+        #driver.find_element_by_css_selector("div#container.container>a#fanxi_button.btn.btn-info").click()
         driver.find_element_by_xpath("//*[@id='fanxi_button']").click()
         #driver.find_element_by_css_selector("div#container.container>a#fanxi_button.btn.btn-info").click()
 #         html body div#container.container a#f''anxi_button.btn.btn-info

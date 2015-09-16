@@ -2,12 +2,12 @@
 #coding=utf-8
 
 from selenium import webdriver
-import threading 
+import threading,wuliu_utiltools
 import MySQLdb,ConfigParser
 
 
 conf = ConfigParser.ConfigParser()
-#conf.read(wuliu_utiltools.getwuliuconfigpath())  
+conf.read(wuliu_utiltools.getwuliuconfigpath())  
 mysqlhostname = conf.get("databaseconn", "mysqlhostname")
 mysqlusername = conf.get("databaseconn", "mysqlusername")
 mysqlpassword = conf.get("databaseconn", "mysqlpassword")
