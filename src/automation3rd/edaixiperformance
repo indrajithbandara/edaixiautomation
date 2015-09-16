@@ -1,0 +1,25 @@
+1.apache ab
+
+2.nmon tool download nmon_x86_64_ubuntu1004
+install nmon
+run nmon comand to create test report
+and download nmon anylitic tool
+and import test report to nmon any tool
+finally automation create test result for nmon perforance
+
+3.Http_Load
+
+4.webbench
+
+5.siege
+
+6.performace testing tools
+IBM RPT RFT
+HP LoadRunner Qtp
+Staf/Stax
+WinRunner/TestDirctor
+
+7.Codes/Database/Middleware/AppServer performance and monitor
+use 3rd software and tools
+
+8.use testin cloud to testing android and ios
