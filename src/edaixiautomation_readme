@@ -1,4 +1,48 @@
 #edaixi automation testing framework#
 #author : cuijun luke
 #start date:201507
+This automation testing framework is edaixi testing framwork,using selenium and python 
+our automation has 4 parts
+1.ruby ui automation
+wuliu
+kefu
+caiwu
+ops
+2.php ui automation
+wechat front system
+wechat end system
+
+3.interface automation
+our interface include api,wuliuapi,jiagongdianapi,open etc.
+
+4.3rd automation testing scripts
+
+5.about mobile testing
+our mobile testing also include ios andriod
+ios user
+ios xiaoe
+android user
+android xiaoe
+this automation testing scripts has been supported by testin
+
+
+6.about performance testing
+1). use loadrunner ,ibm rpt
+    use qtp/rft to implement automaton
+  
+2). use opensource 3rd frameworks
+    jmeter
+    soapui
+    linux ab,siege,workbeach,httpload,nmon etc.
+    
+    
+    
+3). use some 3rd performance product to testing
+    Saas
+    Paas
+    Docker
+    
+ 
+
+
 
