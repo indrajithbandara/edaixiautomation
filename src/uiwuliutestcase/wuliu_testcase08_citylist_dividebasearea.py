@@ -69,11 +69,11 @@ class WuliuTestcase08Citylistdividebasearea(unittest.TestCase):
         self.assertEqual(driver.title, u"物流")
         time.sleep(2)
         driver.find_element_by_id("address_input").clear()
-        driver.find_element_by_id("address_input").send_keys("addmuiltlgraphic")
+        driver.find_element_by_id("address_input").send_keys(u"朝阳区酒仙桥")
         
-
+        time.sleep(2)
         driver.find_element_by_css_selector("#address_search_bar > div.btn.btn-info").click()
-        time.sleep(1)
+        time.sleep(2)
         driver.find_element_by_id("add_polygon_btn").click()
         
         #driver.find_element_by_id("address_input").clear()

@@ -4,7 +4,8 @@
 from selenium import webdriver
 import threading,wuliu_utiltools
 import MySQLdb,ConfigParser
-
+import csv
+#This module /class is config and test data for wuliu automation testing sripts
 
 conf = ConfigParser.ConfigParser()
 conf.read(wuliu_utiltools.getwuliuconfigpath())  
@@ -73,6 +74,10 @@ wuliutabnine=str(9)
 wuliutabten=str(10)
 wuliutabeleven=str(11)
 
+#This is wuliu system test data for platform
+
+global testcase08_jiagongdian_forbalantestdata 
+testcase08_jiagongdian_forbalantestdata=u"快洗"
 
 def deleteOutlet_RulesTableData():
         conn=MySQLdb.connect(host=mysqlhostname,user=mysqlusername,passwd=mysqlpassword,db=mysqlrongchangdb,charset="utf8")    
