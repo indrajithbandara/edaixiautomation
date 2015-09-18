@@ -48,6 +48,7 @@ class WuliuTestcase00EditSitePermission(unittest.TestCase):
         driver.find_element_by_id("login-submit").click()
         print " the testcase WuliuTestcase00EditSitePermission is ",driver.title
         self.assertEqual(driver.title, u"物流")
+        driver.execute_script("$('.dropdown-menu').show();")
         time.sleep(2)
         wuliu_utiltools.updateSignNumber()
         driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child("+appobjectwuliu.wuliutabone+").dropdown a").click()

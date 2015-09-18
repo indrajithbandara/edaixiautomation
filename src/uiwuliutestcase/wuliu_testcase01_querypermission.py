@@ -39,6 +39,7 @@ class WuliuTestcase01Querypermission(unittest.TestCase):
         driver.find_element_by_id("login-submit").click()
         print driver.title
         #self.assertTrue(driver.title, u"物流")
+        driver.execute_script("$('.dropdown-menu').show();")
         self.assertEqual(driver.title, u"物流")
         time.sleep(2)
         driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:first-child.active a").click()

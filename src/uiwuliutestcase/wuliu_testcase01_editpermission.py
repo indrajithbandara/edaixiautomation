@@ -45,10 +45,21 @@ class WuliuTestcase01EditPermission(unittest.TestCase):
         
         #driver.execute_script("document.getElementsByClassName('dropdown-menu').class='dropdown-menu open';")
         
-        driver.execute_script("var doc=document.getElementsByClassName('dropdown-menu').className;document.write(doc.replace(/dropdown-menu open/, 'dropdown-menu'));")
+        #driver.execute_script("var doc=document.getElementsByClassName('dropdown-menu').className;document.write(doc.replace(/dropdown-menu open/, 'dropdown-menu'));")
+                
+        #driver.execute_script("document.getElementsByClassName('dropdown-menu').className='show';")
         
-        time.sleep(2)
-        driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:first-child.active a").click()
+        driver.execute_script("$('.dropdown-menu').show();")
+        #getELementById('a').className='MyClassName';
+        #var div = document.getElementById('d1'); 
+         #v.setAttribute("class", "abc"); 
+
+
+        #
+        time.sleep(1)
+        driver.find_element_by_css_selector("ul.nav.navbar-nav>li.dropdown>ul.dropdown-menu>li:first-child>a").click();
+        #ul.nav.navbar-nav>li.dropdown>ul.dropdown-menu>li:first-child>a
+        #driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:first-child.active a").click()
         time.sleep(1)
         #driver.find_element_by_xpath("/html/body/header/div/nav/ul/li[1]/a").click()
         #driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:first-child.active a").click()
@@ -62,14 +73,14 @@ class WuliuTestcase01EditPermission(unittest.TestCase):
         #driver.find_element_by_css_selector("/html/body/div/div[2]/table/tbody/tr[2]/td[4]/a").click()
         
         #html body div#container.container div.panel.panel-primary.checkout-order table.table.table-striped tbody tr:last-child td:last-child div.btn-toolbar a.btn.btn-sm.btn-success
-        driver.find_element_by_css_selector("div#container.container div.panel.panel-primary.checkout-order table.table.table-striped tbody tr:last-child td:last-child div.btn-toolbar a").click()
-        #html body div#container.container div.panel.panel-primary.checkout-order table.table.table-striped.city-table tbody tr:last-child td:last-child a.btn.btn-info.btn-xs
-        driver.find_element_by_id("worker_is_shouyidian").click()
-        driver.find_element_by_id("worker_is_jiagongdian").click()
-        driver.find_element_by_id("worker_is_zb_yunying").click()
-        driver.find_element_by_name("commit").click()
-        #self.asser.assertTrue(driver.title, u"物流111")
-        self.assertEqual(driver.title, u"物流")
+#         driver.find_element_by_css_selector("div#container.container div.panel.panel-primary.checkout-order table.table.table-striped tbody tr:last-child td:last-child div.btn-toolbar a").click()
+#         #html body div#container.container div.panel.panel-primary.checkout-order table.table.table-striped.city-table tbody tr:last-child td:last-child a.btn.btn-info.btn-xs
+#         driver.find_element_by_id("worker_is_shouyidian").click()
+#         driver.find_element_by_id("worker_is_jiagongdian").click()
+#         driver.find_element_by_id("worker_is_zb_yunying").click()
+#         driver.find_element_by_name("commit").click()
+#         #self.asser.assertTrue(driver.title, u"物流111")
+#         self.assertEqual(driver.title, u"物流")
         #driver.get_screenshot_as_file("C:\\edaixi_testdata\\myluke.png")
         
     def is_element_present(self, how, what):
