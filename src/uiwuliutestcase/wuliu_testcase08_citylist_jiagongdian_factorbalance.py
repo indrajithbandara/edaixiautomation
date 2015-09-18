@@ -52,6 +52,7 @@ class WuliuTestcase08CitylistJiagongdianFactoryBalance(unittest.TestCase):
         print " the testcase test_wuliu_testcase08_citylist_jiagongdian_factorybalance is ",driver.title
         self.assertEqual(driver.title, u"物流")
         
+        testdata=appobjectwuliu.testcase08_jiagongdian_forbalantestdata
         conn=MySQLdb.connect(host=mysqlhostname,user=mysqlusername,passwd=mysqlpassword,db=mysqlrongchangdb,charset="utf8")    
         global cursor 
         cursor = conn.cursor() 
@@ -73,7 +74,7 @@ class WuliuTestcase08CitylistJiagongdianFactoryBalance(unittest.TestCase):
         #html body div#container.container table.table.table-striped tbody tr#outlets_279 td a.btn.btn-primary.btn-sm
         self.assertEqual(driver.title, u"物流")
     
-        Select(driver.find_element_by_id("outlet_rule_form_category_id")).select_by_visible_text(u"快洗")
+        Select(driver.find_element_by_id("outlet_rule_form_category_id")).select_by_visible_text(testdata)
         driver.find_element_by_id("outlet_rule_form_discount").clear()
         driver.find_element_by_id("outlet_rule_form_discount").send_keys("22")
 
@@ -81,13 +82,16 @@ class WuliuTestcase08CitylistJiagongdianFactoryBalance(unittest.TestCase):
         driver.execute_script("window.scrollBy(0,document.body.scrollHeight)","")  #folloing down to page
 
         print str(wuliu_utiltools.today())
-        #driver.find_element_by_id("outlet_rule_form_start_time_display").send_keys(str(wuliu_utiltools.today()))
+        driver.find_element_by_id("outlet_rule_form_start_time_display").send_keys(str(wuliu_utiltools.today()))
         #driver.find_element_by_link_text("6").click()
+
         driver.find_element_by_id("outlet_rule_form_end_time").send_keys(str(wuliu_utiltools.get_day_of_day(5)))
         #driver.find_element_by_link_text("20").click()
         driver.find_element_by_name("commit").click()
         self.assertEqual(driver.title, u"物流")
         time.sleep(2)
+        
+        
         hell=driver.find_element_by_css_selector("div#container.container>div#outlet_rule>table.table.table-striped>tbody>tr:last-child>td:last-child>a").text
         print "the hell rules is ",hell
         #html body div#container.container div#outlet_rule table.table.table-striped tbody tr:last-child td:last-child a.btn.btn-sm.btn-danger
@@ -121,6 +125,7 @@ class WuliuTestcase08CitylistJiagongdianFactoryBalance(unittest.TestCase):
 #         driver.find_element_by_name("commit").click()
         Select(driver.find_element_by_id("outlet_rule_form_category_id")).select_by_visible_text(u"洗鞋")
         #driver.find_element_by_link_text("6").click()
+        #driver.find_element_by_id("outlet_rule_form_start_time_display").send_keys(str(wuliu_utiltools.today()))
         driver.find_element_by_id("outlet_rule_form_end_time").send_keys(str(wuliu_utiltools.get_day_of_day(5)))
         #driver.find_element_by_link_text("20").click()
         driver.find_element_by_id("outlet_rule_form_discount").clear()
@@ -131,7 +136,9 @@ class WuliuTestcase08CitylistJiagongdianFactoryBalance(unittest.TestCase):
         time.sleep(2)
         
         #Select(driver.find_element_by_id("outlet_rule_form_category_id")).select_by_visible_text(u"奢侈品")
-        Select(driver.find_element_by_id("outlet_rule_form_category_id")).select_by_visible_text(u"快洗")
+        Select(driver.find_element_by_id("outlet_rule_form_category_id")).select_by_visible_text(testdata)
+        driver.find_element_by_id("outlet_rule_form_start_time_display").send_keys(str(wuliu_utiltools.today()))
+#         driver.find_element_by_id("outlet_rule_form_end_time").send_keys(str(wuliu_utiltools.get_day_of_day(5)))
         driver.find_element_by_id("outlet_rule_form_discount").clear()
         driver.find_element_by_id("outlet_rule_form_discount").send_keys("12")
         
@@ -165,7 +172,7 @@ class WuliuTestcase08CitylistJiagongdianFactoryBalance(unittest.TestCase):
         finally: self.accept_next_alert = True
     
     def tearDown(self):
-        #self.driver.quit()
+        self.driver.quit()
         self.assertEqual([], self.verificationErrors)
 
 if __name__ == "__main__":

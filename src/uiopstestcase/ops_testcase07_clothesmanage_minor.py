@@ -22,7 +22,7 @@ class OpsTestcase07clothesmanageminor(unittest.TestCase):
         PASS_WORD = conf.get("opssection", "uiadminpassword")
         print OPS_URL,USER_NAME,PASS_WORD  
         self.base_url = OPS_URL
-        self.base_url = "http://ops05.edaixi.cn:81/"
+        #self.base_url = "http://ops05.edaixi.cn:81/"
         self.verificationErrors = []
         self.accept_next_alert = True
     
@@ -85,7 +85,7 @@ class OpsTestcase07clothesmanageminor(unittest.TestCase):
         finally: self.accept_next_alert = True
     
     def tearDown(self):
-        #self.driver.quit()
+        self.driver.quit()
         self.assertEqual([], self.verificationErrors)
 
 if __name__ == "__main__":

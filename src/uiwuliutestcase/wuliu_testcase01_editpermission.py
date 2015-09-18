@@ -42,6 +42,11 @@ class WuliuTestcase01EditPermission(unittest.TestCase):
         driver.find_element_by_id("login-submit").click()
         print driver.title
         self.assertEqual(driver.title, u"物流")
+        
+        #driver.execute_script("document.getElementsByClassName('dropdown-menu').class='dropdown-menu open';")
+        
+        driver.execute_script("var doc=document.getElementsByClassName('dropdown-menu').className;document.write(doc.replace(/dropdown-menu open/, 'dropdown-menu'));")
+        
         time.sleep(2)
         driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:first-child.active a").click()
         time.sleep(1)
@@ -89,7 +94,7 @@ class WuliuTestcase01EditPermission(unittest.TestCase):
         finally: self.accept_next_alert = True
     
     def tearDown(self):
-        self.driver.quit()
+        #self.driver.quit()
         self.assertEqual([], self.verificationErrors)
 
 if __name__ == "__main__":
