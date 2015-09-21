@@ -41,11 +41,20 @@ kefu_tab_usuallyquery=str(7)
 kefu_tab_estimatemanage=str(8)
 kefu_tab_estimatecomplain=str(9)
 
-global kefu_tab_test00_myfeedback,kefu_tab_test00_ordertousu
+global kefu_tab_test00_myfeedback,kefu_tab_test00_ordertousu,kefu_tab_test00_orderlist,kefu_tab_test00_orderpinjia
+global kefu_tab_test00_ueuallyfeedbak,kefu_tab_test00_ueuallyquery,kefu_tab_test00_rdt3_ueuallyquery
 
 kefu_tab_test00_myfeedback=str(7)
 kefu_tab_test00_ordertousu=str(7)
+kefu_tab_test00_orderlist=str(2)
+kefu_tab_test00_orderpinjia=str(6)
+kefu_tab_test00_ueuallyfeedbak=str(3)
+kefu_tab_test00_ueuallyquery=str(5)
 
+
+kefu_tab_test00_rdt3_ueuallyquery=str(3)
+
+# this is test data for automation testing 
 ordersnnumber="040300364669"
 
 # class appobjectkefu:

@@ -6,7 +6,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
-import unittest, time, re ,ConfigParser
+import unittest, time, re ,ConfigParser,random
 # from xlwt.antlr import ifelse
 import appobjectops,ops_utiltools
 class OpsTestcase02innertestingmanage(unittest.TestCase):
@@ -52,14 +52,14 @@ class OpsTestcase02innertestingmanage(unittest.TestCase):
         #driver.find_element_by_link_text(u"内测管理").click()
         driver.find_element_by_link_text(u"添 加").click()
         driver.find_element_by_id("gray_group_name").clear()
-        driver.find_element_by_id("gray_group_name").send_keys("innertestname")
+        driver.find_element_by_id("gray_group_name").send_keys(str("innertestname"+str(random.randint(0,999))))
         time.sleep(1)
         driver.find_element_by_name("commit").click()
 
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
         driver.find_element_by_link_text(u"编辑").click()
         driver.find_element_by_id("gray_group_name").clear()
-        driver.find_element_by_id("gray_group_name").send_keys("innertestnameedit")
+        driver.find_element_by_id("gray_group_name").send_keys(str("innertestnameedit"+str(random.randint(0,99))))
         driver.find_element_by_name("commit").click()
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
         driver.find_element_by_link_text(u"删除").click()
@@ -109,7 +109,7 @@ class OpsTestcase02innertestingmanage(unittest.TestCase):
         finally: self.accept_next_alert = True
     
     def tearDown(self):
-        #self.driver.quit()
+        self.driver.quit()
         self.assertEqual([], self.verificationErrors)
 
 if __name__ == "__main__":

@@ -39,7 +39,7 @@ class KefuTestcase00rdt2usellyfeedbackl(unittest.TestCase):
         time.sleep(1)
         self.assertEqual(driver.title,u"客服系统")
 
-        driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child(3)>a").click()
+        driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child("+appobjectkefu.kefu_tab_test00_ueuallyfeedbak+")>a").click()
         #driver.find_element_by_link_text(u"反馈总列表").click()
         #driver.find_element_by_link_text(u"踢").click()
         
