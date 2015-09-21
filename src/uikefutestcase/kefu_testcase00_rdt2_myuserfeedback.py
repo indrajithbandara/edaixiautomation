@@ -37,19 +37,23 @@ class KefuTestcase00rdt2myuserfeedback(unittest.TestCase):
         driver.find_element_by_id("password").clear()
         driver.find_element_by_id("password").send_keys(PASS_WORD)
         driver.find_element_by_id("login-submit").click()
+        print " the testcase test_kefu_testcase00_rdt2_myuserfeedback is ",driver.title
         time.sleep(1)
         self.assertEqual(driver.title,u"客服系统")
 
         driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:first-child>a").click()
         #driver.find_element_by_link_text(u"反馈总列表").click()
         #driver.find_element_by_link_text(u"踢").click()
+        time.sleep(1)
         self.assertEqual(driver.title,u"客服系统")
         driver.find_element_by_css_selector("div#container.container div.panel.panel-primary ul.nav.nav-tabs li:first-child.active a").click()
         #driver.find_element_by_link_text(u"处理").click()
+        time.sleep(1)
         self.assertEqual(driver.title,u"客服系统")
         driver.find_element_by_css_selector("div#container.container>div.panel.panel-primary>table.table.table-stripe>tbody>tr>td>a").click()
         #driver.find_element_by_id("tag_to_feedback_71874").click()
         self.assertEqual(driver.title,u"客服系统")
+        time.sleep(1)
 #         driver.find_element_by_css_selector("div#container.container div.col-sm-6 ul#replies_navi.nav.nav-tabs li:first-child#ajax_customer_feedbacks_all.active a").click()
 #         
 #         self.assertEqual(driver.title,u"客服系统")

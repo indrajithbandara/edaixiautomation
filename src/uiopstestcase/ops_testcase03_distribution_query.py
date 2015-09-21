@@ -39,7 +39,7 @@ class OpsTestcase03DistributionQuery(unittest.TestCase):
         #self.assert_(driver.title, u"e袋洗城市运营后台")
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
         
-        driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child("+str(3)+") a").click()
+        driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child("+appobjectops.ops_tab_distribution+") a").click()
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
         driver.find_element_by_id("product_name").clear()
         driver.find_element_by_id("product_name").send_keys(u"测试")

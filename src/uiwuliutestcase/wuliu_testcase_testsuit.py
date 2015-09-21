@@ -63,8 +63,8 @@ if __name__ == '__main__':
      #caiwu testcase01 first need chongzhi,then koukuan,finally is tuikuan testcase
      suite.addTest(WuliuTestcase01EditPermission('test_wuliu_testcase01_EditPermission'))
      time.sleep(3)
-     suite.addTest(WuliuTestcase01Querypermission('test_wuliu_testcase01_querypermission'))
-     time.sleep(3)
+#      suite.addTest(WuliuTestcase01Querypermission('test_wuliu_testcase01_querypermission'))
+#      time.sleep(3)
      #caiwu testcase02
      suite.addTest(WuliuTestcase02factorydelivery('test_wuliu_testcase02_factory_delivery'))
      time.sleep(3)

@@ -7,8 +7,9 @@ from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
 import unittest, time, re ,ConfigParser
+# from xlwt.antlr import ifelse
 import appobjectops,ops_utiltools
-class OpsTestcase05PriceHometextile(unittest.TestCase):
+class OpsTestcase02innertestingmanage(unittest.TestCase):
     def setUp(self):
         #self.driver = webdriver.Firefox()
         self.driver = appobjectops.GetInstance()
@@ -26,7 +27,7 @@ class OpsTestcase05PriceHometextile(unittest.TestCase):
         self.verificationErrors = []
         self.accept_next_alert = True
     
-    def test_ops_testcase05_PriceHometextile(self):
+    def test_ops_testcase02_innertestingmanage(self):
         driver = self.driver
         driver.get(self.base_url + "/")
         driver.find_element_by_css_selector("div#container.container h3.text-center.text-primary a.btn.btn-success.text-center").click()
@@ -35,55 +36,57 @@ class OpsTestcase05PriceHometextile(unittest.TestCase):
         driver.find_element_by_id("password").clear()
         driver.find_element_by_id("password").send_keys(PASS_WORD)
         driver.find_element_by_id("login-submit").click()
-        print driver.title
-        #self.assert_(driver.title, u"e袋洗城市运营后台")
+        print " the testcase test_ops_testcase02_innertestingmanage  is  ",driver.title,appobjectops.ops_tab_innertestingmanage
+        self.assertEqual(driver.title, u"e袋洗城市运营后台")
+        
+        #html body div.navbar.navbar-default.navbar-static-top div.container div.navbar-collapse.collapse.navbar-responsive-collapse ul.nav.navbar-nav li.dropdown a.dropdown-toggle
+        #driver.find_element_by_css_selector("div.navbar.navbar-default.navbar-static-top div.container div.navbar-collapse.collapse.navbar-responsive-collapse ul.nav.navbar-nav li:nth-child("+appobjectops.ops_innertestingmanage+").dropdown a.dropdown-toggle").click()
+        driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child("+str(appobjectops.ops_tab_innertestingmanage)+")>a").click()
+        time.sleep(2)
+        self.assertEqual(driver.title, u"e袋洗城市运营后台")
+#         driver.find_element_by_css_selector("ul.nav.navbar-nav li:nth-child("+appobjectops.ops_innertestingmanage+").dropdown ul.dropdown-menu li:first-child a").click()
+#         time.sleep(1)
+        
+        #driver.find_element_by_css_selector("div#container.container a.btn.btn-sm.btn-info.col-md-1").click()
+        #html body div#container.container div.panel.panel-primary div.pnale-body table.table.table-bordered.table-striped tbody tr:nth-child(2) td:last-child
+        #driver.find_element_by_link_text(u"内测管理").click()
+        driver.find_element_by_link_text(u"添 加").click()
+        driver.find_element_by_id("gray_group_name").clear()
+        driver.find_element_by_id("gray_group_name").send_keys("innertestname")
+        time.sleep(1)
+        driver.find_element_by_name("commit").click()
+
+        self.assertEqual(driver.title, u"e袋洗城市运营后台")
+        driver.find_element_by_link_text(u"编辑").click()
+        driver.find_element_by_id("gray_group_name").clear()
+        driver.find_element_by_id("gray_group_name").send_keys("innertestnameedit")
+        driver.find_element_by_name("commit").click()
+        self.assertEqual(driver.title, u"e袋洗城市运营后台")
+        driver.find_element_by_link_text(u"删除").click()
+        time.sleep(2)
+        self.assertEqual(u"确认是否删除？", self.close_alert_and_get_its_text())
+        self.assertEqual(driver.title, u"e袋洗城市运营后台")
+        
+        driver.find_element_by_id("search_name").clear()
+        driver.find_element_by_id("search_name").send_keys("18888888888")
+        
+        driver.find_element_by_name("commit").click()
+        self.assertEqual(driver.title, u"e袋洗城市运营后台")
+        
+        driver.find_element_by_link_text(u"添 加").click()
+        driver.find_element_by_id("gray_group_name").clear()
+        driver.find_element_by_id("gray_group_name").send_keys("innertestnameedit")
+        driver.find_element_by_name("commit").click()
+        
+        self.assertEqual(driver.title, u"e袋洗城市运营后台")
+        driver.find_element_by_link_text(u"内测成员").click()
+        driver.find_element_by_id("add_tel").clear()
+        driver.find_element_by_id("add_tel").send_keys("zhangsan")
+        driver.find_element_by_id("add_member").click()
+        
 
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
         
-        driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child("+appobjectops.ops_tab_PriceClothes+") a").click()
-        driver.implicitly_wait(10)
-        self.assertEqual(driver.title, u"e袋洗城市运营后台")
-        
-        driver.find_element_by_css_selector("div#container.container>ul#myTab.nav.nav-tabs>li:nth-child(3)>a").send_keys(Keys.ENTER)
-        #html body div#container.container ul#myTab.nav.nav-tabs li a
-        #ul.nav.navbar-nav li.dropdown ul.dropdown-menu li a
-        #driver.find_element_by_css_selector("ul.nav.navbar-nav li:nth-child(3).dropdown ul.dropdown-menu li:nth-child(1) a").click()
-        self.assertEqual(driver.title, u"e袋洗城市运营后台")
-        time.sleep(2)
-        driver.find_element_by_css_selector("div#container.container a.btn.btn-sm.btn-info").click()
-        #html body div#container.container a.btn.btn-sm.btn-info
-        self.assertEqual(driver.title, u"e袋洗城市运营后台")
-        
-        driver.find_element_by_id("supplier_good_form_name").clear()
-        driver.find_element_by_id("supplier_good_form_name").send_keys("addleimu")
-        driver.find_element_by_id("supplier_good_form_edaixi_price").clear()
-        driver.find_element_by_id("supplier_good_form_edaixi_price").send_keys("100")
-        driver.find_element_by_id("supplier_good_form_rongchang_price").clear()
-        driver.find_element_by_id("supplier_good_form_rongchang_price").send_keys("100")
-        driver.find_element_by_id("supplier_good_form_description").clear()
-        driver.find_element_by_id("supplier_good_form_description").send_keys("addleimudescription")
-
-        driver.find_element_by_name("commit").click()
-        #self.assert_(driver.title, u"e袋洗城市运营后台")
-        self.assertEqual(driver.title, u"e袋洗城市运营后台")
-       
-        #html body div#container.container table.table.table-bordered.table-striped tbody tr:last-child td:last-child a.btn.btn-sm.btn-info
-        #driver.find_element_by_xpath(u"(//a[contains(text(),'编辑')])[6]").click()
-        driver.find_element_by_css_selector("div#container.container table.table.table-bordered.table-striped tbody tr:nth-child(2) td:last-child a:first-child.btn.btn-sm.btn-info").click()
-        self.assertEqual(driver.title, u"e袋洗城市运营后台")
-        
-        driver.find_element_by_id("supplier_good_form_description").clear()
-        driver.find_element_by_id("supplier_good_form_description").send_keys("addleimuedit")
-        driver.find_element_by_name("commit").click()
-        
-        self.assertEqual(driver.title, u"e袋洗城市运营后台")
-        #self.assert_(driver.title, u"e袋洗城市运营后台")  
-        driver.find_element_by_css_selector("div#container.container table.table.table-bordered.table-striped tbody tr:nth-child(2) td:last-child a:last-child.btn.btn-sm.btn-danger").click()
-        time.sleep(2)
-        self.assertRegexpMatches(self.close_alert_and_get_its_text(), u"^确认删除[\s\S]$")
-        #self.assert_(driver.title, u"e袋洗城市运营后台")
-        self.assertEqual(driver.title, u"e袋洗城市运营后台")
-            
     def is_element_present(self, how, what):
         try: self.driver.find_element(by=how, value=what)
         except NoSuchElementException, e: return False
@@ -106,7 +109,7 @@ class OpsTestcase05PriceHometextile(unittest.TestCase):
         finally: self.accept_next_alert = True
     
     def tearDown(self):
-        self.driver.quit()
+        #self.driver.quit()
         self.assertEqual([], self.verificationErrors)
 
 if __name__ == "__main__":

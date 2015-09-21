@@ -38,7 +38,7 @@ class OpsTestcase01DistributionUpDown(unittest.TestCase):
         print driver.title
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
         
-        driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child("+str(3)+")>a").send_keys(Keys.ENTER)
+        driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child("+appobjectops.ops_tab_distribution+")>a").send_keys(Keys.ENTER)
         #div#container.container table.table.table-bordered.table-striped tbody tr: td a.btn.btn-sm.btn-danger
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
         ##driver.find_element_by_xpath("/html/body/div[1]/div/div/ul/li[3]/ul/li[3]/a").click()

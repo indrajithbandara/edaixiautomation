@@ -58,14 +58,18 @@ class OpsTestcase02LayoutManageMasterBanner(unittest.TestCase):
         driver.find_element_by_id("banner_title").clear()
         driver.find_element_by_id("banner_title").send_keys("bigbutton")
         
-        linktypename=driver.find_element_by_css_selector("div#container.container div.panel.panel-primary div.pnale-body form#new_banner.form-horizontal.new_banner div:nth-child(3).form-group.select.optional.banner_website_type div.col-sm-8 select#banner_website_type.select.optional.form-control option:nth-child(2)").text
+        #linktypename=driver.find_element_by_css_selector("div#container.container div.panel.panel-primary div.pnale-body form#new_banner.form-horizontal.new_banner div:nth-child(3).form-group.select.optional.banner_website_type div.col-sm-8 select#banner_website_type.select.optional.form-control option:nth-child(2)").text
         
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
-        print " the linktypename is  ",linktypename
-        Select(driver.find_element_by_id("banner_website_type")).select_by_visible_text(linktypename)
+        #print " the linktypename is  ",linktypename
+        Select(driver.find_element_by_id("banner_website_type")).select_by_visible_text(u"站外链接")
         
         driver.find_element_by_id("banner_description").clear()
         driver.find_element_by_id("banner_description").send_keys("hello")
+        
+        driver.find_element_by_id("banner_website").clear()
+        driver.find_element_by_id("banner_website").send_keys("http://localhost.test")
+        
         
         driver.find_element_by_id("banner_inner_url").clear()
         driver.find_element_by_id("banner_inner_url").send_keys("http://localhost.hello")
@@ -160,7 +164,7 @@ class OpsTestcase02LayoutManageMasterBanner(unittest.TestCase):
         finally: self.accept_next_alert = True
     
     def tearDown(self):
-        self.driver.quit()
+        #self.driver.quit()
         self.assertEqual([], self.verificationErrors)
 
 if __name__ == "__main__":

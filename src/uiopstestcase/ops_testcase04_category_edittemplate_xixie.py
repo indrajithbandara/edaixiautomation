@@ -38,11 +38,11 @@ class OpsTestcase04Categoryedittemplatexixie(unittest.TestCase):
         print driver.title
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
         
-        driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child("+str(4)+") a").click()
+        driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child("+appobjectops.ops_tab_Category+") a").click()
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
         
         #ul.nav.navbar-nav li.dropdown ul.dropdown-menu li a
-        driver.find_element_by_css_selector("ul.nav.navbar-nav li:nth-child("+str(4)+").dropdown ul.dropdown-menu li:nth-child(2) a").click()
+        driver.find_element_by_css_selector("ul.nav.navbar-nav li:nth-child("+appobjectops.ops_tab_Category+").dropdown ul.dropdown-menu li:nth-child(2) a").click()
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
         
         #self.assert_(driver.title, u"e袋洗城市运营后台")

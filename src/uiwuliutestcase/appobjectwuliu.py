@@ -76,8 +76,10 @@ wuliutabeleven=str(11)
 
 #This is wuliu system test data for platform
 
-global testcase08_jiagongdian_forbalantestdata 
+global testcase08_jiagongdian_forbalantestdata ,jiagongdianchuruku_signnumber_testdata,jiagongzhandian_signnumber_testdata
 testcase08_jiagongdian_forbalantestdata=u"快洗"
+jiagongdianchuruku_signnumber_testdata=""
+jiagongzhandian_signnumber_testdata=""
 
 def deleteOutlet_RulesTableData():
         conn=MySQLdb.connect(host=mysqlhostname,user=mysqlusername,passwd=mysqlpassword,db=mysqlrongchangdb,charset="utf8")    

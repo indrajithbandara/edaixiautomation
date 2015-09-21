@@ -40,7 +40,7 @@ class OpsTestcase03DistributionAddgoods(unittest.TestCase):
         print driver.title
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
                 
-        driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child("+str(3)+") a").click()
+        driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child("+appobjectops.ops_tab_distribution+") a").click()
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
         driver.find_element_by_css_selector("div#container.container a.btn.btn-info.btn-sm").click()
         #driver.find_element_by_link_text(u"分销系统").click()

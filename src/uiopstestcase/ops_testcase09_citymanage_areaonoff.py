@@ -38,7 +38,9 @@ class OpsTestcase09citymanageareaonoff(unittest.TestCase):
         print driver.title
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
         
-
+        driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child("+appobjectops.ops_tab_citymanage+") a").click()
+        driver.implicitly_wait(10)
+        self.assertEqual(driver.title, u"e袋洗城市运营后台")
     
     def is_element_present(self, how, what):
         try: self.driver.find_element(by=how, value=what)

@@ -49,28 +49,49 @@ class OpsTestcase02LayoutManageBigFunction(unittest.TestCase):
        
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
         driver.find_element_by_id("banner_title").clear()
-        driver.find_element_by_id("banner_title").send_keys("bigbutton")
-        
-        linktypename=driver.find_element_by_css_selector("div#container.container div.panel.panel-primary div.pnale-body form#new_banner.form-horizontal.new_banner div:nth-child(3).form-group.select.optional.banner_website_type div.col-sm-8 select#banner_website_type.select.optional.form-control option:nth-child(2)").text
-        
-        Select(driver.find_element_by_id("banner_website_type")).select_by_visible_text(linktypename)
-        driver.find_element_by_id("banner_description").clear()
-        driver.find_element_by_id("banner_description").send_keys("hello")
-        
-        driver.find_element_by_id("banner_inner_url").clear()
-        driver.find_element_by_id("banner_inner_url").send_keys("http://localhost.cn")
+        driver.find_element_by_id("banner_title").send_keys("bigbuttontest")
+#         
+#         linktypename=driver.find_element_by_css_selector("div#container.container div.panel.panel-primary div.pnale-body form#new_banner.form-horizontal.new_banner div:nth-child(3).form-group.select.optional.banner_website_type div.col-sm-8 select#banner_website_type.select.optional.form-control option:nth-child(2)").text
+#         
+#         Select(driver.find_element_by_id("banner_website_type")).select_by_visible_text(linktypename)
+#         driver.find_element_by_id("banner_description").clear()
+#         driver.find_element_by_id("banner_description").send_keys("hello")
+#         
+#         driver.find_element_by_id("banner_inner_url").clear()
+#         driver.find_element_by_id("banner_inner_url").send_keys("http://localhost.cn")
         
         driver.find_element_by_id("banner_inner_title").clear()
-        driver.find_element_by_id("banner_inner_title").send_keys("hello")
+        driver.find_element_by_id("banner_inner_title").send_keys("bigbuttontesttitle")
         #driver.find_element_by_id("banner_ios").clear()
         driver.find_element_by_id("banner_ios").send_keys("C:\edaixi_testdata\edaixi_ops_banner1.jpg")
         #driver.find_element_by_id("banner_android").clear()
         driver.find_element_by_id("banner_android").send_keys("C:\edaixi_testdata\edaixi_ops_banner2.jpg")
         #driver.find_element_by_id("banner_web").clear()
         driver.find_element_by_id("banner_web").send_keys("C:\edaixi_testdata\edaixi_ops_banner3.jpg")
+        
+#         
+#         driver.find_element_by_id("banner_title").clear()
+#         driver.find_element_by_id("banner_title").send_keys("2121")
+        driver.find_element_by_id("banner_description").clear()
+        driver.find_element_by_id("banner_description").send_keys("bigbuttontestdesc")
+#         driver.find_element_by_id("banner_website").clear()
+#         driver.find_element_by_id("banner_website").send_keys("2112121")
+#         driver.find_element_by_id("banner_inner_url").clear()
+#         driver.find_element_by_id("banner_inner_url").send_keys("121212")
+        driver.find_element_by_id("banner_inner_title").clear()
+        driver.find_element_by_id("banner_inner_title").send_keys("bigbuttontestinnertitle")
+
+        driver.find_element_by_id("banner_website").clear()
+        driver.find_element_by_id("banner_website").send_keys("http://www.localhost.com")
+        driver.find_element_by_id("banner_inner_url").clear()
+        driver.find_element_by_id("banner_inner_url").send_keys("http://www.localhostest.com")
         driver.find_element_by_name("commit").click()
         
+        
+        #driver.find_element_by_name("commit").click()
+        
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
+        time.sleep(2)
         #driver.find_element_by_link_text(u"编辑").click()
         driver.find_element_by_css_selector("div#container.container div.panel.panel-primary div.pnale-body table.table.table-striped tbody tr:first-child td:last-child a:nth-child(2).btn.btn-sm.btn-info").click()
         driver.find_element_by_id("banner_description").clear()

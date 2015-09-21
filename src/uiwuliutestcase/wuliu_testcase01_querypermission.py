@@ -42,7 +42,7 @@ class WuliuTestcase01Querypermission(unittest.TestCase):
         driver.execute_script("$('.dropdown-menu').show();")
         self.assertEqual(driver.title, u"物流")
         time.sleep(2)
-        driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:first-child.active a").click()
+        driver.find_element_by_css_selector("div.container>nav.collapse.navbar-collapse.bs-navbar-collapse>ul.nav.navbar-nav>li:first-child>a").click()
         time.sleep(1)
         #driver.find_element_by_xpath("/html/body/header/div/nav/ul/li[1]/a").click()
         #driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:first-child.active a").click()

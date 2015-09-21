@@ -38,11 +38,12 @@ class OpsTestcase02MapSettingSubCityMapSetting(unittest.TestCase):
         driver.find_element_by_id("login-submit").click()
         print driver.title
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
+        
         #html body div.navbar.navbar-default.navbar-static-top div.container div.navbar-collapse.collapse.navbar-responsive-collapse ul.nav.navbar-nav li.dropdown a.dropdown-toggle
-        driver.find_element_by_css_selector("div.navbar.navbar-default.navbar-static-top div.container div.navbar-collapse.collapse.navbar-responsive-collapse ul.nav.navbar-nav li:nth-child(2).dropdown a.dropdown-toggle").click()
+        driver.find_element_by_css_selector("div.navbar.navbar-default.navbar-static-top div.container div.navbar-collapse.collapse.navbar-responsive-collapse ul.nav.navbar-nav li:nth-child("+appobjectops.ops_tab_mapSetting_subCityMapSetting+").dropdown a.dropdown-toggle").click()
         time.sleep(2)
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
-        driver.find_element_by_css_selector("ul.nav.navbar-nav li:nth-child(2).dropdown ul.dropdown-menu li:first-child a").click()
+        driver.find_element_by_css_selector("ul.nav.navbar-nav li:nth-child("+appobjectops.ops_tab_mapSetting_subCityMapSetting+").dropdown ul.dropdown-menu li:first-child a").click()
         time.sleep(1)
         
         #driver.find_element_by_css_selector("div#container.container a.btn.btn-sm.btn-info.col-md-1").click()

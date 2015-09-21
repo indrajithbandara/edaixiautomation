@@ -12,6 +12,7 @@ from ops_testcase02_layoutmanage_branchbanner import *
 from ops_testcase02_layoutmanage_masterbanner import *
 from ops_testcase02_layoutmanage_smallfunction import *
 from ops_testcase02_mapsetting_subcitymapsetting import *
+from ops_testcase02_innertestingmanage import *
 
 from ops_testcase03_distribution_addgoods import *
 from ops_testcase03_distribution_editgoods import *
@@ -68,6 +69,9 @@ if __name__ == '__main__':
     time.sleep(3)
     
     suite.addTest(OpsTestcase02MapSettingSubCityMapSetting('test_ops_testcase02_mapSetting_subCityMapSetting'))
+    time.sleep(3)
+    
+    suite.addTest(OpsTestcase02innertestingmanage('test_ops_testcase02_innertestingmanage'))
     time.sleep(3)
 
     #caiwu testcase03s

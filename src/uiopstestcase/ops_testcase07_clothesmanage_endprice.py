@@ -36,14 +36,14 @@ class OpsTestcase07clothesmanageendprice(unittest.TestCase):
         driver.find_element_by_id("password").clear()
         driver.find_element_by_id("password").send_keys(PASS_WORD)
         driver.find_element_by_id("login-submit").click()
-        print driver.title
+        print "the testcase test_ops_testcase07_clothesmanageendprice is ",driver.title
         #self.assert_(driver.title, u"e袋洗城市运营后台")
         #self.assertEqual(driver.title, u"e袋洗城市运营后台")
                 
-        driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child("+str(7)+") a").click()
+        driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child("+appobjectops.ops_tab_clothesmanage+") a").click()
         driver.implicitly_wait(10)
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
-        driver.find_element_by_css_selector("div.container>div>ul.nav.navbar-nav>li:nth-child("+str(7)+").dropdown>ul.dropdown-menu>li:nth-child(2)>a").send_keys(Keys.ENTER)
+        driver.find_element_by_css_selector("div.container>div>ul.nav.navbar-nav>li:nth-child("+appobjectops.ops_tab_clothesmanage+").dropdown>ul.dropdown-menu>li:nth-child("+appobjectops.ops_tab_clothesmanage_endprice+")>a").send_keys(Keys.ENTER)
         #driver.find_element_by_css_selector("div.container div.navbar-collapse.collapse.navbar-responsive-collapse ul.nav.navbar-nav li:nth-child("+str(7)+").dropdown ul.dropdown-menu li:nth-child(2) a").send_keys(Keys.ENTER)
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
         print driver.title

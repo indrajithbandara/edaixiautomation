@@ -39,11 +39,11 @@ class OpsTestcase04Categoryedittemplatexijiafang(unittest.TestCase):
         print driver.title
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
         
-        driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child("+str(4)+") a").click()
+        driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child("+appobjectops.ops_tab_Category+") a").click()
         #ul.nav.navbar-nav li.dropdown ul.dropdown-menu li a
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
         
-        driver.find_element_by_css_selector("ul.nav.navbar-nav li:nth-child("+str(4)+").dropdown ul.dropdown-menu li:nth-child(2) a").click()
+        driver.find_element_by_css_selector("ul.nav.navbar-nav li:nth-child("+appobjectops.ops_tab_Category+").dropdown ul.dropdown-menu li:nth-child(2) a").click()
         #html body div#container.container ul#myTab.nav.nav-tabs li a.active
         #self.assert_(driver.title, u"e袋洗城市运营后台")
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
@@ -56,7 +56,7 @@ class OpsTestcase04Categoryedittemplatexijiafang(unittest.TestCase):
         #ActionChains(driver).double_click(addclick).perform()
         #html body div#container.container a.btn.btn-sm.btn-info  .click()
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
-        
+        time.sleep(1)
         #driver.find_element_by_link_text(u"新 建").click()
         driver.find_element_by_id("service_good_form_name").clear()
         driver.find_element_by_id("service_good_form_name").send_keys("xiyileimutemplate")
@@ -68,7 +68,7 @@ class OpsTestcase04Categoryedittemplatexijiafang(unittest.TestCase):
         driver.find_element_by_id("service_good_form_description").send_keys("hellp")
         driver.find_element_by_name("commit").click()
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
-        
+        time.sleep(1)
         #driver.find_element_by_xpath(u"(//a[contains(text(),'编辑')])[5]").click()
         driver.find_element_by_css_selector("div#container.container table.table.table-bordered.table-striped tbody tr:last-child td:last-child a.btn.btn-sm.btn-info").click()
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
