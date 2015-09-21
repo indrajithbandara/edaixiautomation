@@ -41,11 +41,11 @@ class CaiwuTestcase00rdt6caiwushiticard(unittest.TestCase):
         time.sleep(2)
         self.assertEqual(driver.title,u"财务")
         #driver.find_element_by_link_text(u"优惠券").click()
-        driver.find_element_by_css_selector("div.container div.navbar-collapse.collapse.navbar-responsive-collapse ul.nav.navbar-nav li:nth-child(2) a").click()
+        driver.find_element_by_css_selector("div.container div.navbar-collapse.collapse.navbar-responsive-collapse ul.nav.navbar-nav li:nth-child("+appobjectcaiwu.caiwu_tab_rdt6_shiticard+") a").click()
         #driver.find_element_by_link_text(u"优惠券组").click()
         self.assertEqual(driver.title,u"财务")
         #html body div.navbar.navbar-default.navbar-static-top div.container div.navbar-collapse.collapse.navbar-responsive-collapse ul.nav.navbar-nav li:nth-child(2).dropdown ul.dropdown-menu li:first-child a
-        driver.find_element_by_css_selector("ul.nav.navbar-nav>li:nth-child(2).dropdown>ul.dropdown-menu>li:first-child>a").click()
+        driver.find_element_by_css_selector("ul.nav.navbar-nav>li:nth-child("+appobjectcaiwu.caiwu_tab_rdt6_shiticard+").dropdown>ul.dropdown-menu>li:first-child>a").click()
         self.assertEqual(driver.title,u"财务")
         #driver.find_element_by_link_text(u"新 建").click()
         driver.find_element_by_css_selector("div.container a.btn.btn-info.col-md-1").click()
