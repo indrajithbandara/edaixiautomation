@@ -56,7 +56,7 @@ class KefuTestcase04TabmanageCreateMastertab(unittest.TestCase):
         cursor.close()
         conn.close()
         
-        driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child(4)>a").click()
+        driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child("+appobjectkefu.kefu_tab_tabmanage+")>a").click()
         self.assertEqual(driver.title,u"客服系统")
         #driver.find_element_by_id("add_tag").click()
         driver.find_element_by_css_selector("div#container.container div.col-sm-4 a#add_tag").send_keys(Keys.ENTER)

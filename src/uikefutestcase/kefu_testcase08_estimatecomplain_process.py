@@ -41,7 +41,7 @@ class KefuTestcase08EstimateComplainProcess(unittest.TestCase):
         time.sleep(2)
         print "the testcase test_kefu_testcase08_estimatecomplain_process is ",driver.title
         self.assertEqual(driver.title,u"客服系统")
-        driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child("+str(9)+")>a").click() 
+        driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child("+appobjectkefu.kefu_tab_estimatecomplain+")>a").click() 
 #         self.assertEqual(driver.title,u"客服系统")
 #         driver.find_element_by_css_selector("div#container.container>ul.nav.navbar-nav.btn-box>li:nth-child(3)>a").click()
 #         self.assertEqual(driver.title,u"客服系统")

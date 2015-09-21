@@ -41,10 +41,10 @@ class KefuTestcase06UsuallyqueryDianzikaquery(unittest.TestCase):
         time.sleep(1)
         #print driver.title
         #self.assertEqual(driver.title,u"客服系统")
-        driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child(7)>a").click() 
+        driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child("+appobjectkefu.kefu_tab_usuallyquery+")>a").click() 
         self.assertEqual(driver.title,u"客服系统")
         time.sleep(1)
-        driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child(7).dropdown>ul.dropdown-menu>li:nth-child(3)>a").click()
+        driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child("+appobjectkefu.kefu_tab_usuallyquery+").dropdown>ul.dropdown-menu>li:nth-child(3)>a").click()
         
         print driver.title
         #self.assertTrue(driver.title, u"1客服系统")

@@ -40,7 +40,7 @@ class KefuTestcase07EstimatemanageGoodinfos(unittest.TestCase):
         
         print driver.title
         self.assertEqual(driver.title,u"客服系统")
-        driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child(8)>a").click() 
+        driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child("+appobjectkefu.kefu_tab_estimatemanage+")>a").click() 
         self.assertEqual(driver.title,u"客服系统")
         driver.find_element_by_css_selector("div#container.container>ul.nav.navbar-nav.btn-box>li:first-child>a").click()
         self.assertEqual(driver.title,u"客服系统")

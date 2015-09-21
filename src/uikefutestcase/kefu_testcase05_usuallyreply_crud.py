@@ -41,7 +41,7 @@ class KefuTestcase05UsuallyreplyCrud(unittest.TestCase):
         print " the testcase test_kefu_testcase05_usuallyreply_crud is ",driver.title
         time.sleep(1)
         self.assertEqual(driver.title,u"客服系统")
-        driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child(5)>a").click() 
+        driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child("+appobjectkefu.kefu_tab_usuallyreply+")>a").click() 
         self.assertEqual(driver.title,u"客服系统")
         
         driver.find_element_by_id("content").clear()

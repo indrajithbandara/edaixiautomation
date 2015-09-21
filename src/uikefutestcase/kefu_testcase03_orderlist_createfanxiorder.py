@@ -50,7 +50,7 @@ class KefuTestcase03OrderlistCreatefanxiorder(unittest.TestCase):
         print " the testcase test_kefu_testcase03_orderlist_createfanxiorder is ",driver.title
         #self.assertEqual(driver.title,u"客服系统")
         time.sleep(1)
-        driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child(3)>a").click()
+        driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child("+appobjectkefu.kefu_tab_orderlist+")>a").click()
        
         conn=MySQLdb.connect(host=mysqlhostname,user=mysqlusername,passwd=mysqlpassword,db=mysqldatabase,charset="utf8")    
         global cursor 

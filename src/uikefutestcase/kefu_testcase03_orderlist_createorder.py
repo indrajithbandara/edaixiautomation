@@ -42,7 +42,7 @@ class KefuTestcase03OrderlistCreateorder(unittest.TestCase):
         print " the testcase test_kefu_testcase03_orderlist_createorder is ",driver.title,USER_NAME,PASS_WORD
         self.assertEqual(driver.title,u"客服系统")
         time.sleep(1)
-        driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child(3)>a").click()
+        driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child("+appobjectkefu.kefu_tab_orderlist+")>a").click()
         self.assertEqual(driver.title,u"客服系统")
         #html body div#container.container>div#content-container>a.btn.btn-info.col-md-1
         #createorderclick=driver.find_element_by_css_selector("div#container.container>div#content-container>a.btn.btn-info.col-md-1")

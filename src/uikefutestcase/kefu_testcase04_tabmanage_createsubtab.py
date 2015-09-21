@@ -41,7 +41,7 @@ class KefuTestcase04TabmanageCreatesubtab(unittest.TestCase):
         time.sleep(1)
         print "the testcase test_kefu_testcase04_tabmanage_createsubtab is ",driver.title
         self.assertEqual(driver.title,u"客服系统")
-        driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child(4)>a").click()
+        driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child("+appobjectkefu.kefu_tab_tabmanage+")>a").click()
         self.assertEqual(driver.title,u"客服系统")
         #driver.find_element_by_id("add_tag").click()
         time.sleep(1)

@@ -53,7 +53,7 @@ class KefuTestcase00rdt2myuserfeedback(unittest.TestCase):
         driver.find_element_by_css_selector("div#container.container>div.panel.panel-primary>table.table.table-stripe>tbody>tr>td>a").click()
         #driver.find_element_by_id("tag_to_feedback_71874").click()
         self.assertEqual(driver.title,u"客服系统")
-        time.sleep(1)
+        #time.sleep(1)
 #         driver.find_element_by_css_selector("div#container.container div.col-sm-6 ul#replies_navi.nav.nav-tabs li:first-child#ajax_customer_feedbacks_all.active a").click()
 #         
 #         self.assertEqual(driver.title,u"客服系统")
@@ -63,7 +63,7 @@ class KefuTestcase00rdt2myuserfeedback(unittest.TestCase):
 #         time.sleep(1)
 #         self.assertEqual(u"确认发券吗？", self.close_alert_and_get_its_text())
 #         
-        time.sleep(1)
+        time.sleep(3)
         driver.find_element_by_link_text(u"待回复").click()
         time.sleep(1)
         driver.find_element_by_link_text(u"调度").click()

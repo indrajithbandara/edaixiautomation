@@ -47,18 +47,18 @@ class KefuTestcase03OrderlistCancellorder(unittest.TestCase):
         print " the testcase test_kefu_testcase03_orderlist_cancellorder is ",driver.title
         #self.assertEqual(driver.title,u"客服系统")
         time.sleep(1)
-        driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child(3)>a").click()
+        driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child("+appobjectkefu.kefu_tab_orderlist+")>a").click()
         self.assertEqual(driver.title,u"客服系统")
         conn=MySQLdb.connect(host=mysqlhostname,user=mysqlusername,passwd=mysqlpassword,db=mysqldatabase,charset="utf8")    
         global cursor 
         cursor = conn.cursor() 
-        n = cursor.execute("SELECT ordersn ,username,tel,address FROM ims_washing_order WHERE status_delivery=1 AND pay_status=1 AND bagsn IS NOT NULL ORDER BY id") 
-        for i in xrange(cursor.rowcount):
-            ordersn ,username,tel,address = cursor.fetchone()
-        print " the ordersn ,username,tel,address is ",ordersn ,username,tel,address
+#         n = cursor.execute("SELECT ordersn ,username,tel,address FROM ims_washing_order WHERE status_delivery=1 AND pay_status=1 AND bagsn IS NOT NULL ORDER BY id") 
+#         for i in xrange(cursor.rowcount):
+#             ordersn ,username,tel,address = cursor.fetchone()
+#         print " the ordersn ,username,tel,address is ",ordersn ,username,tel,address
         
         driver.find_element_by_id("order_search_form_ordersn").clear()
-        driver.find_element_by_id("order_search_form_ordersn").send_keys(ordersn)
+        driver.find_element_by_id("order_search_form_ordersn").send_keys(appobjectkefu.ordersnnumber)
         
         driver.find_element_by_css_selector("input.btn.btn-success.col-md-1").click()
         time.sleep(2)
@@ -86,7 +86,7 @@ class KefuTestcase03OrderlistCancellorder(unittest.TestCase):
         print driver.title
         #assert "Yahoo!" in driver.titlecursor = db.cursor()
 
-        cursor.execute("UPDATE ims_washing_order SET status_delivery='1' ,STATUS='1'  WHERE ordersn='"+ordersn+"'")
+        cursor.execute("UPDATE ims_washing_order SET status_delivery='1' ,STATUS='1'  WHERE ordersn='"+appobjectkefu.ordersnnumber+"'")
         #提交到数据库执行
         conn.commit()
         cursor.close()

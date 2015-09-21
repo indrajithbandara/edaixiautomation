@@ -40,7 +40,7 @@ class KefuTestcase05UsuallyreplySearch(unittest.TestCase):
         
         print driver.title
         self.assertEqual(driver.title,u"客服系统")     
-        driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child(5)>a").click() 
+        driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child("+appobjectkefu.kefu_tab_usuallyreply+")>a").click() 
         self.assertEqual(driver.title,u"客服系统")
         #driver.find_element_by_id("content").clear()
         #driver.find_element_by_id("content").send_keys("hell,changyonghuifu")
