@@ -59,6 +59,7 @@ encoding//src/uicaiwutestcase/caiwu_testcase08_citylist_jiagongdian_factorbalanc
 encoding//src/uicaiwutestcase/caiwu_testcase_testsuit.py=utf-8
 encoding//src/uicaiwutestcase/caiwu_utiltools.py=utf-8
 encoding//src/uikefutestcase/PythonDateUtils.py=utf-8
+encoding//src/uikefutestcase/appobjectkefu.py=UTF-8
 encoding//src/uikefutestcase/kefu_testcase00_rdt2_myuserfeedback.py=utf-8
 encoding//src/uikefutestcase/kefu_testcase00_rdt2_orderlist.py=utf-8
 encoding//src/uikefutestcase/kefu_testcase00_rdt2_orderpinjia.py=utf-8
