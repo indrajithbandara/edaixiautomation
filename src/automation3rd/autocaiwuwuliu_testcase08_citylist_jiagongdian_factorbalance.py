@@ -83,7 +83,7 @@ class WuliuTestcase08CitylistJiagongdianFactoryBalance(unittest.TestCase):
 
         time.sleep(1)
         print str(auto3rd_utiltools.today())
-        #driver.find_element_by_id("outlet_rule_form_start_time_display").send_keys(str(auto3rd_utiltools.today()))
+        driver.find_element_by_id("outlet_rule_form_start_time_display").send_keys(str(auto3rd_utiltools.today()))
         #driver.find_element_by_link_text("6").click()
         driver.find_element_by_id("outlet_rule_form_end_time").send_keys(str(auto3rd_utiltools.get_day_of_day(3)))
         #driver.find_element_by_link_text("20").click()
@@ -107,7 +107,7 @@ class WuliuTestcase08CitylistJiagongdianFactoryBalance(unittest.TestCase):
         driver.find_element_by_id("outlet_rule_form_discount").clear()
         driver.find_element_by_id("outlet_rule_form_discount").send_keys("10")
         
-        #driver.find_element_by_id("outlet_rule_form_start_time_display").send_keys(str(auto3rd_utiltools.today()))
+        driver.find_element_by_id("outlet_rule_form_start_time_display").send_keys(str(auto3rd_utiltools.today()))
         #driver.find_element_by_link_text("6").click()
         driver.find_element_by_id("outlet_rule_form_end_time").send_keys(str(auto3rd_utiltools.get_day_of_day(3)))
         #driver.find_element_by_link_text("20").click()
@@ -122,7 +122,7 @@ class WuliuTestcase08CitylistJiagongdianFactoryBalance(unittest.TestCase):
 #         driver.find_element_by_link_text("20").click()
 #         driver.find_element_by_name("commit").click()
         Select(driver.find_element_by_id("outlet_rule_form_category_id")).select_by_visible_text(auto3rd_utiltools.xixiecode)
-        #driver.find_element_by_id("outlet_rule_form_start_time_display").send_keys(str(auto3rd_utiltools.today()))
+        driver.find_element_by_id("outlet_rule_form_start_time_display").send_keys(str(auto3rd_utiltools.today()))
         #driver.find_element_by_link_text("6").click()
         driver.find_element_by_id("outlet_rule_form_end_time").send_keys(str(auto3rd_utiltools.get_day_of_day(3)))
         #driver.find_element_by_link_text("20").click()
@@ -138,7 +138,7 @@ class WuliuTestcase08CitylistJiagongdianFactoryBalance(unittest.TestCase):
         driver.find_element_by_id("outlet_rule_form_discount").clear()
         driver.find_element_by_id("outlet_rule_form_discount").send_keys("8")
         
-        #driver.find_element_by_id("outlet_rule_form_start_time_display").send_keys(str(auto3rd_utiltools.today()))
+        driver.find_element_by_id("outlet_rule_form_start_time_display").send_keys(str(auto3rd_utiltools.today()))
         #driver.find_element_by_link_text("6").click()
         driver.find_element_by_id("outlet_rule_form_end_time").send_keys(str(auto3rd_utiltools.get_day_of_day(3)))
         #driver.find_element_by_link_text("20").click()

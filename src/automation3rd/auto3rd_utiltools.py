@@ -14,7 +14,8 @@ jiagongdianjiesuantestdata=u"test"
 xiyicode=u"洗衣"
 xixiecode=u"洗鞋"
 jiafangcode=u"家纺"
-kuaixicode=u"快洗"
+#kuaixicode=u"快洗"
+kuaixicode=u"窗帘"
 
 
 ARR = (7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2)
