@@ -49,10 +49,10 @@ class CaiwuTestcase06CaiwuuserqueryQuery(unittest.TestCase):
         driver.find_element_by_id("login-submit").click()
         driver.implicitly_wait(30)
         self.assertEqual(driver.title, u"财务")
-        driver.find_element_by_css_selector("ul.nav.navbar-nav li:nth-child(7).dropdown a.dropdown-toggle").click()
+        driver.find_element_by_css_selector("ul.nav.navbar-nav li:nth-child("+appobjectcaiwu.caiwu_tab_caiwuuserquery+").dropdown a.dropdown-toggle").click()
         #driver.find_element_by_link_text(u"会员卡查询").click()
         self.assertEqual(driver.title, u"财务")
-        driver.find_element_by_css_selector("ul.nav.navbar-nav li:nth-child(7).dropdown ul.dropdown-menu li:first-child a").click()
+        driver.find_element_by_css_selector("ul.nav.navbar-nav li:nth-child("+appobjectcaiwu.caiwu_tab_caiwuuserquery+").dropdown ul.dropdown-menu li:first-child a").click()
         #WebDriverWait(driver, 10).until(lambda the_driver: the_driver.find_element_by_css_selector("div.container").is_displayed()) 
         self.assertEqual(driver.title, u"财务")
         

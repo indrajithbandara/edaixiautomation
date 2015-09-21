@@ -39,10 +39,10 @@ class CaiwuTestcase02caiwuYouhuiquanlistAddEditEcouple(unittest.TestCase):
         time.sleep(2)
         self.assertEqual(driver.title,u"财务")
         #driver.find_element_by_link_text(u"优惠券").click()
-        driver.find_element_by_css_selector("ul.nav.navbar-nav li:nth-child(2).dropdown a.dropdown-toggle").click()
+        driver.find_element_by_css_selector("ul.nav.navbar-nav li:nth-child("+appobjectcaiwu.caiwu_tab_caiwuyouhuicardlist+").dropdown a.dropdown-toggle").click()
         #self.assertEqual(driver.title,u"财务")
        #driver.find_element_by_link_text(u"优惠券列表").click()
-        driver.find_element_by_css_selector("ul.nav.navbar-nav li:nth-child(2).dropdown ul.dropdown-menu li:first-child a").click()
+        driver.find_element_by_css_selector("ul.nav.navbar-nav li:nth-child("+appobjectcaiwu.caiwu_tab_caiwuyouhuicardlist+").dropdown ul.dropdown-menu li:first-child a").click()
         self.assertEqual(driver.title,u"财务")
         #youhuiquan list add function
         time.sleep(2)

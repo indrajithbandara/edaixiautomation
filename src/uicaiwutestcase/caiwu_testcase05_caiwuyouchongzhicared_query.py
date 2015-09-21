@@ -39,9 +39,9 @@ class CaiwuTestcase05CaiwuyouchongzhicaredQuery(unittest.TestCase):
         driver.implicitly_wait(10)
 
                  #driver.find_element_by_link_text(u"充值卡").click()
-        driver.find_element_by_css_selector("ul.nav.navbar-nav li:nth-child(5).dropdown a").click()
+        driver.find_element_by_css_selector("ul.nav.navbar-nav li:nth-child("+appobjectcaiwu.caiwu_tab_caiwuyouchongzhicard+").dropdown a").click()
         #driver.find_element_by_link_text(u"充值卡查询").click()
-        driver.find_element_by_css_selector("ul.nav.navbar-nav li:nth-child(5).dropdown ul.dropdown-menu li:last-child a").click()
+        driver.find_element_by_css_selector("ul.nav.navbar-nav li:nth-child("+appobjectcaiwu.caiwu_tab_caiwuyouchongzhicard+").dropdown ul.dropdown-menu li:last-child a").click()
         
         driver.find_element_by_id("sncode").clear()
         driver.find_element_by_id("sncode").send_keys("2542508117715622238")

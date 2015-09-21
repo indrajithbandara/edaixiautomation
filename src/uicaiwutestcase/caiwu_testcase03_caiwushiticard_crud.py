@@ -42,11 +42,11 @@ class CaiwuTestcase03CaiwushiticardCrud(unittest.TestCase):
 #         self.assertEqual(driver.title, u"财务")
 #         
         #driver.find_element_by_link_text(u"实体卡").click()
-        driver.find_element_by_css_selector("ul.nav.navbar-nav li:nth-child(3).dropdown a.dropdown-toggle").click()
+        driver.find_element_by_css_selector("ul.nav.navbar-nav li:nth-child("+appobjectcaiwu.caiwu_tab_caiwushiticard+").dropdown a.dropdown-toggle").click()
         self.assertEqual(driver.title, u"财务")
         
         #driver.find_element_by_link_text(u"实体卡列表").click()
-        driver.find_element_by_css_selector("ul.nav.navbar-nav li:nth-child(3).dropdown ul.dropdown-menu li:first-child a").click()
+        driver.find_element_by_css_selector("ul.nav.navbar-nav li:nth-child("+appobjectcaiwu.caiwu_tab_caiwushiticard+").dropdown ul.dropdown-menu li:first-child a").click()
         #WebDriverWait(driver, 10).until(lambda the_driver: the_driver.find_element_by_css_selector("div.container").is_displayed()) 
         #driver.find_element_by_link_text(u"新 建").click()
         self.assertEqual(driver.title, u"财务")

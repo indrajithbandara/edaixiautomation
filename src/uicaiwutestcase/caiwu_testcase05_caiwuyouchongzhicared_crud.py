@@ -39,9 +39,9 @@ class CaiwuTestcase05CaiwuyouchongzhicaredCrud(unittest.TestCase):
         driver.find_element_by_id("login-submit").click()
         
         #driver.find_element_by_link_text(u"充值卡").click()
-        driver.find_element_by_css_selector("ul.nav.navbar-nav li:nth-child(5).dropdown a").click()
+        driver.find_element_by_css_selector("ul.nav.navbar-nav li:nth-child("+appobjectcaiwu.caiwu_tab_caiwuyouchongzhicard+").dropdown a").click()
         #driver.find_element_by_link_text(u"充值卡列表").click()
-        driver.find_element_by_css_selector("ul.nav.navbar-nav li:nth-child(5).dropdown ul.dropdown-menu li:first-child a").click()
+        driver.find_element_by_css_selector("ul.nav.navbar-nav li:nth-child("+appobjectcaiwu.caiwu_tab_caiwuyouchongzhicard+").dropdown ul.dropdown-menu li:first-child a").click()
         #WebDriverWait(driver, 10).until(lambda the_driver: the_driver.find_element_by_css_selector("div.container").is_displayed()) 
         #driver.find_element_by_link_text(u"新 建").click()
         driver.find_element_by_css_selector("div.container a.btn.btn-info.col-md-1").click()

@@ -3,6 +3,7 @@
 
 from selenium import webdriver
 import threading 
+from __builtin__ import str
 
 
 
@@ -72,8 +73,12 @@ global caiwu_tab_caiwuordermanage,caiwu_tab_caiwuyouhuiquancard,caiwu_tab_caiwuy
 global caiwu_tab_caiwushiticard,caiwu_tab_caiwuhuiyuancardquery,caiwu_tab_caiwuyouchongzhicard
 global caiwu_tab_caiwuuserquery,caiwu_tab_citylist_jiagongdian
 
+caiwu_tab_caiwuhuiyuancardquery=str(4)
+caiwu_tab_caiwuyouchongzhicard=str(5)
+caiwu_tab_caiwuuserquery=str(6)
 
-
+caiwu_tab_caiwushiticard=str(3)
+caiwu_tab_caiwuyouhuicardlist=str(2)
 # 
 # # class appobjectops:
 # global permloginClickButton,clickPermissionLink,clickPermissionButton

@@ -40,10 +40,10 @@ class CaiwuTestcase05CaiwuyouchongzhicaredKongbaikaCreate(unittest.TestCase):
         driver.implicitly_wait(10)
         self.assertEqual(driver.title, u"财务")
          #driver.find_element_by_link_text(u"充值卡").click()
-        driver.find_element_by_css_selector("ul.nav.navbar-nav li:nth-child(5).dropdown a").click()
+        driver.find_element_by_css_selector("ul.nav.navbar-nav li:nth-child("+appobjectcaiwu.caiwu_tab_caiwuyouchongzhicard+").dropdown a").click()
         #driver.find_element_by_link_text(u"充值卡列表").click()
         self.assertEqual(driver.title, u"财务")
-        driver.find_element_by_css_selector("ul.nav.navbar-nav li:nth-child(5).dropdown ul.dropdown-menu li:first-child a").click()
+        driver.find_element_by_css_selector("ul.nav.navbar-nav li:nth-child("+appobjectcaiwu.caiwu_tab_caiwuyouchongzhicard+").dropdown ul.dropdown-menu li:first-child a").click()
         self.assertEqual(driver.title, u"财务")
         totolpagenum=driver.find_element_by_css_selector("div.container > div#content > ul > li:nth-last-child(2)").text
         time.sleep(2)
