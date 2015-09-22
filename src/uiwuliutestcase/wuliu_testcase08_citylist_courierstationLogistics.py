@@ -50,7 +50,7 @@ class WuliuTestcase08CitylistAddEdit(unittest.TestCase):
         print driver.title
         #self.assertTrue(driver.title, u"物流")
         self.assertEqual(driver.title, u"物流")
-        driver.find_element_by_css_selector("div.container > nav > ul > li:nth-child("+appobjectwuliu.wuliutabnine+") >a").click()
+        driver.find_element_by_css_selector("div.container > nav > ul > li:nth-child("+appobjectwuliu.wuliutabnine_citylist+") >a").click()
         #driver.find_element_by_css_selector("div.container > nav > ul > li:nth-child("+appobjectwuliu.wuliutabnine+") >a").click()
         #sdriver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child("+appobjectwuliu.wuliutabnine+").active a").click()
         

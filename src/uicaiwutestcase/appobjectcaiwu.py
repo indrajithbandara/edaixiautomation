@@ -79,6 +79,10 @@ caiwu_tab_caiwuuserquery=str(6)
 
 caiwu_tab_caiwushiticard=str(3)
 caiwu_tab_caiwuyouhuicardlist=str(2)
+
+# testdata for caiwu testcae06 caiwuuserquery
+global caiwuuserquerytelephonenumber
+caiwuuserquerytelephonenumber="18888888888"
 # 
 # # class appobjectops:
 # global permloginClickButton,clickPermissionLink,clickPermissionButton

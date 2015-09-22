@@ -80,31 +80,31 @@ class WuliuTestcase02factorydelivery(unittest.TestCase):
         #driver.find_element_by_css_selector("div.container>nav.collapse.navbar-collapse.bs-navbar-collapse>ul.nav.navbar-nav>li:nth-child(2)>ul.dropdown-menu>li:first-child>a").click()
         #driver.find_element_by_xpath("/html/body/header/div/nav/ul/li[2]/ul/li[1]/a").click()
         #self.assertTrue(driver.title, u"物流")
-        time.sleep(1)
+        time.sleep(2)
         self.assertEqual(driver.title, u"物流")
         #html body header.navbar.navbar-default.navbar-static-top div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child(2).dropdown ul.dropdown-menu li:first-child a
-        driver.find_element_by_id("bagsn").clear()
-        driver.find_element_by_id("bagsn").send_keys(appobjectwuliu.factorysignnumber)
+        driver.find_element_by_id("order_key").clear()
+        driver.find_element_by_id("order_key").send_keys(appobjectwuliu.factorysignnumber)
         driver.find_element_by_name("commit").click()
         
         #print driver.title
         #self.assertTrue(driver.title, u"物流")
         self.assertEqual(driver.title, u"物流")
         time.sleep(1)
-        driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child("+appobjectwuliu.wuliutabtwo_factorysign+").dropdown a").click()
-        self.assertEqual(driver.title, u"物流")
-        
-        driver.find_element_by_xpath("/html/body/header/div/nav/ul/li[2]/ul/li[2]/a").click()
-                
-        #Select(driver.find_element_by_id("store_type")).select_by_visible_text(u"加工店")
-        driver.find_element_by_id("order_key").clear()
-        driver.find_element_by_id("order_key").send_keys("1792411229")
-        driver.find_element_by_name("commit").click()
-                
-        print driver.title
-        #cursor.execute("UPDATE ims_washing_order SET status_delivery='1',qianshoudian_id= NULL WHERE bagsn='E0000000006'")
-        #conn.commit()
-        self.assertEqual(driver.title, u"物流")
+#         driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child("+appobjectwuliu.wuliutabtwo_factorysign+").dropdown a").click()
+#         self.assertEqual(driver.title, u"物流")
+#         driver.find_element_by_css_selector("div.container  > nav > ul > li:nth-child("+appobjectwuliu.wuliutabtwo_factorysign+").dropdown > ul.dropdown-menu > li:nth-child("+appobjectwuliu.wuliutabtwo_factorysign_inoutstockquery+") > a").click()
+#         #driver.find_element_by_xpath("/html/body/header/div/nav/ul/li[2]/ul/li[2]/a").click()
+#                 
+#         #Select(driver.find_element_by_id("store_type")).select_by_visible_text(u"加工店")
+#         driver.find_element_by_id("order_key").clear()
+#         driver.find_element_by_id("order_key").send_keys(appobjectwuliu.factorysignnumber)
+#         driver.find_element_by_name("commit").click()
+#                 
+#         print driver.title
+#         #cursor.execute("UPDATE ims_washing_order SET status_delivery='1',qianshoudian_id= NULL WHERE bagsn='E0000000006'")
+#         #conn.commit()
+#         self.assertEqual(driver.title, u"物流")
         
         cursor.close()
         conn.close()
@@ -131,7 +131,7 @@ class WuliuTestcase02factorydelivery(unittest.TestCase):
         finally: self.accept_next_alert = True
     
     def tearDown(self):
-        self.driver.quit()
+        #self.driver.quit()
         self.assertEqual([], self.verificationErrors)
 
 if __name__ == "__main__":

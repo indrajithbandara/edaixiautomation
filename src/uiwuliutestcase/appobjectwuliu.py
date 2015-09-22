@@ -62,7 +62,7 @@ class Singleton():
 #define wuliu system module tab,if module tab has been changed,we need change the number for wuliu ssyetem tab
 global wuliutabone,wuliutabtwo_factorysign,wuliutabtwo_factorysign_delivery
 global wuliutabtwo_factorysign_inoutstockquery ,wuliutabthree,wuliutabfour,wuliutabfive
-global wuliutabsix,wuliutabseven,wuliutabeight
+global wuliutabsix,wuliutabseven,wuliutabeight,wuliutabnine_citylist
 global wuliutabnine_citylist_diaodufanxi,wuliutabten,wuliutabeleven
 wuliutabone=str(1)
 wuliutabtwo_factorysign=str(2)
@@ -74,6 +74,7 @@ wuliutabfive=str(5)
 wuliutabsix=str(6)
 wuliutabseven=str(7)
 wuliutabeight=str(8)
+wuliutabnine_citylist=str(9)
 wuliutabnine_citylist_diaodufanxi=str(9)
 wuliutabten=str(10)
 wuliutabeleven=str(11)

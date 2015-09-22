@@ -90,7 +90,7 @@ class OpsTestcase04CategorySubStation(unittest.TestCase):
                 driver.find_element_by_link_text("logout").click()
                 driver.implicitly_wait(20)  
                 self.loginMasterApproveMethod()
-        else:
+            else:
                 pass
         #html body div#container.container>table.table.table-bordered.table-striped>tbody>tr:nth-child(2).danger>td:last-child
 

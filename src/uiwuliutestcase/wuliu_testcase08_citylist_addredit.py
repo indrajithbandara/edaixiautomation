@@ -48,7 +48,7 @@ class WuliuTestcase08CitylistAddEdit(unittest.TestCase):
         print " the testcase test_wuliu_testcase08_citylist_addedit is ",driver.title
         #self.assertTrue(driver.title, u"物流")
         self.assertEqual(driver.title, u"物流")
-        driver.find_element_by_css_selector("div.container > nav > ul > li:nth-child("+appobjectwuliu.wuliutabnine+") >a").click()
+        driver.find_element_by_css_selector("div.container > nav > ul > li:nth-child("+appobjectwuliu.wuliutabnine_citylist+") >a").click()
         #driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child("+appobjectwuliu.wuliutabnine+") a").click()
         #html body header.navbar.navbar-default.navbar-static-top div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child(8) a
         self.assertEqual(driver.title, u"物流")
@@ -86,7 +86,7 @@ class WuliuTestcase08CitylistAddEdit(unittest.TestCase):
         #driver.switch_to_window(winBeforeHandle)
         #driver.find_element_by_link_text(u"返回").click()
         
-        driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child("+str(9)+").active a").click()
+        driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child("+appobjectwuliu.wuliutabnine_citylist+").active a").click()
         #html body div#container.container div.panel.panel-primary.checkout-order table.table.table-striped.city-table tbody tr:last-child td:last-child a.btn.btn-info.btn-xs
         self.assertEqual(driver.title, u"物流")
         driver.find_element_by_css_selector("div#container.container div.panel.panel-primary.checkout-order table.table.table-striped.city-table tbody tr:last-child td:last-child a").click()

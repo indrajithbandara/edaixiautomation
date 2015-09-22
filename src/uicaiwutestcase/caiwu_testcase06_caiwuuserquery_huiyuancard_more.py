@@ -52,7 +52,7 @@ class CaiwuTestcase06CaiwuuserqueryHuiyuanMore(unittest.TestCase):
         time.sleep(1)
         self.assertEqual(driver.title, u"财务")
         driver.find_element_by_id("mobile").clear()
-        driver.find_element_by_id("mobile").send_keys("18888888888")
+        driver.find_element_by_id("mobile").send_keys(appobjectcaiwu.caiwuuserquerytelephonenumber)
         driver.find_element_by_xpath("(//input[@name='commit'])[2]").click()
                
         self.assertEqual(driver.title, u"财务")
