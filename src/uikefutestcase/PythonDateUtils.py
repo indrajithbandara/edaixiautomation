@@ -29,7 +29,7 @@ def getcreatefanxiordersn():
            return ordersn
        
   
-fanxiordersnnumber=str(getcreatefanxiordersn())
+fanxiordersnnumber=str(15092228298335)
 print "the random fanxiordersnnumber  is ",fanxiordersnnumber 
      
 def getordersn():

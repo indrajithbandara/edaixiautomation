@@ -57,7 +57,7 @@ def getordersn():
 #ordersnnumber=str(getordersn())
 #keep database testdb has order number 15051110387266
 #this is test data for create fanxi order number of wuliu, orderunmber mustbe correct
-ordersnnumber=str(15091028225251)
+ordersnnumber=str(15092228298335)
 print "the random ordersn  is ",ordersnnumber  
 #print ordersn
 def getfanid():
