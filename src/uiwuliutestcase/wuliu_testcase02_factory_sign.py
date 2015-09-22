@@ -68,14 +68,14 @@ class WuliuTestcase02factorysign(unittest.TestCase):
 #         print ordersn ,bagsn,status_delivery,jiagongdian_id,qianshoudian_id
         
         #driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child(2).dropdown a").click()
-        driver.find_element_by_css_selector("div.container > nav > ul > li:nth-child("+appobjectwuliu.wuliutabtwo+") >a").click()
+        driver.find_element_by_css_selector("div.container > nav > ul > li:nth-child("+appobjectwuliu.wuliutabtwo_factorysign+") >a").click()
         
         self.assertEqual(driver.title, u"物流")
-        #driver.find_element_by_css_selector("div.container > ul.nav.navbar-nav > li:nth-child(2).dropdown > ul.dropdown-menu > li:first-child > a").click()
+        driver.find_element_by_css_selector("div.container  > nav > ul > li:nth-child("+appobjectwuliu.wuliutabtwo_factorysign+").dropdown > ul.dropdown-menu > li:first-child > a").click()
 
         #html body header.navbar.navbar-default.navbar-static-top div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li.dropdown ul.dropdown-menu li a
         #driver.find_element_by_css_selector("div.container>nav.collapse.navbar-collapse.bs-navbar-collapse>ul.nav.navbar-nav>li:nth-child(2)>ul.dropdown-menu>li:first-child>a").click()
-        driver.find_element_by_xpath("/html/body/header/div/nav/ul/li[2]/ul/li[1]/a").click()
+        #driver.find_element_by_xpath("/html/body/header/div/nav/ul/li[2]/ul/li[1]/a").click()
         #html body header.navbar.navbar-default.navbar-static-top div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child(2).dropdown ul.dropdown-menu li:first-child a
         driver.find_element_by_id("bagsn").clear()
         driver.find_element_by_id("bagsn").send_keys("1792411229")
@@ -130,7 +130,7 @@ class WuliuTestcase02factorysign(unittest.TestCase):
         finally: self.accept_next_alert = True
     
     def tearDown(self):
-        #self.driver.quit()
+        self.driver.quit()
         self.assertEqual([], self.verificationErrors)
 
 if __name__ == "__main__":

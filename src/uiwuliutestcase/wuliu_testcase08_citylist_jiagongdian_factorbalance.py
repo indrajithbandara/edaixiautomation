@@ -52,7 +52,7 @@ class WuliuTestcase08CitylistJiagongdianFactoryBalance(unittest.TestCase):
         print " the testcase test_wuliu_testcase08_citylist_jiagongdian_factorybalance is ",driver.title
         self.assertEqual(driver.title, u"物流")
         
-        testdata=appobjectwuliu.testcase08_jiagongdian_forbalantestdata
+        #testdata=appobjectwuliu.testcase08_jiagongdian_forbalantestdata
         conn=MySQLdb.connect(host=mysqlhostname,user=mysqlusername,passwd=mysqlpassword,db=mysqlrongchangdb,charset="utf8")    
         global cursor 
         cursor = conn.cursor() 
@@ -74,7 +74,7 @@ class WuliuTestcase08CitylistJiagongdianFactoryBalance(unittest.TestCase):
         #html body div#container.container table.table.table-striped tbody tr#outlets_279 td a.btn.btn-primary.btn-sm
         self.assertEqual(driver.title, u"物流")
     
-        Select(driver.find_element_by_id("outlet_rule_form_category_id")).select_by_visible_text(testdata)
+        Select(driver.find_element_by_id("outlet_rule_form_category_id")).select_by_visible_text(appobjectwuliu.testcase08_jiagongdian_forbalantestdata)
         driver.find_element_by_id("outlet_rule_form_discount").clear()
         driver.find_element_by_id("outlet_rule_form_discount").send_keys("22")
 
@@ -105,11 +105,11 @@ class WuliuTestcase08CitylistJiagongdianFactoryBalance(unittest.TestCase):
     
     
         #driver.find_element_by_link_text(u"创建规则").click()
-        Select(driver.find_element_by_id("outlet_rule_form_category_id")).select_by_visible_text(u"洗衣")
+        Select(driver.find_element_by_id("outlet_rule_form_category_id")).select_by_visible_text(appobjectwuliu.testcase08_jiagongdian_forbalantestdata_xiyi)
         driver.find_element_by_id("outlet_rule_form_discount").clear()
         driver.find_element_by_id("outlet_rule_form_discount").send_keys("100")
         
-        #driver.find_element_by_id("outlet_rule_form_start_time_display").send_keys(str(wuliu_utiltools.today()))
+        driver.find_element_by_id("outlet_rule_form_start_time_display").send_keys(str(wuliu_utiltools.today()))
         #driver.find_element_by_link_text("6").click()
         driver.find_element_by_id("outlet_rule_form_end_time").send_keys(str(wuliu_utiltools.get_day_of_day(5)))
         #driver.find_element_by_link_text("20").click()
@@ -123,9 +123,9 @@ class WuliuTestcase08CitylistJiagongdianFactoryBalance(unittest.TestCase):
 #         driver.find_element_by_id("outlet_rule_form_end_time").click()
 #         driver.find_element_by_link_text("20").click()
 #         driver.find_element_by_name("commit").click()
-        Select(driver.find_element_by_id("outlet_rule_form_category_id")).select_by_visible_text(u"洗鞋")
+        Select(driver.find_element_by_id("outlet_rule_form_category_id")).select_by_visible_text(appobjectwuliu.testcase08_jiagongdian_forbalantestdata_xixie)
         #driver.find_element_by_link_text("6").click()
-        #driver.find_element_by_id("outlet_rule_form_start_time_display").send_keys(str(wuliu_utiltools.today()))
+        driver.find_element_by_id("outlet_rule_form_start_time_display").send_keys(str(wuliu_utiltools.today()))
         driver.find_element_by_id("outlet_rule_form_end_time").send_keys(str(wuliu_utiltools.get_day_of_day(5)))
         #driver.find_element_by_link_text("20").click()
         driver.find_element_by_id("outlet_rule_form_discount").clear()
@@ -136,7 +136,7 @@ class WuliuTestcase08CitylistJiagongdianFactoryBalance(unittest.TestCase):
         time.sleep(2)
         
         #Select(driver.find_element_by_id("outlet_rule_form_category_id")).select_by_visible_text(u"奢侈品")
-        Select(driver.find_element_by_id("outlet_rule_form_category_id")).select_by_visible_text(testdata)
+        Select(driver.find_element_by_id("outlet_rule_form_category_id")).select_by_visible_text(appobjectwuliu.testcase08_jiagongdian_forbalantestdata)
         driver.find_element_by_id("outlet_rule_form_start_time_display").send_keys(str(wuliu_utiltools.today()))
 #         driver.find_element_by_id("outlet_rule_form_end_time").send_keys(str(wuliu_utiltools.get_day_of_day(5)))
         driver.find_element_by_id("outlet_rule_form_discount").clear()

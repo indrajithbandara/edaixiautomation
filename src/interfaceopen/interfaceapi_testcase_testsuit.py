@@ -3,24 +3,16 @@
 import unittest, time, re 
 import HTMLTestRunner
 
-from app_status_list import *
-from available_area import *
-from available_order_time import *
+from checkMysqlKeywords import *
 
-from bind_coupon import *
-from bind_http_user import *
-from bind_member_card import *
-from bind_recharge import *
-from bind_user import *
-
-from cancel_order import *
-from cities import *
-from comment_text_list import *
+from autocaiwuwuliu_testcase08_citylist_jiagongdian_factorbalance import *
+from autocaiwu_testcase08_citylist_jiagongdian_factorbalancebranch import *
+from autocaiwu_testcase08_citylist_jiagongdian_factorbalancemaster import *
 
 if __name__ == '__main__':  
     suite = unittest.TestSuite()  
 
-#     #caiwu testcase01 permission and position manage testcase
+    #caiwu testcase01 permission and position manage testcase
 #     suite.addTest(checkMysqlKeywordsClass('test_checkMysqlKeywordsMethod'))
 #     time.sleep(3)
 # 
@@ -30,7 +22,7 @@ if __name__ == '__main__':
 #     time.sleep(3)
 #     suite.addTest(CaiwuTestcase08CitylistJiagongdianFactoryBalanceMaster('test_caiwu_testcase08_citylist_jiagongdian_factorybalance_master'))
 #     time.sleep(3)
-#         
+        
     currenttime=time.strftime("%Y-%m-%d-%H-%M-%S", time.localtime())
     print currenttime
 

@@ -98,13 +98,13 @@ class WuliuTestcase08CitylistselfmanagedLogistics(unittest.TestCase):
         #html body div#container.container div.panel.panel-primary.checkout-order div.panle-body div.orders_container form div.col-md-4.input-group span.input-group-btn input.btn.btn-info
         #html body div#container.container div.panel.panel-primary.checkout-order div.panle-body div.orders_container form div.col-md-4.input-group span.input-group-btn input.btn.btn-info
         driver.find_element_by_link_text(u"编辑").click()
-        telephonenumberedit=random.choice(['139','188','185','136','158','151'])+"".join(random.choice("0123456789") for i in range(8))
+        telephonenumberedit=random.choice(['132','188','185','137','159','188'])+"".join(random.choice("0123456789") for i in range(8))
         print " the telephonenumberedit is ",telephonenumberedit
-        identifiedCardIdedit=wuliu_utiltools.makeNewIdentifiedCardId()
-        print " the identifiedCardIdedit is ",identifiedCardIdedit
-        driver.find_element_by_id("courier_form_id_number").clear()
-        driver.find_element_by_id("courier_form_id_number").send_keys(identifiedCardId)
-        driver.find_element_by_id("courier_form_password").clear()
+#         identifiedCardIdedit=wuliu_utiltools.makeNewIdentifiedCardId()
+#         print " the identifiedCardIdedit is ",identifiedCardIdedit
+#         driver.find_element_by_id("courier_form_id_number").clear()
+#         driver.find_element_by_id("courier_form_id_number").send_keys(identifiedCardId)
+#         driver.find_element_by_id("courier_form_password").clear()
         driver.find_element_by_id("courier_form_tel").clear()
         driver.find_element_by_id("courier_form_tel").send_keys(telephonenumberedit)
         driver.find_element_by_id("courier_form_password").clear()
@@ -113,12 +113,12 @@ class WuliuTestcase08CitylistselfmanagedLogistics(unittest.TestCase):
         driver.find_element_by_id("courier_form_realname").send_keys("ziyingwuliuguanlli11")
         #driver.find_element_by_id("courier_form_is_employee").click()
         driver.find_element_by_name("commit").click()
-        
+        time.sleep(1)
         self.assertEqual(driver.title, u"物流")
         driver.find_element_by_id("realname").clear()
         driver.find_element_by_id("realname").send_keys("ziyingwuliuguanlli")
         driver.find_element_by_name("commit").click()
-        
+        time.sleep(1)
         self.assertEqual(driver.title, u"物流")
         
         driver.find_element_by_id("check-ban").click()

@@ -43,11 +43,14 @@ class WuliuTestcase02factoryinoutstockquery(unittest.TestCase):
         self.assertEqual(driver.title, u"物流")
         time.sleep(2)
         
-        driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child("+appobjectwuliu.wuliutabtwo+").dropdown a").click()
+        driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child("+appobjectwuliu.wuliutabtwo_factorysign+").dropdown a").click()
         self.assertEqual(driver.title, u"物流")
+        
+        driver.find_element_by_css_selector("div.container  > nav > ul > li:nth-child("+appobjectwuliu.wuliutabtwo_factorysign+").dropdown > ul.dropdown-menu > li:nth-child("+appobjectwuliu.wuliutabtwo_factorysign_inoutstockquery+") > a").click()
+        
         #html body header.navbar.navbar-default.navbar-static-top div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li.dropdown ul.dropdown-menu li a
         #driver.find_element_by_css_selector("div.container>nav.collapse.navbar-collapse.bs-navbar-collapse>ul.nav.navbar-nav>li:nth-child(2)>ul.dropdown-menu>li:first-child>a").click()
-        driver.find_element_by_xpath("/html/body/header/div/nav/ul/li[2]/ul/li[3]/a").click()
+        #driver.find_element_by_xpath("/html/body/header/div/nav/ul/li[2]/ul/li[3]/a").click()
         #html body header.navbar.navbar-default.navbar-static-top div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child(2).dropdown ul.dropdown-menu li:first-child a
         self.assertEqual(driver.title, u"物流")
         #html body div#container.container div.panel.panel-primary div.panle-body form#jiagongdian_form table tbody tr td:nth-last-child(3) select#target_type.form-control.single_input option:nth-child(2)

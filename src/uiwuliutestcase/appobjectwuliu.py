@@ -60,24 +60,34 @@ class Singleton():
             #printInfo(u'å�•ä¾‹å·²ç»�åˆ�å§‹åŒ–')          
         return Singleton.instance  
 #define wuliu system module tab,if module tab has been changed,we need change the number for wuliu ssyetem tab
-global wuliutabone,wuliutabtwo,wuliutabthree,wuliutabfour,wuliutabfive
-global wuliutabsix,wuliutabseven,wuliutabeight,wuliutabnine,wuliutabten,wuliutabeleven
+global wuliutabone,wuliutabtwo_factorysign,wuliutabtwo_factorysign_delivery
+global wuliutabtwo_factorysign_inoutstockquery ,wuliutabthree,wuliutabfour,wuliutabfive
+global wuliutabsix,wuliutabseven,wuliutabeight
+global wuliutabnine_citylist_diaodufanxi,wuliutabten,wuliutabeleven
 wuliutabone=str(1)
-wuliutabtwo=str(2)
+wuliutabtwo_factorysign=str(2)
+wuliutabtwo_factorysign_delivery=str(2)
+wuliutabtwo_factorysign_inoutstockquery=str(3)
 wuliutabthree=str(3)
 wuliutabfour=str(4)
 wuliutabfive=str(5)
 wuliutabsix=str(6)
 wuliutabseven=str(7)
 wuliutabeight=str(8)
-wuliutabnine=str(9)
+wuliutabnine_citylist_diaodufanxi=str(9)
 wuliutabten=str(10)
 wuliutabeleven=str(11)
+
+global factorysignnumber
+factorysignnumber="1792411229"
 
 #This is wuliu system test data for platform
 
 global testcase08_jiagongdian_forbalantestdata ,jiagongdianchuruku_signnumber_testdata,jiagongzhandian_signnumber_testdata
-testcase08_jiagongdian_forbalantestdata=u"快洗"
+testcase08_jiagongdian_forbalantestdata=u"窗帘"
+testcase08_jiagongdian_forbalantestdata_xiyi=u"洗衣"
+testcase08_jiagongdian_forbalantestdata_xixie=u"洗鞋"
+
 jiagongdianchuruku_signnumber_testdata=""
 jiagongzhandian_signnumber_testdata=""
 
