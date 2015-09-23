@@ -51,7 +51,7 @@ class WechatTestcase02mainbusinesssendcouple(unittest.TestCase):
         time.sleep(1)
         driver.find_element_by_css_selector("div.mCSB_container>div.sidebar-nav>div#snav>ul:nth-child("+appobjectwechat.wechatend_tab_mainbusiness_ul+")>li:nth-child("+appobjectwechat.wechatend_tab_mainbusiness_sendcouple+")>a").click()
         
-        
+        driver.switch_to_frame("main") 
     def is_element_present(self, how, what):
         try: self.driver.find_element(by=how, value=what)
         except NoSuchElementException, e: return False

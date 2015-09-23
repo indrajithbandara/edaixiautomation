@@ -53,7 +53,7 @@ class WechatTestcase01basesettingfrontreply(unittest.TestCase):
         
         print "wechat end  test_wechat_testcase01_basesetting_frontreply testcaesee is ",driver.title
         self.assertEqual(driver.title, u"荣昌微信公众服务平台")
-        
+        driver.switch_to_frame("main") 
     def is_element_present(self, how, what):
         try: self.driver.find_element(by=how, value=what)
         except NoSuchElementException, e: return False
