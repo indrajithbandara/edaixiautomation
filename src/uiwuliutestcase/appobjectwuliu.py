@@ -59,6 +59,9 @@ class Singleton():
             print u" Sigleton has been initial...."
             #printInfo(u'å�•ä¾‹å·²ç»�åˆ�å§‹åŒ–')          
         return Singleton.instance  
+    
+#our testing env include test14 test15 test09    test15 is total deploy testing env, 
+#test14 is pre-deploy testing env, test09 is xiaoe testing env
 #define wuliu system module tab,if module tab has been changed,we need change the number for wuliu ssyetem tab
 global wuliutabone,wuliutabtwo_factorysign,wuliutabtwo_factorysign_delivery
 global wuliutabtwo_factorysign_inoutstockquery ,wuliutabthree,wuliutabfour,wuliutabfive
@@ -79,6 +82,7 @@ wuliutabnine_citylist_diaodufanxi=str(9)
 wuliutabten=str(10)
 wuliutabeleven=str(11)
 
+# test data for our wuliu system 
 global factorysignnumber
 factorysignnumber="1792411229"
 

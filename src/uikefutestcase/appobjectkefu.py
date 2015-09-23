@@ -25,8 +25,11 @@ def GetInstance():
             print u" kefu webdriver Sigleton has been initial...."
             #printInfo(u'å�•ä¾‹å·²ç»�åˆ�å§‹åŒ–')          
     return instance  
-
-
+#
+#kefu automation testing frameworks
+#our testing env include test14 test15 test09    test15 is total deploy testing env, 
+#test14 is pre-deploy testing env, test09 is xiaoe testing env
+#test15
 global kefu_tab_feedback,kefu_tab_myuserfeedback,kefu_tab_orderlist
 global kefu_tab_tabmanage,kefu_tab_usuallyreply,kefu_tab_usuallyquery
 global kefu_tab_estimatemanage,kefu_tab_estimatecomplain,ordersnnumber
@@ -53,6 +56,9 @@ kefu_tab_test00_ueuallyquery=str(5)
 
 
 kefu_tab_test00_rdt3_ueuallyquery=str(3)
+
+
+#test14
 
 # this is test data for automation testing 
 ordersnnumber="040300364669"

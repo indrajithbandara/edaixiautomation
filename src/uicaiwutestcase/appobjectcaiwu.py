@@ -54,7 +54,8 @@ class Singleton():
 #class appobjectops:
 # class appObjectUtils(self):
 #     
-
+#our testing env include test14 test15 test09    test15 is total deploy testing env, 
+#test14 is pre-deploy testing env, test09 is xiaoe testing env
 global caiwu_tab_rdt5_chongzhi,caiwu_tab_rdt5_huiyuancard,caiwu_tab_rdt5_shiticard,caiwu_tab_rdt5_user
 
 caiwu_tab_rdt5_chongzhi=str(4)
@@ -75,8 +76,13 @@ global caiwu_tab_caiwuuserquery,caiwu_tab_citylist_jiagongdian
 
 caiwu_tab_caiwuhuiyuancardquery=str(4)
 caiwu_tab_caiwuyouchongzhicard=str(5)
+#caiwu_tab_caiwuuserquery=str(6)
+#test09
 caiwu_tab_caiwuuserquery=str(6)
-
+#test14
+caiwu_tab_caiwuuserquery=str(6)
+#test15
+caiwu_tab_caiwuuserquery=str(7)
 caiwu_tab_caiwushiticard=str(3)
 caiwu_tab_caiwuyouhuicardlist=str(2)
 

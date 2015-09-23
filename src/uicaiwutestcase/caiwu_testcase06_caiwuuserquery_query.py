@@ -54,6 +54,7 @@ class CaiwuTestcase06CaiwuuserqueryQuery(unittest.TestCase):
         self.assertEqual(driver.title, u"财务")
         driver.find_element_by_css_selector("ul.nav.navbar-nav li:nth-child("+appobjectcaiwu.caiwu_tab_caiwuuserquery+").dropdown ul.dropdown-menu li:first-child a").click()
         #WebDriverWait(driver, 10).until(lambda the_driver: the_driver.find_element_by_css_selector("div.container").is_displayed()) 
+        time.sleep(1)
         self.assertEqual(driver.title, u"财务")
         
         driver.find_element_by_id("mobile").clear()

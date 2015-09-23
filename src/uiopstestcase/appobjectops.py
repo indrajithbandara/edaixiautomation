@@ -54,6 +54,9 @@ class Singleton():
 #class appobjectops:
 # class appObjectUtils(self):
 #     
+#our testing env include test14 test15 test09    test15 is total deploy testing env, 
+#test14 is pre-deploy testing env, test09 is xiaoe testing env
+#test14
 global ops_tab_category_username,ops_tab_category_password
 global ops_tab_mapSetting_subCityMapSetting,ops_tab_innertestingmanage,ops_tab_permissionmanage
 global ops_tab_couponmanage,ops_tab_MarketingTools,ops_tab_freight,ops_tab_clothesmanage
@@ -81,6 +84,10 @@ ops_tab_recharge=str(9)
 ops_tab_citymanage=str(10)
 ops_tab_couponmanage=str(11)
 ops_tab_MarketingTools=str(12)
+
+#test15
+
+
 # class appobjectops:
 global permloginClickButton,clickPermissionLink,clickPermissionButton
 global clickPositionLink,clickPositionNewButton,clickPositionEditButton,clickPositionDeleteButton
