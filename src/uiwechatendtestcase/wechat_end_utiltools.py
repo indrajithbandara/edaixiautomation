@@ -56,8 +56,8 @@ def getordersn():
 #global ordersnnumber
 #ordersnnumber=str(getordersn())
 #keep database testdb has order number 15051110387266
-ordersnnumber=str(15051110387266)
-print "the random ordersn  is ",ordersnnumber  
+# ordersnnumber=str(15051110387266)
+# print "the random ordersn  is ",ordersnnumber  
 #print ordersn
 def getfanid():
     n = cursor.execute("SELECT fan_id FROM ims_washing_order WHERE status_delivery=3 AND fanxidan_id=0 AND bagsn IS NOT NULL  AND id=(SELECT MIN(id) FROM ims_washing_order) ORDER BY id") 
@@ -66,8 +66,8 @@ def getfanid():
           return fanid  
       
 #print gethuiyuanid()  
-fanidnumber=str(getfanid())
-print fanidnumber
+# fanidnumber=str(getfanid())
+# print fanidnumber
 
 
 
@@ -76,8 +76,8 @@ def getfanstablefanid():
     for row in cursor.fetchall():
       for fanid in row: 
           return fanid  
-fansfanidnumber=str(getfanstablefanid())
-print " the fansfanidnumber is ",fansfanidnumber  
+# fansfanidnumber=str(getfanstablefanid())
+# print " the fansfanidnumber is ",fansfanidnumber  
       
       
 def getcloseconn():
@@ -248,7 +248,7 @@ def get_today_month(n=0):
   
 def getwechatendconfigpath():
 #window path    return "C:/edaixi_testdata/userdata_kefu.conf"
-    return "C:/edaixi_testdata/userdata_wuliu.conf"
+    return "C:/edaixi_testdata/userdata_wechat.conf"
 
 
 if __name__=="__main__":
