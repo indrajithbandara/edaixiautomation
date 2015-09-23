@@ -43,6 +43,7 @@ class KefuTestcase00rdt2myuserfeedback(unittest.TestCase):
 
         driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:first-child>a").click()
         #driver.find_element_by_link_text(u"反馈总列表").click()
+        time.sleep(2)
         driver.find_element_by_link_text(u"踢").click()
         time.sleep(1)
         self.assertEqual(driver.title,u"客服系统")
@@ -146,7 +147,7 @@ class KefuTestcase00rdt2myuserfeedback(unittest.TestCase):
         finally: self.accept_next_alert = True
     
     def tearDown(self):
-        #self.driver.quit()
+        self.driver.quit()
         self.assertEqual([], self.verificationErrors)
 
 if __name__ == "__main__":

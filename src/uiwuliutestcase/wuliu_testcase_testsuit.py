@@ -27,6 +27,7 @@ from wuliu_testcase08_citylist_addredit import *
 from wuliu_testcase08_citylist_diaodupaidan_fanxidan_yiconfirm import *
 from wuliu_testcase08_citylist_diaodupaidan_fanxidan_yipandan import *
 from wuliu_testcase08_citylist_diaoduquery_fanxidan import *
+from wuliu_testcase08_citylist_diaoduquery_crud import *
 
 from wuliu_testcase08_citylist_jiagongdian_factorbalance import *
 from wuliu_testcase08_citylist_jiagongdianmanage import *
@@ -102,6 +103,8 @@ if __name__ == '__main__':
      suite.addTest(WuliuTestcase08citylistdiaodupaidanfanxidanYiConfirm('test_wuliu_testcase08citylist_diaodupaidan_fanxidan_yiconfirm'))
      time.sleep(3)
      suite.addTest(WuliuTestcase08citylistdiaoduqueryfanxidan('test_wuliu_testcase08_citylist_diaoduquery_fanxidan'))
+     time.sleep(3)
+     suite.addTest(WuliuTestcase08citylistdiaoduquerycrud('test_wuliu_testcase08_citylist_diaoduquery_crud'))
      time.sleep(3)
      
      suite.addTest(WuliuTestcase08Citylistdividebasearea('test_wuliu_testcase08_citylist_dividebasearea'))

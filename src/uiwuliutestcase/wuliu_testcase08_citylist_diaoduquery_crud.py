@@ -124,6 +124,15 @@ class WuliuTestcase08citylistdiaoduquerycrud(unittest.TestCase):
                 driver.switch_to_window(handle)
         driver.find_element_by_xpath("//div[@id='container']/div/div[4]/div/div/div[2]/div/div/button").click()
         time.sleep(2)
+        if EC.alert_is_present:
+           print("Alert exists")
+           alert=self.driver.switch_to_alert()
+           #sprint "alert.text",(alert.text)#
+           alert.accept
+           print("Alert accepted")
+        else:
+           print("NO alert exists")
+           
 #         winBeforeHandle = driver.current_window_handle
 #         print "winBeforeHandle==",winBeforeHandle
 #         winHandles = driver.window_handles
@@ -133,7 +142,7 @@ class WuliuTestcase08citylistdiaoduquerycrud(unittest.TestCase):
 #                 driver.switch_to_window(handle)
         
         #print " the dialog windows is ",driver.switch_to_alert()
-        driver.execute_script("var doc=document.getElementsByClassName('wuliu_form modal fade');doc.setAttribute('aria-hidden','');")
+        ''' driver.execute_script("var doc=document.getElementsByClassName('wuliu_form modal fade');doc.setAttribute('aria-hidden','');")
         if EC.alert_is_present:
            print("Alert exists")
            alert=self.driver.switch_to_alert()
@@ -185,7 +194,7 @@ class WuliuTestcase08citylistdiaoduquerycrud(unittest.TestCase):
 #         
 
         #/html/body/div[1]/form/table/tbody/tr[11]/td[2]/input
-        
+        '''
         #self.assertTrue(driver.title, u"物流")
         self.assertEqual(driver.title, u"物流")
         cursor.execute("UPDATE ims_washing_order SET fanxidan_id='0',paytype='1',pay_status='1',fan_id='"+wuliu_utiltools.fansfanidnumber+"',status_delivery='3'  WHERE ordersn='"+wuliu_utiltools.ordersnnumber+"'")
