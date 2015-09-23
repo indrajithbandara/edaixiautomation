@@ -65,6 +65,20 @@ wechatend_tab_basesetting_fronreply=str(2)
 wechatend_tab_basesetting_graphreply=str(3)
 
 
+global wechatend_tab_mainbusiness_exportcouple,wechatend_tab_mainbusiness_sendcouple,wechatend_tab_mainbusiness,wechatend_tab_mainbusiness_ul
+global wechatend_tab_mainbusiness_userdefinebatchsend,wechatend_tab_mainbusiness_wechatcouple
+
+wechatend_tab_mainbusiness=str(1)
+wechatend_tab_mainbusiness_ul=str(2)
+wechatend_tab_mainbusiness_wechatcouple=str(2)
+wechatend_tab_mainbusiness_sendcouple=str(3)
+wechatend_tab_mainbusiness_userdefinebatchsend=str(4)
+wechatend_tab_mainbusiness_exportcouple=str(5)
+
+
+
+
+
 
 
 

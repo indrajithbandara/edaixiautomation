@@ -63,6 +63,7 @@ class WechatTestcase01basesettinggraphreply(unittest.TestCase):
         #.attr('style','display:none';)
         driver.execute_script("$('.emotions').attr('style','display:block;');")
         driver.execute_script("$('div[class=emotions]').show();")
+        driver.switch_to_frame("main") 
         #driver.execute_script("document.getElementsByClassName('emotions').style.display = 'block';")
 #         winBeforeHandle = driver.current_window_handle
 #         print "winBeforeHandle==",winBeforeHandle
@@ -82,11 +83,14 @@ class WechatTestcase01basesettinggraphreply(unittest.TestCase):
         #html body ul.nav.nav-tabs li.active a
         driver.find_element_by_css_selector("html>body>ul.nav.nav-tabs>li:nth-child(2)>a").click()
         time.sleep(1)
-        driver.find_element_by_css_selector("ul.nav.nav-tabs>li:nth-child(1).active>a").click()
+        
+        driver.find_element_by_css_selector("html>body>ul.nav.nav-tabs>li:nth-child(1)>a").click()
         #driver.find_element_by_link_text(u"管理规则").click()
         time.sleep(1)
-        driver.find_element_by_link_text(u"添加规则").click()
-        driver.find_element_by_link_text(u"管理规则").click()
+#         driver.find_element_by_link_text(u"添加规则").click()
+#         driver.find_element_by_link_text(u"管理规则").click()
+        #driver.find_element_by_css_selector("html>body>ul.nav.nav-tabs>li:nth-child(2)>a").click()
+        #time.sleep(1)
         driver.find_element_by_name("keyword").clear()
         driver.find_element_by_name("keyword").send_keys("dsds")
         driver.find_element_by_xpath("//button").click()

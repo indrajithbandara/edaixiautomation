@@ -8,71 +8,50 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
 import unittest, time, re,ConfigParser
 from selenium.webdriver.common.action_chains import ActionChains
-import appobjectops,ops_utiltools
+import appobjectwechat,wechat_end_utiltools
 
-class OpsTestcase01Permissionmanagepermission(unittest.TestCase):
+class WechatTestcase02mainbusinessuserdefinebatchsend(unittest.TestCase):
     def setUp(self):
         #self.driver = webdriver.Firefox()
-        self.driver = appobjectops.GetInstance()
+        self.driver = appobjectwechat.GetInstance()
         self.driver.implicitly_wait(30)
         conf = ConfigParser.ConfigParser()
-        conf.read(ops_utiltools.getopsconfigpath())
+        conf.read(wechat_end_utiltools.getwechatendconfigpath())
         #conf.read("C:/edaixi_testdata/userdata_ops.conf")
-        global CAIWU_URL,USER_NAME,PASS_WORD
-        OPS_URL = conf.get("opssection", "uihostname")
-        USER_NAME = conf.get("opssection", "uiusername")
-        PASS_WORD = conf.get("opssection", "uipassword")
-        print OPS_URL,USER_NAME,PASS_WORD  
-        self.base_url = OPS_URL
+        global WECHAT_URL,WECHAT_USER_NAME,WECHAT_PASS_WORD
+        WECHAT_URL = conf.get("wechatsection", "uihostname")
+        WECHAT_USER_NAME = conf.get("wechatsection", "uiusername")
+        WECHAT_PASS_WORD = conf.get("wechatsection", "uipassword")
+        print WECHAT_URL,WECHAT_USER_NAME,WECHAT_PASS_WORD  
+        self.base_url = WECHAT_URL
         #self.base_url = "http://ops05.edaixi.cn:81"
         self.verificationErrors = []
         self.accept_next_alert = True
     
-    def test_ops_testcase01_permissionmanage_permission(self):
+    def test_wechat_testcase02_mainbusiness_userdefinebatchsend(self):
         driver = self.driver
         driver.get(self.base_url + "/")
+        driver.find_element_by_link_text("login with cas").click()
+        time.sleep(1)
         #html body div#container.container h3.text-center.text-primary a.btn.btn-success.text-center
-        #driver.find_element_by_css_selector("div#container.container h3.text-center.text-primary a.btn.btn-success.text-center").click()
-        #loginclick=driver.find_element_by_css_selector("div#container.container h3.text-center.text-primary a.btn.btn-success.text-center")
-        loginclick=driver.find_element_by_css_selector(appobjectops.permloginClickButton)
-        ActionChains(driver).double_click(loginclick).perform()
         driver.find_element_by_id("username").clear()
-        driver.find_element_by_id("username").send_keys(USER_NAME)
+        driver.find_element_by_id("username").send_keys(WECHAT_USER_NAME)
         driver.find_element_by_id("password").clear()
-        driver.find_element_by_id("password").send_keys(PASS_WORD)
+        driver.find_element_by_id("password").send_keys(WECHAT_PASS_WORD)
         driver.find_element_by_id("login-submit").click()
-        print driver.title
-        self.assertEqual(driver.title, u"e袋洗城市运营后台")
-        time.sleep(2)
-        driver.find_element_by_css_selector(appobjectops.clickPermissionLink).click()
-        #permissionlinkclick=driver.find_element_by_css_selector("div.navbar.navbar-default.navbar-static-top div.container div.navbar-collapse.collapse.navbar-responsive-collapse ul.nav.navbar-nav li.dropdown a.dropdown-toggle")
-        #ActionChains(driver).double_click(permissionlinkclick).perform()
-        #driver.find_element_by_css_selector("div.navbar.navbar-default.navbar-static-top div.container div.navbar-collapse.collapse.navbar-responsive-collapse ul.nav.navbar-nav li.dropdown a.dropdown-toggle").click()
-        #driver.find_element_by_css_selector("div.navbar.navbar-default.navbar-static-top div.container div.navbar-collapse.collapse.navbar-responsive-collapse ul.nav.navbar-nav li:first-child.dropdown ul.dropdown-menu li:first-child a").click()
-        #driver.find_element_by_link_text(u"权限管理").click()
-        #driver.find_element_by_css_selector("ul.nav.navbar-nav > li:first-child.dropdown > ul.dropdown-menu > li:first-child > a").send_keys(Keys.ENTER)
-        #ul.nav.navbar-nav li.dropdown ul.dropdown-menu li a
-        #permissionclick=driver.find_element_by_css_selector("ul.nav.navbar-nav > li:first-child.dropdown > ul.dropdown-menu > li:first-child a")
-        #ActionChains.click(permissionclick)
-        #ActionChains(driver)..sigle_click(permissionclick).perform()
-        #driver.find_element_by_link_text(u"权限管理").click()
-        self.assertEqual(driver.title, u"e袋洗城市运营后台")
-        driver.find_element_by_xpath("/html/body/div[1]/div/div/ul/li[1]/ul/li[1]/a").click()
-        self.assertEqual(driver.title, u"e袋洗城市运营后台")
-        #driver.find_element_by_css_selector("div#container.container div.panel.panel-primary div.panle-body table.table.table-striped tbody tr:first-child td:last-child div.btn-toolbar a.btn.btn-sm.btn-success").click()
-        driver.find_element_by_css_selector(appobjectops.clickPermissionButton).click()
+        #print driver.title
+        print " the testcase test_wechat_testcase01_basesetting_defaultkeyword is ",driver.title
+        time.sleep(1)
+        driver.find_element_by_link_text(u"如果你的浏览器没有自动跳转，请点击此链接").click()
+        time.sleep(1)
         
-        self.assertEqual(driver.title, u"e袋洗城市运营后台")
-        driver.find_element_by_id("worker_is_admin").click()
-        driver.find_element_by_id("worker_is_city_manager").click()
-        #定位到要右击的元素
-        #qqq =driver.find_element_by_xpath("/html/body/div/div[2]/div[2]/div/div[3]/table/tbody/tr/td[2]")
-        #对定位到的元素执行鼠标右键操作
-        #ActionChains(driver).context_click(qqq).perform()
-        driver.find_element_by_css_selector(".btn.btn-info").click()
-
-        print "ops persmission manage assert title is ",driver.title
-        self.assertEqual(driver.title, u"e袋洗城市运营后台")
+        #html body div.content-main table#frametable tbody tr td.content-left.mCustomScrollbar._mCS_11 div#mCSB_11.mCustomScrollBox.mCS-dark-thin div.mCSB_container div.sidebar-nav div#snav ul:first-child.snav li:nth-child(1).snav-header.open a
+        driver.find_element_by_css_selector("div.mCSB_container>div.sidebar-nav>div#snav>ul:nth-child("+appobjectwechat.wechatend_tab_mainbusiness_ul+")>li:nth-child("+appobjectwechat.wechatend_tab_mainbusiness+")>a").click()
+        #driver.find_element_by_link_text(u"基本设置").click()
+        #driver.find_element_by_css_selector(appobjectops.clickPermissionLink).click()
+        time.sleep(1)
+        driver.find_element_by_css_selector("div.mCSB_container>div.sidebar-nav>div#snav>ul:nth-child("+appobjectwechat.wechatend_tab_mainbusiness_ul+")>li:nth-child("+appobjectwechat.wechatend_tab_mainbusiness_userdefinebatchsend+")>a").click()
+        
         
     def is_element_present(self, how, what):
         try: self.driver.find_element(by=how, value=what)

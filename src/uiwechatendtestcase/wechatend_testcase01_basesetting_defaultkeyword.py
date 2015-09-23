@@ -70,11 +70,13 @@ class WechatTestcase01basesettingdefaultkeyword(unittest.TestCase):
         driver.execute_script("$('#myModal').show();")
         #driver.execute_script("$('.emotions')[0].style.display = 'block';")
         #driver.execute_script("document.getElementsByClassName('emotions')[0].style.display='block';")
-        driver.execute_script("$('.button.btn.btn-success.edit-word').bind('click');")
+        #driver.execute_script("$('.button.btn.btn-success.edit-word').bind('click');")
+        driver.switch_to_frame("main") 
         #document.getElementsByClassName("emotions").style.display="block";
         #html body div.main table.table.table-bordered tbody tr td button.btn.btn-success.edit-word
-        #driver.find_element_by_css_selector("div.main>table.table.table-bordered>tbody>tr:last-child>td:last-child>button.btn.btn-success.edit-word").click()
+        driver.find_element_by_css_selector("div.main>table.table.table-bordered>tbody>tr:last-child>td:last-child>button.btn.btn-success.edit-word").click()
         #driver.find_element_by_xpath("//button").click()
+        time.sleep(2)
         driver.find_element_by_name("name").clear()
         driver.find_element_by_name("name").send_keys("aaaa")
         driver.find_element_by_css_selector("button.btn.btn-primary").click()
