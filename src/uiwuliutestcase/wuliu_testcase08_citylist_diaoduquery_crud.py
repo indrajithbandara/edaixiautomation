@@ -107,7 +107,13 @@ class WuliuTestcase08citylistdiaoduquerycrud(unittest.TestCase):
         Select(driver.find_element_by_id("order_search_form_delivery_status")).select_by_visible_text(u"客户签收")
         driver.find_element_by_name("commit").click()
         time.sleep(1)
-        driver.find_element_by_link_text("15091128225325").click()
+        
+        
+        #html body div#container.container div.checkout-order div.panle-body div.panel.panel-primary form.form-horizontal.batch_update table.table.table-striped tbody tr:first-child td:nth-child(2) a 
+        queryordernumber=driver.find_element_by_css_selector("div#container.container div.checkout-order div.panle-body div.panel.panel-primary form.form-horizontal.batch_update table.table.table-striped tbody tr:first-child td:nth-child(2) a ").text
+        print " the queryordernumber is ",queryordernumber
+        time.sleep(1)
+        driver.find_element_by_link_text(queryordernumber).click()
         time.sleep(1)
         winBeforeHandle = driver.current_window_handle
         print "winBeforeHandle==",winBeforeHandle
@@ -177,30 +183,7 @@ class WuliuTestcase08citylistdiaoduquerycrud(unittest.TestCase):
 #             if winBeforeHandle != handle:
 #                 driver.switch_to_window(handle)
 #         
-        self.assertEqual(driver.title, u"物流")        
-        time.sleep(1)
-        #driver.find_element_by_css_selector("div#container.container>a#fanxi_button.btn.btn-info").click()
-        driver.find_element_by_xpath("//*[@id='fanxi_button']").click()
-        #driver.find_element_by_css_selector("div#container.container>a#fanxi_button.btn.btn-info").click()
-#         html body div#container.container a#f''anxi_button.btn.btn-info
-        time.sleep(1)
-        self.assertEqual(driver.title, u"物流")
-        #html body div#container.container a#fanxi_button.btn.btn-info
-        #submit to database
-     
-        fanxiwashingtime=driver.find_element_by_xpath("/html/body/div[1]/form/table/tbody/tr[8]/td[2]/div/div/select/option[2]").text
-        #fanxiwashingtime=driver.find_element_by_css_selector("div#container.container form#new_fanxi_order_form_1039230.form-horizontal.new_fanxi_order_form table.table.table-striped.search-table tbody tr:nth-last-child(4) td:last-child div.form-group.select.required.fanxi_order_form_washing_time div.col-sm-8 select#fanxi_order_form_washing_time.select.required.form-control option:nth-child(2)").text
-        print " the fanxiwashingtime is ",fanxiwashingtime
-        Select(driver.find_element_by_id("fanxi_order_form_washing_time")).select_by_visible_text(fanxiwashingtime)
-        
-        driver.find_element_by_id("fanxi_order_form_remark").clear()
-        driver.find_element_by_id("fanxi_order_form_remark").send_keys("beijingjiangtailu")
-        
-        driver.find_element_by_id("fanxi_order_form_washing_date").clear()
-        driver.find_element_by_id("fanxi_order_form_washing_date").send_keys(str(wuliu_utiltools.get_day_of_day(2)))
-        
-        #driver.find_element_by_css_selector("div#container.container form#new_fanxi_order_form_254.form-horizontal.new_fanxi_order_form table.table.table-striped.search-table tbody tr:last-child td:last-child input.button.btn.btn-info.btn-style-width").click()
-        driver.find_element_by_xpath("//input[@type='submit']").click()
+
         #/html/body/div[1]/form/table/tbody/tr[11]/td[2]/input
         
         #self.assertTrue(driver.title, u"物流")

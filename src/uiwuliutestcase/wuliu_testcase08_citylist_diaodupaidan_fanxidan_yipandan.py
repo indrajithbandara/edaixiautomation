@@ -65,41 +65,46 @@ class WuliuTestcase08citylistdiaodupaidanfanxidanYiPandan(unittest.TestCase):
         global cursor 
         cursor = conn.cursor() 
         
-        time.sleep(1)
-        driver.find_element_by_link_text(u"新建城市").click()
-        #driver.find_elements_by_css_selector("div#container.container a.btn.btn-infos").click()
-        #driver.find_element_by_xpath("/html/body/div/a").click()
-        cityidname=driver.find_element_by_css_selector("div#container.container div.panel.panel-primary div.panle-body div.orders_container form#new_map_city.form-horizontal.new_map_city div.form-inputs div.form-group.select.required.map_city_api_city_id div.col-sm-8 select#map_city_api_city_id.select.required.form-control option:nth-child(2)").text
-        print cityidname
-        Select(driver.find_element_by_id("map_city_api_city_id")).select_by_visible_text(cityidname)
+        try:
+            wuliufanxiresultlag=driver.find_element_by_css_selector("div#container.container div.panel.panel-primary.checkout-order table.table.table-striped.city-table tbody tr:nth-child(2) td:nth-child(2).btn-link a").text
+            print " the wuliufanxiresultlag is ",wuliufanxiresultlag
+    
+        except:
+            time.sleep(1)
+            driver.find_element_by_link_text(u"新建城市").click()
+            #driver.find_elements_by_css_selector("div#container.container a.btn.btn-infos").click()
+            #driver.find_element_by_xpath("/html/body/div/a").click()
+            cityidname=driver.find_element_by_css_selector("div#container.container div.panel.panel-primary div.panle-body div.orders_container form#new_map_city.form-horizontal.new_map_city div.form-inputs div.form-group.select.required.map_city_api_city_id div.col-sm-8 select#map_city_api_city_id.select.required.form-control option:nth-child(2)").text
+            print cityidname
+            Select(driver.find_element_by_id("map_city_api_city_id")).select_by_visible_text(cityidname)
+    
+            driver.find_element_by_id("map_city_center_lat").clear()
+            driver.find_element_by_id("map_city_center_lat").send_keys("-5")
+    
+            driver.find_element_by_id("map_city_center_lng").clear()
+            driver.find_element_by_id("map_city_center_lng").send_keys("-3")
 
-        driver.find_element_by_id("map_city_center_lat").clear()
-        driver.find_element_by_id("map_city_center_lat").send_keys("-5")
-
-        driver.find_element_by_id("map_city_center_lng").clear()
-        driver.find_element_by_id("map_city_center_lng").send_keys("-3")
-
-        driver.find_element_by_id("map_city_search_radius").clear()
-        driver.find_element_by_id("map_city_search_radius").send_keys("-5")
-        
-        driver.find_element_by_id("map_city_gaode_map_code").clear()
-        driver.find_element_by_id("map_city_gaode_map_code").send_keys("beijinggaode")
-        
-        driver.find_element_by_name("commit").click()
-        
-        #self.assertTrue(driver.title, u"物流")
-        self.assertEqual(driver.title, u"物流")
-        time.sleep(2)
+            driver.find_element_by_id("map_city_search_radius").clear()
+            driver.find_element_by_id("map_city_search_radius").send_keys("-5")
+            
+            driver.find_element_by_id("map_city_gaode_map_code").clear()
+            driver.find_element_by_id("map_city_gaode_map_code").send_keys("beijinggaode")
+            
+            driver.find_element_by_name("commit").click()
+            
+            #self.assertTrue(driver.title, u"物流")
+            self.assertEqual(driver.title, u"物流")
+            time.sleep(2)
         #addsuccess=driver.find_element_by_css_selector("div#container.container div.alert.fade.in.alert-success").text
         #print addsuccess
         #shtml body div#container.container>div:nth-child(2)>a.btn.btn-default
         
-        driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child("+str(9)+").active a").click()
-        self.assertEqual(driver.title, u"物流")
-        
-        driver.find_element_by_css_selector("div#container.container div.panel.panel-primary.checkout-order table.table.table-striped.city-table tbody tr:nth-child(2) td:nth-child(2).btn-link a").click()
-        #.btn.btn-success
-        self.assertEqual(driver.title, u"物流")
+            driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child("+appobjectwuliu.wuliutabnine_citylist+").active a").click()
+            self.assertEqual(driver.title, u"物流")
+            
+            driver.find_element_by_css_selector("div#container.container div.panel.panel-primary.checkout-order table.table.table-striped.city-table tbody tr:nth-child(2) td:nth-child(2).btn-link a").click()
+            #.btn.btn-success
+            self.assertEqual(driver.title, u"物流")
         
 #         n = cursor.execute("SELECT ordersn ,username,tel,address ,status_delivery,STATUS ,fanxidan_id  FROM ims_washing_order WHERE status_delivery='3' AND ordersn='15072110393738'") 
 #         for i in xrange(cursor.rowcount):
