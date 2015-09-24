@@ -106,22 +106,26 @@ class WuliuTestcase08Citylistjiagongdianmanage(unittest.TestCase):
         driver.find_element_by_id("outlet_form_end_date").send_keys(str(wuliu_utiltools.today()))
 # 
 
-        driver.find_element_by_id("capacity_1_is_enabled").click()
-        driver.find_element_by_id("capacity_2_is_enabled").click()
-        driver.find_element_by_id("capacity_3_is_enabled").click()
-#         driver.find_element_by_id("capacity_5_is_enabled").click()
-#         driver.find_element_by_id("capacity_9_is_enabled").click()
-        
+#         driver.find_element_by_id("capacity_1_is_enabled").click()
+#         driver.find_element_by_id("capacity_2_is_enabled").click()
+#         driver.find_element_by_id("capacity_3_is_enabled").click()
+# #         driver.find_element_by_id("capacity_5_is_enabled").click()
+# #         driver.find_element_by_id("capacity_9_is_enabled").click()
+#         
+#         
+# 
+#         
+#         
+# #         driver.find_element_by_id("capacity_1_count").clear()
+# #         driver.find_element_by_id("capacity_1_count").send_keys("4")
 #         driver.find_element_by_id("capacity_1_count").clear()
-#         driver.find_element_by_id("capacity_1_count").send_keys("4")
-        driver.find_element_by_id("capacity_1_count").clear()
-        driver.find_element_by_id("capacity_1_count").send_keys("5")
-        
-        driver.find_element_by_id("capacity_2_count").clear()
-        driver.find_element_by_id("capacity_2_count").send_keys("5")
-        
-        driver.find_element_by_id("capacity_3_count").clear()
-        driver.find_element_by_id("capacity_3_count").send_keys("5")
+#         driver.find_element_by_id("capacity_1_count").send_keys("5")
+#         
+#         driver.find_element_by_id("capacity_2_count").clear()
+#         driver.find_element_by_id("capacity_2_count").send_keys("5")
+#         
+#         driver.find_element_by_id("capacity_3_count").clear()
+#         driver.find_element_by_id("capacity_3_count").send_keys("5")
         
 #         startworktime=driver.find_element_by_css_selector("div#container.container div.panel.panel-primary.checkout-order div.panle-body div.orders_container form#new_outlet_form.form-horizontal.new_outlet_form div.form-group.select.optional.outlet_form_operation_time_start div.col-sm-8 select#outlet_form_operation_time_start.select.optional.form-control.start_time_select option:nth-child(2)")
 #         startworktime.is_displayed()
@@ -204,13 +208,21 @@ class WuliuTestcase08Citylistjiagongdianmanage(unittest.TestCase):
         #driver.find_element_by_id("s2id_autogen2").send_keys("01:00")
         
         #s2id_autogen2
-        jiagongdianbianma="".join(random.choice("0123456789") for i in range(8))
+        #jiagongdianbianma="".join(random.choice("0123456789") for i in range(8))
+        jiagongdianbianma="".join(random.choice("01234") for i in range(4))
         print " the jiagongdianbianma is ",jiagongdianbianma
         driver.find_element_by_id("outlet_form_bianma").clear()
         driver.find_element_by_id("outlet_form_bianma").send_keys(jiagongdianbianma)
 #         driver.find_element_by_id("capacity_5_count").clear()
 #         driver.find_element_by_id("capacity_5_count").send_keys("5")
         
+        driver.find_element_by_id("capacity_2_is_enabled").click()
+        
+        driver.find_element_by_id("capacity_2_count").clear()
+        driver.find_element_by_id("capacity_2_count").send_keys("5")
+                
+        driver.find_element_by_id("capacity_2_item").clear()
+        driver.find_element_by_id("capacity_2_item").send_keys("115")
 # 
 #         driver.find_element_by_id("capacity_9_count").clear()
 #         driver.find_element_by_id("capacity_9_count").send_keys("5")
@@ -272,7 +284,7 @@ class WuliuTestcase08Citylistjiagongdianmanage(unittest.TestCase):
         finally: self.accept_next_alert = True
     
     def tearDown(self):
-        self.driver.quit()
+        #self.driver.quit()
         self.assertEqual([], self.verificationErrors)
 
 if __name__ == "__main__":

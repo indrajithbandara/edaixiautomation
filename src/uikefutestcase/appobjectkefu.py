@@ -61,7 +61,7 @@ kefu_tab_test00_rdt3_ueuallyquery=str(3)
 #test14
 
 # this is test data for automation testing 
-ordersnnumber="040300364669"
+ordersnnumber="041000366739"
 
 # class appobjectkefu:
 #     
