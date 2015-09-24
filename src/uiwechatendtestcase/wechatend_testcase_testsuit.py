@@ -36,7 +36,7 @@ from wechatend_testcase06_hongbao_recommendhongbao import *
 from wechatend_testcase06_hongbao_telephonesendcouple import *
 
 
-from wechatend_testcase07_promotion_qudaolist import *
+from uiwechatendtestcase.wechatend_testcase07_promotion_Channellist import *
 from wechatend_testcase07_promotion_webpushorderlink import  *
  
 from wechatend_testcase08_crm_checktaglist import *
@@ -54,116 +54,85 @@ if __name__ == '__main__':
 
 
     #caiwu testcase01 first need chongzhi,then koukuan,finally is tuikuan testcase
-    suite.addTest(CaiwuTestcase01Caiwuordermanagementchongzhi('test_caiwu_testcase01_caiwuordermanagementchongzhi'))
+    suite.addTest(WechatTestcase01basesettingdefaultkeyword('test_wechat_testcase01_basesetting_defaultkeyword'))
     time.sleep(3)
-    suite.addTest(CaiwuTestcase01Caiwuordermanagementkoukuan('test_caiwu_testcase01_caiwuordermanagementkoukuan'))
+    suite.addTest(WechatTestcase01basesettingfrontreply('test_wechat_testcase01_basesetting_frontreply'))
     time.sleep(3)
-    suite.addTest(CaiwuTestcase01Caiwuordermanagementtuikuan('test_caiwu_testcase01_caiwuordermanagementtuikuan')) 
-    time.sleep(3)
-    suite.addTest(CaiwuTestcase01Caiwuordermanagementmore('test_caiwu_testcase01_caiwuordermanagementmore')) 
-    time.sleep(3)
-    suite.addTest(CaiwuTestcase01Caiwuordermanagementshoukuanmanagei('test_caiwu_testcase01_caiwuordermanagement_shoukuanmanage')) 
-    time.sleep(3)
-    #caiwu testcase02
-    suite.addTest(CaiwuTestcase02Caiwuyouhuicardgroup('test_caiwu_testcase02_caiwuyouhuicardgroup'))
-    time.sleep(3)
-    suite.addTest(CaiwuTestcase02Caiwuyouhuicardgsearch('test_caiwu_testcase02_caiwuyouhuicardsearch'))
+    suite.addTest(WechatTestcase01basesettinggraphreply('test_wechat_testcase01_basesetting_graphreply')) 
     time.sleep(3)
     
-    suite.addTest(CaiwuTestcase02caiwuYouhuiquanlistAddEditEcouple('test_Caiwu_Testcase02_caiwuyouhuiquanlist_addedit_ecouple'))
+    suite.addTest(WechatTestcase02mainbusinessexportcouple('test_ops_testcase02_mainbusiness_exportcouple')) 
     time.sleep(3)
-    suite.addTest(CaiwuTestcase02caiwuYouhuiquanlistAddEditShitiCouple('test_Caiwu_Testcase02_caiwuyouhuiquanlist_addedit_shiticouple'))
+    suite.addTest(WechatTestcase02mainbusinesssendcouple('test_wechat_testcase02_mainbusiness_sendcouple')) 
     time.sleep(3)
-    suite.addTest(CaiwuTestcase02CaiwuyouhuicardlistCreate('test_caiwu_testcase02_caiwuyouhuicardlist_create'))
+    #caiwu testcase02
+    suite.addTest(WechatTestcase02mainbusinessuserdefinebatchsend('test_wechat_testcase02_mainbusiness_userdefinebatchsend'))
     time.sleep(3)
-    suite.addTest(CaiwuTestcase02caiwuYouhuiquanlistQuery('test_CaiwuTestcase02_caiwuyouhuiquanlist_query'))
+    suite.addTest(WechatTestcase02mainbusinesswechatcouple('test_wechat_testcase02_mainbusiness_wechatcouple'))
     time.sleep(3)
-        
-    #caiwu testcase03s
-    suite.addTest(CaiwuTestcase03CaiwushiticardCreate('test_caiwu_testcase03_caiwushiticard_create'))
+    
+    
+    suite.addTest(WechatTestcase03twodimensioncodebatchcreate('test_twodimensioncode_testcase03_twodimensioncode_batchcreate'))
     time.sleep(3)
-    suite.addTest(CaiwuTestcase03CaiwushiticardCrud('test_caiwu_testcase03_caiwushiticard_crud'))
+    suite.addTest(WechatTestcase03twodimensioncodebatchmodify('test_wechat_testcase03_twodimensioncode_batchmodify'))
     time.sleep(3)
-    suite.addTest(CaiwuTestcase03CaiwushiticardQuery('test_caiwu_testcase03_caiwushiticard_query'))
+    suite.addTest(wechatTestcase03twodimensioncodecreateqrcode('test_wechat_testcase03_twodimensioncode_createqrcode'))
+    time.sleep(3)
+    suite.addTest(wechatTestcase03twodimensioncodeexportqrcode('test_wechat_testcase03_twodimensioncode_exportqrcode'))
+    time.sleep(3)
+    suite.addTest(wechatTestcase03twodimensioncodehandqqrcode('test_wechat_testcase03_twodimensioncode_handqqrcode'))
+    time.sleep(3)
+    suite.addTest(wechatTestcase03twodimensioncodemanageqrcode('test_wechat_testcase03_twodimensioncode_manageqrcode'))
+    time.sleep(3)
+    suite.addTest(wechatTestcase03twodimensioncodescanningstatifcation('test_wechat_testcase03_twodimensioncode_scanningstatifcation'))
+    time.sleep(3)
+    suite.addTest(wechatTestcase03twodimensioncodexiaoeqrcode('test_testcase03_twodimensioncode_xiaoeqrcode'))
     time.sleep(3)
     
     #caiwu testcase04
-    suite.addTest(CaiwuTestcase04CaiwuhuiyuancardqueryChongzhi('test_caiwu_testcase04_caiwuhuiyuancardquery_chongzhi'))
+    suite.addTest(WechatTestcase04settingmanagegroup('test_wechat_testcase04_setting_managegroup'))
     time.sleep(3)
-    suite.addTest(CaiwuTestcase04CaiwuhuiyuancardqueryKoukuan('test_caiwu_testcase04_caiwuhuiyuancardquery_koukuan'))
+    suite.addTest(WechatTestcase04settingmanagemenu('test_wechat_testcase04_setting_managemenu'))
     time.sleep(3)
-    suite.addTest(CaiwuTestcase04CaiwuhuiyuancardqueryTuikuan('test_caiwu_testcase04_caiwuhuiyuancardquery_tuikuan'))
+    suite.addTest(CreditTestcase05creditcreditregular('test_credit_testcase05_credit_creditregular'))
     time.sleep(3)
-    suite.addTest(CaiwuTestcase04CaiwuhuiyuancardqueryMore('test_caiwu_testcase04_caiwuhuiyuancardquery_more'))
-    time.sleep(3)
-            
+
     #caiwu testcase05
-    suite.addTest(CaiwuTestcase05CaiwuyouchongzhicaredCrud('test_caiwu_testcase05_caiwuyouchongzhicared_crud'))
+    suite.addTest(HongbaoTestcase06hongbaogamehongbao('test_hongbao_testcase06_hongbao_gamehongbao'))
     time.sleep(3)
-    suite.addTest(CaiwuTestcase05CaiwuyouchongzhicaredFenpei('test_caiwu_testcase05_caiwuyouchongzhicared_fenpei'))
+    suite.addTest(HongbaoTestcase06hongbaohongbaologistic('test_hongbao_testcase06_hongbao_hongbaologistic'))
     time.sleep(3)
-    suite.addTest(CaiwuTestcase05CaiwuyouchongzhicaredHuishou('test_caiwu_testcase05_caiwuyouchongzhicared_huishou'))
+    suite.addTest(HongbaoTestcase06hongbaolinkhongbao('test_hongbao_testcase06_hongbao_linkhongbao'))
     time.sleep(3)
-    suite.addTest(CaiwuTestcase05CaiwuyouchongzhicaredKongbaikaCreate('test_caiwu_testcase05_caiwuyouchongzhicared_kongbaika_create'))
+    suite.addTest(HongbaoTestcase06hongbaoorderhongbao('test_hongbao_testcase06_hongbao_orderhongbao'))
     time.sleep(3)
-    suite.addTest(CaiwuTestcase05CaiwuyouchongzhicaredQuery('test_caiwu_testcase05_caiwuyouchongzhicared_query'))
+    suite.addTest(HongbaoTestcase06hongbaorecommendhongbao('test_hongbao_testcase06_hongbao_recommendhongbao'))
     time.sleep(3)
-        
-    #caiwu testcase06
-    suite.addTest(CaiwuTestcase06CaiwuuserqueryQuery('test_caiwu_testcase06_caiwuuserquery_query'))
+    suite.addTest(HongbaoTestcase06hongbaotelephonesendcouple('test_hongbao_testcase06_hongbao_telephonesendcouple'))
     time.sleep(3)
-    suite.addTest(CaiwuTestcase06CaiwuuserqueryHuiyuancardcrud('test_caiwu_testcase06_caiwuuserquery_huiyuancardcrud'))
+
+
+    suite.addTest(PromotionTestcase07promotionChannellist('test_promotion_testcase07_promotion_Channellist'))
     time.sleep(3)
-    suite.addTest(CaiwuTestcase06CaiwuuserqueryHuiyuanMore('test_caiwu_testcase06_caiwuuserquery_Huiyuan_more'))
+    suite.addTest(PromotionTestcase07promotionwebpushorderlink('test_promotion_testcase07_promotion_webpushorderlink'))
     time.sleep(3)
-            
-    suite.addTest(CaiwuTestcase06CaiwuuserqueryHuiyuncardChongzhi('test_caiwu_testcase06_caiwuuserquery_Huiyuncard_Chongzhi'))
-    time.sleep(3)
-    suite.addTest(CaiwuTestcase06CaiwuuserqueryHuiyuncardKoukuan('test_caiwu_testcase06_caiwuuserquery_Huiyuncard_Koukuan'))
-    time.sleep(3)
-    suite.addTest(CaiwuTestcase06CaiwuuserqueryHuiyuanTuikuan('test_caiwu_testcase06_caiwuuserquery_Huiyuan_Tuikuan'))
-    time.sleep(3)
+
 
     currenttime=time.strftime("%Y-%m-%d-%H-%M-%S", time.localtime())
     #print currenttime
 
-    fp = file("c:\\edaixi_testdata\\"+currenttime+"-caiwu_test_report.html", 'wb')
+    fp = file("c:\\edaixi_testdata\\"+currenttime+"-wechatend_test_report.html", 'wb')
     
-    htmlRunner= HTMLTestRunner.HTMLTestRunner(stream=fp,title="edaixi uicaiwu testing result",description="201508 luke")
+    htmlRunner= HTMLTestRunner.HTMLTestRunner(stream=fp,title="edaixi UIwechat testing result",description="201510 luke")
     #suite =  unittest.TestLoader().loadTestsFromTestCase(MyTest)  
     htmlRunner.run(suite)
     fp.close()
-'''
-def test_caiwu_suite():
-    suite= unittest.TestSuite()  
 
-    suite.addTest(CaiwuHuiyuancardquery('test_caiwu_huiyuancardquery'))
-    suite.addTest(CaiwuUserquery('test_caiwu_userquery'))
-    
-    suite.addTest(CaiwuShitika('test_caiwu_shitika'))
-    suite.addTest(CaiwuShitikaShengchenka('test_caiwu_shitika_shengchenka')) 
-    suite.addTest(CaiwuShitikaQuery('test_caiwu_shitika_query'))
-    suite.addTest(CaiwuShitikaModify('test_caiwu_shitika_modify'))
-    suite.addTest(CaiwuShitikaChongzhi('test_caiwu_shitika_chongzhi'))
-    
-    suite.addTest(CaiwuYouhuiquangroup('test_caiwu_youhuiquangroup'))
-    suite.addTest(CaiwuYouhuiquanlist('test_caiwu_youhuiquanlist'))
-    suite.addTest(CaiwuYouhuiquanlistAdd('test_caiwu_youhuiquanlist_add'))
-    suite.addTest(CaiwuYouhuiquanlistExport('test_caiwu_youhuiquanlist_export'))
-    suite.addTest(CaiwuYouhuiquanlistModify('test_caiwu_youhuiquanlist_modify'))
-    
 
-    #outfile=open("c://edaixi_testdata//report.html",'wb')
-    #filename = 'G:\\seleniums\\result.html'
-    currenttime=time.strftime("%Y-%m-%d-%H-%M-%S", time.localtime())
-    print currenttime
-    #fp = file("/usr/edaixi_report/"+currenttime+"caiwu_test_report.html", 'wb')
-    fp = file("c:\\edaixi_testdata\\"+currenttime+"caiwu_test_report.html", 'wb')
-    #fp = file("c:\\edaixi_testdata\\20150717caiwu_test_report.html", 'wb')
 
-    htmlRunner= HTMLTestRunner.HTMLTestRunner(stream=fp,title="edaixi uicaiwu testing result",description="201507 luke")
-    #suite =  unittest.TestLoader().loadTestsFromTestCase(MyTest)  
-    htmlRunner.run(suite)
-    fp.close()
- '''
-    
+
+
+
+
+
+

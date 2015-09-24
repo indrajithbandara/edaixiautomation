@@ -10,7 +10,7 @@ import unittest, time, re,ConfigParser
 from selenium.webdriver.common.action_chains import ActionChains
 import appobjectwechat,wechat_end_utiltools
 
-class OpsTestcase01Permissionmanagepermission(unittest.TestCase):
+class HongbaoTestcase06hongbaogamehongbao(unittest.TestCase):
     def setUp(self):
         #self.driver = webdriver.Firefox()
         self.driver = appobjectwechat.GetInstance()
@@ -28,7 +28,7 @@ class OpsTestcase01Permissionmanagepermission(unittest.TestCase):
         self.verificationErrors = []
         self.accept_next_alert = True
     
-    def test_ops_testcase01_permissionmanage_permission(self):
+    def test_hongbao_testcase06_hongbao_gamehongbao(self):
         driver = self.driver
         driver.get(self.base_url + "/")
         #html body div#container.container h3.text-center.text-primary a.btn.btn-success.text-center

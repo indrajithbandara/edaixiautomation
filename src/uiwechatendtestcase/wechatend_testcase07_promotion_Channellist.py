@@ -10,8 +10,9 @@ import unittest, time, re,ConfigParser
 from selenium.webdriver.common.action_chains import ActionChains
 import appobjectwechat,wechat_end_utiltools
 
-class HongbaoTestcase06hongbaohongbaologistic(unittest.TestCase):
+class PromotionTestcase07promotionChannellist(unittest.TestCase):
     def setUp(self):
+        #self.driver = webdriver.Firefox()
         self.driver = appobjectwechat.GetInstance()
         self.driver.implicitly_wait(30)
         conf = ConfigParser.ConfigParser()
@@ -27,12 +28,14 @@ class HongbaoTestcase06hongbaohongbaologistic(unittest.TestCase):
         self.verificationErrors = []
         self.accept_next_alert = True
     
-    def test_hongbao_testcase06_hongbao_hongbaologistic(self):
+    def test_promotion_testcase07_promotion_Channellist(self):
         driver = self.driver
         driver.get(self.base_url + "/")
         #html body div#container.container h3.text-center.text-primary a.btn.btn-success.text-center
         #driver.find_element_by_css_selector("div#container.container h3.text-center.text-primary a.btn.btn-success.text-center").click()
         #loginclick=driver.find_element_by_css_selector("div#container.container h3.text-center.text-primary a.btn.btn-success.text-center")
+#         loginclick=driver.find_element_by_css_selector(appobjectops.permloginClickButton)
+#         ActionChains(driver).double_click(loginclick).perform()
         driver.find_element_by_link_text("login with cas").click()
         time.sleep(1)
         driver.find_element_by_id("username").clear()
@@ -49,11 +52,11 @@ class HongbaoTestcase06hongbaohongbaologistic(unittest.TestCase):
         #html body div.content-main table#frametable tbody tr td.content-left.mCustomScrollbar._mCS_11 div#mCSB_11.mCustomScrollBox.mCS-dark-thin div.mCSB_container div.sidebar-nav div#snav ul:first-child.snav li:nth-child(1).snav-header.open a
         
         #html body div.content-main table#frametable tbody tr td.content-left.mCustomScrollbar._mCS_11 div#mCSB_11.mCustomScrollBox.mCS-dark-thin div.mCSB_container div.sidebar-nav div#snav ul:first-child.snav li:nth-child(1).snav-header.open a
-        driver.find_element_by_css_selector("div.mCSB_container>div.sidebar-nav>div#snav>ul:nth-child("+appobjectwechat.wechatend_tab_hongbao_ul+")>li:nth-child("+appobjectwechat.wechatend_tab_hongbao+")>a").click()
+        driver.find_element_by_css_selector("div.mCSB_container>div.sidebar-nav>div#snav>ul:nth-child("+appobjectwechat.wechatend_tab_promotion_ul+")>li:nth-child("+appobjectwechat.wechatend_tab_promotion+")>a").click()
         #driver.find_element_by_link_text(u"基本设置").click()
         #driver.find_element_by_css_selector(appobjectops.clickPermissionLink).click()
         time.sleep(1)
-        driver.find_element_by_css_selector("div.mCSB_container>div.sidebar-nav>div#snav>ul:nth-child("+appobjectwechat.wechatend_tab_hongbao_ul+")>li:nth-child("+appobjectwechat.wechatend_tab_hongbao_hongbaologistic+")>a").click()
+        driver.find_element_by_css_selector("div.mCSB_container>div.sidebar-nav>div#snav>ul:nth-child("+appobjectwechat.wechatend_tab_promotion_ul+")>li:nth-child("+appobjectwechat.wechatend_tab_promotion_channellist+")>a").click()
         
         self.assertEqual(driver.title, u"荣昌微信公众服务平台")
         
@@ -79,7 +82,7 @@ class HongbaoTestcase06hongbaohongbaologistic(unittest.TestCase):
         finally: self.accept_next_alert = True
     
     def tearDown(self):
-        #self.driver.quit()
+        self.driver.quit()
         self.assertEqual([], self.verificationErrors)
 
 if __name__ == "__main__":
