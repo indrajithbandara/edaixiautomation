@@ -76,12 +76,77 @@ wechatend_tab_mainbusiness_userdefinebatchsend=str(4)
 wechatend_tab_mainbusiness_exportcouple=str(5)
 
 
+global wechatend_tab_twodimensioncode_batchcreate,wechatend_tab_twodimensioncode,wechatend_tab_twodimensioncode_batchmodify
+global wechatend_tab_twodimensioncode_createqrcode,wechatend_tab_twodimensioncode_manageqrcode
+global wechatend_tab_twodimensioncode_exportqrcode,wechatend_tab_twodimensioncode_scanningstatifcation
+global wechatend_tab_twodimensioncode_handqqrcode,wechatend_tab_twodimensioncode_xiaoeqrcode,wechatend_tab_twodimensioncode_ul
+
+wechatend_tab_twodimensioncode=str(1)
+wechatend_tab_twodimensioncode_ul=str(3)
+wechatend_tab_twodimensioncode_createqrcode=str(2)
+wechatend_tab_twodimensioncode_manageqrcode=str(3)
+wechatend_tab_twodimensioncode_xiaoeqrcode=str(4)
+wechatend_tab_twodimensioncode_handqqrcode=str(5)
+wechatend_tab_twodimensioncode_scanningstatifcation=str(6)
+wechatend_tab_twodimensioncode_batchcreate=str(7)
+wechatend_tab_twodimensioncode_batchmodify=str(8)
+wechatend_tab_twodimensioncode_exportqrcode=str(9)
 
 
 
+global wechatend_tab_setting,wechatend_tab_setting_ul
+global wechatend_tab_setting_managegroup,wechatend_tab_setting_managemenu
+
+wechatend_tab_setting=str(1)
+wechatend_tab_setting_ul=str(4)
+wechatend_tab_setting_managegroup=str(2)
+wechatend_tab_setting_managemenu=str(3)
+
+global wechatend_tab_credit,wechatend_tab_credit_ul,wechatend_tab_credit_creditregular
+
+wechatend_tab_credit=str(1)
+wechatend_tab_credit_ul=str(5)
+wechatend_tab_credit_creditregular=str(2)
 
 
 
+global wechatend_tab_hongbao,wechatend_tab_hongbao_ul
+global wechatend_tab_hongbao_gamehongbao,wechatend_tab_hongbao_hongbaologistic,wechatend_tab_hongbao_linkhongbao
+global wechatend_tab_hongbao_orderhongbao,wechatend_tab_hongbao_recommendhongbao,wechatend_tab_hongbao_telephonesendcouple
  
-    
+wechatend_tab_hongbao=str(1)
+wechatend_tab_hongbao_ul=str(6)
+
+wechatend_tab_hongbao_linkhongbao=str(2)
+wechatend_tab_hongbao_orderhongbao=str(3)
+wechatend_tab_hongbao_gamehongbao=str(4)
+wechatend_tab_hongbao_recommendhongbao=str(5)
+wechatend_tab_hongbao_telephonesendcouple=str(6)
+wechatend_tab_hongbao_hongbaologistic=str(7)
+
+
+
+global wechatend_tab_promotion,wechatend_tab_promotion_ul
+global wechatend_tab_promotion_channellist,wechatend_tab_promotion_webpushorderlist
+
+wechatend_tab_promotion=str(1)
+wechatend_tab_promotion_ul=str(7)
+wechatend_tab_promotion_channellist=str(2)
+wechatend_tab_promotion_webpushorderlist=str(3)
+
+
+
+global wechatend_tab_crm,wechatend_tab_crm_ul,wechatend_tab_crm_usertag
+global wechatend_tab_crm_createtag,wechatend_tab_crm_createtaggroup
+global wechatend_tab_crm_managetag,wechatend_tab_crm_managetaggroup
+
+
+
+
+
+
+
+
+
+
     

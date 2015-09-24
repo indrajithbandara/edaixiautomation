@@ -3,42 +3,49 @@
 
 #http://weixin03.edaixi.cn/
 import unittest, time, re 
-from caiwu_testcase01_caiwuordermanagechongzhi import *
-from caiwu_testcase01_caiwuordermanagekoukuan import *
-from caiwu_testcase01_caiwuordermanagetuikuan import *
-from caiwu_testcase01_caiwuordermanagemore import *
-from caiwu_testcase01_caiwuordermanageshoukuanmanage import *
+from wechatend_testcase01_basesetting_defaultkeyword import *
+from wechatend_testcase01_basesetting_fontreply import *
+from wechatend_testcase01_basesetting_graphreply import *
+
+from wechatend_testcase02_mainbusiness_exportcouple import *
+from wechatend_testcase02_mainbusiness_sendcouple import *
+from wechatend_testcase02_mainbusiness_userdefinebatchsend import *
+from wechatend_testcase02_mainbusiness_wechatcouple import *
 
 
-from caiwu_testcase02_caiwuyouhuicardgroup import *
-from caiwu_testcase02_caiwuyouhuicardlist_create import *
-from caiwu_testcase02_caiwuyouhuicardgsearch import *
-from caiwu_testcase02_caiwuyouhuiquanlist_addedit_ecouple import *
-from caiwu_testcase02_caiwuyouhuiquanlist_addedit_shiticouple import *
+from wechatend_testcase03_twodimensioncode_batchcreate import *
+from wechatend_testcase03_twodimensioncode_batchmodify import *
+from wechatend_testcase03_twodimensioncode_createqrcode import *
+from wechatend_testcase03_twodimensioncode_exportqrcode import *
+from wechatend_testcase03_twodimensioncode_handqqrcode import *
+from wechatend_testcase03_twodimensioncode_manageqrcode import *
+from wechatend_testcase03_twodimensioncode_scanningstatifcation import *
+from wechatend_testcase03_twodimensioncode_xiaoeqrcode import *
 
-from caiwu_testcase02_caiwuyouhuiquanlist_query import *
 
-from caiwu_testcase03_caiwushiticard_create import *
-from caiwu_testcase03_caiwushiticard_crud import *
-from caiwu_testcase03_caiwushiticard_query import *
+from wechatend_testcase04_setting_managegroup import *
+from wechatend_testcase04_setting_managemenu import *
+from wechatend_testcase05_credit_creditregular import *
 
-from caiwu_testcase04_caiwuhuiyuancardquery_chongzhi import *
-from caiwu_testcase04_caiwuhuiyuancardquery_koukuan import *
-from caiwu_testcase04_caiwuhuiyuancardquery_tuikuan import *
-from caiwu_testcase04_caiwuhuiyuancardquery_more import *
 
-from caiwu_testcase05_caiwuyouchongzhicared_crud import *
-from caiwu_testcase05_caiwuyouchongzhicared_fenpei import *
-from caiwu_testcase05_caiwuyouchongzhicared_huishou import *
-from caiwu_testcase05_caiwuyouchongzhicared_kongbaikaCreate import *
-from caiwu_testcase05_caiwuyouchongzhicared_query import *
+from wechatend_testcase06_hongbao_gamehongbao import *
+from wechatend_testcase06_hongbao_hongbaologistic import *
+from wechatend_testcase06_hongbao_linkhongbao import *
+from wechatend_testcase06_hongbao_orderhongbao import *
+from wechatend_testcase06_hongbao_recommendhongbao import *
+from wechatend_testcase06_hongbao_telephonesendcouple import *
 
-from caiwu_testcase06_caiwuuserquery_huiyuancard_chongzhi import *
-from caiwu_testcase06_caiwuuserquery_huiyuancard_koukuan import *
-from caiwu_testcase06_caiwuuserquery_huiyuancard_tuikuan import *
-from caiwu_testcase06_caiwuuserquery_huiyuancard_more import *
-from caiwu_testcase06_caiwuuserquery_huiyuancardcrud import *
-from caiwu_testcase06_caiwuuserquery_query import *
+
+from wechatend_testcase07_promotion_qudaolist import *
+from wechatend_testcase07_promotion_webpushorderlink import  *
+ 
+from wechatend_testcase08_crm_checktaglist import *
+from wechatend_testcase08_crm_createtag import *
+from wechatend_testcase08_crm_createtaggroup import *
+from wechatend_testcase08_crm_managetag import *
+from wechatend_testcase08_crm_managetaggroup import *
+from wechatend_testcase08_crm_usertag import *
+
 
 import HTMLTestRunner
 
