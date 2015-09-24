@@ -38,7 +38,7 @@ class WuliuTestcase02factoryinoutstockquery(unittest.TestCase):
         driver.find_element_by_id("password").clear()
         driver.find_element_by_id("password").send_keys(PASS_WORD)
         driver.find_element_by_id("login-submit").click()
-        print driver.title
+        print " the testcase test_wuliu_testcase02_factory_inoutstockquery  is  ",driver.title
         #self.assertTrue(driver.title, u"物流")
         self.assertEqual(driver.title, u"物流")
         time.sleep(2)
@@ -55,24 +55,25 @@ class WuliuTestcase02factoryinoutstockquery(unittest.TestCase):
         self.assertEqual(driver.title, u"物流")
         #html body div#container.container div.panel.panel-primary div.panle-body form#jiagongdian_form table tbody tr td:nth-last-child(3) select#target_type.form-control.single_input option:nth-child(2)
         jiagongdian=driver.find_element_by_css_selector("div#container.container div.panel.panel-primary div.panle-body form#jiagongdian_form table tbody tr td:nth-last-child(3) select#target_type.form-control.single_input option:nth-child(2)").text
-        print jiagongdian
+        print " the test result  jiagongdian is ",jiagongdian
         Select(driver.find_element_by_id("target_type")).select_by_visible_text(jiagongdian)
         
         chukuname=driver.find_element_by_css_selector("div#container.container div.panel.panel-primary div.panle-body form#jiagongdian_form table tbody tr td:nth-child(2) select#in_out_type.form-control.single_input option:nth-child(2)").text
-        print chukuname
+        print  " the test result  chukuname is ",chukuname
         #html body div#container.container div.panel.panel-primary div.panle-body form#jiagongdian_form table tbody tr td:nth-child(2) select#in_out_type.form-control.single_input option:nth-child(2)
         Select(driver.find_element_by_id("in_out_type")).select_by_visible_text(chukuname)
         driver.find_element_by_name("commit").click()
         
-        print driver.title
+        time.sleep(1)
+        #print driver.title
         self.assertEqual(driver.title, u"物流")
         rukuname=driver.find_element_by_css_selector("div#container.container div.panel.panel-primary div.panle-body form#jiagongdian_form table tbody tr td:nth-child(2) select#in_out_type.form-control.single_input option:nth-child(1)").text
-        print rukuname
+        print  " the test result  rukuname is ",rukuname
         
         Select(driver.find_element_by_id("in_out_type")).select_by_visible_text(rukuname)
         driver.find_element_by_name("commit").click()
         
-        print driver.title
+        #print driver.title
         self.assertEqual(driver.title, u"物流")
 
         

@@ -54,15 +54,19 @@ class CaiwuTestcase01Caiwuordermanagementchongzhi(unittest.TestCase):
         # end 6 number to query order
         #print caiwu_edaixi_mysql.getordersn()[-6:]
         driver.find_element_by_id("settlement_search_form_ordersn").clear()
-        driver.find_element_by_id("settlement_search_form_ordersn").send_keys(caiwu_edaixi_mysql.getordersn()[-6:])
+        #driver.find_element_by_id("settlement_search_form_ordersn").send_keys(caiwu_edaixi_mysql.getordersn()[-6:])
+        driver.find_element_by_id("settlement_search_form_ordersn").send_keys(appobjectcaiwu.testdata_ordersn[-6:])
         driver.find_element_by_name("commit").click()
         self.assertEqual(driver.title,u"财务")
+        
+        time.sleep(1)
         # ordernumber to query order
         driver.find_element_by_id("settlement_search_form_ordersn").clear()
-        driver.find_element_by_id("settlement_search_form_ordersn").send_keys(caiwu_edaixi_mysql.getordersn())
+        #        driver.find_element_by_id("settlement_search_form_ordersn").send_keys(caiwu_edaixi_mysql.getordersn())
+        driver.find_element_by_id("settlement_search_form_ordersn").send_keys(appobjectcaiwu.testdata_ordersn)
         driver.find_element_by_name("commit").click()
 
-        time.sleep(5)
+        time.sleep(3)
         self.assertEqual(driver.title,u"财务")
         ordernumber=driver.find_element_by_css_selector("div.container>div#content div.panel.panel-primary>table.table.table-striped.list-table>tbody>tr:first-child>td:nth-child(3)>a").text
         #print " the ordernumber is :",ordernumber

@@ -29,7 +29,6 @@ class WuliuTestcase02factorydelivery(unittest.TestCase):
         
         print mysqlhostname,mysqlusername,mysqlpassword,mysqlrongchangdb
         
-        
         self.base_url = WULIU_URL
         #self.base_url = "http://wuliu05.edaixi.cn:81/"
         self.verificationErrors = []

@@ -36,15 +36,15 @@ from wechatend_testcase06_hongbao_recommendhongbao import *
 from wechatend_testcase06_hongbao_telephonesendcouple import *
 
 
-from uiwechatendtestcase.wechatend_testcase07_promotion_Channellist import *
+from wechatend_testcase07_promotion_Channellist import *
 from wechatend_testcase07_promotion_webpushorderlink import  *
  
-from wechatend_testcase08_crm_checktaglist import *
-from wechatend_testcase08_crm_createtag import *
-from wechatend_testcase08_crm_createtaggroup import *
-from wechatend_testcase08_crm_managetag import *
-from wechatend_testcase08_crm_managetaggroup import *
-from wechatend_testcase08_crm_usertag import *
+# from wechatend_testcase08_crm_checktaglist import *
+# from wechatend_testcase08_crm_createtag import *
+# from wechatend_testcase08_crm_createtaggroup import *
+# from wechatend_testcase08_crm_managetag import *
+# from wechatend_testcase08_crm_managetaggroup import *
+# from wechatend_testcase08_crm_usertag import *
 
 
 import HTMLTestRunner

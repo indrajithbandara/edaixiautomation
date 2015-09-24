@@ -56,7 +56,7 @@ class WuliuTestcase03sitedelivery(unittest.TestCase):
         global cursor 
         cursor = conn.cursor() 
         
-        cursor.execute("UPDATE ims_washing_order SET status_delivery='1' ,qianshoudian_id= NULL WHERE bagsn='1792411229'")
+        cursor.execute("UPDATE ims_washing_order SET status_delivery='1' ,qianshoudian_id= NULL WHERE bagsn='"+appobjectwuliu.factorysignnumber+"'")
         conn.commit()
         
 #      
@@ -77,7 +77,7 @@ class WuliuTestcase03sitedelivery(unittest.TestCase):
         self.assertEqual(driver.title, u"物流")
         #html body header.navbar.navbar-default.navbar-static-top div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child(2).dropdown ul.dropdown-menu li:first-child a
         driver.find_element_by_id("bagsn").clear()
-        driver.find_element_by_id("bagsn").send_keys("1792411229")
+        driver.find_element_by_id("bagsn").send_keys(appobjectwuliu.factorysignnumber)
         driver.find_element_by_name("commit").click()
         
         winBeforeHandle = driver.current_window_handle
@@ -88,21 +88,21 @@ class WuliuTestcase03sitedelivery(unittest.TestCase):
         
         sitesignname=driver.find_element_by_xpath("/html/body/div/div/p[1]/b").text
 
-        print "===================",sitesignname
+        print " the sitesignname  print is  ",sitesignname
         #print driver.title
         #self.assertTrue(driver.title, u"物流")
         self.assertEqual(driver.title, u"物流")
         
-        driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child(3).dropdown a").click()
+        driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child("+appobjectwuliu.wuliutabthree+").dropdown a").click()
         self.assertEqual(driver.title, u"物流")
         
         #driver.find_element_by_xpath("/html/body/header/div/nav/ul/li[2]/ul/li[2]/a").click()
-        driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child(3).dropdown ul.dropdown-menu li:nth-child(2) a").click()
+        driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child("+appobjectwuliu.wuliutabthree+").dropdown ul.dropdown-menu li:nth-child(2) a").click()
         self.assertEqual(driver.title, u"物流")
         
         Select(driver.find_element_by_id("store_type")).select_by_visible_text(u"加工店")
         driver.find_element_by_id("order_key").clear()
-        driver.find_element_by_id("order_key").send_keys("E0000000006")
+        driver.find_element_by_id("order_key").send_keys(appobjectwuliu.testdata_ordersnumber)
         driver.find_element_by_name("commit").click()
                 
         print driver.title
@@ -117,7 +117,7 @@ class WuliuTestcase03sitedelivery(unittest.TestCase):
         #delicerysitename=driver.find_element_by_css_selector("div#container.container div.panel.panel-primary p.text-center b").text
         #cursor.execute("UPDATE ims_washing_order SET status_delivery='1',qianshoudian_id= NULL WHERE bagsn='E0000000006'")
         #conn.commit()
-        print "===================",delicerysitename
+        print " the  delicerysitename  signmuber description is  ",delicerysitename
         self.assertEqual(driver.title, u"物流")
         
         cursor.close()

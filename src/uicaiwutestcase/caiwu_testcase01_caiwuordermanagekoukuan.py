@@ -39,15 +39,16 @@ class CaiwuTestcase01Caiwuordermanagementkoukuan(unittest.TestCase):
         driver.find_element_by_id("password").clear()
         driver.find_element_by_id("password").send_keys(PASS_WORD)
         driver.find_element_by_id("login-submit").click()
-        driver.implicitly_wait(20)
+        driver.implicitly_wait(30)
         self.assertEqual(driver.title,u"财务")
         #driver.find_element_by_link_text(u"财务单管理").click()
         driver.find_element_by_css_selector("div.navbar.navbar-default.navbar-static-top div.container div.navbar-collapse.collapse.navbar-responsive-collapse ul.nav.navbar-nav li:first-child a").click()
         driver.find_element_by_id("settlement_search_form_ordersn").clear()
-        driver.find_element_by_id("settlement_search_form_ordersn").send_keys(caiwu_edaixi_mysql.ordersnnumber)
+        driver.find_element_by_id("settlement_search_form_ordersn").send_keys(appobjectcaiwu.testdata_ordersn)
+#         driver.find_element_by_id("settlement_search_form_ordersn").send_keys(caiwu_edaixi_mysql.ordersnnumber)
         driver.find_element_by_name("commit").click()
         self.assertEqual(driver.title,u"财务")
-        
+        time.sleep(1)
         ordernumber=driver.find_element_by_css_selector("div.container>div#content div.panel.panel-primary>table.table.table-striped.list-table>tbody>tr:first-child>td:nth-child(3)>a").text
         print " the ordernumber is :",ordernumber
         driver.find_element_by_link_text(ordernumber).click()

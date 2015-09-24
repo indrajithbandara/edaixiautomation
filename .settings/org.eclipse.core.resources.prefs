@@ -2,6 +2,8 @@
 <<<<<<<=Upstream, based on origin/master
 >>>>>>>=2f87011 aaa
 eclipse.preferences.version=1
+encoding//src/automation3rd/PythonCsvDemo.py=utf-8
+encoding//src/automation3rd/PythonTxtDemo.py=utf-8
 encoding//src/automation3rd/auto3rd_utiltools.py=utf-8
 encoding//src/automation3rd/autocaiwu_testcase08_citylist_jiagongdian_factorbalancebranch.py=utf-8
 encoding//src/automation3rd/autocaiwu_testcase08_citylist_jiagongdian_factorbalancemaster.py=utf-8

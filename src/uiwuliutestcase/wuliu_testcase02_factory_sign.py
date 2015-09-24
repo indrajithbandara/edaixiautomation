@@ -10,6 +10,7 @@ import unittest, time, re,ConfigParser,MySQLdb
 from selenium.webdriver.common.action_chains import ActionChains
 #from pty import CHILD
 import appobjectwuliu,wuliu_utiltools
+from uiwuliutestcase import appobjectwuliu
 class WuliuTestcase02factorysign(unittest.TestCase):
     def setUp(self):
         #self.driver = webdriver.Firefox()
@@ -58,7 +59,7 @@ class WuliuTestcase02factorysign(unittest.TestCase):
         global cursor 
         cursor = conn.cursor() 
         
-        cursor.execute("UPDATE ims_washing_order SET status_delivery='1' ,qianshoudian_id= NULL WHERE bagsn='E0000000006'")
+        cursor.execute("UPDATE ims_washing_order SET status_delivery='1' ,qianshoudian_id= NULL WHERE bagsn='"+appobjectwuliu.factorysignnumber+"'")
         conn.commit()
         
      
@@ -78,7 +79,7 @@ class WuliuTestcase02factorysign(unittest.TestCase):
         #driver.find_element_by_xpath("/html/body/header/div/nav/ul/li[2]/ul/li[1]/a").click()
         #html body header.navbar.navbar-default.navbar-static-top div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child(2).dropdown ul.dropdown-menu li:first-child a
         driver.find_element_by_id("bagsn").clear()
-        driver.find_element_by_id("bagsn").send_keys("1792411229")
+        driver.find_element_by_id("bagsn").send_keys(appobjectwuliu.factorysignnumber)
         driver.find_element_by_name("commit").click()
         
         print " after submitted testcase test_wuliu_testcase02factory_sign ",driver.title

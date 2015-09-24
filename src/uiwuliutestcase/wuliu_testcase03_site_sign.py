@@ -60,19 +60,19 @@ class WuliuTestcase03sitesign(unittest.TestCase):
         global cursor 
         cursor = conn.cursor() 
         
-        n = cursor.execute("SELECT washorder.bagsn FROM ims_washing_order AS washorder WHERE washorder.status_delivery=1 AND washorder.bagsn IS NOT NULL ORDER BY washorder.id") 
-        for i in xrange(cursor.rowcount):
-            bagsn= cursor.fetchone()
-        print " the bagsn is ",str(bagsn)[3:-3]
-        
-        cursor.execute("UPDATE ims_washing_order SET status_delivery='1' ,status='7' ,jiagongdian_id=NULL,qianshoudian_id= NULL WHERE bagsn='"+str(bagsn)[3:-3]+"'")
+#         n = cursor.execute("SELECT washorder.bagsn FROM ims_washing_order AS washorder WHERE washorder.status_delivery=1 AND washorder.bagsn IS NOT NULL ORDER BY washorder.id") 
+#         for i in xrange(cursor.rowcount):
+#             bagsn= cursor.fetchone()
+#         print " the bagsn is ",str(bagsn)[3:-3]
+        cursor.execute("UPDATE ims_washing_order SET status_delivery='1' ,status='7' ,jiagongdian_id=NULL,qianshoudian_id= NULL WHERE bagsn='"+appobjectwuliu.factorysignnumber+"'")
+#         cursor.execute("UPDATE ims_washing_order SET status_delivery='1' ,status='7' ,jiagongdian_id=NULL,qianshoudian_id= NULL WHERE bagsn='"+str(bagsn)[3:-3]+"'")
         conn.commit()
         
      
-        n = cursor.execute("SELECT ordersn,bagsn,status_delivery,jiagongdian_id,qianshoudian_id  FROM ims_washing_order WHERE bagsn='"+str(bagsn)[3:-3]+"'") 
-        for i in xrange(cursor.rowcount):
-            ordersn ,bagsn,status_delivery,jiagongdian_id,qianshoudian_id = cursor.fetchone()
-        print ordersn ,bagsn,status_delivery,jiagongdian_id,qianshoudian_id
+#         n = cursor.execute("SELECT ordersn,bagsn,status_delivery,jiagongdian_id,qianshoudian_id  FROM ims_washing_order WHERE bagsn='"+str(bagsn)[3:-3]+"'") 
+#         for i in xrange(cursor.rowcount):
+#             ordersn ,bagsn,status_delivery,jiagongdian_id,qianshoudian_id = cursor.fetchone()
+#         print ordersn ,bagsn,status_delivery,jiagongdian_id,qianshoudian_id
         
         driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child("+appobjectwuliu.wuliutabthree+").dropdown a").click()
         
@@ -85,7 +85,7 @@ class WuliuTestcase03sitesign(unittest.TestCase):
         #driver.find_element_by_xpath("/html/body/header/div/nav/ul/li[2]/ul/li[1]/a").click()
         #html body header.navbar.navbar-default.navbar-static-top div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child(2).dropdown ul.dropdown-menu li:first-child a
         driver.find_element_by_id("bagsn").clear()
-        driver.find_element_by_id("bagsn").send_keys(bagsn)
+        driver.find_element_by_id("bagsn").send_keys(appobjectwuliu.factorysignnumber)
         driver.find_element_by_name("commit").click()
         
         print driver.title

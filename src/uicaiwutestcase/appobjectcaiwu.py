@@ -89,6 +89,14 @@ caiwu_tab_caiwuyouhuicardlist=str(2)
 # testdata for caiwu testcae06 caiwuuserquery
 global caiwuuserquerytelephonenumber
 caiwuuserquerytelephonenumber="18888888888"
+
+
+global testdata_ordersn
+#testdata_ordersn="040500364922"
+
+testdata_ordersn="0812236583676"
+#test14 env avalibale testdata :040500367268  040600362644  040500364922
+#test15 env avalibale testdata :040500368342  040600368487  040600369192
 # 
 # # class appobjectops:
 # global permloginClickButton,clickPermissionLink,clickPermissionButton

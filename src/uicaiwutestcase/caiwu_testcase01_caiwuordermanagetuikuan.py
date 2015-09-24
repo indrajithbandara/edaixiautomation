@@ -43,11 +43,14 @@ class CaiwuTestcase01Caiwuordermanagementtuikuan(unittest.TestCase):
         #driver.find_element_by_link_text(u"财务单管理").click()
         driver.find_element_by_css_selector("div.navbar.navbar-default.navbar-static-top div.container div.navbar-collapse.collapse.navbar-responsive-collapse ul.nav.navbar-nav li:first-child a").click()
         driver.find_element_by_id("settlement_search_form_ordersn").clear()
-        driver.find_element_by_id("settlement_search_form_ordersn").send_keys(caiwu_edaixi_mysql.ordersnnumber)
+        #driver.find_element_by_id("settlement_search_form_ordersn").send_keys(caiwu_edaixi_mysql.ordersnnumber)
+        driver.find_element_by_id("settlement_search_form_ordersn").send_keys(appobjectcaiwu.testdata_ordersn)
         driver.find_element_by_name("commit").click()
         self.assertEqual(driver.title,u"财务")
  
-        driver.find_element_by_link_text(caiwu_edaixi_mysql.ordersnnumber).click()
+        time.sleep(1)
+        #driver.find_element_by_link_text(caiwu_edaixi_mysql.ordersnnumber).click()
+        driver.find_element_by_link_text(appobjectcaiwu.testdata_ordersn).click()
         #WebDriverWait(driver, 10).until(lambda the_driver: the_driver.find_element_by_css_selector("div.container div.info-div div.col-md-6 div.panel.panel-primary.checkout-order div.panel-heading").is_displayed()) 
 
         time.sleep(1)

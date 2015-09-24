@@ -48,7 +48,7 @@ class WuliuTestcase08citylistdiaoduqueryfanxidan(unittest.TestCase):
         driver.find_element_by_id("password").send_keys(PASS_WORD)
         driver.find_element_by_id("login-submit").click()
         time.sleep(2)
-  
+        self.assertEqual(driver.title, u"物流")
         #driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child(8).active a").click()
         #driver.find_element_by_css_selector("div.container > nav > ul > li:nth-child("+str(9)+") >a").click()
         driver.find_element_by_css_selector("div.container > nav > ul > li:nth-child("+appobjectwuliu.wuliutabnine_citylist+") >a").click()
@@ -56,7 +56,7 @@ class WuliuTestcase08citylistdiaoduqueryfanxidan(unittest.TestCase):
         conn=MySQLdb.connect(host=mysqlhostname,user=mysqlusername,passwd=mysqlpassword,db=mysqlrongchangdb,charset="utf8")    
         global cursor 
         cursor = conn.cursor() 
-        self.assertEqual(driver.title, u"物流")
+
         try:
             wuliufanxiresultlag=driver.find_element_by_css_selector("div#container.container div.panel.panel-primary.checkout-order table.table.table-striped.city-table tbody tr:nth-child(2) td:nth-child(2).btn-link a").text
             print " the wuliufanxiresultlag is ",wuliufanxiresultlag
@@ -159,6 +159,7 @@ class WuliuTestcase08citylistdiaoduqueryfanxidan(unittest.TestCase):
         driver.find_element_by_xpath("//input[@type='submit']").click()
         #/html/body/div[1]/form/table/tbody/tr[11]/td[2]/input
         
+        time.sleep(1)
         #self.assertTrue(driver.title, u"物流")
         self.assertEqual(driver.title, u"物流")
         cursor.execute("UPDATE ims_washing_order SET fanxidan_id='0',paytype='1',pay_status='1',fan_id='"+wuliu_utiltools.fansfanidnumber+"',status_delivery='3'  WHERE ordersn='"+wuliu_utiltools.ordersnnumber+"'")

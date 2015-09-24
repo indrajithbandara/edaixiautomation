@@ -51,7 +51,7 @@ class WuliuTestcase08citylistdiaodupaidanfanxidanYiPandan(unittest.TestCase):
         driver.find_element_by_id("password").send_keys(PASS_WORD)
         driver.find_element_by_id("login-submit").click()
         print " the testcase test_wuliu_testcase08citylist_diaodupaidan_fanxidan_yipandan is ",driver.title
-        time.sleep(1)
+        time.sleep(2)
         #self.assertTrue(driver.title, u"物流")
         #self.assertEqual(driver.title, u"物流")
         
