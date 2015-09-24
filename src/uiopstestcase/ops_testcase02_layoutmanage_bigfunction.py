@@ -39,14 +39,15 @@ class OpsTestcase02LayoutManageBigFunction(unittest.TestCase):
         driver.find_element_by_id("password").clear()
         driver.find_element_by_id("password").send_keys(PASS_WORD)
         driver.find_element_by_id("login-submit").click()
-        print driver.title
+        print " the testcase test_ops_testcase02_layoutmanage_bigfunction  is  ",driver.title
+        time.sleep(2)
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
         driver.find_element_by_css_selector("div.navbar.navbar-default.navbar-static-top div.container div.navbar-collapse.collapse.navbar-responsive-collapse ul.nav.navbar-nav li.dropdown a.dropdown-toggle").click()
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
         driver.find_element_by_css_selector("ul.nav.navbar-nav li:first-child.dropdown ul.dropdown-menu li:nth-child(2) a").click()
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
         driver.find_element_by_css_selector("div#container.container a.btn.btn-sm.btn-info.col-md-1").click()
-       
+        time.sleep(2)
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
         driver.find_element_by_id("banner_title").clear()
         driver.find_element_by_id("banner_title").send_keys("bigbuttontest")
@@ -87,13 +88,13 @@ class OpsTestcase02LayoutManageBigFunction(unittest.TestCase):
         driver.find_element_by_id("banner_inner_url").send_keys("http://www.localhostest.com")
         driver.find_element_by_name("commit").click()
         
-        
+        time.sleep(2)
         #driver.find_element_by_name("commit").click()
         
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
-        time.sleep(2)
-        #driver.find_element_by_link_text(u"编辑").click()
-        driver.find_element_by_css_selector("div#container.container div.panel.panel-primary div.pnale-body table.table.table-striped tbody tr:first-child td:last-child a:nth-child(2).btn.btn-sm.btn-info").click()
+
+        driver.find_element_by_link_text(u"编辑").click()
+        #driver.find_element_by_css_selector("div#container.container div.panel.panel-primary div.pnale-body table.table.table-striped tbody tr:first-child td:last-child a:nth-child(2).btn.btn-sm.btn-info").click()
         driver.find_element_by_id("banner_description").clear()
         driver.find_element_by_id("banner_description").send_keys("hello1111")
         
@@ -108,32 +109,53 @@ class OpsTestcase02LayoutManageBigFunction(unittest.TestCase):
         #driver.find_element_by_link_text(u"删除").click()
 
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
+        time.sleep(2)
+        
         
         downactivename=driver.find_element_by_css_selector("div#container.container div.panel.panel-primary div.pnale-body table.table.table-striped tbody tr:first-child td:last-child a:first-child").text
-        print downactivename
-        if downactivename == u"下线":
-           driver.find_element_by_link_text(u"下线").click()
-           time.sleep(2)
-           self.assertRegexpMatches(self.close_alert_and_get_its_text(), u"^确认下线[\s\S]$")
-           self.assertEqual(driver.title, u"e袋洗城市运营后台")
-           driver.find_element_by_css_selector("div#container.container>div.panel.panel-primary>div.pnale-body>table.table.table-striped>tbody>tr:first-child>td:last-child>a:last-child").click()
-           time.sleep(2)
-           self.assertRegexpMatches(self.close_alert_and_get_its_text(), u"^确认删除图片[\s\S]$")
-        elif downactivename == u"激活":
-           driver.find_element_by_link_text(u"激活").click()
-           time.sleep(2)
-           self.assertRegexpMatches(self.close_alert_and_get_its_text(), u"^确认激活[\s\S]$")
-           self.assertEqual(driver.title, u"e袋洗城市运营后台")
-           driver.find_element_by_css_selector("div#container.container>div.panel.panel-primary>div.pnale-body>table.table.table-striped>tbody>tr:first-child>td:last-child>a:nth-child(3)").click()
-           time.sleep(2)
-           self.assertRegexpMatches(self.close_alert_and_get_its_text(), u"^确认删除图片[\s\S]$")
+        print " the downactivename is ",downactivename
+        if downactivename == u"激活":
+               driver.find_element_by_link_text(u"激活").click()
+               time.sleep(2)
+               self.assertRegexpMatches(self.close_alert_and_get_its_text(), u"^确认激活?[\s\S]$")
+               self.assertEqual(driver.title, u"e袋洗城市运营后台")
+               
+               time.sleep(2)
+               driver.find_element_by_css_selector("div#container.container>div.panel.panel-primary>div.pnale-body>table.table.table-striped>tbody>tr:first-child>td:last-child>a:nth-child(3)").click()
+               time.sleep(2)
+               self.assertRegexpMatches(self.close_alert_and_get_its_text(), u"^确认删除图片[\s\S]$")
+               time.sleep(1)
+               
+
         else:
-           pass
-           driver.find_element_by_css_selector("div#container.container>div.panel.panel-primary>div.pnale-body>table.table.table-striped>tbody>tr:first-child>td:last-child>a:nth-child(3)").click()
-           time.sleep(2)
-           self.assertRegexpMatches(self.close_alert_and_get_its_text(), u"^确认删除图片[\s\S]$")
+            
+            if downactivename == u"下线":
+                   driver.find_element_by_link_text(u"下线").click()
+                   time.sleep(2)
+                   self.assertRegexpMatches(self.close_alert_and_get_its_text(), u"^确认下线?[\s\S]$")
+                   self.assertEqual(driver.title, u"e袋洗城市运营后台")
+                   driver.find_element_by_css_selector("div#container.container>div.panel.panel-primary>div.pnale-body>table.table.table-striped>tbody>tr:first-child>td:last-child>a:last-child").click()
+                   time.sleep(2)
+                   self.assertRegexpMatches(self.close_alert_and_get_its_text(), u"^确认删除图片[\s\S]$")
+                   exit
+    
+            elif downactivename == u"上线":
+                   driver.find_element_by_link_text(u"上线").click()
+                   time.sleep(2)
+                   self.assertRegexpMatches(self.close_alert_and_get_its_text(), u"^确认下线?[\s\S]$")
+                   self.assertEqual(driver.title, u"e袋洗城市运营后台")
+                   driver.find_element_by_css_selector("div#container.container>div.panel.panel-primary>div.pnale-body>table.table.table-striped>tbody>tr:first-child>td:last-child>a:last-child").click()
+                   time.sleep(2)
+                   self.assertRegexpMatches(self.close_alert_and_get_its_text(), u"^确认删除图片?[\s\S]$")
+                   exit
+               #pass
+#             else:
+#                driver.find_element_by_css_selector("div#container.container>div.panel.panel-primary>div.pnale-body>table.table.table-striped>tbody>tr:first-child>td:last-child>a:nth-child(3)").click()
+#                time.sleep(2)
+#                self.assertRegexpMatches(self.close_alert_and_get_its_text(), u"^确认删除图片?[\s\S]$")
+#                exit
         
-        
+        print " completed my bigfunction button function click "
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
         
     def is_element_present(self, how, what):
@@ -158,7 +180,7 @@ class OpsTestcase02LayoutManageBigFunction(unittest.TestCase):
         finally: self.accept_next_alert = True
     
     def tearDown(self):
-        self.driver.quit()
+        #self.driver.quit()
         self.assertEqual([], self.verificationErrors)
 
 if __name__ == "__main__":

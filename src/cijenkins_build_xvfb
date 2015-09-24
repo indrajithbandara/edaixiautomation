@@ -1,14 +1,258 @@
-CI framework to manage our automation system and build testcase use jenkins
+# 
+# CI framework to manage our automation system and build testcase use jenkins
+# 
+# jenkins
+# windows
+# ubuntu
+# 
+# install headless xvfb
+# install python2.7
+# install python mysql
+# install python selenium
+# 
+# modify some automation config files 
+# 
+# deploy automation scripts and config files,and prepare test data
 
-jenkins
-windows
-ubuntu
 
-install headless xvfb
-install python2.7
-install python mysql
-install python selenium
+http://itindex.net/detail/50790-%E6%98%BE%E7%A4%BA%E5%99%A8-ubuntu-selenium
 
-modify some automation config files 
+翻译自：http://www.installationpage.com/selenium/how-to-run-selenium-headless-firefox-in-ubuntu/
 
-deploy automation scripts and config files,and prepare test data
+Selenium是一个web自动化测试框架。用它可以实现web应用自动化测试。不过，我不只是用它来做测试，我还用它从电子商务网站签到页面爬取javascript生成的或AJAX的内容。
+
+作为程序员，我不满足于使用Selenium IDE来记录和重放宏记录。那样很蹩脚，而且不适合部署到多台服务器。这时，你需要Selenium WebDriver，它又灵活，而且通过Selenium headless，运行Selenium在服务器上不需要显示设备。
+
+为什么要运行Headless Selenium 测试？
+
+当你希望能在服务器上运行的健壮的自动化操作，而其操作又依赖于 27X7，同时还希望它是稳定的，这时，Selenium是你唯一的选择。但是，Selenium需要运行在浏览器上。所以，你得骗Selenium，让它觉得，它正跑在一台带有显示器的机器上。这样，你就可以不间断的跑自动化测试，同时又不失稳定性和扩展性。
+
+如何在ubuntu上运行Selenium headless
+
+本教程的目标是在使用Mozilla Firefox作为主浏览器的ubuntu上配置和运行selenium headless。
+
+安装Firefox headless
+
+确认你的ubuntu安装的是最新版本的Firefox。我遇到过Selenium的版本和Firefox的版本不兼容问题。如果你没有安装Firefox或者使用的是老版本的Firefox，可按以下步骤升级Firefox：
+
+在/etc/apt/sources.list加入：
+
+ppa:mozillateam/firefox-stable
+
+运行以下命令升级或安装Firefox
+
+sudo apt-get update 
+sudo apt-get install firefox
+
+运行成功后，ubuntu上就应该安装好最新版本的Firefox了。
+
+安装Xvfb——一个X虚拟框架
+
+这个仿真框架使用虚拟内存能让X-Server运行在没有显示设备的机器上。这样，浏览器就可以运行了。在ubuntu和Debian上安装xvfb，只要运行：
+
+ sudo apt-get install xvfb
+现在，可以运行xvfb服务上一个带有数字的显示设备上，这样是为了防止你在下阶段添加设备时引发冲突。本教程，我们分配一个显示设备 10.
+
+ sudo Xvfb :10 -ac
+-ac代表关闭xvfb的访问控制。好了，服务器可以运行了。
+
+启动浏览器
+
+在你运行浏览器前，你首先要设置DISPLAY环境变量，以指定xvfb运行在哪个显示设备上。在加入环境变量前，我们检查一下所有的这些都如我们所料：
+
+ export DISPLAY=:10
+ firefox
+如果终端(terminal)没有显示错误，就说明你已经成功运行Firefox在无显示设备的ubuntu上了。它会一直运行，直到你使用ctrl + C或其它类似方法来终止其运行。同时，它不会有任何输出。
+
+如果你能成功运行以上的步骤，那么接下来的部分就是轻而易举了。现在，我们可以在ubuntu服务器上运行selenium，如同你在本地运行一样。本教程的下一部分，我展示了如何运行一个独立selenium服务器，同时使用PHP的selenium webdriver去连接。
+
+小结
+
+很久以前，我也使用selenium做自动化的集成测试，使用HtmlUnit的webdriver，所以不需要显示器。但是HtmlUnit的表现总是有些不如意。而最近在项目中发现这篇文章，解决我长久以来的问题：在没有显示器的服务器上运行Firefox的集成测试。
+
+selenium在linux上无界面运行，其实是非常简单的。具体的方法有使用HtmlUnitDriver或者PhantomJSDriver，有时间我会写写关于这两个东东的文章，其实基本和ChromeDriver 和FirefoxDriver是一样的。但是有些人或者会比较排斥他们说HtmlUnitDriver对JS支持不好，PhantomJSDriver估计也很少有人用，其实他是对Phantomjs的封装，对这些不做多过评论，我用下来感觉还好。
+
+            还有另一种方法，就是使用XVFB, 有人说XVFB是什么，没听说过，没听说过就自己Google吧。
+
+这里就主要是讲一下XVFB的安装使用。以chrome + ubuntu 和 firefox + centOS 为例子(chrome linux版好像是到6的时候就不支持centOS了， 都自带firefox )
+
+一、 XVFB在Ubuntu上的安装（chrome）
+
+1. 安装ubuntu(百度google安装步骤)
+
+2. putty.exe 连接ubuntu
+
+    安装openssh-server：sudo apt-get install openssh-server
+    启动openssh-server：   sudo /etc/init.d/ssh start
+    确认openssh-server是否启动：ps -e | grep ssh
+    telnet ip 端口号
+
+3. 安装oracle JDK6:(可跳过：自带penjdk-6-jre)
+    $ remove openjdk:　　sudo apt-get autoremove openjdk-6-jre
+    $ sudo add-apt-repository ppa:webupd8team/java
+    $ sudo apt-get update
+    $ sudo apt-get install oracle-java6-installer
+    $ sudo update-java-alternatives -s java-6-oracle
+
+4. 装chrome:(自带firefox)
+    http://www.ubuntuupdates.org/ppa/google_chrome
+    wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
+    sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+    sudo apt-get update 
+    sudo apt-get install google-chrome-stable
+
+5. 装xvfb 及各种：
+       sudo apt-get update && sudo apt-get install -y xfonts-100dpi xfonts-75dpi xfonts-scalable xfonts-cyrillic xvfb x11-apps  imagemagick firefox google-chrome-stable
+
+ 
+
+OK， 到这一步都装好了。
+
+ 
+
+二、测试安装
+
+putty连接Ubuntu运行下面命令：
+
+1. 启动Xvfb服务
+
+ 
+
+ Xvfb -ac :7 -screen 0 1280x1024x8  (注意这个是x, 不是* 哦)
+
+ 2.  启动firefox or chrome
+
+export  DISPLAY=:7
+
+/usr/bin/google-chrome-stable http://www.investopedia.com         //chrome 浏览www.investopedia.com
+
+或者
+
+export DISPLAY=:7
+
+firefox http://www.investopedia.com                                              //firefox 浏览www.investopedia.com
+
+ 
+
+如果运行完后，出现：
+
+Xlib: extension "RANDR"  missing on display ":7"
+
+我想说，you made it. 这是个无关紧要的信息，之前我试图解决掉它，没有成功。最后我在运行selenium脚本后，完全没有出现这个信息，脚本执行很正常，所以现在我把它当做是安装成功的信息。
+
+ 
+
+当然运行selenium 脚本前总不能老是敲一遍这些命令，太麻烦了。
+
+弄成一个服务，先 touch /etc/init.d/xvfb
+
+脚本如下：
+
+#! /bin/bash
+if [ -z "$1" ]; then 
+echo "`basename $0` {start|stop}"
+exit
+fi
+
+case "$1" in
+start)
+      /usr/bin/Xvfb :7 -ac -screen 0 1024x768x8 &
+;;
+stop)
+      killall Xvfb
+;;
+esac
+ 
+
+修改脚本权限，启动服务：
+
+chmod +x /etc/init.d/xvfb
+chkconfig xvfb on
+service xvfb start
+
+ 
+
+停止服务的话就是： service xvfb stop
+
+完毕了。
+
+ 
+
+ 
+
+三、Xvfb在CentsOS安装
+
+ Install Xvfb with library:
+
+    yum install Xvfb
+    yum -y install libXfont
+    yum install xorg-x11-fonts*
+
+
+touch /etc/init.d/xvfb with content:
+
+#!/bin/bash
+#
+# /etc/rc.d/init.d/xvfbd
+#
+# chkconfig: 345 95 28
+# description: Starts/Stops X Virtual Framebuffer server
+# processname: Xvfb
+#
+
+. /etc/init.d/functions
+
+[ "${NETWORKING}" = "no" ] && exit 0
+
+PROG="Xvfb"
+PROG_OPTIONS=":7 -ac -screen 0 1024x768x24"
+PROG_OUTPUT="/tmp/Xvfb.out"
+
+case "$1" in
+    start)
+        echo -n "Starting : X Virtual Frame Buffer "
+        $PROG $PROG_OPTIONS>>$PROG_OUTPUT 2>&1 &
+        disown -ar
+        /bin/usleep 500000
+        status Xvfb & >/dev/null && echo_success || echo_failure
+        RETVAL=$?
+        if [ $RETVAL -eq 0 ]; then
+            /bin/touch /var/lock/subsys/Xvfb
+            /sbin/pidof -o  %PPID -x Xvfb > /var/run/Xvfb.pid
+        fi
+        echo
+        ;;
+    stop)
+        echo -n "Shutting down : X Virtual Frame Buffer"
+        killproc $PROG
+        RETVAL=$?
+        [ $RETVAL -eq 0 ] && /bin/rm -f /var/lock/subsys/Xvfb /var/run/Xvfb.pid
+        echo
+        ;;
+    restart|reload)
+        $0 stop
+        $0 start
+        RETVAL=$?
+        ;;
+    status)
+        status Xvfb
+        RETVAL=$?
+        ;;
+    *)
+     echo $"Usage: $0 (start|stop|restart|reload|status)"
+     exit 1
+esac
+
+exit $RETVAL
+
+Registering in system and start:
+chmod +x /etc/init.d/xvfb
+chkconfig xvfb on
+service xvfb start
+
+now
+
+export DISPLAY=:7 (actually you should add this to your etc/bashrc)
+ 
+
+下一篇会用selenium 脚本测试一下这个环境

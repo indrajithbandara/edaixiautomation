@@ -93,28 +93,53 @@ global ops_tab_mapSetting_subCityMapSetting,ops_tab_innertestingmanage,ops_tab_p
 global ops_tab_couponmanage,ops_tab_MarketingTools,ops_tab_freight,ops_tab_clothesmanage
 global ops_tab_clothesmanage_endprice,ops_tab_clothesmanage_brand,ops_tab_clothesmanage_historyprice,ops_tab_clothesmanage_minor
 global ops_tab_citymanage,ops_tab_recharge,ops_tab_distribution,ops_tab_Category,ops_tab_PriceClothes
+# ops_tab_permissionmanage=str(1)
+# ops_tab_innertestingmanage=str(2)
+# ops_tab_mapSetting_subCityMapSetting=str(2)
+# ops_tab_distribution=str(3)
+# ops_tab_Category=str(4)
+# ops_tab_Category_substation=str(3)
+# ops_tab_category_username="rdt10"
+# ops_tab_category_password="abc123"
+# 
+# ops_tab_PriceClothes=str(5)
+# ops_tab_freight=str(6)
+# ops_tab_clothesmanage=str(7)
+# ops_tab_clothesmanage_brand=str(4)
+# ops_tab_clothesmanage_endprice=str(2)
+# ops_tab_clothesmanage_historyprice=str(3)
+# ops_tab_clothesmanage_minor=str(1)
+# 
+# 
+# ops_tab_recharge=str(8)
+# ops_tab_citymanage=str(9)
+# ops_tab_couponmanage=str(10)
+# ops_tab_MarketingTools=str(11)
+
+
+
 ops_tab_permissionmanage=str(1)
-ops_tab_innertestingmanage=str(2)
-ops_tab_mapSetting_subCityMapSetting=str(2)
-ops_tab_distribution=str(3)
-ops_tab_Category=str(4)
+ops_tab_innertestingmanage=str(3)
+ops_tab_mapSetting_subCityMapSetting=str(3)
+ops_tab_distribution=str(4)
+ops_tab_Category=str(5)
 ops_tab_Category_substation=str(3)
 ops_tab_category_username="rdt10"
 ops_tab_category_password="abc123"
 
-ops_tab_PriceClothes=str(5)
-ops_tab_freight=str(6)
-ops_tab_clothesmanage=str(7)
+ops_tab_PriceClothes=str(6)
+ops_tab_freight=str(7)
+ops_tab_clothesmanage=str(8)
 ops_tab_clothesmanage_brand=str(4)
 ops_tab_clothesmanage_endprice=str(2)
 ops_tab_clothesmanage_historyprice=str(3)
 ops_tab_clothesmanage_minor=str(1)
 
 
-ops_tab_recharge=str(8)
-ops_tab_citymanage=str(9)
-ops_tab_couponmanage=str(10)
-ops_tab_MarketingTools=str(11)
+ops_tab_recharge=str(9)
+ops_tab_citymanage=str(10)
+ops_tab_couponmanage=str(11)
+ops_tab_MarketingTools=str(12)
 
 
 
