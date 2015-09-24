@@ -44,12 +44,13 @@ class OpsTestcase02innertestingmanage(unittest.TestCase):
         driver.find_element_by_css_selector("div.container>div.navbar-collapse.collapse.navbar-responsive-collapse>ul.nav.navbar-nav>li:nth-child("+str(appobjectops.ops_tab_innertestingmanage)+")>a").click()
         time.sleep(2)
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
-#         driver.find_element_by_css_selector("ul.nav.navbar-nav li:nth-child("+appobjectops.ops_innertestingmanage+").dropdown ul.dropdown-menu li:first-child a").click()
-#         time.sleep(1)
+        driver.find_element_by_css_selector("ul.nav.navbar-nav li:nth-child("+appobjectops.ops_tab_innertestingmanage+").dropdown ul.dropdown-menu li:first-child a").click()
+        time.sleep(1)
         
         #driver.find_element_by_css_selector("div#container.container a.btn.btn-sm.btn-info.col-md-1").click()
         #html body div#container.container div.panel.panel-primary div.pnale-body table.table.table-bordered.table-striped tbody tr:nth-child(2) td:last-child
         #driver.find_element_by_link_text(u"内测管理").click()
+        '''    time.sleep(1)
         driver.find_element_by_link_text(u"添 加").click()
         driver.find_element_by_id("gray_group_name").clear()
         driver.find_element_by_id("gray_group_name").send_keys(str("innertestname"+str(random.randint(0,999))))
@@ -83,7 +84,7 @@ class OpsTestcase02innertestingmanage(unittest.TestCase):
         driver.find_element_by_id("add_tel").clear()
         driver.find_element_by_id("add_tel").send_keys("zhangsan")
         driver.find_element_by_id("add_member").click()
-        
+        '''
 
         self.assertEqual(driver.title, u"e袋洗城市运营后台")
         

@@ -10,7 +10,7 @@ import unittest, time, re,ConfigParser,MySQLdb
 from selenium.webdriver.common.action_chains import ActionChains
 #from pty import CHILD
 import appobjectwuliu,wuliu_utiltools
-from uiwuliutestcase import appobjectwuliu
+# from uiwuliutestcase import appobjectwuliu
 class WuliuTestcase02factorysign(unittest.TestCase):
     def setUp(self):
         #self.driver = webdriver.Firefox()
