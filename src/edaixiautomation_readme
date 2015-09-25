@@ -44,5 +44,12 @@ this automation testing scripts has been supported by testin
     
  
 
+TroubleShooting for edaixi automation testing framework
+
+if you running automation scripts on testing machine.
+We are sorry --- maybe bug ,maybe testdata issue, we need confirm it hand by ourself.
+404 error --- no this page
+No such elements issues  ---This is selenium can't search element on our webpage
+
 
 

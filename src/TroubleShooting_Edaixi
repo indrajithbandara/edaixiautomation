@@ -1,0 +1,9 @@
+TroubleShooting Summary for edaixi automation testing
+1. running our  testing scripts on our jenkis CI System.
+
+2. anylise test report or test result for our testing scripts.
+
+3. TroubleShooting our automaton scripts and confirm if it is bug.
+
+4. Transfer bug to bug manage system and report dev,let them fix it asap.
+
