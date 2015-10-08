@@ -71,6 +71,7 @@ class CaiwuTestcase03CaiwushiticardCreate(unittest.TestCase):
         assert u"实体卡生成任务提交成功" in shiticardcreate
         time.sleep(2)
         #html body div.container div#content div.panel.panel-primary table.table.table-striped tbody tr:first-child td:first-child
+        time.sleep(1)
         createshiticarednum=driver.find_element_by_css_selector("div.container div#content div.panel.panel-primary table.table.table-striped tbody tr:first-child td:first-child").text
         print " the createshiticarednum is ",createshiticarednum
         

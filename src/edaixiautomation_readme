@@ -53,3 +53,124 @@ No such elements issues  ---This is selenium can't search element on our webpage
 
 
 
+
+edaixi automation SQL statements examples:
+
+SHOW  COLUMNS  FROM  ims_washing_order FROM rongchain04
+
+SELECT table_name FROM information_schema.columns WHERE column_name LIKE 'Name';
+
+SELECT table_name, column_name FROM information_schema.columns WHERE table_name LIKE 'ims_washing_order';
+
+SELECT table_name FROM information_schema.tables WHERE table_schema='rongchain04' AND table_type='base table';
+
+----------------------------------------------------------------------------
+ims_icard_outlet  outlet_type
+1 jiagongdian
+2 fuwuzhandian
+
+`ims_washing_courier``rongchain04`
+SELECT ordersn ,username,tel,address ,status_delivery,STATUS ,fanxidan_id,fan_id  FROM ims_washing_order WHERE status_delivery='3' AND ordersn='15072110393738'
+`ims_washing_courier`
+040300364669
+
+SELECT * FROM map_cities WHERE title LIKE '上%'
+DELETE FROM  map_cities WHERE gaode_map_code LIKE 'beijing%'
+
+DELETE FROM  map_cities WHERE gaode_map_code='test'
+
+DELETE FROM  map_cities WHERE  title LIKE '上%' AND gaode_map_code='test'
+SELECT 
+SELECT ordersn,bagsn,status_delivery,jiagongdian_id,qianshoudian_id  FROM ims_washing_order WHERE bagsn='E0000000006'
+
+SELECT * FROM ims_washing_order WHERE status_delivery=3 AND fanxidan_id=0 AND bagsn IS NOT NULL  AND id=(SELECT MIN(id) FROM ims_washing_order) ORDER BY id
+
+INSERT INTO musiclist(musicid, musicname, singername)
+VALUES('20', '1111', 'zhang san')
+
+DELETE FROM  map_cities WHERE gaode_map_code LIKE 'qqsq%'
+
+DELETE FROM  ims_washing_courier WHERE realname LIKE 'ziyingwuliu%' OR 
+SELECT * FROM ims_washing_courier
+
+DELETE FROM  ims_icard_outlet WHERE title LIKE 'shouyiguan%'
+SELECT * FROM ims_icard_outlet
+
+SELECT *  FROM ims_washing_order WHERE ordersn='15051110386850'
+
+SELECT *  FROM ims_washing_order WHERE ordersn='15051110387266'
+
+
+UPDATE ims_washing_order SET fanxidan_id='0',paytype='0',pay_status='1',fan_id='0',status_delivery='3' WHERE ordersn='15082410394057
+
+SELECT MIN(id)  FROM ims_fans
+
+SELECT *  FROM ims_fans where id=623364
+
+SELECT * FROM ims_washing_order WHERE  bagsn IS NOT NULL  AND id=(SELECT MIN(id) FROM ims_washing_order) ORDER BY id
+
+
+SELECT id,status_delivery,fanxidan_id,fan_id FROM ims_washing_order WHERE  bagsn IS NOT NULL  AND id=(SELECT MIN(id) FROM ims_washing_order) ORDER BY id
+
+SELECT ordersn FROM ims_washing_order WHERE status_delivery=3 AND fanxidan_id=0 AND bagsn IS NOT NULL  AND id=(SELECT MIN(id) FROM ims_washing_order) ORDER BY i
+
+SELECT ordersn FROM ims_washing_order WHERE status_delivery=1 AND bagsn IS NOT NULL order by id 
+
+SELECT ordersn FROM ims_washing_order WHERE status_delivery=3 AND fanxidan_id=0 AND bagsn IS NOT NULL  AND id=(SELECT MIN(id) FROM ims_washing_order) ORDER BY id
+
+`rongchain04``edaixi04`
+
+SELECT MIN(id)  FROM ims_fans
+
+select * from ims_fans where id=779
+
+select fan_id from  ims_washing_order where ordersn='15051110387266'
+
+select fan_id from  ims_washing_order where ordersn='041100366845'
+
+select count(fan_id) from  ims_washing_order where  fan_id='799'
+ delete from ims_washing_order where fan_id='799'
+
+SELECT fan_id FROM ims_washing_order WHERE status_delivery=3 AND fanxidan_id=0 AND bagsn IS NOT NULL  AND id=(SELECT MIN(id) FROM ims_washing_order) ORDER BY id
+SELECT ordersn FROM ims_washing_order WHERE status_delivery=3 AND fanxidan_id=0 AND bagsn IS NOT NULL  AND id=(SELECT MIN(id) FROM ims_washing_order) ORDER BY id
+
+---------------------------------------------------------------
+
+SELECT ordersn,fan_id FROM ims_washing_order WHERE  ordersn=0723821336144
+SELECT  * FROM ims_fans WHERE ID =82133
+
+SELECT ordersn FROM ims_washing_order WHERE status_delivery=3 AND fanxidan_id=0 AND bagsn IS NOT NULL  AND id=(SELECT MIN(id) FROM ims_washing_order) ORDER BY id
+
+UPDATE ims_washing_order SET status_delivery='3' ,STATUS='1' ,fanxidan_id=0
+
+ WHERE ordersn=(
+ SELECT ordersn FROM ims_washing_order WHERE status_delivery=3 AND fanxidan_id=0 
+ AND bagsn IS NOT NULL  AND id=(SELECT MIN(id) FROM ims_washing_order) ORDER BY id
+)
+
+SELECT * FROM ims_fans WHERE id =(
+SELECT fan_id FROM ims_washing_order WHERE 
+status_delivery=3 AND fanxidan_id=0 AND 
+bagsn IS NOT NULL  AND id=(SELECT MIN(id) FROM ims_washing_order) ORDER BY id
+)
+
+
+UPDATE ims_washing_order SET fanxidan_id='0',paytype='0',pay_status='1',fan_id='0',status_delivery='3' WHERE ordersn='15082410394057'
+
+SELECT *  FROM ims_washing_order WHERE ordersn='15051110387266'
+
+SELECT id,status_delivery,fanxidan_id,fan_id FROM ims_washing_order WHERE  bagsn IS NOT NULL  AND id=(SELECT MIN(id) FROM ims_washing_order) ORDER BY id
+
+SELECT *  FROM ims_fans WHERE id = 20717
+
+15051110387266
+SELECT MIN(id)  FROM ims_fans
+SELECT id,status_delivery,fanxidan_id,fan_id FROM ims_washing_order WHERE  ordersn='15051110387266'
+
+
+edaixi automation Linux Shell examples:
+
+
+edaixi git github examples:
+
+
