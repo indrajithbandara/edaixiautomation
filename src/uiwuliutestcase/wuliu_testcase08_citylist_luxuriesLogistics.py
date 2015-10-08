@@ -57,7 +57,7 @@ class WuliuTestcase08CitylistluxuriesLogistics(unittest.TestCase):
         
         self.assertEqual(driver.title, u"物流")
      
-        driver.find_element_by_css_selector("div#container.container div.panel.panel-primary.checkout-order table.table.table-striped.city-table tbody tr:nth-child(2) td:nth-child(2).btn-link a:nth-child(6)").click()
+        driver.find_element_by_css_selector("div#container.container div.panel.panel-primary.checkout-order table.table.table-striped.city-table tbody tr:nth-child(2) td:nth-child(2).btn-link a:nth-child("+str(7)+")").click()
         #html body div#container.container div.panel.panel-primary.checkout-order table.table.table-striped.city-table tbody tr:nth-child(2) td:nth-child(2).btn-link a:nth-child(4).btn.btn-success
     
         self.assertEqual(driver.title, u"物流")

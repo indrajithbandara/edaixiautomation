@@ -62,6 +62,7 @@ class WuliuTestcase08Citylistouttimemanage(unittest.TestCase):
         #driver.find_element_by_link_text(u"新建城市").click()
         #driver.find_elements_by_css_selector("div#container.container a.btn.btn-infos").click()
         time.sleep(1)
+        '''
         driver.find_element_by_xpath("/html/body/div/a").click()
         self.assertEqual(driver.title,u"物流")
         cityidname=driver.find_element_by_css_selector("div#container.container div.panel.panel-primary div.panle-body div.orders_container form#new_map_city.form-horizontal.new_map_city div.form-inputs div.form-group.select.required.map_city_api_city_id div.col-sm-8 select#map_city_api_city_id.select.required.form-control option:nth-child(2)").text
@@ -88,14 +89,16 @@ class WuliuTestcase08Citylistouttimemanage(unittest.TestCase):
         addsuccess=driver.find_element_by_css_selector("div#container.container div.alert.fade.in.alert-success").text
         print " the addsuccess is ",addsuccess
         #shtml body div#container.container>div:nth-child(2)>a.btn.btn-default
-        
-        driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child("+str(9)+").active a").click()
+        '''
+        driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child("+appobjectwuliu.wuliutabnine_citylist+").active a").click()
                  
-        driver.find_element_by_css_selector("div#container.container div.panel.panel-primary.checkout-order table.table.table-striped.city-table tbody tr:nth-child(2) td:nth-child(2).btn-link a:nth-child(3)").click()
+        time.sleep(2)
+        driver.find_element_by_css_selector("div#container.container div.panel.panel-primary.checkout-order table.table.table-striped.city-table tbody tr:nth-child(2) td:nth-child(2).btn-link a:nth-child("+str(4)+")").click()
         #.btn.btn-success
 
         #sdriver.find_element_by_link_text(u"城市列表").click()
         #driver.find_element_by_link_text(u"超时订单").click()
+        time.sleep(1)
         driver.find_element_by_id("timeout_qu_list_btn").click()
 
         driver.find_element_by_id("timeout_song_list_btn").click()

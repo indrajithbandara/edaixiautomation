@@ -57,15 +57,14 @@ class WuliuTestcase08CitylistxiaoemanagerLogistics(unittest.TestCase):
         driver.find_element_by_css_selector("div.container > nav > ul > li:nth-child("+appobjectwuliu.wuliutabnine_citylist+") >a").click()
         #driver.find_element_by_css_selector("div.container > nav > ul > li:nth-child("+str(9)+") >a").click()
         #driver.find_element_by_css_selector("div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li:nth-child("+str(9)+").active a").click()
-        
         self.assertEqual(driver.title, u"物流")
      
-        driver.find_element_by_css_selector("div#container.container div.panel.panel-primary.checkout-order table.table.table-striped.city-table tbody tr:nth-child(2) td:nth-child(2).btn-link a:nth-child(5)").click()
+        driver.find_element_by_css_selector("div#container.container div.panel.panel-primary.checkout-order table.table.table-striped.city-table tbody tr:nth-child(2) td:nth-child(2).btn-link a:nth-child("+str(6)+")").click()
         #html body div#container.container div.panel.panel-primary.checkout-order table.table.table-striped.city-table tbody tr:nth-child(2) td:nth-child(2).btn-link a:nth-child(4).btn.btn-success
         self.assertEqual(driver.title, u"物流")
 
+        time.sleep(1)
         driver.find_element_by_link_text(u"新建小e管家").click()
-    
         self.assertEqual(driver.title, u"物流")
 #         telephonenumber="18611111"+str(random.randint(0,999))
 #         identitnumber="152528198801280"+str(random.randint(0,999))

@@ -63,11 +63,11 @@ class WuliuTestcase08Citylistjiagongdianmanage(unittest.TestCase):
         #html body header.navbar.navbar-default.navbar-static-top div.container nav.collapse.navbar-collapse.bs-navbar-collapse ul.nav.navbar-nav li.active a
         #html body header.navbar.navbar-default.navbar-static-top div.container>ul.nav.navbar-nav>li:nth-child(8).active a
         self.assertEqual(driver.title, u"物流")
-        driver.find_element_by_css_selector("div#container.container div.panel.panel-primary.checkout-order table.table.table-striped.city-table tbody tr:nth-child(2) td:nth-child(2).btn-link a:nth-child(9)").click()
+        driver.find_element_by_css_selector("div#container.container div.panel.panel-primary.checkout-order table.table.table-striped.city-table tbody tr:nth-child(2) td:nth-child(2).btn-link a:nth-child("+str(10)+")").click()
         #html body div#container.container div.panel.panel-primary.checkout-order table.table.table-striped.city-table tbody tr:nth-child(2) td:nth-child(2).btn-link a:nth-child(4).btn.btn-success
     
         self.assertEqual(driver.title, u"物流")
-        
+        time.sleep(1)
         #driver.find_element_by_link_text(u"新建加工店").click()
         driver.find_element_by_css_selector("div#container.container a.btn.btn-info.col-md-1").click()
         self.assertEqual(driver.title, u"物流")
@@ -284,7 +284,7 @@ class WuliuTestcase08Citylistjiagongdianmanage(unittest.TestCase):
         finally: self.accept_next_alert = True
     
     def tearDown(self):
-        #self.driver.quit()
+        self.driver.quit()
         self.assertEqual([], self.verificationErrors)
 
 if __name__ == "__main__":
