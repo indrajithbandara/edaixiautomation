@@ -8,15 +8,16 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
 import unittest, time, re,ConfigParser
 from selenium.webdriver.common.action_chains import ActionChains
-import appobjectwechat,wechat_end_utiltools
+import appobjectfrontwechat
+
 
 class WechatTestcase01basesettingfrontreply(unittest.TestCase):
     def setUp(self):
         #self.driver = webdriver.Firefox()
-        self.driver = appobjectwechat.GetInstance()
+        self.driver = appobjectfrontwechat.GetInstance()
         self.driver.implicitly_wait(30)
         conf = ConfigParser.ConfigParser()
-        conf.read(wechat_end_utiltools.getwechatendconfigpath())
+        conf.read(appobjectfrontwechat.getwechatendconfigpath())
         #conf.read("C:/edaixi_testdata/userdata_ops.conf")
         global WECHAT_URL,WECHAT_USER_NAME,WECHAT_PASS_WORD
         WECHAT_URL = conf.get("wechatsection", "uihostname")
@@ -44,11 +45,11 @@ class WechatTestcase01basesettingfrontreply(unittest.TestCase):
         driver.find_element_by_link_text(u"如果你的浏览器没有自动跳转，请点击此链接").click()
         time.sleep(1)
 
-        driver.find_element_by_css_selector("div.mCSB_container>div.sidebar-nav>div#snav>ul>li:nth-child("+appobjectwechat.wechatend_tab_basesetting+")>a").click()
+        driver.find_element_by_css_selector("div.mCSB_container>div.sidebar-nav>div#snav>ul>li:nth-child("+appobjectfrontwechat.wechatend_tab_basesetting+")>a").click()
         #driver.find_element_by_link_text(u"基本设置").click()
         #driver.find_element_by_css_selector(appobjectops.clickPermissionLink).click()
         time.sleep(1)
-        driver.find_element_by_css_selector("div.mCSB_container>div.sidebar-nav>div#snav>ul>li:nth-child("+appobjectwechat.wechatend_tab_basesetting_fronreply+")>a").click()
+        driver.find_element_by_css_selector("div.mCSB_container>div.sidebar-nav>div#snav>ul>li:nth-child("+appobjectfrontwechat.wechatend_tab_basesetting_fronreply+")>a").click()
         
         
         print "wechat end  test_wechat_testcase01_basesetting_frontreply testcaesee is ",driver.title
