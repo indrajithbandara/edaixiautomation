@@ -134,8 +134,8 @@ class WuliuTestcase08Citylistxiaoeyizhansitepersonmanage(unittest.TestCase):
         driver.find_element_by_link_text(u"超时订单").click()
         driver.find_element_by_id("timeout_qu_list_btn").click()
         driver.find_element_by_id("timeout_song_list_btn").click()
-        driver.find_element_by_id("warning_qu_list_btn").click()
-        driver.find_element_by_id("warning_song_list_btn").click()
+#         driver.find_element_by_id("warning_qu_list_btn").click()
+#         driver.find_element_by_id("warning_song_list_btn").click()
         self.assertEqual(driver.title, u"物流")
     def is_element_present(self, how, what):
         try: self.driver.find_element(by=how, value=what)

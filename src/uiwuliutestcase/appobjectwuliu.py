@@ -76,11 +76,14 @@ wuliutabfour=str(4)
 wuliutabfive=str(5)
 wuliutabsix=str(6)
 wuliutabseven=str(7)
-wuliutabeight=str(8)
-wuliutabnine_citylist=str(9)
-wuliutabnine_citylist_diaodufanxi=str(9)
+wuliutabeight=str(7)
+#wuliutabeight=str(8)
+
+wuliutabnine_citylist=str(8)
+wuliutabnine_citylist_diaodufanxi=str(11)
 wuliutabten=str(10)
-wuliutabeleven=str(11)
+#wuliutabeleven=str(11)
+wuliutabeleven=str(10)
 
 # test data for our wuliu system 
 global factorysignnumber

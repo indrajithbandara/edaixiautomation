@@ -54,6 +54,11 @@ class OpsTestcase04Categorymanage(unittest.TestCase):
 #         driver.find_element_by_link_text(u"新 建").click()
         driver.find_element_by_id("category_form_name").clear()
         driver.find_element_by_id("category_form_name").send_keys(u"洗内裤")
+        
+        driver.execute_script("var doc=document.getElementById('category_form_category_tag_id');doc.setAttribute('style','display:block');")
+        
+        Select(driver.find_element_by_id("category_form_category_tag_id")).select_by_visible_text(u"普通衣物")
+        
         #Select(driver.find_element_by_id("category_form_ability_name")).select_by_visible_text(u"快洗")
 #         driver.find_element_by_name("commit").click()
 #         driver.find_element_by_xpath(u"(//a[contains(text(),'编辑')])[9]").click()

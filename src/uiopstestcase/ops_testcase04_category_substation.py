@@ -47,7 +47,7 @@ class OpsTestcase04CategorySubStation(unittest.TestCase):
         #driver.find_element_by_link_text(u"类目管理").click()
         #driver.find_element_by_link_text(u"分站类目审核").click()
         #driver.find_element_by_link_text(u"查看").click()
-        driver.find_element_by_css_selector("div#container.container table.table.table-bordered.table-striped tbody tr:nth-child("+str(2)+") td:last-child a.btn.btn-sm.btn-info").click()
+        driver.find_element_by_css_selector("div#container.container table.table.table-bordered.table-striped tbody tr:nth-child("+str(2)+") td:nth-child(2) a.btn.btn-sm.btn-info").click()
         #html body div#container.container table.table.table-bordered.table-striped tbody tr td a.btn.btn-sm.btn-info
         print " check substation for testcase test_ops_testcase04_Category_substation is ",driver.title
         self.assertEqual(driver.title, u"e袋洗城市运营后台")

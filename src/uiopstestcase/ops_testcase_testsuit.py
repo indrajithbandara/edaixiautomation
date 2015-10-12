@@ -86,8 +86,8 @@ if __name__ == '__main__':
     #caiwu testcase04
     suite.addTest(OpsTestcase04Categorymanage('test_ops_testcase04_categorymanage'))
     time.sleep(3)
-    suite.addTest(OpsTestcase04CategorySubStation('test_ops_testcase04_Category_substation'))
-    time.sleep(3)
+#     suite.addTest(OpsTestcase04CategorySubStation('test_ops_testcase04_Category_substation'))
+#     time.sleep(3)
     suite.addTest(OpsTestcase04Categoryedittemplatexiyi('test_ops_testcase04_Categoryedittemplatexiyi'))
     time.sleep(3)
     suite.addTest(OpsTestcase04Categoryedittemplatexixie('test_ops_testcase04_Categoryedittemplatexixie'))
