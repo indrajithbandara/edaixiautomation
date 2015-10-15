@@ -153,7 +153,11 @@ if __name__ == '__main__':
      suite.addTest(WuliuTestcase11SitePersonManage('test_wuliu_testcase11_site_personmanage'))
      time.sleep(3)
     
-    
+     conf = ConfigParser.ConfigParser()
+     conf.read(wuliu_utiltools.getwuliuconfigpath())  
+     mysqlhostname = conf.get("databaseconn", "mysqlhostname")
+     print "this is test enviornment  hostname --->",mysqlhostname
+     #this posiztion can setting permisision for wuliu regress testing testcase
     #wuliu permission rdt siteuiusername
      suite.addTest(WuliuTestcase00EditSitePermission('test_wuliu_testcase00_EditSitePermission'))
      time.sleep(3)

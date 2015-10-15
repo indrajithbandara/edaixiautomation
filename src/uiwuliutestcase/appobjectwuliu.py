@@ -80,8 +80,15 @@ wuliutabseven=str(7)
 wuliutabeight=str(7)
 #wuliutabeight=str(8)
 
+print "Our automation test Environment include  envrionment as below, we need init test data firstly"
+print "wuliu05.edaixi.cn" ,"wuliu06.edaixi.cn","wuliu07.edaixi.cn"
+print "wuliu08.edaixi.cn" ,"wuliu09.edaixi.cn","wuliu10.edaixi.cn"
+print "wuliu11.edaixi.cn" ,"wuliu12.edaixi.cn","wuliu13.edaixi.cn"
+print "wuliu14.edaixi.cn" ,"wuliu15.edaixi.cn"
 #wuliutabnine_citylist=str(8)
 print " the mysqlhostname is --->",mysqlhostname
+# about mysqlhostname ,it include many test envrioement and differenet test data
+# "wuliu05.edaixi.cn" 
 if  mysqlhostname in "wuliu05.edaixi.cn":
     wuliutabnine_citylist=str(9)
     print "this is test05 environment"
