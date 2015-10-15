@@ -5,6 +5,7 @@ from selenium import webdriver
 import threading,wuliu_utiltools
 import MySQLdb,ConfigParser
 import csv
+from test.test_multiprocessing import initializer
 #This module /class is config and test data for wuliu automation testing sripts
 
 conf = ConfigParser.ConfigParser()
@@ -79,7 +80,18 @@ wuliutabseven=str(7)
 wuliutabeight=str(7)
 #wuliutabeight=str(8)
 
-wuliutabnine_citylist=str(8)
+#wuliutabnine_citylist=str(8)
+print " the mysqlhostname is --->",mysqlhostname
+if  mysqlhostname in "wuliu05.edaixi.cn":
+    wuliutabnine_citylist=str(9)
+    print "this is test05 environment"
+    
+if  mysqlhostname in "wuliu15.edaixi.cn":
+#test15 envrionment 
+    wuliutabnine_citylist=str(8)
+    print "this is test15 environment"
+#test05 envrioment
+
 wuliutabnine_citylist_diaodufanxi=str(11)
 wuliutabten=str(10)
 #wuliutabeleven=str(11)
@@ -90,9 +102,19 @@ global factorysignnumber
 factorysignnumber="1792411229"
 
 #This is wuliu system test data for platform
-
+#test data initializer
 global testcase08_jiagongdian_forbalantestdata ,jiagongdianchuruku_signnumber_testdata,jiagongzhandian_signnumber_testdata
-testcase08_jiagongdian_forbalantestdata=u"窗帘"
+if  mysqlhostname in "wuliu05.edaixi.cn":
+    testcase08_jiagongdian_forbalantestdata=u"家纺"
+    print "this is test05 environment-->家纺"
+    
+if  mysqlhostname in "wuliu15.edaixi.cn":
+#test15 envrionment 
+    testcase08_jiagongdian_forbalantestdata=u"窗帘"
+    print "this is test15 environment-->窗帘"
+
+#testcase08_jiagongdian_forbalantestdata=u"窗帘"
+#testcase08_jiagongdian_forbalantestdata=u"家纺"
 testcase08_jiagongdian_forbalantestdata_xiyi=u"洗衣"
 testcase08_jiagongdian_forbalantestdata_xixie=u"洗鞋"
 

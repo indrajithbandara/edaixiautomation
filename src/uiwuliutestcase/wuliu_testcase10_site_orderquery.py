@@ -57,8 +57,8 @@ class WuliuTestcase10SiteOrderquery(unittest.TestCase):
         driver.find_element_by_name("commit").click()
         self.assertEqual(driver.title, u"物流")
         
-        driver.find_element_by_id("tel").clear()
-        driver.find_element_by_id("tel").send_keys("1888888888")
+#         driver.find_element_by_id("tel").clear()
+#         driver.find_element_by_id("tel").send_keys("1888888888")
         driver.find_element_by_name("commit").click()
         self.assertEqual(driver.title, u"物流")
         

@@ -105,12 +105,12 @@ class WuliuTestcase08Citylistxiaoeyizhansitepersonmanage(unittest.TestCase):
         self.assertEqual(driver.title, u"物流")
 
         driver.find_element_by_id("realname").clear()
-        driver.find_element_by_id("realname").send_keys("luke")
+        driver.find_element_by_id("realname").send_keys("")
         driver.find_element_by_name("commit").click()
         driver.find_element_by_css_selector("div.col-md-2.input-group > span.input-group-btn > input[name=\"commit\"]").click()
         driver.find_element_by_id("realname").click()
         driver.find_element_by_id("realname").clear()
-        driver.find_element_by_id("realname").send_keys("luke")
+        driver.find_element_by_id("realname").send_keys("")
         driver.find_element_by_name("commit").click()
         time.sleep(2)
         
